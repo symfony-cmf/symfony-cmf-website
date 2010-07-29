@@ -1,6 +1,25 @@
 parameters:
     kernel.include_core_classes: false
+    miam.user.emails:
+        laet:                   laet.wagner@gmail.com
+        mbontemps:              matthieu.bontemps@gmail.com
+        thib:                   thibault.duplessis@gmail.com
+        anthony:                hamonanthony19@gmail.com
 
-kernel.config: ~
-web.config: ~
-web.templating: ~
+kernel.config:
+    charset:             UTF-8
+    error_handler_level: null
+
+kernel.session:
+    lifetime: 2592000 # one month 
+
+web.config:
+    validation:
+        enabled: true
+    router: { resource: "%kernel.root_dir%/config/routing.yml" }
+
+web.templating:
+    escaping:       htmlspecialchars
+
+doctrine.orm:
+    cache_driver: apc

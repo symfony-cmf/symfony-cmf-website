@@ -29,7 +29,7 @@
           ?>
           <?php foreach ($menu as $label => $route): ?>
             <?php if (strpos($route, 'http://') === false): ?>
-                <li<?php if (strpos($_SERVER['REQUEST_URI'], $route) !== false): ?> id="current"<?php endif; ?>><a href="<?php echo $view->router->generate($route) ?>"><?php echo $label ?></a></li>
+                <li><a href="<?php echo $view->router->generate($route) ?>"><?php echo $label ?></a></li>
             <?php else: ?>
                 <li><a href="<?php echo $route ?>"><?php echo $label ?></a></li>
             <?php endif; ?>

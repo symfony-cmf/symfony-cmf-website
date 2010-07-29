@@ -54,7 +54,7 @@ h3 {
 }
 
 /* Paragraph */
-p { padding: 12px 10px;	}
+p { padding: 12px 10px; margin-right: 30px;	}
 
 /* Lists */
 ul, ol {

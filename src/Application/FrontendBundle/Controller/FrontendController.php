@@ -2,7 +2,7 @@
 
 namespace Application\FrontendBundle\Controller;
 
-use Symfony\Framework\FoundationBundle\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller;
 
 class FrontendController extends Controller
 {
