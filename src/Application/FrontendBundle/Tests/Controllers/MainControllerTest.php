@@ -30,4 +30,12 @@ class MainControllerTest extends WebTestCase
         $this->assertEquals(1, $crawler->filter('a:contains("Github Wiki")')->count());
     }
 
+    public function testClickSiteTitleGoToHomepage()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/get-involved');
+        $client->click($crawler->selectLink('Symfony2 CMF')->link());
+        $this->assertEquals('FrontendBundle:Main:index', $client->getRequest()->attributes->get('_controller'));
+    }
+
 }

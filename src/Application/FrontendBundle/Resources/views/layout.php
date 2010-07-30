@@ -10,7 +10,7 @@
     <body>
         <div id="wrap">
             <div id="header">
-                <h1 id="logo-text"><a href="#">Symfony2 CMF</a></h1>
+                <h1 id="logo-text"><a href="<?php echo $view->router->generate('homepage') ?>">Symfony2 CMF</a></h1>
                 <p id="slogan">Symfony2 Content Management Framework</p>
 
                 <div id="top-menu">
