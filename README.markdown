@@ -19,3 +19,9 @@ You should see a update_vendor.sh script, make sure it is executable and run it:
 
     $ chmod 0777 update_vendor.sh
     $ ./update_vendor.sh
+
+## Run tests
+
+    You need PHPUnit 3.5 installed
+
+    $ phpunit -c frontend
