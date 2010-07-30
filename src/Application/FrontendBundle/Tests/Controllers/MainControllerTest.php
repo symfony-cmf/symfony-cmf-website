@@ -12,6 +12,8 @@ class MainControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/');
         $this->assertTrue($client->getResponse()->isSuccessful());
         $this->assertEquals(1, $crawler->filter('#logo-text:contains("Symfony2 CMF")')->count());
+
+        $this->assertEquals(1, $crawler->filter('#nav li.current a:contains("Home")')->count());
     }
 
     public function testAboutShowsTableOfSponsors()
@@ -20,6 +22,8 @@ class MainControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/about');
         $this->assertTrue($client->getResponse()->isSuccessful());
         $this->assertEquals(1, $crawler->filter('table thead th:contains("Company")')->count());
+
+        $this->assertEquals(1, $crawler->filter('#nav li.current a:contains("Sponsors")')->count());
     }
 
     public function testGetInvolvedShowsALinkToGithubWiki()
@@ -28,6 +32,8 @@ class MainControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/get-involved');
         $this->assertTrue($client->getResponse()->isSuccessful());
         $this->assertEquals(1, $crawler->filter('a:contains("Github Wiki")')->count());
+
+        $this->assertEquals(1, $crawler->filter('#nav li.current a:contains("Get involved")')->count());
     }
 
     public function testClickSiteTitleGoToHomepage()
