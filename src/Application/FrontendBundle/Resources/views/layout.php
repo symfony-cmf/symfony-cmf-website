@@ -5,7 +5,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title><?php $view->slots->output('title', 'Home') ?> | Symfony2 CMF</title>
-        <?php echo $view->javascripts ?>
         <?php echo $view->stylesheets ?>
     </head>
     <body>
@@ -49,5 +48,6 @@
                 </p>
             </div>
         </div>
+        <?php echo $view->javascripts ?>
     </body>
 </html>
