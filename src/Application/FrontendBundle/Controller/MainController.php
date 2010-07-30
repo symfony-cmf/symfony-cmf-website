@@ -4,20 +4,20 @@ namespace Application\FrontendBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller;
 
-class FrontendController extends Controller
+class MainController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('FrontendBundle:Frontend:index');
+        return $this->render('FrontendBundle:Main:index');
     }
 
     public function get_involvedAction()
     {
-        return $this->render('FrontendBundle:Frontend:get_involved');
+        return $this->render('FrontendBundle:Main:get_involved');
     }
 
     public function aboutAction()
     {
-        return $this->render('FrontendBundle:Frontend:about');
+        return $this->render('FrontendBundle:Main:about');
     }
 }

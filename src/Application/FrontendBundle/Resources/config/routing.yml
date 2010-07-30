@@ -1,11 +1,11 @@
 homepage:
     pattern:  /
-    defaults: { _controller: FrontendBundle:Frontend:index }
+    defaults: { _controller: FrontendBundle:Main:index }
 
 get_involved:
     pattern:  /get_involved
-    defaults: { _controller: FrontendBundle:Frontend:get_involved }
+    defaults: { _controller: FrontendBundle:Main:get_involved }
 
 about:
     pattern:  /about
-    defaults: { _controller: FrontendBundle:Frontend:about }
+    defaults: { _controller: FrontendBundle:Main:about }
