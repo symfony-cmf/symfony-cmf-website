@@ -1,10 +1,5 @@
 parameters:
     kernel.include_core_classes: false
-    miam.user.emails:
-        laet:                   laet.wagner@gmail.com
-        mbontemps:              matthieu.bontemps@gmail.com
-        thib:                   thibault.duplessis@gmail.com
-        anthony:                hamonanthony19@gmail.com
 
 kernel.config:
     charset:             UTF-8
@@ -20,6 +15,3 @@ web.config:
 
 web.templating:
     escaping:       htmlspecialchars
-
-doctrine.orm:
-    cache_driver: apc
