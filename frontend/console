@@ -3,7 +3,7 @@
 
 require_once __DIR__.'/FrontendKernel.php';
 
-use Symfony\Framework\FoundationBundle\Console\Application;
+use Symfony\Bundle\FrameworkBundle\Console\Application;
 
 $kernel = new FrontendKernel('dev', true);
 
