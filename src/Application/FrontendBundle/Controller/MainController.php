@@ -11,9 +11,9 @@ class MainController extends Controller
         return $this->render('FrontendBundle:Main:index');
     }
 
-    public function get_involvedAction()
+    public function getInvolvedAction()
     {
-        return $this->render('FrontendBundle:Main:get_involved');
+        return $this->render('FrontendBundle:Main:getInvolved');
     }
 
     public function aboutAction()

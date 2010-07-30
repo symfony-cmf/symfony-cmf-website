@@ -3,8 +3,8 @@ homepage:
     defaults: { _controller: FrontendBundle:Main:index }
 
 get_involved:
-    pattern:  /get_involved
-    defaults: { _controller: FrontendBundle:Main:get_involved }
+    pattern:  /get-involved
+    defaults: { _controller: FrontendBundle:Main:getInvolved }
 
 about:
     pattern:  /about
