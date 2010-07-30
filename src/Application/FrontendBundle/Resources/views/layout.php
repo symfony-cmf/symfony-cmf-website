@@ -17,36 +17,14 @@
                     <p><a href="http://www.symfony-reloaded.org" target="_BLANK">Symfony2</a> + <a href="http://www.doctrine-project.org/projects/orm/2.0/docs/en" target="_BLANK">Doctrine2</a></p>
                 </div>
             </div>
-            <div  id="nav">
-                <ul>
-                    <?php
-                    $menu = array(
-                    'Home' => 'homepage',
-                    'Get Involved' => 'get_involved',
-                    'About' => 'about',
-                    'Wiki' => 'http://wiki.github.com/symfony-cmf/symfony-cmf'
-                    );
-                    ?>
-                    <?php foreach ($menu as $label => $route): ?>
-                    <?php if (strpos($route, 'http://') === false): ?>
-                    <li><a href="<?php echo $view->router->generate($route) ?>"><?php echo $label ?></a></li>
-                    <?php else: ?>
-                    <li><a href="<?php echo $route ?>"><?php echo $label ?></a></li>
-                    <?php endif; ?>
-
-                    <?php endforeach; ?>
-                </ul>
-            </div>
+            <?php $view->output('FrontendBundle::navigation', array('current' => $view->request->getParameter('_route'))) ?>
             <div id="content">
                 <div id="main">
                     <?php $view->slots->output('_content') ?>
                 </div>
             </div>
 
-            <div id="footer">
-                <p>
-                </p>
-            </div>
+            <div id="footer"></div>
         </div>
         <?php echo $view->javascripts ?>
     </body>

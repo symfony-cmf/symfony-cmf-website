@@ -281,10 +281,10 @@ input.button {
 #nav ul li a:active {
 	color: #E7FAA9;	
 }
-#nav ul li#current {
+#nav ul li.current {
 	background: transparent url(../images/left-tab.gif) no-repeat;	
 }
-#nav ul li#current a {	
+#nav ul li.current a {	
 	color: #4B3D2C;
 	background: transparent url(../images/right-tab.gif) no-repeat right top;	
 }
