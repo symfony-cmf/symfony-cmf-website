@@ -1,61 +1,62 @@
 <?php $view->extend('FrontendBundle::layout') ?>
+<?php $view->slots->set('title', 'About') ?>
 
 <h2>About</h2>
 
 <p>
-  The Symfony2 Content Management Framework project was started by a large group of Symfony
-  developers looking to get an early start on collaborating together for the next generation
-  of PHP Content Management Systems built on top of Symfony2. Several companies and developers
-  have dedicated themselves to the project. Some of the companies can be found below:
+The Symfony2 Content Management Framework project was started by a large group of Symfony
+developers looking to get an early start on collaborating together for the next generation
+of PHP Content Management Systems built on top of Symfony2. Several companies and developers
+have dedicated themselves to the project. Some of the companies can be found below:
 </p>
 
 <h2>Sponsors</h2>
 
 <table>
-  <thead>
-    <tr>
-      <th>Company</th>
-      <th>Location</th>
-      <th>Team</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>theGOOD</td>
-      <td>Portland, OR USA</td>
-      <td>Kris Wallsmith</td>
-    </tr>
-    <tr>
-      <td>knpLabs</td>
-      <td>Nantes, France</td>
-      <td>Thibault Duplessis, Matthieu Bontemps</td>
-    </tr>
-    <tr>
-      <td>Devorigin</td>
-      <td>Le Mans, France</td>
-      <td>Vincent Jousse</td>
-    </tr>
-    <tr>
-      <td>Pixel Fusion</td>
-      <td>Auckland, NZ</td>
-      <td>Keri Henare</td>
-    </tr>
-    <tr>
-      <td>Iostudio</td>
-      <td>Nashville, TN USA</td>
-      <td>Ryan Weaver</td>
-    </tr>
-    <tr>
-      <td>Liip AG</td>
-      <td>Switzerland</td>
-      <td>Lukas, Jordi, Ebi, David, Chregu</td>
-    </tr>
-    <tr>
-      <td>Sensio Labs</td>
-      <td>Paris, France | Nashville, TN USA</td>
-      <td>Jonathan H. Wage, Fabien Potencier</td>
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Team</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>theGOOD</td>
+            <td>Portland, OR USA</td>
+            <td>Kris Wallsmith</td>
+        </tr>
+        <tr>
+            <td>knpLabs</td>
+            <td>Nantes, France</td>
+            <td>Thibault Duplessis, Matthieu Bontemps</td>
+        </tr>
+        <tr>
+            <td>Devorigin</td>
+            <td>Le Mans, France</td>
+            <td>Vincent Jousse</td>
+        </tr>
+        <tr>
+            <td>Pixel Fusion</td>
+            <td>Auckland, NZ</td>
+            <td>Keri Henare</td>
+        </tr>
+        <tr>
+            <td>Iostudio</td>
+            <td>Nashville, TN USA</td>
+            <td>Ryan Weaver</td>
+        </tr>
+        <tr>
+            <td>Liip AG</td>
+            <td>Switzerland</td>
+            <td>Lukas, Jordi, Ebi, David, Chregu</td>
+        </tr>
+        <tr>
+            <td>Sensio Labs</td>
+            <td>Paris, France | Nashville, TN USA</td>
+            <td>Jonathan H. Wage, Fabien Potencier</td>
+        </tr>
+    </tbody>
 </table>
 
 <h2>Resources/Links</h2>
