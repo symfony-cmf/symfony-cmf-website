@@ -4,10 +4,12 @@
 <h2>About</h2>
 
 <p>
-The Symfony2 Content Management Framework project was started by a large group of Symfony
+The <a href="http://symfony-reloaded.org/">Symfony2</a> Content Management Framework project
+was started by a large group of Symfony
 developers looking to get an early start on collaborating together for the next generation
 of PHP Content Management Systems built on top of Symfony2. Several companies and developers
-have dedicated themselves to the project. Some of the companies can be found below:
+have dedicated themselves to the project. Some of the companies can be found below. Please
+feel invited to join the effort with or without the backing of a company behind you:
 </p>
 
 <h2>Sponsors</h2>
