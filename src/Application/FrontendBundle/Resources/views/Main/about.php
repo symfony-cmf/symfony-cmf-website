@@ -58,6 +58,11 @@ feel invited to join the effort with or without the backing of a company behind 
             <td>Paris, France | Nashville, TN USA</td>
             <td>Jonathan H. Wage, Fabien Potencier</td>
         </tr>
+        <tr>
+            <td>ServerGrove</td>
+            <td>Miami, Florida</td>
+            <td>Pablo Godel</td>
+        </tr>
     </tbody>
 </table>
 
