@@ -75,5 +75,4 @@ feel invited to join the effort with or without the backing of a company behind 
     <li><strong>IRC</strong>: #symfony-cmf @ irc.freenode.org</li>
     <li><strong>Users mailing list</strong>: http://groups.google.com/group/symfony-cmf-users</li>
     <li><strong>Devs mailing list</strong>: http://groups.google.com/group/symfony-cmf-devs</li>
-    <li><strong>Uservoice forum</strong>: https://symfonycmf.uservoice.com/forums/70879-general</li>
 </ul>
