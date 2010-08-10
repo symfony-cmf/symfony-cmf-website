@@ -35,7 +35,7 @@ class MainControllerTest extends WebTestCase
         $client = $this->createClient();
         $crawler = $client->request('GET', '/get-involved');
         $client->click($crawler->selectLink('Symfony2 CMF')->link());
-        $this->assertEquals('FrontendBundle:Main:index', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Application\FrontendBundle\Controller\MainController::indexAction', $client->getRequest()->attributes->get('_controller'));
     }
 
     public function testOnlyCurrentNavItemIsCurrent()
