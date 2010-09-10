@@ -8,6 +8,14 @@ by the Symfony community and has several sponsoring companies and prominent open
 leaders. You can read learn more about the project on the <a href="<?php echo $view->router->generate('about') ?>">about</a> page.
 </p>
 
+<h2>Mission Statement</h2>
+<p>
+    The Symfony CMF project makes it easier for <strong>developers</strong> to add <strong>CMS functionality</strong> to 
+    applications built with the <strong>Symfony2 PHP</strong> framework. Key development principles for the provided 
+    <strong>set of bundles</strong> are <strong>scalability</strong>, <strong>usability</strong>, 
+    <strong>documentation</strong> and <strong>testing</strong>
+</p>
+
 <h2>Links</h2>
 <ul>
     <li><a href="<?php echo $view->router->generate('about') ?>">About</a></li>
