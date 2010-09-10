@@ -31,7 +31,7 @@ feel invited to join the effort with or without the backing of a company behind 
         <tr>
             <td>knpLabs</td>
             <td>Nantes, France</td>
-            <td>Thibault Duplessis, Matthieu Bontemps</td>
+            <td>Thibault Duplessis, Matthieu Bontemps, Antoine Hérault</td>
         </tr>
         <tr>
             <td>Devorigin</td>
