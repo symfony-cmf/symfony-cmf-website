@@ -16,8 +16,4 @@ $loader->registerNamespaces(array(
     'Doctrine'                   => __DIR__.'/vendor/doctrine/lib',
     'Zend'                       => __DIR__.'/vendor/zend/library',
 ));
-$loader->registerPrefixes(array(
-    'Swift_' => __DIR__.'/vendor/swiftmailer/lib/classes',
-    'Twig_'  => __DIR__.'/vendor/twig/lib',
-));
 $loader->register();
