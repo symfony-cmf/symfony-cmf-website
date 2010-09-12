@@ -1,5 +1,5 @@
 <?php $view->extend('FrontendBundle::layout') ?>
-<?php $view->slots->set('title', 'About') ?>
+<?php $view['slots']->set('title', 'About') ?>
 
 <h2>About</h2>
 
