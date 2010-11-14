@@ -72,6 +72,7 @@ feel invited to join the effort with or without the backing of a company behind 
     <li><strong>GitHub</strong>: https://github.com/symfony-cmf/symfony-cmf</li>
     <li><strong>Website</strong>: http://cmf.symfony-project.org/
     <li><strong>Wiki</strong>: http://wiki.github.com/symfony-cmf/symfony-cmf/</li>
+    <li><strong>Issue Tracker</strong>: http://cmf.symfony-project.org/redmine/</li>
     <li><strong>IRC</strong>: #symfony-cmf @ irc.freenode.org</li>
     <li><strong>Users mailing list</strong>: http://groups.google.com/group/symfony-cmf-users</li>
     <li><strong>Devs mailing list</strong>: http://groups.google.com/group/symfony-cmf-devs</li>
