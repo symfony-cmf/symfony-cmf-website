@@ -2,7 +2,7 @@
 
 namespace Application\FrontendBundle;
 
-use Symfony\Framework\Bundle\Bundle;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class FrontendBundle extends Bundle
 {

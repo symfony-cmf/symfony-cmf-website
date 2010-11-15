@@ -8,16 +8,28 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('FrontendBundle:Main:index');
+        return $this->render('FrontendBundle:Main:index.twig');
     }
 
     public function getInvolvedAction()
     {
-        return $this->render('FrontendBundle:Main:getInvolved');
+        return $this->render('FrontendBundle:Main:getInvolved.twig');
     }
 
     public function aboutAction()
     {
-        return $this->render('FrontendBundle:Main:about');
+        return $this->render('FrontendBundle:Main:about.twig');
+    }
+
+    /**
+     * Renders the navigation
+     *
+     * @return Response
+     */
+    public function navigationAction()
+    {
+        $current = $this->container->get('request')->attributes->get('_route');
+
+        return $this->render('FrontendBundle:Main:navigation.php', array('current' => $current));
     }
 }

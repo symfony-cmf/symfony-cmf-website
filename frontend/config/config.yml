@@ -1,17 +1,19 @@
 parameters:
     kernel.include_core_classes: false
 
-kernel.config:
+frontend.config:  ~
+
+app.config:
     charset:             UTF-8
-    error_handler_level: null
-
-kernel.session:
-    lifetime: 2592000 # one month 
-
-web.config:
+    error_handler:       null
+    router: { resource: "%kernel.root_dir%/config/routing.yml" }
     validation:
         enabled: true
-    router: { resource: "%kernel.root_dir%/config/routing.yml" }
+    templating:
+        escaping:       htmlspecialchars
+    user:
+        session:
+            lifetime: 2592000 # one month
 
-web.templating:
-    escaping:       htmlspecialchars
+twig.config:
+    auto_reload: true

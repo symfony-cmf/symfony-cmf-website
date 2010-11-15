@@ -12,9 +12,9 @@ $menu = array(
         <?php if (0 === strncmp($route, 'http://', 7)): //absolute url ?>
         <li><a href="<?php echo $route ?>"><?php echo $label ?></a></li>
         <?php elseif($route === $current): // current route ?>
-        <li class="current"><a href="<?php echo $view->router->generate($route) ?>"><?php echo $label ?></a></li>
+        <li class="current"><a href="<?php echo $view['router']->generate($route) ?>"><?php echo $label ?></a></li>
         <?php else: ?>
-        <li><a href="<?php echo $view->router->generate($route) ?>"><?php echo $label ?></a></li>
+        <li><a href="<?php echo $view['router']->generate($route) ?>"><?php echo $label ?></a></li>
         <?php endif; ?>
     <?php endforeach; ?>
     </ul>
