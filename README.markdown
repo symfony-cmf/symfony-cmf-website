@@ -9,19 +9,16 @@ To get the website running, first clone the repository:
 
 ### Get vendors
 
-#### With Git 1.6+
+    $ php bin/vendors install
 
-    $ git submodule update --init --recursive
+### Create a parameters file
 
-#### With Git 1.5
+    $ cp app/config/parameters.ini.dist app/config/parameters.ini
 
-You should see a update_vendor.sh script, make sure it is executable and run it:
-
-    $ chmod 0777 update_vendor.sh
-    $ ./update_vendor.sh
+### Setup your permissions - see [Setting up Permissions](http://symfony.com/doc/current/book/installation.html#configuration-and-setup).
 
 ## Run tests
 
     You need PHPUnit 3.5 installed
 
-    $ phpunit -c frontend
+    $ phpunit -c app
