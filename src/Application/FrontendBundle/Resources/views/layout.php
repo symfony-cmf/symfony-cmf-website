@@ -14,7 +14,7 @@
                 <p id="slogan">Symfony2 Content Management Framework</p>
 
                 <div id="top-menu">
-                    <p><a href="http://www.symfony-reloaded.org" target="_BLANK">Symfony2</a> + <a href="http://www.doctrine-project.org/projects/orm/2.0/docs/en" target="_BLANK">Doctrine2</a></p>
+                    <p><a href="http://www.symfony.com" target="_BLANK">Symfony2</a> + <a href="http://www.doctrine-project.org/projects/orm/2.0/docs/en" target="_BLANK">Doctrine2</a></p>
                 </div>
             </div>
             <?php $view->output('FrontendBundle::navigation', array('current' => $view['request']->getParameter('_route'))) ?>

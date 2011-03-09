@@ -4,7 +4,7 @@
 <h2>About</h2>
 
 <p>
-The <a href="http://symfony-reloaded.org/">Symfony2</a> Content Management Framework project
+The <a href="http://symfony.com/">Symfony2</a> Content Management Framework project
 was started by a large group of Symfony
 developers looking to get an early start on collaborating together for the next generation
 of PHP Content Management Systems built on top of Symfony2. Several companies and developers
@@ -70,9 +70,9 @@ feel invited to join the effort with or without the backing of a company behind 
 
 <ul>
     <li><strong>GitHub</strong>: https://github.com/symfony-cmf/symfony-cmf</li>
-    <li><strong>Website</strong>: http://cmf.symfony-project.org/
+    <li><strong>Website</strong>: http://cmf.symfony.com/
     <li><strong>Wiki</strong>: http://wiki.github.com/symfony-cmf/symfony-cmf/</li>
-    <li><strong>Issue Tracker</strong>: http://cmf.symfony-project.org/redmine/</li>
+    <li><strong>Issue Tracker</strong>: http://cmf.symfony.com/redmine/</li>
     <li><strong>IRC</strong>: #symfony-cmf @ irc.freenode.org</li>
     <li><strong>Users mailing list</strong>: http://groups.google.com/group/symfony-cmf-users</li>
     <li><strong>Devs mailing list</strong>: http://groups.google.com/group/symfony-cmf-devs</li>
