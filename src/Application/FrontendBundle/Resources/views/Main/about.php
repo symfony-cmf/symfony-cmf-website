@@ -61,7 +61,7 @@ feel invited to join the effort with or without the backing of a company behind 
         <tr>
             <td><a href="http://www.ideato.it" title="Ideato">Ideato</a></td>
             <td>Cesena, Italy</td>
-            <td>Michele, Manuel, Francesco, Filippo</td>
+            <td>Michele, Manuel, Francesco, Filippo, Jacopo</td>
         </tr>
     </tbody>
 </table>
