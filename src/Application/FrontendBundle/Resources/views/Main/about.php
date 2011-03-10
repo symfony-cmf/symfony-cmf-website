@@ -63,6 +63,11 @@ feel invited to join the effort with or without the backing of a company behind 
             <td>Miami, Florida</td>
             <td>Pablo Godel</td>
         </tr>
+        <tr>
+            <td>Ideato</td>
+            <td>Cesena, Italy</td>
+            <td>Michele Orselli, Manuel Baldassarri</td>
+        </tr>
     </tbody>
 </table>
 
