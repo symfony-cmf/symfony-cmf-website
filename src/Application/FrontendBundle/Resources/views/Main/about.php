@@ -17,51 +17,51 @@ feel invited to join the effort with or without the backing of a company behind 
 <table>
     <thead>
         <tr>
-            <th>Company</th>
-            <th>Location</th>
-            <th>Team</th>
+            <th width="15%">Company</th>
+            <th width="20%">Location</th>
+            <th width="65%">Team</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>theGOOD</td>
+            <td><a href="http://www.thegood.com" title="The Good">theGOOD</a></td>
             <td>Portland, OR USA</td>
             <td>Kris Wallsmith</td>
         </tr>
         <tr>
-            <td>knpLabs</td>
+            <td><a href="http://www.knplabs.com" title="knpLabs">knpLabs</a></td>
             <td>France</td>
             <td>Florian Klein (docteurklein), Vincent Jousse (vjousse), Antoine Hérault (herzult), Matthieu Bontemps (mbontemps)</td>
         </tr>
         <tr>
-            <td>Pixel Fusion</td>
+            <td><a href="http://pixelfusion.co.nz" title="Pixel Fusion">Pixel Fusion</a></td>
             <td>Auckland, NZ</td>
             <td>Keri Henare</td>
         </tr>
         <tr>
-            <td>Iostudio</td>
+            <td><a href="http://www.iostudio.com" title="Iostudio">Iostudio</a></td>
             <td>Nashville, TN USA</td>
             <td>Ryan Weaver</td>
         </tr>
         <tr>
-            <td>Liip AG</td>
+            <td><a href="http://www.liip.ch" title="Liip AG">Liip AG</a></td>
             <td>Switzerland</td>
             <td>Lukas, Jordi, Ebi, David, Chregu</td>
         </tr>
         <tr>
-            <td>Sensio Labs</td>
+            <td><a href="http://www.sensiolabs.com" title="Sensio Labs">Sensio Labs</a></td>
             <td>Paris, France | Nashville, TN USA</td>
             <td>Jonathan H. Wage, Fabien Potencier</td>
         </tr>
         <tr>
-            <td>ServerGrove</td>
+            <td><a href="http://servergrove.com" title="ServerGrove">ServerGrove</a></td>
             <td>Miami, Florida</td>
             <td>Pablo Godel</td>
         </tr>
         <tr>
-            <td>Ideato</td>
+            <td><a href="http://www.ideato.it" title="Ideato">Ideato</a></td>
             <td>Cesena, Italy</td>
-            <td>Michele Orselli, Manuel Baldassarri</td>
+            <td>Michele, Manuel, Francesco, Filippo</td>
         </tr>
     </tbody>
 </table>
