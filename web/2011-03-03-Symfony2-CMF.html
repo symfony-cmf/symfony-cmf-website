@@ -2057,6 +2057,36 @@ SyntaxHighlighter.brushes.Xml.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
         </div>
 
         <div class="slide">
+            <h2>Document class</h2>
+            <pre class="brush: php">
+namespace Foo;
+
+/** @phpcr:Document() */
+class Bar
+{
+    /** @phpcr:Path */
+    public $path;
+
+    /** @phpcr:Node */
+    public $node;
+
+    /** @phpcr:String(name="name") */
+    private $name;
+
+    public function getName()
+    {
+      return $this-&gt;name;
+    }
+
+    public function setName($name)
+    {
+      $this-&gt;name = $name;
+    }
+}
+            </pre>
+        </div>
+
+        <div class="slide">
             <h2>CRUD API</h2>
             <pre class="brush: php">
 // Create
@@ -2082,10 +2112,10 @@ $documentManager-&gt;flush();
         <div class="slide">
             <h2>Traversal API</h2>
             <pre class="brush: php">
-public function getParents($path)
+public function getParents($document)
 {
     $root = $this-&gt;phpcrsession-&gt;getRootNode();
-    $node = $root-&gt;getNode($path);
+    $node = $document-&gt;node;
 
     $i = 0; $breadcrumb = array();
 
