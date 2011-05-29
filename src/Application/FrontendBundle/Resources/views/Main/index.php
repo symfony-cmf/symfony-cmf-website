@@ -19,7 +19,7 @@ leaders. You can read learn more about the project on the <a href="<?php echo $v
 <h2>Links</h2>
 <ul>
     <li><a href="<?php echo $view['router']->generate('about') ?>">About</a></li>
-    <li><a href="./2011-03-03-Symfony2-CMF.html">Slides</a></li>
+    <li><a href="./slides.html">Slides</a></li>
     <li><a href="<?php echo $view['router']->generate('get_involved') ?>">Get Involved</a></li>
     <li><a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Wiki</a></li>
 </ul>
