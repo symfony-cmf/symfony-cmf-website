@@ -1,2 +1,6 @@
-frontend/logs/*
-frontend/cache/*
+/app/logs/*
+/app/cache/*
+/app/config/parameters.ini
+/vendor/
+/web/bundles/
+/app/bootstrap.php.cache

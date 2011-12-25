@@ -1,2 +1,0 @@
-web:
-    resource: FrontendBundle/Resources/config/routing.yml
