@@ -1,5 +1,5 @@
 <?php
-namespace SymfonyCMF\FrontendBundle\Menu;
+namespace Symfony\Cmf\Bundle\FrontendBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
 use Symfony\Component\DependencyInjection\ContainerAware;

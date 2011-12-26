@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyCMF\FrontendBundle;
+namespace Symfony\Cmf\Bundle\FrontendBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

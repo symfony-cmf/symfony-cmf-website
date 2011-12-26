@@ -1,0 +1,4 @@
+parameters:
+    locale: en
+
+    secret: ThisTokenIsNotSoSecretChangeIt

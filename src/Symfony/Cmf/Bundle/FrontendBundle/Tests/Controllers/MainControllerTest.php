@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyCMF\FrontendBundle\Tests\Controller;
+namespace Symfony\Cmf\Bundle\FrontendBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -35,7 +35,7 @@ class MainControllerTest extends WebTestCase
         $client = $this->createClient();
         $crawler = $client->request('GET', $client->getContainer()->get('router')->generate('get_involved'));
         $client->click($crawler->selectLink('Symfony2 CMF')->link());
-        $this->assertEquals('SymfonyCMF\FrontendBundle\Controller\MainController::indexAction', $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals('Symfony\Cmf\Bundle\FrontendBundle\Controller\MainController::indexAction', $client->getRequest()->attributes->get('_controller'));
     }
 
     public function testOnlyCurrentNavItemIsCurrent()
