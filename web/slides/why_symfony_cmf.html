@@ -226,7 +226,6 @@
             $('.slideContent')
                 .height(slideH*0.95)
                 .css('margin', (slideH*0.05).toString() + "px auto 0");
-            if (options.baseWidth) {
             $('.slideContent img').each(function() {
                 var ratio, imgWidth, imgHeight;
                 imgWidth = $.data(this, 'origWidth');
@@ -245,7 +244,6 @@
                     $(this).css('height',  Math.round(ratio * slideH * 0.9));
                 }
             });
-}
             $('.slideContent embed').each(function() {
                 var ratio, imgWidth, newWidth, $el, $parent, $object;
                 $el = $(this);
@@ -1896,6 +1894,14 @@ SyntaxHighlighter.brushes.Xml.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
             </ul></div>
 
         <div class="slide">
+            <div class="vcenter">
+                <h2>Note the Drupal guys agree and are actually collaborating with Symfony2 to improve</h2>
+
+                <ul><li>The "sucks for developers" slide criticisms are all valid. And we're trying to fix them in D8. <a href="https://twitter.com/#!/Crell/statuses/157216206993108993">Larry Garfield (aka Crell)</a></li>
+                </ul></div>
+        </div>
+
+        <div class="slide">
             <h2>Do we also suffer from NIH?</h2>
             <ul><li>Focus on solving core issues of Drupal</li>
                 <li>Based ourselves as much on standard tools and specs</li>
@@ -1957,7 +1963,7 @@ SyntaxHighlighter.brushes.Xml.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
         <div class="slide">
             <h2>PHPCR implementations</h2>
             <ul><li>Jackalope
-                    <ul><li>Davex (Jackrabbit) transport layer</li>
+                    <ul><li>Jackrabbit (via Http WebDav/Davex) transport layer</li>
                         <li>Doctrine DBAL transport layer</li>
                     </ul></li>
                 <li>Midgard2 PHPCR</li>
@@ -1982,8 +1988,8 @@ SyntaxHighlighter.brushes.Xml.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
 
         <div class="slide">
             <h2>Interest is huge!</h2>
-            <ul><li>Over 150 people on the mailinglist</li>
-                <li>About 20 more per month</li>
+            <ul><li>Almost 250 people on the mailinglist</li>
+                <li>About 10 more per month</li>
                 <li>All key decisions have been made in public forums</li>
                 <li>Multiple people are working and committing to all parts of the code</li>
             </ul></div>
@@ -2000,7 +2006,7 @@ SyntaxHighlighter.brushes.Xml.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
 
         <div class="slide">
             <h2>Eat your own dog food</h2>
-            <ul><li>Liip and Ideato are currently rebuilding their websites on top of the CMF</li>
+            <ul><li>Liip has rebuilding their <a href="http://liip.ch">website</a> on top of the CMF</li>
             </ul></div>
 
         <div class="slide" style="text-align:center">
