@@ -2,9 +2,12 @@ homepage:
     pattern:  /
     defaults: { _controller: FrontendBundle:Main:index }
 
-homepage2:
+slides:
     pattern:  /slides.html
-    defaults: { _controller: FrontendBundle:Main:index }
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: homepage
+        permanent: true # this for 301
 
 get_involved:
     pattern:  /get-involved
