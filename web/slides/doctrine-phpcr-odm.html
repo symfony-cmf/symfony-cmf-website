@@ -2001,23 +2001,16 @@ $dm-&gt;deleteVersion($illegal);
         <div class="slide">
             <h2>Search via SQL2 API</h2>
             <pre class="brush: php">
-$queryManager = $workspace-&gt;getQueryManager();
-
 $sql = "SELECT * FROM [nt:unstructured]
     WHERE [nt:unstructured].text = 'foo!'
     ORDER BY [nt:unstructured].title";
-$query = $queryManager-&gt;createQuery($sql, 'JCR-SQL2');
+$query = $dm-&gt;createQuery($sql, 'JCR-SQL2');
 $query-&gt;setLimit($limit);
 $query-&gt;setOffset($offset);
-$queryResult = $query-&gt;execute();
 
-foreach ($queryResult-&gt;getRows() as $row) {
-    $doc = $dm-&gt;find(null, $row-&gt;getPath());
-}
+$collection = $dm-&gt;getDocumentsByQuery($query);
             </pre>
         </div>
-
-        <!-- TODO: QOM and query builder -->
 
         <div class="slide">
             <h2>Translation</h2>
