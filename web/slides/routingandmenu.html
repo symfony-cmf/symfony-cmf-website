@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><!-- To render these slides you need Slippy https://github.com/Seldaek/slippy --><title>Symfony2 CMF - Routing and Navigation Menu</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="author" content="Symfony CMF"><meta name="email" content="Symfony2 CMF-devs@googlegroups.com"><meta name="date" content="2012-01-11"><meta name="venue" content="The Internets"><!-- Slippy core file and dependencies --><script type="text/javascript">/*!
+<html><head><!-- To render these slides you need Slippy https://github.com/Seldaek/slippy --><title>Symfony2 CMF - Routing and Navigation Menu</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="author" content="Symfony2 CMF"><meta name="email" content="symfony-cmf-devs@googlegroups.com"><meta name="date" content="2012-01-11"><meta name="venue" content="The Internets"><!-- Slippy core file and dependencies --><script type="text/javascript">/*!
  * jQuery JavaScript Library v1.5.1
  * http://jquery.com/
  *
@@ -226,6 +226,7 @@
             $('.slideContent')
                 .height(slideH*0.95)
                 .css('margin', (slideH*0.05).toString() + "px auto 0");
+            if (options.baseWidth) {
             $('.slideContent img').each(function() {
                 var ratio, imgWidth, imgHeight;
                 imgWidth = $.data(this, 'origWidth');
@@ -244,6 +245,7 @@
                     $(this).css('height',  Math.round(ratio * slideH * 0.9));
                 }
             });
+}
             $('.slideContent embed').each(function() {
                 var ratio, imgWidth, newWidth, $el, $parent, $object;
                 $el = $(this);
@@ -1877,7 +1879,7 @@ SyntaxHighlighter.brushes.Xml.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
             <h2>
                 Symfony2 CMF routing concept
             </h2>
-            <ul><li>optionally separate content tree from navigation tree</li>
+            <ul><li>possible to separate content tree from navigation tree</li>
                 <li>navigation tree consists of references to the content tree</li>
                 <li>
                     <ul><li>multi site: f.e. desktop, tablet, phone ..</li>
@@ -1993,7 +1995,6 @@ interface ControllerResolverInterface
                 </ul></li>
             <li>pimp KnpMenu with breadcrumb twig function (<a href="https://github.com/KnpLabs/KnpMenu/issues/24">github</a>)</li>
             </ul></div>
-
 
         <div class="slide" style="text-align:left">
             <h2>Conclusions</h2>

@@ -226,6 +226,7 @@
             $('.slideContent')
                 .height(slideH*0.95)
                 .css('margin', (slideH*0.05).toString() + "px auto 0");
+            if (options.baseWidth) {
             $('.slideContent img').each(function() {
                 var ratio, imgWidth, imgHeight;
                 imgWidth = $.data(this, 'origWidth');
@@ -244,6 +245,7 @@
                     $(this).css('height',  Math.round(ratio * slideH * 0.9));
                 }
             });
+}
             $('.slideContent embed').each(function() {
                 var ratio, imgWidth, newWidth, $el, $parent, $object;
                 $el = $(this);
@@ -1864,7 +1866,7 @@ SyntaxHighlighter.brushes.Xml.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
 
         <div class="slide" style="text-align:center">
             <h2>PHPCR provides a <strong>standardized API</strong> that can be used by any PHP content management system to interface with any content repository.</h2>
-            <hr><p>Understanding PHPCR helps to understand the phpcr-odm. See <a href="http://phpcr.github.com/slides.html">PHPCR slides</a> for an introduction.</p>
+            <hr><p>Understanding PHPCR helps to understand the PHPCR ODM. See <a href="http://phpcr.github.com/slides.html">PHPCR slides</a> for an introduction.</p>
         </div>
 
         <div class="slide" style="text-align:left">
@@ -1884,9 +1886,9 @@ SyntaxHighlighter.brushes.Xml.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
             <pre class="brush: php">
 namespace Foo;
 
-use Doctrine\ODM\PHPCR\Mapping as PHPCR
+use Doctrine\ODM\PHPCR\Mapping as PHPCR;
 
-/** @PHPCR\Document(alias="bar") */
+/** @PHPCR\Document */
 class Bar
 {
     /** @PHPCR\Id */
@@ -1895,11 +1897,11 @@ class Bar
     /**
      * presence of this annotation changes default id strategy
      * to "parent and name" strategy
-     * @PHPCRODM\ParentDocument
+     * @PHPCR\ParentDocument
      */
     public $parent;
 
-    /** @PHPCRODM\Nodename */
+    /** @PHPCR\Nodename */
     public $nodename;
 
     /** @PHPCR\String */
@@ -1935,18 +1937,18 @@ $dm-&gt;flush();
         <div class="slide">
             <h2>Traversal and References</h2>
             <pre class="brush: php">
-/** @PHPCR\Document(alias="bar") */
+/** @PHPCR\Document */
 class Bar
 {
     /**
      * Map the child node named logo
-     * @PHPCR\Child(filter=logo)
+     * @PHPCR\Child(filter="logo")
      */
     public $logo;
 
     /**
      * All child nodes starting with "a".
-     * @PHPCR\Children(filter=a*)
+     * @PHPCR\Children(filter="a*")
      */
     public $children;
 
@@ -1964,7 +1966,7 @@ class Bar
         <div class="slide">
             <h2>Versioning API: basics</h2>
             <pre class="brush: php">
-// @Document(versioningType=simple)
+// @Document(versioningType="simple")
 $document = $dm-&gt;find(null, $id);
 
 // create a new version
@@ -1977,7 +1979,7 @@ $history = $dm-&gt;getAllLinearVersions($document, 2);
 // get a document in an old state
 $version = reset($history);
 $pre = $dm-&gt;findVersionByName($version['versionname']);
-echo $pre-&gt;getPropertyValue('text');
+echo $pre-&gt;text;
             </pre>
         </div>
 
@@ -2013,32 +2015,38 @@ $collection = $dm-&gt;getDocumentsByQuery($query);
         </div>
 
         <div class="slide">
+            <h2>And more...</h2>
+            <ul><li>Query Builder</li> <!-- TODO: QOM and query builder -->
+                <li>Transactions</li>  <!-- TODO: using phpcr transactions -->
+            </ul></div>
+
+        <div class="slide">
             <h2>Translation</h2>
             <pre class="brush: php">
-/** @PHPCRODM\Document(translator="attribute") */
+/** @PHPCR\Document(translator="attribute") */
 class Article
 {
     /**
      * The language this document currently is in
-     * @PHPCRODM\Locale
+     * @PHPCR\Locale
      */
     public $locale;
 
     /**
      * Untranslated property
-     * @PHPCRODM\Date
+     * @PHPCR\Date
      */
     public $publishDate;
 
     /**
      * Translated property
-     * @PHPCRODM\String(translated=true)
+     * @PHPCR\String(translated=true)
      */
     public $topic;
 
     /**
      * Language specific image
-     * @PHPCRODM\Binary(translated=true)
+     * @PHPCR\Binary(translated=true)
      */
     public $image;
 }
@@ -2096,7 +2104,7 @@ namespace Foo;
 use Doctrine\ODM\PHPCR\DocumentRepository;
 use Doctrine\ODM\PHPCR\Id\RepositoryIdInterface;
 
-/** @Document(repositoryClass="Foo\BarRepository") */
+/** @PHPCR\Document(repositoryClass="Foo\BarRepository") */
 class Bar
 {
     /** @PHPCR\Id(strategy="repository") */

@@ -226,6 +226,7 @@
             $('.slideContent')
                 .height(slideH*0.95)
                 .css('margin', (slideH*0.05).toString() + "px auto 0");
+            if (options.baseWidth) {
             $('.slideContent img').each(function() {
                 var ratio, imgWidth, imgHeight;
                 imgWidth = $.data(this, 'origWidth');
@@ -244,6 +245,7 @@
                     $(this).css('height',  Math.round(ratio * slideH * 0.9));
                 }
             });
+}
             $('.slideContent embed').each(function() {
                 var ratio, imgWidth, newWidth, $el, $parent, $object;
                 $el = $(this);
