@@ -11,9 +11,24 @@ class MainController extends Controller
         return $this->render('FrontendBundle:Main:index.html.twig');
     }
 
+    public function getNewsAction()
+    {
+        return $this->render('FrontendBundle:Main:news.html.twig');
+    }
+
     public function getInvolvedAction()
     {
         return $this->render('FrontendBundle:Main:getInvolved.html.twig');
+    }
+
+    public function getStartedAction()
+    {
+        return $this->render('FrontendBundle:Main:getStarted.html.twig');
+    }
+
+    public function newsAction()
+    {
+        return $this->render('FrontendBundle:Main:news.html.twig');
     }
 
     public function aboutAction()

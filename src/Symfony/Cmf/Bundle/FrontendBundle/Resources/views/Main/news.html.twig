@@ -1,0 +1,74 @@
+{% extends "FrontendBundle::layout.html.twig" %}
+{% block title %}News{% endblock %}
+
+{% block body %}
+    <h2>News</h2>
+
+    <h3>Symfony CMF at the Create.js hackathon in Berlin</h3>
+    <div class="subtitle"><a href="https://connect.sensiolabs.com/profile/lsmith">Lukas Kahwe Smith</a> – July 21, 2012</div>
+
+    <p>
+        The Symfony CMF has featured integration with create.js and VIE for inline editing for quite sometime
+        already. As a matter of fact <a href="http://liip.ch">Liip</a> is one of the big contributors thanks to the
+        <a href="http://blog.liip.ch/archive/2011/12/23/what-liip-did-after-winning-the-iks-semantics-ux-contest.html">UX design prize</a>
+        Liip won showcasing our work integrating create.js into the Symfony CMF sandbox. David represented the CMF project
+        at the <a href="http://lanyrd.com/2012/createjs-hackathon-berlin/">hackathon in Berlin</a>. You can read some more
+        information on <a href="http://bergie.iki.fi/blog/createjs-update/">what is going on with create.js</a> on Henri's blog.
+    </p>
+
+    <h3>Jackalope Doctrine DBAL now compatible with PostgreSQL and SQLite</h3>
+    <div class="subtitle"><a href="https://connect.sensiolabs.com/profile/lsmith">Lukas Kahwe Smith</a> – July 19, 2012</div>
+
+    <p>
+        Thanks to the work of <a href="https://github.com/cryptocompress">cryptocompress</a> the Jackalope
+        test suite for the Doctrine DBAL implementation now also
+        <a href="http://travis-ci.org/#!/jackalope/jackalope-doctrine-dbal">runs with PostgreSQL and SQLite</a>!
+        Previously it only passed using MySQL for storage. This is a major milestone as once you can support 3
+        so radically different RDBMS there is little doubt left that we cannot easily support others too. More
+        importantly this was all done in a very short time frame and we now have worked around many of the
+        special gotcha's of MySQL. As a result we expect that adding support for other RDBMS will only
+        take a minimal amount of time.
+    </p>
+
+    <h3>Symfony CMF sandbox now running with multiple different PHPCR implementations</h3>
+    <div class="subtitle"><a href="https://connect.sensiolabs.com/profile/lsmith">Lukas Kahwe Smith</a> – June 12, 2012</div>
+
+    <p>
+        One of the fundamental ideas of PHPCR is that there can be multiple implementations that
+        from an API act and behave exactly the same, but can be optimized for every different
+        scalability and server requirements. We have been adding functional tests for the sandbox,
+        but initially only tested using the <a href="https://github.com/jackalope/jackalope-jackrabbit">Jackrabbit</a>
+        based PHPCR implementation. In the past weeks we have now also
+        <a href="http://travis-ci.org/#!/symfony-cmf/cmf-sandbox">enabled running the same tests</a>
+        against the <a href="https://github.com/jackalope/jackalope-doctrine-dbal">Doctrine DBAL</a> and
+        <a href="http://midgard-project.org/phpcr/">Midgard</a> implementations. The key thing is
+        that all we had to do was adjust the configuration, no code changes were necessary. This is
+        the best validation of the concept of PHPCR possible! It proofs that the same code can run
+        against now 3 different implementations of PHPCR!
+    </p>
+
+    <h3>Symfony CMF featured on symfony.com</h3>
+    <div class="subtitle"><a href="https://connect.sensiolabs.com/profile/lsmith">Lukas Kahwe Smith</a> – June 05, 2012</div>
+
+    <p>
+    David has written a <a href="http://symfony.com/blog/the-symfony-content-management-framework-is-getting-ready#">blog post</a>
+    for symfony.com on the current state of the Symfony CMF project and our recent release of 1.0.0alpha.
+    He also mentions the work that Frederic Haddad has been doing leveraging the CMF for his clients that
+    he illustrates in this <a href="http://www.youtube.com/watch?v=i5Y5QPcYWHw">short video</a>. Looks
+    like the Symfony CMF is ready for prime time!
+    </p>
+
+    <h3>Symfony CMF 1.0.0alpha1 released</h3>
+    <div class="subtitle"><a href="https://connect.sensiolabs.com/profile/lsmith">Lukas Kahwe Smith</a> – June 04, 2012</div>
+
+    <p>
+        David has been hard at work doing the last changes in our routing component that adds
+        dynamic routing capabilities to the Symfony2 routing component that by default only handles
+        static routing. We now have tagged all relevant Bundles of the CMF which we are using
+        inside the sandbox. Speaking of the sandbox its now aligned with the latest version of
+        the Symfony2 Standard Edition which means its also using composer for dependency management.
+        Note the <a href="http://packagist.org/packages/symfony-cmf/symfony-cmf">symfony-cmf</a> package
+        is just a "meta" package to quickly be able to add a dependency on all the CMF packages.
+    </p>
+
+{% endblock %}

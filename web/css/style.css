@@ -505,3 +505,5 @@ ol.commentlist {
 	height:0; 
 	content: "."; 
 }
+
+.subtitle { margin-left: 15px; }

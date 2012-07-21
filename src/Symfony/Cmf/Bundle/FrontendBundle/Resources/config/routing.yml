@@ -9,9 +9,17 @@ slides:
         route: homepage
         permanent: true # this for 301
 
+get_started:
+    pattern:  /get-started
+    defaults: { _controller: FrontendBundle:Main:getStarted }
+
 get_involved:
     pattern:  /get-involved
     defaults: { _controller: FrontendBundle:Main:getInvolved }
+
+news:
+    pattern:  /news
+    defaults: { _controller: FrontendBundle:Main:news }
 
 about:
     pattern:  /about
