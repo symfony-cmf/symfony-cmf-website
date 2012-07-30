@@ -16,6 +16,7 @@ class Builder extends ContainerAware
         $menu->addChild('Get Started', array('route' => 'get_started'));
         $menu->addChild('Get Involved', array('route' => 'get_involved'));
         $menu->addChild('About', array('route' => 'about'));
+        $menu->addChild('Docs', array('uri' => 'http://symfony-cmf.readthedocs.org'));
         $menu->addChild('Wiki', array('uri' => 'http://wiki.github.com/symfony-cmf/symfony-cmf'));
         $menu->addChild('Demo', array('uri' => 'http://cmf.liip.ch'));
 
