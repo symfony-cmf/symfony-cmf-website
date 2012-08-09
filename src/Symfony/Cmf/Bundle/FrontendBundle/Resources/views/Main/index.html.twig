@@ -21,6 +21,23 @@
         <strong>testing</strong>.
     </p>
 
+    <h2>Try it out</h2>
+    <pre>
+        Get the code
+
+        curl -s http://getcomposer.org/installer | php --
+        php composer.phar create-project symfony-cmf/standard-edition path/to/install
+
+        This will fetch the main project and all it's dependencies.
+
+        The next step is to setup the database:
+
+        app/console doctrine:database:create
+        app/console doctrine:phpcr:init:dbal
+        app/console doctrine:phpcr:register-system-node-types
+        app/console doctrine:phpcr:fixtures:load
+    </pre>
+
     <h2>Slides</h2>
     <ul>
         <li><a href="./slides/why_symfony_cmf.html">Why Symfony2 CMF?</a></li>
