@@ -26,8 +26,8 @@ class AppKernel extends Kernel
             new Symfony\Cmf\Bundle\ContentBundle\SymfonyCmfContentBundle(),
             new Symfony\Cmf\Bundle\SimpleCmsBundle\SymfonyCmfSimpleCmsBundle(),
 
-            // and the sandbox bundle
-            new Acme\MainBundle\AcmeMainBundle(),
+            // and the website specific bundle
+            new Cmf\MainBundle\CmfMainBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

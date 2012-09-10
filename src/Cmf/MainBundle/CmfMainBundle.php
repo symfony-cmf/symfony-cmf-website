@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Acme\MainBundle
+ * This file is part of the Cmf\MainBundle
  *
  * (c) Lukas Kahwe Smith <smith@pooteeweet.org>
  *
@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Acme\MainBundle;
+namespace Cmf\MainBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AcmeMainBundle extends Bundle
+class CmfMainBundle extends Bundle
 {
 }
