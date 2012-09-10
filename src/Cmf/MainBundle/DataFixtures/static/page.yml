@@ -9,10 +9,21 @@ static:
                 <p>There is a couple of bundles to look into in the vendor/symfony-cmf/ folder. Look at the main README but also at the individual README files of the bundles.</p>
 
     company:
-        name: "company"
-        title: "The Company"
+            name: "company"
+            title: "The Company"
+            content: |
+                <h2>Who is behind the Symfony CMF project?</h2>
+                <p>The content management framework is a joint effort by various developers and companies</p>
+                <h2>dicta facete eu vis</h2>
+                <p>Sonet affert an has. Nam id odio nisl eruditi. Te quo falli propriae delectus, ut animal meliore est, agam decore in sea. Prima debet fierent id sed. Usu debet paulo argumentum ex, solum homero in sed, modus laboramus et usu. Brute legendos contentiones ex pri.
+
+                Ut suscipit honestatis sed, per id facer euismod probatus. Ne persius posidonium eum, has elaboraret philosophia eu. No eam wisi choro labores. Sit id oratio aperiam electram, quodsi deterruisset no eum, vel modo quaeque ei</p>
+
+    test:
+        name: "test"
+        title: "A test"
         content: |
-            <h2>Who is behind the Symfony CMF project?</h2>
+            <h2>This is a test</h2>
             <p>The content management framework is a joint effort by various developers and companies</p>
             <h2>dicta facete eu vis</h2>
             <p>Sonet affert an has. Nam id odio nisl eruditi. Te quo falli propriae delectus, ut animal meliore est, agam decore in sea. Prima debet fierent id sed. Usu debet paulo argumentum ex, solum homero in sed, modus laboramus et usu. Brute legendos contentiones ex pri.

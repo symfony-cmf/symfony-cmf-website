@@ -3,12 +3,10 @@
 <head>
     <meta name="viewport" content=" minimum-scale=1.0, maximum-scale=1.0, width=device-width; user-scalable=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{% block title %}{{ title|default('Simple CMS')|striptags }}{% endblock %}</title>
+    <title>{% block title %}{{ title|default('Simple CMS')|striptags }}{% endblock %} | Symfony2 CMF</title>
 
     {% block includes %}
-        <link href="{{ asset('bundles/acmemain/bootstrap/css/bootstrap.css') }}" type="text/css" rel="stylesheet"/>
-        <link href="{{ asset('bundles/acmemain/bootstrap/css/bootstrap-responsive.css') }}" type="text/css" rel="stylesheet"/>
-        <link href="{{ asset('bundles/acmemain/css/style.css') }}" type="text/css" rel="stylesheet"/>
+        <link href="{{ asset('bundles/cmfmain/css/style.css') }}" type="text/css" rel="stylesheet"/>
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -17,53 +15,35 @@
     {% endblock %}
 </head>
 <body>
-<div class="container">
 
-    <div id="top" class="row">
-        <div class="span12">
-            <ul id="skiplinks" class="pull-left hidden-desktop">
-                <li><a href="#content" title="Go to main content">Skip to content</a></li>
-                <li><a href="#navigation" title="go to navigation">Skip to navigation</a></li>
-            </ul>
-        </div>
 
-    </div>
 
-    <div class="row">
-        <div id="banner" class="span12">
-            <a href="https://github.com/symfony-cmf/symfony-cmf-standard"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
+<div id="wrap">
+    <div id="header">
+        <h1 id="logo-text"><a href="{{ path('', {'content_id': '/cms/simple'}) }}">Symfony2 CMF</a></h1>
+        <p id="slogan">Symfony2 Content Management Framework</p>
 
-            <div class="hero-unit">
-                <h1 id="logo-text"><a href="{{ path('', {'content_id': '/cms/simple'}) }}">Standard Edition</a></h1>
-
-                <p id="slogan">Symfony2 Content Management Framework</p>
-            </div>
+        <div id="top-menu">
+            <p><a href="http://www.symfony.com" target="_BLANK">Symfony2</a> + <a href="http://www.doctrine-project.org/projects/orm/2.0/docs/en" target="_BLANK">Doctrine2</a></p>
         </div>
     </div>
 
-    <div class="row">
-        <div id="content-container" class="span12 boxed">
-            <div class="row">
-                <div id="navigation" class="span3">
-                    <div class="well">
-                        {% block navigation %}
-                            <h2>Navigation</h2>
-                            {{ knp_menu_render('simple') }}
-                        {% endblock %}
-                    </div>
-                </div>
-                <div class="span9">
-                    <div id="content">
-                        <div class="inner">
-                            {% block content %}
-                            {% endblock %}
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div id="nav">
+
+        {{ knp_menu_render('simple', {}, 'custom') }}
+    </div>
+
+    <div id="content">
+        <div id="main">
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
+
+    <div id="footer"></div>
 </div>
+
+
 
 </body>
 </html>

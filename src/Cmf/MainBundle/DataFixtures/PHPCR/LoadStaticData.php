@@ -34,7 +34,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface
         $overview = $data['static']['home'];
         $home = new Page();
         $home->setPosition($base, $homename);
-        $home->setLabel($overview['name']);
+        $home->setLabel($overview['title']);
         $home->setTitle($overview['title']);
         $home->setBody($overview['content']);
         unset($data['static']['home']);
@@ -45,8 +45,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface
             $page = new Page();
             $page->setPosition($home, $overview['name']);
 
-            $page->setLabel($overview['name']);
-            $page->setName($overview['name']);
+            $page->setLabel($overview['title']);
 
             $page->setTitle($overview['title']);
             $page->setBody($overview['content']);

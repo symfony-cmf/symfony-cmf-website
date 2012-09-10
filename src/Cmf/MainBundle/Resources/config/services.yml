@@ -1,0 +1,8 @@
+services:
+    cmf_main.menu_renderer:
+        # The class implements Knp\Menu\Renderer\RendererInterface
+        class: Cmf\MainBundle\Menu\CustomRenderer
+        arguments: [ @twig, %knp_menu.renderer.twig.template%, %knp_menu.renderer.twig.options% ] # set your own dependencies here
+        tags:
+            # The alias is what is used to retrieve the menu
+            - { name: knp_menu.renderer, alias: custom }
