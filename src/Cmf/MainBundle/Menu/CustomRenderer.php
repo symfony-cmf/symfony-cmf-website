@@ -21,11 +21,24 @@ class CustomRenderer extends TwigRenderer
 
     public function render(ItemInterface $item, array $options = array())
     {
-        $home = new MenuItem('Home', new MenuFactory());
+        $menuFactory = new MenuFactory();
+        $home = new MenuItem('Home', $menuFactory);
         $home->setUri($item->getUri());
         $item->addChild($home);
         $home->moveToFirstPosition();
+
+        $docs = new MenuItem('Docs', $menuFactory);
+        $docs->setUri('http://symfony-cmf.readthedocs.org');
+        $item->addChild($docs);
+
+        $wiki = new MenuItem('Wiki', $menuFactory);
+        $wiki->setUri('http://wiki.github.com/symfony-cmf/symfony-cmf');
+        $item->addChild($wiki);
+
+        $demo = new MenuItem('Demo', $menuFactory);
+        $demo->setUri('http://cmf.liip.ch/');
+        $item->addChild($demo);
+
         return parent::render($item, $options);
     }
-
 }
