@@ -1,0 +1,41 @@
+{
+    "name": "symfony-cmf/standard-edition",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.1.*",
+        "twig/extensions": "dev-master",
+        "symfony/monolog-bundle": "dev-master",
+        "sensio/distribution-bundle": "dev-master",
+        "symfony-cmf/symfony-cmf": "1.0.*",
+        "symfony-cmf/simple-cms-bundle": "1.0.*",
+        "jackalope/jackalope-doctrine-dbal":"dev-master",
+        "doctrine/doctrine-bundle": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "liip/functional-test-bundle": "dev-master",
+        "lunetics/locale-bundle": "dev-master"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "symfony-assets-install": "symlink"
+    }
+}
