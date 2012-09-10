@@ -16,7 +16,6 @@ class AppKernel extends Kernel
 
             new Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new Lunetics\LocaleBundle\LuneticsLocaleBundle(),
 
             // enable cmf bundles
             new Symfony\Cmf\Bundle\RoutingExtraBundle\SymfonyCmfRoutingExtraBundle(),

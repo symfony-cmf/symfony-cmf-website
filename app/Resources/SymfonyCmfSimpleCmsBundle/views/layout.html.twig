@@ -26,13 +26,7 @@
                 <li><a href="#navigation" title="go to navigation">Skip to navigation</a></li>
             </ul>
         </div>
-        <div id="language_selector" class="pull-right">
-            {% block language_selector %}
-                {% if page is defined %}
-                    {{ locale_switcher('', {content: page}) }}
-                {% endif %}
-            {% endblock %}
-        </div>
+
     </div>
 
     <div class="row">
