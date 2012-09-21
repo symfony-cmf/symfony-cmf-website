@@ -153,8 +153,8 @@ static:
                 </p>
 
     getstarted:
-        name: "getstarted"
-        title: "Get started"
+        name: "get-started"
+        title: "Get Started"
         content: |
             <h2>Get started</h2>
 
@@ -175,8 +175,8 @@ static:
             </ol>
 
     getinvolved:
-            name: "getinvolved"
-            title: "Get involved"
+            name: "get-involved"
+            title: "Get Involved"
             content: |
                 <h2>Get involved</h2>
 
