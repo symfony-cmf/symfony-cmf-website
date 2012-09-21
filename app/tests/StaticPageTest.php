@@ -1,21 +1,9 @@
 <?php
 
-namespace Sandbox;
+namespace Cmf;
 
 class StaticPageTest extends WebTestCase
 {
-    public function testRedirectToHomepage()
-    {
-        $client = $this->createClient();
-
-        $client->request('GET', '/');
-
-        $this->assertEquals(301, $client->getResponse()->getStatusCode());
-
-        $client->followRedirect();
-
-        $this->assertEquals('http://localhost/en', $client->getRequest()->getUri());
-    }
 
     /**
      * @dataProvider contentDataProvider
@@ -28,18 +16,54 @@ class StaticPageTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
-        $this->assertCount(1, $crawler->filter(sprintf('h1:contains("%s")', $title)), 'Page does not contain an h1 tag with: '.$title);
+        $this->assertCount(1, $crawler->filter(sprintf('h2:contains("%s")', $title)), 'Page does not contain an h2 tag with: '.$title);
     }
 
     public function contentDataProvider()
     {
         return array(
-            array('/en', 'Welcome to the CMF Standard Edition'),
-            array('/en/about', 'Some information about us'),
-            array('/en/contact', 'A contact page'),
-            array('/en/contact/map', 'A map of a location in the US'),
-            array('/de/contact/map', 'Eine Karte von einem Ort in Deutschland'),
-            array('/en/contact/team', 'A team page'),
+            array('/', 'The Symfony CMF Project'),
+            array('/news', 'News'),
+            array('/get-started', 'Get started'),
+            array('/get-involved', 'Get involved'),
+            array('/about', 'About'),
         );
     }
+
+    public function testAboutShowsTableOfSponsors()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/about');
+        $this->assertTrue($client->getResponse()->isSuccessful());
+        $this->assertEquals(1, $crawler->filter('table thead th:contains("Company")')->count());
+        $this->assertEquals(1, $crawler->filter('table tbody tr:contains("Liip AG")')->count());
+    }
+
+    public function testGetInvolvedShowsALinkToGithubWiki()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/get-involved');
+        $this->assertTrue($client->getResponse()->isSuccessful());
+        $this->assertEquals(1, $crawler->filter('a:contains("Github Wiki")')->count());
+    }
+
+    public function testClickSiteTitleGoToHomepage()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/get-started');
+        $this->assertTrue($client->getResponse()->isSuccessful());
+        $crawler = $client->click($crawler->selectLink('Symfony2 CMF')->link());
+        $this->assertCount(1, $crawler->filter(sprintf('h2:contains("%s")', 'The Symfony CMF Project')));
+    }
+
+    public function testOnlyCurrentNavItemIsCurrent()
+    {
+        $client = $this->createClient();
+        $crawler = $client->request('GET', '/get-involved');
+        $this->assertTrue($client->getResponse()->isSuccessful());
+        $this->assertEquals(1, $crawler->filter('#nav li.current a:contains("Get Involved")')->count());
+        $this->assertEquals(0, $crawler->filter('#nav li.current a:contains("Home")')->count());
+        $this->assertEquals(0, $crawler->filter('#nav li.current a:contains("About")')->count());
+    }
+
 }

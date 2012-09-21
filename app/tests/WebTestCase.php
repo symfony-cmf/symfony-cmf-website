@@ -1,6 +1,6 @@
 <?php
 
-namespace Sandbox;
+namespace Cmf;
 
 use Liip\FunctionalTestBundle\Test\WebTestCase as BaseWebTestCase;
 use Doctrine\Common\DataFixtures\Executor\PHPCRExecutor;
@@ -17,7 +17,7 @@ abstract class WebTestCase extends BaseWebTestCase
         }
 
         $this->loadFixtures(array(
-            'Acme\MainBundle\DataFixtures\PHPCR\LoadSimpleCmsData',
+            'Cmf\MainBundle\DataFixtures\PHPCR\LoadStaticData',
         ), null, 'doctrine_phpcr');
 
         self::$fixturesLoaded = true;
