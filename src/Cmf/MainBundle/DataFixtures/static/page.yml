@@ -26,20 +26,26 @@ static:
 
                 <h2>Try it out</h2>
                 <pre>
-                    Get the code
 
-                    curl -s http://getcomposer.org/installer | php --
-                    php composer.phar create-project symfony-cmf/standard-edition path/to/install
+                    Get the code:
 
-                    This will fetch the main project and all it's dependencies.
+                        $ git clone git://github.com/symfony-cmf/symfony-cmf-website.git
+                        $ cd symfony-cmf-website
 
-                    The next step is to setup the database:
+                        $ curl -s http://getcomposer.org/installer | php --
+                        $ php composer.phar install
 
-                    app/console doctrine:database:create
-                    app/console doctrine:phpcr:init:dbal
-                    app/console doctrine:phpcr:register-system-node-types
-                    app/console doctrine:phpcr:fixtures:load
+                    This will fetch the vendors and all it's dependencies.
+
+                    Setup the database:
+
+                        app/console doctrine:database:create
+                        app/console doctrine:phpcr:init:dbal
+                        app/console doctrine:phpcr:register-system-node-types
+                        app/console doctrine:phpcr:fixtures:load
+
                 </pre>
+                <p><a href="https://github.com/symfony-cmf/symfony-cmf-website">See the complete installation doc on GitHub</a></p>
 
                 <h2>Slides</h2>
                 <ul>
