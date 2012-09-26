@@ -10,3 +10,5 @@ web/config.php
 app/SymfonyRequirements.php
 app/check.php
 .idea/*
+
+/bin/
