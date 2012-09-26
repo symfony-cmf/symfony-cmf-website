@@ -21,18 +21,6 @@ class MenuProvider extends \Symfony\Cmf\Bundle\MenuBundle\Provider\PHPCRMenuProv
            $item->setUri($menu->getUri());
            $menu->addChild($item);
            $item->moveToFirstPosition();
-           //Docs menu item
-           $item = new MenuItem('Docs', $this->factory);
-           $item->setUri('http://symfony-cmf.readthedocs.org');
-           $menu->addChild($item);
-           //Wiki menu item
-           $item = new MenuItem('Wiki', $this->factory);
-           $item->setUri('http://wiki.github.com/symfony-cmf/symfony-cmf');
-           $menu->addChild($item);
-           //Demo menu item
-           $item = new MenuItem('Demo', $this->factory);
-           $item->setUri('http://cmf.liip.ch/');
-           $menu->addChild($item);
 
            return $menu;
        }

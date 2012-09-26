@@ -7,6 +7,7 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Document\Page;
+use Symfony\Cmf\Bundle\MenuBundle\Document\MenuItem;
 
 use PHPCR\Util\NodeHelper;
 
@@ -44,13 +45,20 @@ class LoadStaticData extends ContainerAware implements FixtureInterface
         foreach ($data['static'] as $overview) {
             $page = new Page();
             $page->setPosition($home, $overview['name']);
-
             $page->setLabel($overview['title']);
-
             $page->setTitle($overview['title']);
             $page->setBody($overview['content']);
-
             $manager->persist($page);
+        }
+
+        $data = $yaml->parse(file_get_contents(__DIR__ . '/../static/external.yml'));
+
+        foreach ($data['static'] as $overview) {
+            $item = new MenuItem();
+            $item->setName($overview['name']);
+            $item->setUri($overview['uri']);
+            $item->setParent($home);
+            $manager->persist($item);
         }
 
         $manager->flush(); //to get ref id populated

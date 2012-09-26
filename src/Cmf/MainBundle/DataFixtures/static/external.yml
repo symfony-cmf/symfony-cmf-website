@@ -1,0 +1,10 @@
+static:
+    docs:
+      name: "Docs"
+      uri: "http://symfony-cmf.readthedocs.org/"
+    wiki:
+      name: "Wiki"
+      uri: "http://wiki.github.com/symfony-cmf/symfony-cmf"
+    demo:
+        name: "Demo"
+        uri: "http://cmf.liip.ch/"
