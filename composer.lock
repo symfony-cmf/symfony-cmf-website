@@ -1123,12 +1123,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/Routing",
-                "reference": "42b54cf62223be20ee184a50413bc8fee60aa37a"
+                "reference": "5b56ecfaa74813ae88f175b42ee1b480f0e9e161"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony-cmf/Routing/zipball/42b54cf62223be20ee184a50413bc8fee60aa37a",
-                "reference": "42b54cf62223be20ee184a50413bc8fee60aa37a",
+                "url": "https://github.com/symfony-cmf/Routing/zipball/5b56ecfaa74813ae88f175b42ee1b480f0e9e161",
+                "reference": "5b56ecfaa74813ae88f175b42ee1b480f0e9e161",
                 "shasum": ""
             },
             "require": {
