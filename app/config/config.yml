@@ -51,3 +51,10 @@ knp_menu:
 symfony_cmf_menu:
     use_sonata_admin: false
     menu_basepath: /cms
+
+liip_doctrine_cache:
+    namespaces:
+        meta:
+            type: file_system
+        nodes:
+            type: file_system
