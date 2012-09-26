@@ -8,15 +8,24 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
+            // enable symfony-standard bundles
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
+            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
 
-            // third party bundles
+            new Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
 
-            // app bundles
-            new Symfony\Cmf\Bundle\FrontendBundle\FrontendBundle(),
+            // enable cmf bundles
+            new Symfony\Cmf\Bundle\RoutingExtraBundle\SymfonyCmfRoutingExtraBundle(),
+            new Symfony\Cmf\Bundle\MenuBundle\SymfonyCmfMenuBundle(),
+            new Symfony\Cmf\Bundle\ContentBundle\SymfonyCmfContentBundle(),
+            new Symfony\Cmf\Bundle\SimpleCmsBundle\SymfonyCmfSimpleCmsBundle(),
+
+            // and the website specific bundle
+            new Cmf\MainBundle\CmfMainBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -1,4 +1,20 @@
 parameters:
     locale: en
-
-    secret: ThisTokenIsNotSoSecretChangeIt
+    locales: [en]
+    secret: 10784a86848b5412b5f7fa644e90ef24e
+    database_driver: pdo_sqlite
+    database_path: '%kernel.root_dir%/app.sqlite'
+    phpcr_backend:
+        type: doctrinedbal
+        connection: doctrine.dbal.default_connection
+        caches:
+            meta: liip_doctrine_cache.ns.meta
+            nodes: liip_doctrine_cache.ns.nodes
+    phpcr_workspace: default
+    phpcr_user: admin
+    phpcr_pass: admin
+    database_host: null
+    database_port: null
+    database_name: null
+    database_user: null
+    database_password: null

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content=" minimum-scale=1.0, maximum-scale=1.0, width=device-width; user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{% block title %}{{ title|default('Simple CMS')|striptags }}{% endblock %} | Symfony2 CMF</title>
+
+    {% block includes %}
+        <link href="{{ asset('bundles/cmfmain/css/style.css') }}" type="text/css" rel="stylesheet"/>
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    {% endblock %}
+</head>
+<body>
+
+<div id="wrap">
+    <div id="header">
+        <h1 id="logo-text"><a href="{{ path('', {'content_id': '/cms/simple'}) }}">Symfony2 CMF</a></h1>
+        <p id="slogan">Symfony2 Content Management Framework</p>
+
+        <div id="top-menu">
+            <p><a href="http://www.symfony.com" target="_BLANK">Symfony2</a> + <a href="http://www.doctrine-project.org/projects/orm/2.0/docs/en" target="_BLANK">Doctrine2</a></p>
+        </div>
+    </div>
+
+    <div id="nav">
+        {{ knp_menu_render('simple') }}
+    </div>
+
+    <div id="content">
+        <div id="main">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</div>
+
+</body>
+</html>
+

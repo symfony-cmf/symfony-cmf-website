@@ -1,0 +1,11 @@
+services:
+  symfony_cmf_menu.provider:
+        class: Cmf\MainBundle\Menu\MenuProvider
+        arguments:
+          - @service_container
+          - @symfony_cmf_menu.factory
+          - %symfony_cmf_menu.document_manager_name%
+          - %symfony_cmf_menu.menu_basepath%
+          - %symfony_cmf_menu.menu_document_class%
+        tags:
+          - { name: knp_menu.provider, alias: simple } # The alias is what is used to retrieve the menu
