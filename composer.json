@@ -1,5 +1,5 @@
 {
-    "name": "symfony-cmf/standard-edition",
+    "name": "symfony-cmf/website",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -11,7 +11,11 @@
         "symfony/monolog-bundle": "2.1.*",
         "sensio/distribution-bundle": "2.1.*",
         "symfony-cmf/menu-bundle": "1.0.*",
-        "symfony-cmf/simple-cms-bundle": "1.0.*",
+        "symfony-cmf/simple-cms-bundle": "dev-publish_workflow as 1.0.0",
+        "symfony-cmf/routing-extra-bundle": "dev-format_support as 1.0.0",
+        "symfony-cmf/core-bundle": "dev-publish_workflow as 1.0.0",
+        "symfony-cmf/content-bundle": "dev-publish_workflow as 1.0.0",
+        "friendsofsymfony/rest-bundle": "0.10.*",
         "jackalope/jackalope-doctrine-dbal": "dev-master",
         "doctrine/doctrine-bundle": "1.0.*",
         "doctrine/doctrine-fixtures-bundle": "dev-master",

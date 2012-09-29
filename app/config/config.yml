@@ -58,3 +58,13 @@ liip_doctrine_cache:
             type: file_system
         nodes:
             type: file_system
+
+fos_rest:
+    view:
+        formats:
+            rss: true
+        templating_formats:
+            rss: true
+            html: true
+        mime_types:
+            rss: 'application/rss+xml'

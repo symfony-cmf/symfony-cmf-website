@@ -1,0 +1,20 @@
+{% extends "CmfMainBundle::layout.html.twig" %}
+
+{% block content %}
+    <div xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" typeof="sioc:Post" about="{{ path }}">
+        <h2 property="dcterms:title">{{ page.title }}</h2>
+
+        <div class="subtitle">Date: {{ page.publishDate| date('Y-m-d') }}</div>
+        <p property="sioc:content">{{ page.body|raw }}</p>
+
+        {% set prev = cmf_prev(page) %}
+        {% if prev %}
+            <a href="{{ path(prev) }}">prev</a>
+        {% endif %}
+        {% set next = cmf_next(page) %}
+        {% if next %}
+            <span style="float: right; padding-right: 40px;"><a href="{{ path(next) }}">next</a></span>
+        {%  endif %}
+    </div>
+
+{% endblock %}
