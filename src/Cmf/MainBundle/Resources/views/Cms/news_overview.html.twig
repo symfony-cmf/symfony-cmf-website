@@ -9,7 +9,7 @@
 
             <ul>
                 {% for news in cmf_children(page)|reverse %}
-                    <li><a href="{{ path(news) }}">{{ news.title }}</a> ({{ news.publishDate | date('Y-m-d')  }})</li>
+                    <li><a href="{{ path(news) }}">{{ news.title }}</a> ({{ news.publishStartDate | date('Y-m-d')  }})</li>
                 {% endfor %}
             </ul>
 

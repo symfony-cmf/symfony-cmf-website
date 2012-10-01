@@ -98,7 +98,7 @@ static:
         title: "Symfony CMF featured on symfony.com"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
-        publish_date: "2012-06-05"
+        publish_start_date: "2012-06-05"
         content: |
             David wrote a <a href="http://symfony.com/blog/the-symfony-content-management-framework-is-getting-ready#">blog post</a>
             for symfony.com on the current state of the Symfony CMF project.
@@ -112,7 +112,7 @@ static:
         title: "Symfony CMF sandbox now running with multiple different PHPCR implementations"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
-        publish_date: "2012-06-12"
+        publish_start_date: "2012-06-12"
         content: |
             One of the fundamental ideas of PHPCR is that there can be multiple implementations that
             from an API act and behave exactly the same, but can be optimized for every different
@@ -132,7 +132,7 @@ static:
         title: "Jackalope Doctrine DBAL now compatible with PostgreSQL and SQLite"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
-        publish_date: "2012-07-19"
+        publish_start_date: "2012-07-19"
         content: |
               Thanks to the work of <a href="https://github.com/cryptocompress">cryptocompress</a> the Jackalope
               test suite for the Doctrine DBAL implementation now also
@@ -149,7 +149,7 @@ static:
         title: "Symfony CMF at the Create.js hackathon in Berlin"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
-        publish_date: "2012-07-21"
+        publish_start_date: "2012-07-21"
         content: |
               The Symfony CMF has featured integration with create.js and VIE for inline editing for quite sometime
               already. As a matter of fact <a href="http://liip.ch">Liip</a> is one of the big contributors thanks to the
@@ -164,7 +164,7 @@ static:
         title: "Symfony CMF docs and standard edition"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
-        publish_date: "2012-08-01"
+        publish_start_date: "2012-08-01"
         content: |
               We have finally setup our <a href="http://symfony-cmf.readthedocs.org">documentation</a> on readthedocs.org.
               There is still a fair bit of work to make the documentation complete. But the installation instructions
@@ -179,7 +179,7 @@ static:
         title: "Symfony CMF website update"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
-        publish_date: "2012-09-29"
+        publish_start_date: "2012-09-29"
         content: |
               In an effort to eat our own dog food, we have finally updated this website to use the Symfony CMF. The bulk of
               the work was done during the <a href="https://rocketlab.liip.ch/event/symfony_cmf_hackday_september">recent hackathon</a>

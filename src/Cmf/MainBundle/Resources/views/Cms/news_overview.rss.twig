@@ -17,7 +17,7 @@
             <category>General</category>
             <description>{{ news.body|striptags }}</description>
             <content:encoded>{{ news.body|raw }}</content:encoded>
-            <pubDate>{{ news.publishDate | date('r') }}</pubDate>
+            <pubDate>{{ news.publishStartDate | date('r') }}</pubDate>
             <dc:creator>symfony-cmf-devs@googlegroups.com (Symfony CMF)</dc:creator>
         </item>
         {% endfor %}
