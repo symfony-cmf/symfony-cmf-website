@@ -181,12 +181,13 @@ static:
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-09-29"
         content: |
-              In an effort to eat our own dog food, we have finally updated this website to use the Symfony CMF. The bulk of
-              the work was done during the <a href="https://rocketlab.liip.ch/event/symfony_cmf_hackday_september">recent hackathon</a>
+              In an effort to eat our own dog food, we have finally <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/6">updated</a>
+              this website to use the Symfony CMF. The bulk of the work was done during the
+              <a href="https://rocketlab.liip.ch/event/symfony_cmf_hackday_september">recent hackathon</a>
               at the <a href="http://liip.ch">Liip</a> offices in Fribourg. Overall the hackathon was very productive, you
               can read a <a href="https://groups.google.com/d/msg/symfony-cmf-devs/XwaDeFam79I/uOfiyGzGpVMJ">short summary here</a>.
-              In a second step we have also added a news system based on the SimpleCmsBundle, including an
-              <a href="http://cmf.symfony.com/news.rss">RSS feed</a>.
+              In a second step we have also <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/7">added a news system</a>
+              based on the SimpleCmsBundle, including an <a href="http://cmf.symfony.com/news.rss">RSS feed</a>.
 
     getstarted:
         name: "get-started"
