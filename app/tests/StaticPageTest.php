@@ -24,6 +24,7 @@ class StaticPageTest extends WebTestCase
         return array(
             array('/', 'The Symfony CMF Project'),
             array('/news', 'News'),
+            array('/news/symfony-cmf-featured-on-symfony-com', 'Symfony CMF featured on symfony.com'),
             array('/get-started', 'Get started'),
             array('/get-involved', 'Get involved'),
             array('/about', 'About'),
@@ -66,4 +67,10 @@ class StaticPageTest extends WebTestCase
         $this->assertEquals(0, $crawler->filter('#nav li.current a:contains("About")')->count());
     }
 
+    public function testRssFeed()
+    {
+        $client = $this->createClient();
+        $client->request('GET', '/news.rss');
+        $this->assertTrue($client->getResponse()->isSuccessful());
+    }
 }

@@ -1,0 +1,19 @@
+{% extends "CmfMainBundle::layout.html.twig" %}
+
+{% block content %}
+    <div xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" typeof="sioc:Post" about="{{ path }}">
+        <h2 property="dcterms:title">{{ page.title }}</h2>
+
+        <div property="sioc:content">
+            <div>{{ page.body|raw }}</div>
+
+            <ul>
+                {% for news in cmf_children(page)|reverse %}
+                    <li><a href="{{ path(news) }}">{{ news.title }}</a> ({{ news.publishStartDate | date('Y-m-d')  }})</li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+
+{% endblock %}
