@@ -185,7 +185,8 @@ static:
               the work was done during the <a href="https://rocketlab.liip.ch/event/symfony_cmf_hackday_september">recent hackathon</a>
               at the <a href="http://liip.ch">Liip</a> offices in Fribourg. Overall the hackathon was very productive, you
               can read a <a href="https://groups.google.com/d/msg/symfony-cmf-devs/XwaDeFam79I/uOfiyGzGpVMJ">short summary here</a>.
-              In a second step we have also added a news system based on the SimpleCmsBundle, including an RSS feed.
+              In a second step we have also added a news system based on the SimpleCmsBundle, including an
+              <a href="http://cmf.symfony.com/news.rss">RSS feed</a>.
 
     getstarted:
         name: "get-started"
