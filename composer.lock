@@ -1,5 +1,5 @@
 {
-    "hash": "66dc17ac4f00ae115cc98f6016631fb3",
+    "hash": "7050ad85308ffd4e8c9bc3ed56b45689",
     "packages": [
         {
             "name": "doctrine/common",
@@ -42,7 +42,8 @@
                 },
                 {
                     "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
                 },
                 {
                     "name": "Roman Borschel",
@@ -55,7 +56,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -152,7 +153,8 @@
                 },
                 {
                     "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
                 },
                 {
                     "name": "Roman Borschel",
@@ -361,12 +363,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/phpcr-odm",
-                "reference": "5b5c17d0dae087b20a151daaade9cb908eb38907"
+                "reference": "c62988dc103b35b7e2f2dcc50bd4e1acc64d14c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/phpcr-odm/zipball/5b5c17d0dae087b20a151daaade9cb908eb38907",
-                "reference": "5b5c17d0dae087b20a151daaade9cb908eb38907",
+                "url": "https://github.com/doctrine/phpcr-odm/zipball/c62988dc103b35b7e2f2dcc50bd4e1acc64d14c1",
+                "reference": "c62988dc103b35b7e2f2dcc50bd4e1acc64d14c1",
                 "shasum": ""
             },
             "require": {
@@ -384,7 +386,7 @@
                 "jackalope/jackalope-jackrabbit": "1.0.*",
                 "midgard/phpcr": ">=1.3"
             },
-            "time": "1349096384",
+            "time": "1349179865",
             "bin": [
                 "bin/phpcr",
                 "bin/phpcr.php"
@@ -447,6 +449,7 @@
                 "php": ">=5.3.2",
                 "symfony/http-foundation": ">=2.0,<2.3-dev"
             },
+            "time": "1347135166",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -476,8 +479,7 @@
             "homepage": "http://friendsofsymfony.github.com",
             "keywords": [
                 "rest"
-            ],
-            "time": "1347135166"
+            ]
         },
         {
             "name": "friendsofsymfony/rest-bundle",
@@ -508,6 +510,7 @@
             "suggest": {
                 "sensio/framework-extra-bundle": "Add support for route annotations"
             },
+            "time": "1348990701",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -542,8 +545,7 @@
             "homepage": "http://friendsofsymfony.github.com",
             "keywords": [
                 "rest"
-            ],
-            "time": "1348990701"
+            ]
         },
         {
             "name": "jackalope/jackalope",
@@ -603,12 +605,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jackalope/jackalope-doctrine-dbal",
-                "reference": "b613ecfee17f12dd32c2f1a6767d679bb9d1c335"
+                "reference": "05ff9060cb9c3599150edd3ab67840220254febe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jackalope/jackalope-doctrine-dbal/zipball/b613ecfee17f12dd32c2f1a6767d679bb9d1c335",
-                "reference": "b613ecfee17f12dd32c2f1a6767d679bb9d1c335",
+                "url": "https://github.com/jackalope/jackalope-doctrine-dbal/zipball/05ff9060cb9c3599150edd3ab67840220254febe",
+                "reference": "05ff9060cb9c3599150edd3ab67840220254febe",
                 "shasum": ""
             },
             "require": {
@@ -626,7 +628,7 @@
             "suggest": {
                 "phpcr/phpcr-api-tests": "dev-master"
             },
-            "time": "1348665534",
+            "time": "1349128829",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -698,7 +700,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -737,7 +739,7 @@
                 "twig/twig": ">=1.8,<2.0-dev",
                 "doctrine/orm": ">=2.1,<2.4-dev"
             },
-            "time": "2012-09-19 07:23:52",
+            "time": "2012-09-20 19:23:52",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -854,7 +856,7 @@
                 "knplabs/knp-menu": "1.1.*",
                 "symfony/framework-bundle": ">=2.0,<2.2-dev"
             },
-            "time": "2012-05-15 03:56:49",
+            "time": "2012-05-17 07:56:49",
             "type": "symfony-bundle",
             "installation-source": "dist",
             "autoload": {
@@ -871,7 +873,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "KnpLabs",
+                    "name": "Knplabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -882,6 +884,72 @@
             "description": "This bundle provides an integration of the KnpMenu library",
             "keywords": [
                 "menu"
+            ]
+        },
+        {
+            "name": "kriswallsmith/assetic",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "http://github.com/kriswallsmith/assetic.git",
+                "reference": "e22c5e07e672bb0cf43127e97e9368b53abf4aa8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/kriswallsmith/assetic/zipball/e22c5e07e672bb0cf43127e97e9368b53abf4aa8",
+                "reference": "e22c5e07e672bb0cf43127e97e9368b53abf4aa8",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/process": ">=2.1.0,<2.3-dev",
+                "php": ">=5.3.1"
+            },
+            "require-dev": {
+                "twig/twig": ">=1.6.0,<2.0",
+                "leafo/lessphp": "*",
+                "leafo/scssphp": "*",
+                "ptachoire/cssembed": "*",
+                "leafo/scssphp-compass": "*"
+            },
+            "suggest": {
+                "twig/twig": "Assetic provides the integration with the Twig templating engine",
+                "leafo/lessphp": "Assetic provides the integration with the lessphp LESS compiler",
+                "leafo/scssphp": "Assetic provides the integration with the scssphp SCSS compiler",
+                "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
+                "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin"
+            },
+            "time": "1349004759",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Assetic": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Asset Management for PHP",
+            "homepage": "https://github.com/kriswallsmith/assetic",
+            "keywords": [
+                "assets",
+                "compression",
+                "minification"
             ]
         },
         {
@@ -1024,6 +1092,46 @@
                 "multilanguage",
                 "language",
                 "cookie"
+            ]
+        },
+        {
+            "name": "midgard/createphp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/flack/createphp.git",
+                "reference": "99e27172c0de250d520363014d7fc6d79c25f193"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/flack/createphp/zipball/99e27172c0de250d520363014d7fc6d79c25f193",
+                "reference": "99e27172c0de250d520363014d7fc6d79c25f193",
+                "shasum": ""
+            },
+            "require-dev": {
+                "twig/twig": ">=1.8,<2.0-dev"
+            },
+            "time": "1348484091",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Midgard\\CreatePHP": "src"
+                }
+            },
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Flack",
+                    "email": "flack@contentcontrol-berlin.de",
+                    "homepage": "http://www.contentcontrol-berlin.de/"
+                }
+            ],
+            "description": "PHP adapter for Create.js",
+            "keywords": [
+                "rdfa"
             ]
         },
         {
@@ -1215,6 +1323,7 @@
             "require": {
                 "symfony/framework-bundle": "2.1.*"
             },
+            "time": "1347340208",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1240,8 +1349,7 @@
             "keywords": [
                 "distribution",
                 "configuration"
-            ],
-            "time": "1347340208"
+            ]
         },
         {
             "name": "symfony-cmf/content-bundle",
@@ -1303,12 +1411,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony-cmf/CoreBundle.git",
-                "reference": "50a7e1308c0dbb52b276ac361a0433050e58e3ee"
+                "reference": "2170d201e7ebfb66d19811b7c6734a41deb48239"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony-cmf/CoreBundle/zipball/50a7e1308c0dbb52b276ac361a0433050e58e3ee",
-                "reference": "50a7e1308c0dbb52b276ac361a0433050e58e3ee",
+                "url": "https://github.com/symfony-cmf/CoreBundle/zipball/2170d201e7ebfb66d19811b7c6734a41deb48239",
+                "reference": "2170d201e7ebfb66d19811b7c6734a41deb48239",
                 "shasum": ""
             },
             "require": {
@@ -1322,7 +1430,7 @@
             "suggest": {
                 "symfony/twig-bundle": ">2.0,<2.2-dev"
             },
-            "time": "1349092134",
+            "time": "1349161204",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1349,6 +1457,59 @@
             "keywords": [
                 "Symfony CMF"
             ]
+        },
+        {
+            "name": "symfony-cmf/create-bundle",
+            "version": "dev-master",
+            "target-dir": "Symfony/Cmf/Bundle/CreateBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony-cmf/CreateBundle.git",
+                "reference": "01738fd73d0ea221528df3a9dc9e48697b6c5cdf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony-cmf/CreateBundle/zipball/01738fd73d0ea221528df3a9dc9e48697b6c5cdf",
+                "reference": "01738fd73d0ea221528df3a9dc9e48697b6c5cdf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "friendsofsymfony/rest-bundle": "*",
+                "midgard/createphp": "dev-master",
+                "symfony/symfony": "2.1.*",
+                "symfony/assetic-bundle": "2.1.*"
+            },
+            "suggest": {
+                "dms/dms-filter": "if you want to filter content on your fields"
+            },
+            "time": "1349131269",
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Cmf\\Bundle\\CreateBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Liip AG",
+                    "homepage": "http://www.liip.ch/"
+                },
+                {
+                    "name": "Symfony CMF Community",
+                    "homepage": "https://github.com/symfony-cmf/CreateBundle/contributors"
+                }
+            ],
+            "description": "Symfony Bundle for createphp and create.js. The easiest way to make any site editable and have semantic annotations with RDFa."
         },
         {
             "name": "symfony-cmf/menu-bundle",
@@ -1573,6 +1734,69 @@
             ]
         },
         {
+            "name": "symfony/assetic-bundle",
+            "version": "dev-master",
+            "target-dir": "Symfony/Bundle/AsseticBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/AsseticBundle",
+                "reference": "5ebcf72d9b2d7028ca8c9b71b464ccc81d4795d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony/AsseticBundle/zipball/5ebcf72d9b2d7028ca8c9b71b464ccc81d4795d2",
+                "reference": "5ebcf72d9b2d7028ca8c9b71b464ccc81d4795d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "kriswallsmith/assetic": "1.1.*",
+                "symfony/framework-bundle": ">=2.1.0,<2.3-dev"
+            },
+            "require-dev": {
+                "symfony/twig-bundle": ">=2.1.0,<2.3-dev",
+                "symfony/console": ">=2.1.0,<2.3-dev",
+                "symfony/class-loader": ">=2.1.0,<2.3-dev",
+                "symfony/yaml": ">=2.1.0,<2.3-dev",
+                "symfony/form": ">=2.1.0,<2.3-dev",
+                "symfony/dom-crawler": ">=2.1.0,<2.3-dev",
+                "symfony/css-selector": ">=2.1.0,<2.3-dev"
+            },
+            "suggest": {
+                "symfony/twig-bundle": ">=2.1.0,<2.3-dev"
+            },
+            "time": "1348938560",
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Bundle\\AsseticBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Integrates Assetic into Symfony2",
+            "homepage": "https://github.com/symfony/AsseticBundle",
+            "keywords": [
+                "assets",
+                "compression",
+                "minification"
+            ]
+        },
+        {
             "name": "symfony/monolog-bundle",
             "version": "dev-master",
             "target-dir": "Symfony/Bundle/MonologBundle",
@@ -1633,12 +1857,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "2f5a4d7dbca5e586ddf3ae409528ae456f45b0b4"
+                "reference": "49ca64824567b8018a5bb614f35e6da8622ccd1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/zipball/2f5a4d7dbca5e586ddf3ae409528ae456f45b0b4",
-                "reference": "2f5a4d7dbca5e586ddf3ae409528ae456f45b0b4",
+                "url": "https://github.com/symfony/symfony/zipball/49ca64824567b8018a5bb614f35e6da8622ccd1f",
+                "reference": "49ca64824567b8018a5bb614f35e6da8622ccd1f",
                 "shasum": ""
             },
             "require": {
@@ -1687,7 +1911,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "dev-master"
             },
-            "time": "1349116845",
+            "time": "1349173376",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1827,6 +2051,7 @@
         "doctrine/doctrine-fixtures-bundle": 20,
         "liip/functional-test-bundle": 20,
         "lunetics/locale-bundle": 20,
-        "liip/doctrine-cache-bundle": 20
+        "liip/doctrine-cache-bundle": 20,
+        "symfony-cmf/create-bundle": 20
     }
 }
