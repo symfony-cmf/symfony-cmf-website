@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
 
             // enable cmf bundles
             new Symfony\Cmf\Bundle\RoutingExtraBundle\SymfonyCmfRoutingExtraBundle(),

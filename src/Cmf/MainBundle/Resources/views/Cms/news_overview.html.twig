@@ -6,18 +6,20 @@
 <div {{ createphp_attributes(rdf) }}>
 
     <h2 {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h2>
-    <p {{ createphp_attributes( rdf.body|raw ) }}>{{ createphp_content( rdf.body|raw ) }}</p>
+    <p {{ createphp_attributes( rdf.body ) }}>{{ createphp_content( rdf.body|raw ) }}</p>
 
         <!-- TODO: next step, use create.js collections instead of twig iterations -->
+        {#
+        {{ createphp_attributes( rdf.children ) }}
+        #}
         <ul>
-            {% for news in cmf_children(page)|reverse %}
+            {% for news in page.children|reverse %}
                 <li>
                     <a href="{{ path(news) }}">{{ news.title }}</a> ({{ news.publishStartDate | date('Y-m-d')  }})
                 </li>
             {% endfor %}
         </ul>
-
     </div>
-    {% endcreatephp %}
+{% endcreatephp %}
 
 {% endblock %}

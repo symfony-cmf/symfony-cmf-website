@@ -72,9 +72,3 @@ fos_rest:
 
 symfony_cmf_create:
     phpcr_odm: true
-    #orm: my_document_manager
-    rdf_config_dirs:
-        - "%kernel.root_dir%/Resources/rdf-mappings"
-    base_path: /cms/routes
-    cms_path: /cms/simple
-    # stanbol_url: custom stanbol url, otherwise defaults to the demo install
