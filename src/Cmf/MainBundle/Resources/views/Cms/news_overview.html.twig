@@ -1,19 +1,23 @@
 {% extends "CmfMainBundle::layout.html.twig" %}
 
 {% block content %}
-    <div xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" typeof="sioc:Post" about="{{ path }}">
-        <h2 property="dcterms:title">{{ page.title }}</h2>
 
-        <div property="sioc:content">
-            <div>{{ page.body|raw }}</div>
+    {% createphp page as="rdf" %}
+    <div {{ createphp_attributes(rdf) }}>
 
-            <ul>
-                {% for news in cmf_children(page)|reverse %}
-                    <li><a href="{{ path(news) }}">{{ news.title }}</a> ({{ news.publishStartDate | date('Y-m-d')  }})</li>
-                {% endfor %}
-            </ul>
+        <h2 {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h2>
+        <p {{ createphp_attributes( rdf.body|raw ) }}>{{ createphp_content( rdf.body|raw ) }}</p>
 
-        </div>
+        <!-- TODO: next step, use create.js collections instead of twig iterations
+        <ul>
+            {% for news in cmf_children(page)|reverse %}
+                <li>
+                    <a href="{{ path(news) }}">{{ news.title }}</a> ({{ news.publishStartDate | date('Y-m-d')  }})
+                </li>
+            {% endfor %}
+        </ul>
+
     </div>
+    {% endcreatephp %}
 
 {% endblock %}

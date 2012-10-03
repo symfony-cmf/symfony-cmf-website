@@ -2,28 +2,24 @@
 
 {% block content %}
 
+{% createphp page as="rdf" %}
+<div {{ createphp_attributes(rdf) }}>
 
-<div xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" typeof="sioc:Post" about="{{ path }}">
-        <h2 property="dcterms:title">{{ page.title }}</h2>
+    <h2 class="my-title" {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h2>
+    <div class="subtitle">Date: {{ page.publishStartDate| date('Y-m-d') }}</div>
+    <p {{ createphp_attributes( rdf.body|raw ) }}>{{ createphp_content( rdf.body|raw ) }}</p>
 
-        <div class="subtitle">Date: {{ page.publishStartDate| date('Y-m-d') }}</div>
-        <p property="sioc:content">{{ page.body|raw }}</p>
+    {% set prev = cmf_prev(page) %}
+    {% if prev %}
+        <a href="{{ path(prev) }}">prev</a>
+    {% endif %}
 
-        {% set prev = cmf_prev(page) %}
-        {% if prev %}
-            <a href="{{ path(prev) }}">prev</a>
-        {% endif %}
-        {% set next = cmf_next(page) %}
-        {% if next %}
+    {% set next = cmf_next(page) %}
+    {% if next %}
             <span style="float: right; padding-right: 40px;"><a href="{{ path(next) }}">next</a></span>
-        {%  endif %}
-    </div>
+    {% endif %}
 
-<h1>TEST</h1>
-<p>
-    {% createphp page as="rdf" %}
-    {{ rdf|raw }}
-    {% endcreatephp %}
-</p>
+</div>
+{% endcreatephp %}
 
 {% endblock %}
