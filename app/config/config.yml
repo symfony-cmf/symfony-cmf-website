@@ -39,10 +39,11 @@ symfony_cmf_routing_extra:
     dynamic:
         enabled: true
 
+
 symfony_cmf_simple_cms:
     routing:
         templates_by_class:
-            Symfony\Cmf\Bundle\SimpleCmsBundle\Document\Page:  SymfonyCmfSimpleCmsBundle:Page:index.html.twig
+            Symfony\Cmf\Bundle\SimpleCmsBundle\Document\Page: SymfonyCmfSimpleCmsBundle:Page:index.html.twig
     use_sonata_admin: false
 
 knp_menu:
@@ -68,3 +69,12 @@ fos_rest:
             html: true
         mime_types:
             rss: 'application/rss+xml'
+
+symfony_cmf_create:
+    phpcr_odm: true
+    #orm: my_document_manager
+    rdf_config_dirs:
+        - "%kernel.root_dir%/Resources/rdf-mappings"
+    base_path: /cms/routes
+    cms_path: /cms/simple
+    # stanbol_url: custom stanbol url, otherwise defaults to the demo install
