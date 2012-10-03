@@ -2,13 +2,13 @@
 
 {% block content %}
 
-    {% createphp page as="rdf" %}
-    <div {{ createphp_attributes(rdf) }}>
+{% createphp page as="rdf" %}
+<div {{ createphp_attributes(rdf) }}>
 
-        <h2 {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h2>
-        <p {{ createphp_attributes( rdf.body|raw ) }}>{{ createphp_content( rdf.body|raw ) }}</p>
+    <h2 {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h2>
+    <p {{ createphp_attributes( rdf.body|raw ) }}>{{ createphp_content( rdf.body|raw ) }}</p>
 
-        <!-- TODO: next step, use create.js collections instead of twig iterations
+        <!-- TODO: next step, use create.js collections instead of twig iterations -->
         <ul>
             {% for news in cmf_children(page)|reverse %}
                 <li>

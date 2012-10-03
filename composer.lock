@@ -181,12 +181,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/doctrine/DoctrineBundle.git",
-                "reference": "db818ceec46d05fed4f944b957f82a4ab5197e27"
+                "reference": "64deb4921926f482976414895fe549a6b4c604bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrineBundle/zipball/db818ceec46d05fed4f944b957f82a4ab5197e27",
-                "reference": "db818ceec46d05fed4f944b957f82a4ab5197e27",
+                "url": "https://github.com/doctrine/DoctrineBundle/zipball/64deb4921926f482976414895fe549a6b4c604bb",
+                "reference": "64deb4921926f482976414895fe549a6b4c604bb",
                 "shasum": ""
             },
             "require": {
@@ -203,7 +203,7 @@
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle."
             },
-            "time": "1348828243",
+            "time": "1349217332",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1047,12 +1047,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lunetics/LocaleBundle",
-                "reference": "fff389afecb07c8c2ad0717d9cc936077101a60b"
+                "reference": "7f9ae16f90a0888e640c1f40f093954465753364"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/lunetics/LocaleBundle/zipball/fff389afecb07c8c2ad0717d9cc936077101a60b",
-                "reference": "fff389afecb07c8c2ad0717d9cc936077101a60b",
+                "url": "https://github.com/lunetics/LocaleBundle/zipball/7f9ae16f90a0888e640c1f40f093954465753364",
+                "reference": "7f9ae16f90a0888e640c1f40f093954465753364",
                 "shasum": ""
             },
             "require": {
@@ -1062,7 +1062,7 @@
                 "symfony/yaml": "2.1.*",
                 "symfony/locale": "2.1.*"
             },
-            "time": "1346024588",
+            "time": "1349250213",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -1857,12 +1857,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "49ca64824567b8018a5bb614f35e6da8622ccd1f"
+                "reference": "566ad10f675ae39a7260b99bd1da1c5e986cef69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/zipball/49ca64824567b8018a5bb614f35e6da8622ccd1f",
-                "reference": "49ca64824567b8018a5bb614f35e6da8622ccd1f",
+                "url": "https://github.com/symfony/symfony/zipball/566ad10f675ae39a7260b99bd1da1c5e986cef69",
+                "reference": "566ad10f675ae39a7260b99bd1da1c5e986cef69",
                 "shasum": ""
             },
             "require": {
@@ -1911,7 +1911,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "dev-master"
             },
-            "time": "1349173376",
+            "time": "1349203503",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2041,7 +2041,9 @@
             ]
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+
+    ],
     "aliases": [
 
     ],
