@@ -17,13 +17,4 @@ use Symfony\Cmf\Bundle\CoreBundle\PublishWorkflow\PublishWorkflowInterface;
  */
 class NewsCollection extends Page
 {
-    /**
-     * @PHPCRODM\Children
-     */
-    private $children;
-
-    public function getChildren()
-    {
-        return $this->children;
-    }
 }
