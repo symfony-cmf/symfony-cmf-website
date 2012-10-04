@@ -3,11 +3,8 @@
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
 
-
-
-#TODO: use that import?
-#<import resource=”symfony_cmf_create.rest.controller” type=”rest” />
-
-#createjs:
-#    resource: “@SymfonyCmfCreateBundle/Resources/config/routing/rest.xml”
+create:
+    resource: "@SymfonyCmfCreateBundle/Resources/config/routing/rest.xml"
+create_iamge:
+    resource: "@SymfonyCmfCreateBundle/Resources/config/routing/image.xml"
 
