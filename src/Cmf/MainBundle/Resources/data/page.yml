@@ -90,6 +90,8 @@ static:
         title: "News"
         formats: [html, rss]
         template: CmfMainBundle:Cms:news_overview.{_format}.twig
+        options:
+            displayChildren: false
         content: The latest news about the Symfony CMF:
 
     symfony-cmf-featured-on-symfony-com:

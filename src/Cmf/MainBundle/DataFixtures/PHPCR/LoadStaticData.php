@@ -19,7 +19,7 @@ class LoadStaticData extends LoadCmsData
     protected function getData()
     {
         $yaml = new Parser();
-        return $yaml->parse(file_get_contents(__DIR__.'/../static/page.yml'));
+        return $yaml->parse(file_get_contents(__DIR__.'/../../Resources/data/page.yml'));
     }
 
     public function load(ObjectManager $dm)
@@ -27,7 +27,7 @@ class LoadStaticData extends LoadCmsData
         parent::load($dm);
 
         $yaml = new Parser();
-        $data = $yaml->parse(file_get_contents(__DIR__ . '/../static/external.yml'));
+        $data = $yaml->parse(file_get_contents(__DIR__ . '/../../Resources/data/external.yml'));
 
         $basepath = $this->container->getParameter('symfony_cmf_simple_cms.basepath');
         $home = $dm->find(null, $basepath);
