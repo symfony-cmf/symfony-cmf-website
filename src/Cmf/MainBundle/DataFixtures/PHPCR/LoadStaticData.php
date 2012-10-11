@@ -32,9 +32,10 @@ class LoadStaticData extends LoadCmsData
         $basepath = $this->container->getParameter('symfony_cmf_simple_cms.basepath');
         $home = $dm->find(null, $basepath);
 
-        foreach ($data['static'] as $overview) {
+        foreach ($data['static'] as $name => $overview) {
             $item = new MenuItem();
-            $item->setName($overview['name']);
+            $item->setName($name);
+            $item->setLabel($overview['label']);
             $item->setUri($overview['uri']);
             $item->setParent($home);
             $dm->persist($item);
