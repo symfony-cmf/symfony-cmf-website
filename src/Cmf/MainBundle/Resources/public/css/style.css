@@ -507,3 +507,5 @@ ol.commentlist {
 }
 
 .subtitle { margin-left: 15px; }
+
+div.newscontent { display: none; }
