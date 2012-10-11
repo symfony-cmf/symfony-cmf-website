@@ -92,6 +92,7 @@ static:
         template: CmfMainBundle:Cms:news_overview.{_format}.twig
         options:
             displayChildren: false
+            currentUriPrefix: "/news"
         content: The latest news about the Symfony CMF:
 
     symfony-cmf-featured-on-symfony-com:

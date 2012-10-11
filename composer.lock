@@ -301,12 +301,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrinePHPCRBundle",
-                "reference": "e067f600afe4403140d73b03338924317a7a786a"
+                "reference": "9ff404ce9dbf978b3f4912dbd950be4b6c5cd8d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrinePHPCRBundle/zipball/e067f600afe4403140d73b03338924317a7a786a",
-                "reference": "e067f600afe4403140d73b03338924317a7a786a",
+                "url": "https://github.com/doctrine/DoctrinePHPCRBundle/zipball/9ff404ce9dbf978b3f4912dbd950be4b6c5cd8d2",
+                "reference": "9ff404ce9dbf978b3f4912dbd950be4b6c5cd8d2",
                 "shasum": ""
             },
             "require": {
@@ -321,7 +321,7 @@
                 "doctrine/data-fixtures": "if you want to use the fixture loading",
                 "doctrine/phpcr-odm": "if you want to use the odm as well. require version 1.0.*"
             },
-            "time": "1349882136",
+            "time": "1349968429",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1358,12 +1358,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony-cmf/MenuBundle.git",
-                "reference": "55cd6409c3016b47f40630a99334d5c180e11866"
+                "reference": "c9013a354fe6b03dc5cd346d5541ec347bafd39a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony-cmf/MenuBundle/zipball/55cd6409c3016b47f40630a99334d5c180e11866",
-                "reference": "55cd6409c3016b47f40630a99334d5c180e11866",
+                "url": "https://github.com/symfony-cmf/MenuBundle/zipball/c9013a354fe6b03dc5cd346d5541ec347bafd39a",
+                "reference": "c9013a354fe6b03dc5cd346d5541ec347bafd39a",
                 "shasum": ""
             },
             "require": {
@@ -1379,7 +1379,7 @@
             "suggest": {
                 "sonata-project/doctrine-phpcr-admin-bundle": "if you want to have editing capabilities"
             },
-            "time": "1349882234",
+            "time": "1349968851",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1635,12 +1635,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "0247dd5237f11db4ee4bbc4efadfb72aabdb5887"
+                "reference": "854015265c24a7524d95d4ee57c59f2836d60dc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/zipball/0247dd5237f11db4ee4bbc4efadfb72aabdb5887",
-                "reference": "0247dd5237f11db4ee4bbc4efadfb72aabdb5887",
+                "url": "https://github.com/symfony/symfony/zipball/854015265c24a7524d95d4ee57c59f2836d60dc1",
+                "reference": "854015265c24a7524d95d4ee57c59f2836d60dc1",
                 "shasum": ""
             },
             "require": {
@@ -1689,7 +1689,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "dev-master"
             },
-            "time": "1349880543",
+            "time": "1349963062",
             "type": "library",
             "extra": {
                 "branch-alias": {
