@@ -7,8 +7,5 @@
     <children>
         <property property="dcterms:title" identifier="title" tag-name="h1"/>
         <property property="sioc:content" identifier="body" />
-
-        <collection rel="skos:related" identifier="children" tag-name="ul" ctrl="sioc:Post" />
-
     </children>
 </type>
