@@ -98,7 +98,7 @@ static:
         parent: "/news"
         title: "Symfony CMF featured on symfony.com"
         label: false
-        template: CmfMainBundle:Cms:news_detail.html.twig
+        class: "Cmf\\MainBundle\\Document\\NewsDetail"
         publish_start_date: "2012-06-05"
         content: |
             David wrote a <a href="http://symfony.com/blog/the-symfony-content-management-framework-is-getting-ready#">blog post</a>
@@ -112,7 +112,7 @@ static:
         parent: "/news"
         title: "Symfony CMF sandbox now running with multiple different PHPCR implementations"
         label: false
-        template: CmfMainBundle:Cms:news_detail.html.twig
+        class: "Cmf\\MainBundle\\Document\\NewsDetail"
         publish_start_date: "2012-06-12"
         content: |
             One of the fundamental ideas of PHPCR is that there can be multiple implementations that
@@ -132,7 +132,7 @@ static:
         parent: "/news"
         title: "Jackalope Doctrine DBAL now compatible with PostgreSQL and SQLite"
         label: false
-        template: CmfMainBundle:Cms:news_detail.html.twig
+        class: "Cmf\\MainBundle\\Document\\NewsDetail"
         publish_start_date: "2012-07-19"
         content: |
               Thanks to the work of <a href="https://github.com/cryptocompress">cryptocompress</a> the Jackalope
@@ -149,7 +149,7 @@ static:
         parent: "/news"
         title: "Symfony CMF at the Create.js hackathon in Berlin"
         label: false
-        template: CmfMainBundle:Cms:news_detail.html.twig
+        class: "Cmf\\MainBundle\\Document\\NewsDetail"
         publish_start_date: "2012-07-21"
         content: |
               The Symfony CMF has featured integration with create.js and VIE for inline editing for quite sometime
@@ -164,7 +164,7 @@ static:
         parent: "/news"
         title: "Symfony CMF docs and standard edition"
         label: false
-        template: CmfMainBundle:Cms:news_detail.html.twig
+        class: "Cmf\\MainBundle\\Document\\NewsDetail"
         publish_start_date: "2012-08-01"
         content: |
               We have finally setup our <a href="http://symfony-cmf.readthedocs.org">documentation</a> on readthedocs.org.
@@ -179,7 +179,7 @@ static:
         parent: "/news"
         title: "Symfony CMF website update"
         label: false
-        template: CmfMainBundle:Cms:news_detail.html.twig
+        class: "Cmf\\MainBundle\\Document\\NewsDetail"
         publish_start_date: "2012-09-29"
         content: |
               In an effort to eat our own dog food, we have finally <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/6">updated</a>
