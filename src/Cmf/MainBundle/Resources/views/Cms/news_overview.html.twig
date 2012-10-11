@@ -15,12 +15,24 @@
                 {% createphp news %}
                 <li {{ createphp_attributes(news_rdf) }}>
                     <a href="{{ path(news) }}" {{ createphp_attributes(news_rdf.title) }}>{{ createphp_content(news_rdf.title) }}</a> ({{ news.publishStartDate | date('Y-m-d')  }})
-                    <div {{ createphp_attributes(news_rdf.body) }}></div>
+                    <div class="newscontent" {{ createphp_attributes(news_rdf.body) }}>{{ createphp_content(news_rdf.body) }}</div>
                 </li>
                 {% endcreatephp %}
             {% endfor %}
         </ul>
 
 {% endcreatephp %}
+</div>
+
+{% block customjs %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        //show  / hide the news content
+        $('a.create-ui-btn').click(function() {
+            $('div.newscontent').toggle();
+        });
+    });
+</script>
+{% endblock %}
 
 {% endblock %}
