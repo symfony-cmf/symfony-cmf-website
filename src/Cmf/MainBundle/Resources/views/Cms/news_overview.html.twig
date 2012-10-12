@@ -26,12 +26,17 @@
 
 {% block customjs %}
 <script type="text/javascript">
+
     $(document).ready(function() {
-        //show  / hide the news content
-        $('a.create-ui-btn').click(function() {
-            $('div.newscontent').toggle();
+        $('body').bind('midgardcreatestatechange', function (event, options) {
+            if (options.state == 'edit') {
+                $('div.newscontent').show();
+            } else {
+                $('div.newscontent').hide();
+            }
         });
     });
+
 </script>
 {% endblock %}
 
