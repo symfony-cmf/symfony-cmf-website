@@ -13,7 +13,10 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     {% endblock %}
-    {% include "SymfonyCmfCreateBundle::includecssfiles.html.twig" %}
+    {% if is_granted('ROLE_EDITOR') %}
+        {% include "SymfonyCmfCreateBundle::includecssfiles.html.twig" %}
+    {% endif %}
+
 </head>
 <body>
 
@@ -40,12 +43,12 @@
 
     <div id="footer"></div>
 </div>
-{% render "symfony_cmf_create.jsloader.controller:includeJSFilesAction" %}
-
+{% if is_granted('ROLE_EDITOR') %}
+    {% render "symfony_cmf_create.jsloader.controller:includeJSFilesAction" %}
+{% endif %}
 
 {% block customjs %}
 {% endblock %}
-
 
 </body>
 </html>

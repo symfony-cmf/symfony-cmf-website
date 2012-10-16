@@ -1,0 +1,22 @@
+security:
+    firewalls:
+        secured_area:
+            pattern:    ^/
+            anonymous: ~
+            http_basic:
+                realm: "Acess to the content editing of the website"
+
+    access_control:
+        - { path: ^/news, roles: ROLE_EDITOR }
+
+    providers:
+        my_chain_provider:
+            chain:
+                providers: [my_memory_provider]
+        my_memory_provider:
+            memory:
+                users:
+                    editor: { password: dummy, roles: 'ROLE_EDITOR' }
+
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext

@@ -7,4 +7,3 @@ create:
     resource: "@SymfonyCmfCreateBundle/Resources/config/routing/rest.xml"
 create_image:
     resource: "@SymfonyCmfCreateBundle/Resources/config/routing/image.xml"
-
