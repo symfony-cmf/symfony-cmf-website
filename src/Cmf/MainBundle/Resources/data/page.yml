@@ -11,7 +11,7 @@ static:
                     source leaders implementing the philosophy of the
                     <a href="http://decoupledcms.org">decoupled CMS</a>.
                     You can read learn more about the project on the
-                    <a href="{{ path('about') }}">about</a> page.
+                    <a href="/about">about</a> page.
                 </p>
 
                 <h2>Mission Statement</h2>
@@ -79,8 +79,8 @@ static:
 
                 <h2>Links</h2>
                 <ul>
-                    <li><a href="{{ path('about') }}">About</a></li>
-                    <li><a href="{{ path('get_involved') }}">Get Involved</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/get-involved">Get Involved</a></li>
                     <li><a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Wiki</a></li>
                     <li><a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Roadmap">Roadmap</a></li>
                 </ul>
