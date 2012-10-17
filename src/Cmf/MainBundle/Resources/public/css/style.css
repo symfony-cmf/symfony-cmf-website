@@ -250,6 +250,26 @@ input.button {
     color: #fff;
 }
 
+
+/* login-info */
+#login-info {
+    position: absolute;
+    margin: 0;
+    padding: 10px 15px 8px 15px;
+    background: #333;
+    font-family: 'Trebuchet MS', Arial, Sans-serif;
+    color: #FFF;
+
+    bottom: 0px;	right: 70px
+}
+#login-info p {
+    margin: 0; padding: 0;
+}
+#login-info a {
+    font-weight: bold;
+    color: #fff;
+}
+
 /* Navigation */
 #nav {
     clear: both;

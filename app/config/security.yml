@@ -5,9 +5,13 @@ security:
             anonymous: ~
             http_basic:
                 realm: "Acess to the content editing of the website"
+            logout:
+                path:   /logout
+                target: /
+                invalidate_session: true
 
     access_control:
-        - { path: ^/news, roles: ROLE_EDITOR }
+        - { path: ^/login, roles: ROLE_EDITOR }
 
     providers:
         my_chain_provider:
