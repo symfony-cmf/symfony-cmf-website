@@ -25,12 +25,13 @@ static:
                 </p>
 
                 <h2>Try it out</h2>
+                <p>Live demo of the CMF Sandbox: <a href="http://cmf.liip.ch/">cmf.liip.ch</a></p>
                 <pre>
 
                     Get the code:
 
-                        $ git clone git://github.com/symfony-cmf/symfony-cmf-website.git
-                        $ cd symfony-cmf-website
+                        $ git clone git://github.com/symfony-cmf/symfony-cmf-standard.git
+                        $ cd symfony-cmf-standard
 
                         $ curl -s http://getcomposer.org/installer | php --
                         $ php composer.phar install
@@ -47,6 +48,7 @@ static:
                 </pre>
                 <p><a href="https://github.com/symfony-cmf/symfony-cmf-website">See the complete installation doc on GitHub</a></p>
 
+                <a name="slides"></a>
                 <h2>Slides</h2>
                 <ul>
                     <li><a href="./slides/why_symfony_cmf.html">Why Symfony2 CMF?</a></li>
@@ -63,6 +65,7 @@ static:
                     <li><a href="http://docs.doctrine-project.org/projects/doctrine-phpcr-odm/en/latest/">PHPCR ODM</a></li>
                 </ul>
 
+                <a name="bundles"></a>
                 <h2>Bundles</h2>
                 <ul>
                     <li><a href="https://github.com/symfony-cmf/RoutingExtraBundle">RoutingExtraBundle</a> (adds dynamic routing)</li>
