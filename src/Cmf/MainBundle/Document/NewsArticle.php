@@ -9,6 +9,6 @@ use Symfony\Cmf\Bundle\SimpleCmsBundle\Document\Page;
 /**
  * @PHPCRODM\Document
  */
-class NewsDetail extends Page
+class NewsArticle extends Page
 {
 }

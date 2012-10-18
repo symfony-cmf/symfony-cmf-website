@@ -1,9 +1,9 @@
 static:
     home:
         name: ""
-        title: "Home"
+        title: "The Symfony CMF Project"
+        class: "Cmf\\MainBundle\\Document\\WebPage"
         content: |
-                <h2>The Symfony CMF Project</h2>
                 <p>
                     Welcome to the home of the <a href="http://symfony.com">Symfony2</a>
                     Content Management Framework. The project is organized by the Symfony
@@ -88,7 +88,7 @@ static:
     news:
         name: "news"
         title: "News"
-        class: "Cmf\\MainBundle\\Document\\NewsCollection"
+        class: "Cmf\\MainBundle\\Document\\CollectionPage"
         formats: [html, rss]
         template: CmfMainBundle:Cms:news_overview.{_format}.twig
         options:
@@ -101,7 +101,7 @@ static:
         parent: "/news"
         title: "Symfony CMF featured on symfony.com"
         label: false
-        class: "Cmf\\MainBundle\\Document\\NewsDetail"
+        class: "Cmf\\MainBundle\\Document\\NewsArticle"
         publish_start_date: "2012-06-05"
         content: |
             David wrote a <a href="http://symfony.com/blog/the-symfony-content-management-framework-is-getting-ready#">blog post</a>
@@ -115,7 +115,7 @@ static:
         parent: "/news"
         title: "Symfony CMF sandbox now running with multiple different PHPCR implementations"
         label: false
-        class: "Cmf\\MainBundle\\Document\\NewsDetail"
+        class: "Cmf\\MainBundle\\Document\\NewsArticle"
         publish_start_date: "2012-06-12"
         content: |
             One of the fundamental ideas of PHPCR is that there can be multiple implementations that
@@ -135,7 +135,7 @@ static:
         parent: "/news"
         title: "Jackalope Doctrine DBAL now compatible with PostgreSQL and SQLite"
         label: false
-        class: "Cmf\\MainBundle\\Document\\NewsDetail"
+        class: "Cmf\\MainBundle\\Document\\NewsArticle"
         publish_start_date: "2012-07-19"
         content: |
               Thanks to the work of <a href="https://github.com/cryptocompress">cryptocompress</a> the Jackalope
@@ -152,7 +152,7 @@ static:
         parent: "/news"
         title: "Symfony CMF at the Create.js hackathon in Berlin"
         label: false
-        class: "Cmf\\MainBundle\\Document\\NewsDetail"
+        class: "Cmf\\MainBundle\\Document\\NewsArticle"
         publish_start_date: "2012-07-21"
         content: |
               The Symfony CMF has featured integration with create.js and VIE for inline editing for quite sometime
@@ -167,7 +167,7 @@ static:
         parent: "/news"
         title: "Symfony CMF docs and standard edition"
         label: false
-        class: "Cmf\\MainBundle\\Document\\NewsDetail"
+        class: "Cmf\\MainBundle\\Document\\NewsArticle"
         publish_start_date: "2012-08-01"
         content: |
               We have finally setup our <a href="http://symfony-cmf.readthedocs.org">documentation</a> on readthedocs.org.
@@ -182,7 +182,7 @@ static:
         parent: "/news"
         title: "Symfony CMF website update"
         label: false
-        class: "Cmf\\MainBundle\\Document\\NewsDetail"
+        class: "Cmf\\MainBundle\\Document\\NewsArticle"
         publish_start_date: "2012-09-29"
         content: |
               In an effort to eat our own dog food, we have finally <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/6">updated</a>
@@ -196,9 +196,8 @@ static:
     getstarted:
         name: "get-started"
         title: "Get Started"
+        class: "Cmf\\MainBundle\\Document\\WebPage"
         content: |
-            <h2>Get started</h2>
-
             <p>Want to get started with the project? The best way to get your feet wet is to install the sandbox.
             It shows how far the project has come already and what is already possible today!</p>
 
@@ -218,9 +217,8 @@ static:
     getinvolved:
             name: "get-involved"
             title: "Get Involved"
+            class: "Cmf\\MainBundle\\Document\\WebPage"
             content: |
-                <h2>Get involved</h2>
-
                 <p>Want to get involved with the project? Here are some simple things you can do to get started:</p>
 
                 <ol>
@@ -244,9 +242,8 @@ static:
     about:
             name: "about"
             title: "About"
+            class: "Cmf\\MainBundle\\Document\\WebPage"
             content: |
-                <h2>About</h2>
-
                 <p>
                 The <a href="http://symfony.com">Symfony2</a> Content Management
                 Framework project was started by a large group of Symfony developers looking

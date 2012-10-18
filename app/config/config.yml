@@ -1,5 +1,5 @@
 imports:
-    - { resource: parameters.yml.dist }
+    - { resource: parameters.yml }
     - { resource: security.yml }
 
 framework:
@@ -44,8 +44,8 @@ symfony_cmf_routing_extra:
 symfony_cmf_simple_cms:
     routing:
         templates_by_class:
-            Cmf\MainBundle\Document\NewsDetail: CmfMainBundle:Cms:news_detail.html.twig
-            Symfony\Cmf\Bundle\SimpleCmsBundle\Document\Page: SymfonyCmfSimpleCmsBundle:Page:index.html.twig
+            Cmf\MainBundle\Document\NewsArticle: CmfMainBundle:Cms:news_detail.html.twig
+            Cmf\MainBundle\Document\WebPage: SymfonyCmfSimpleCmsBundle:Page:index.html.twig
     use_sonata_admin: false
 
 knp_menu:
@@ -76,4 +76,4 @@ fos_rest:
 symfony_cmf_create:
     phpcr_odm: true
     map:
-        http://cmf.symfony.com/ns#NewsDetail: Cmf\MainBundle\Document\NewsDetail
+        http://schema.org/NewsArticle: Cmf\MainBundle\Document\NewsArticle
