@@ -1,5 +1,5 @@
 imports:
-    - { resource: parameters.yml }
+    - { resource: parameters.yml.dist }
     - { resource: security.yml }
 
 framework:
@@ -76,4 +76,4 @@ fos_rest:
 symfony_cmf_create:
     phpcr_odm: true
     map:
-        http://rdfs.org/sioc/ns#Post: Cmf\MainBundle\Document\NewsDetail
+        http://cmf.symfony.com/ns#NewsDetail: Cmf\MainBundle\Document\NewsDetail

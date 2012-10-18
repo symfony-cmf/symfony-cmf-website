@@ -1,11 +1,10 @@
 <type
-        xmlns:sioc="http://rdfs.org/sioc/ns#"
         xmlns:dcterms="http://purl.org/dc/terms/"
-        xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-        typeof="sioc:Post"
+        xmlns:cmf="http://cmf.symfony.com/ns#"
+        typeof="cmf:NewsDetail"
         >
     <children>
-        <property property="dcterms:title" identifier="title" tag-name="h1"/>
-        <property property="sioc:content" identifier="body" />
+        <property property="cmf:title" identifier="title" tag-name="h1"/>
+        <property property="cmf:content" identifier="body" />
     </children>
 </type>
