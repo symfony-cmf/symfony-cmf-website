@@ -20,7 +20,7 @@ security:
         my_memory_provider:
             memory:
                 users:
-                    editor: { password: dummy, roles: 'ROLE_EDITOR' }
+                    editor: { password: %editor_password%, roles: 'ROLE_EDITOR' }
 
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext

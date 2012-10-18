@@ -18,3 +18,4 @@ parameters:
     database_name: null
     database_user: null
     database_password: null
+    editor_password: dummy
