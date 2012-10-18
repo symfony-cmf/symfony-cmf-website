@@ -14,10 +14,10 @@ class CreateJsTest extends WebTestCase
         $partOfKey = '<http://purl.org/dc/terms/partOf>';
         $partOf = '</cms/simple/news>';
 
-        $titleKey = '<http://purl.org/dc/terms/title>';
+        $titleKey = '<http://schema.org/CreativeWork/headline>';
         $title = 'news title from testAddNews';
 
-        $contentKey = '<http://rdfs.org/sioc/ns#content>';
+        $contentKey = '<http://schema.org/Article/articleBody>';
         $content = 'some new content';
 
         $subjectKey = '@subject';
@@ -52,10 +52,10 @@ class CreateJsTest extends WebTestCase
         $client = $this->createClient();
 
         //prepare the PUT request
-        $titleKey = '<http://purl.org/dc/terms/title>';
+        $titleKey = '<http://schema.org/CreativeWork/headline>';
         $title = 'updated title from testUpdateNews';
 
-        $contentKey = '<http://rdfs.org/sioc/ns#content>';
+        $contentKey = '<http://schema.org/Article/articleBody>';
         $content = 'some updated content';
 
         $subjectKey = '@subject';
@@ -90,10 +90,10 @@ class CreateJsTest extends WebTestCase
         $partOfKey = '<http://purl.org/dc/terms/partOf>';
         $partOf = '</cms/simple/news>';
 
-        $titleKey = '<http://purl.org/dc/terms/title>';
+        $titleKey = '<http://schema.org/CreativeWork/headline>';
         $title = 'updated title from testRestService';
 
-        $contentKey = '<http://rdfs.org/sioc/ns#content>';
+        $contentKey = '<http://schema.org/Article/articleBody>';
         $content = 'updated content<br>';
 
         $subjectKey = '@subject';
@@ -114,11 +114,11 @@ class CreateJsTest extends WebTestCase
 
         $typeFactory = $this->getContainer()->get('symfony_cmf_create.rdf_type_factory');
 
-        $classType = $typeFactory->getType('Cmf\\MainBundle\\Document\\NewsCollection');
+        $classType = $typeFactory->getType('Cmf\\MainBundle\\Document\\CollectionPage');
 
         $result = $restService->run($request, $classType, null, RestService::HTTP_POST);
 
-        $this->assertEquals($title, $result['<http://purl.org/dc/terms/title>']);
-        $this->assertEquals($content, $result['<http://rdfs.org/sioc/ns#content>']);
+        $this->assertEquals($title, $result['<http://schema.org/CreativeWork/headline>']);
+        $this->assertEquals($content, $result['<http://schema.org/Article/articleBody>']);
     }
 }

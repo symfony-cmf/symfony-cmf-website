@@ -1,8 +1,8 @@
 <type
         xmlns:dcterms="http://purl.org/dc/terms/"
         xmlns:sc="http://schema.org/"
-        xmlns:cw="http://schema.org/CreativeWork"
-        xmlns:ar="http://schema.org/Article"
+        xmlns:cw="http://schema.org/CreativeWork/"
+        xmlns:ar="http://schema.org/Article/"
         typeof="sc:WebPage"
         itemtype="http://schema.org/WebPage"
         >
