@@ -56,13 +56,13 @@ class CreateJsTest extends WebTestCase
         $title = 'updated title from testUpdateNews';
 
         $contentKey = '<http://schema.org/Article/articleBody>';
-        $content = 'some updated content';
+        $content = 'some updated content from testUpdateNews';
 
         $subjectKey = '@subject';
         $subject = '</cms/simple/news/symfony-cmf-website-update>';
 
         $typeKey = '@type';
-        $type = '<http://rdfs.org/sioc/ns#Post';
+        $type = '<<http://schema.org/NewsArticle>';
 
         $crawler = $client->request('PUT', '/en/symfony-cmf/create/document/cms/simple/news/symfony-cmf-website-update',
             array(
@@ -70,8 +70,8 @@ class CreateJsTest extends WebTestCase
                 $contentKey => $content,
                 $subjectKey => $subject,
                 $typeKey => $type
-                )
-            );
+            )
+        );
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
@@ -83,6 +83,42 @@ class CreateJsTest extends WebTestCase
         $this->assertCount(1, $crawler->filter(sprintf('p:contains("%s")', $content)));
     }
 
+    public function testUpdatePage()
+    {
+        $client = $this->createClient();
+
+        //prepare the PUT request
+        $titleKey = '<http://schema.org/CreativeWork/headline>';
+        $title = 'updated title from testUpdatePage';
+
+        $contentKey = '<http://schema.org/CreativeWork/text>';
+        $content = 'updated content for the page from testUpdatePage';
+
+        $subjectKey = '@subject';
+        $subject = '</cms/simple/get-started>';
+
+        $typeKey = '@type';
+        $type = '<http://schema.org/WebPage>';
+
+        $crawler = $client->request('PUT', '/en/symfony-cmf/create/document/cms/simple/get-started',
+            array(
+                $titleKey => $title,
+                $contentKey => $content,
+                $subjectKey => $subject,
+                $typeKey => $type
+            )
+        );
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        //get the updated page and check if data has been updated
+        $crawler = $client->request('GET', '/get-started');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertCount(1, $crawler->filter(sprintf('h2:contains("%s")', $title)));
+        //TODO: why is the count 5? Bug of the filter? The update is correct in the database...
+        $this->assertTrue($crawler->filter(sprintf('div:contains("%s")', $content))->count() >= 1);
+    }
 
     public function testRestServiceWithPost()
     {
