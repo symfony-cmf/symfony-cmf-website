@@ -207,7 +207,7 @@ static:
               The pace of development has picked up quite a bit since the summer. One of the big things that finally
               landed in the <a href="http://cmf.liip.ch">demo site</a> is the integration with <a href="https://github.com/flack/createphp">createphp</a>.
               One of the big benefits of createphp is that it can help with generating RDFa output inside
-              <a href-"https://github.com/symfony-cmf/cmf-sandbox/blob/master/src/Sandbox/MainBundle/Resources/views/MultilangStaticContent/index.html.twig">templates</a>.
+              <a href="https://github.com/symfony-cmf/cmf-sandbox/blob/master/src/Sandbox/MainBundle/Resources/views/MultilangStaticContent/index.html.twig">templates</a>.
               The image upload is now actually functional and all the CMF Bundles and libraries have been updated
               to their respective latest versions. Finally we are now using the <a href="https://github.com/lunetics/LocaleBundle">LuneticsLocaleBundle</a>
               as the language switcher. To be able to use such a general purpose Bundle, build around the
