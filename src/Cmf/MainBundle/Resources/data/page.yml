@@ -97,7 +97,7 @@ static:
         options:
             displayChildren: false
             currentUriPrefix: "/news"
-        content: The latest news about the Symfony CMF:
+        content: The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):
 
     symfony-cmf-featured-on-symfony-com:
         name: "symfony-cmf-featured-on-symfony-com"
@@ -258,7 +258,7 @@ static:
                         and introduce yourself there as well.
                     </li>
                     <li>
-                        Read the <a href="{{ path('about') }}">about</a> page.
+                        Read the <a href="/about">about</a> page.
                     </li>
                     <li>
                         Read through the <a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Github Wiki</a> as well
