@@ -73,7 +73,6 @@ static:
                     <li><a href="https://github.com/symfony-cmf/ContentBundle">ContentBundle</a> (provides basic classes for defining content)</li>
                     <li><a href="https://github.com/symfony-cmf/CreateBundle">CreateBundle</a> (provides integration with <a href="http://createjs.org">create.js</a> and <a href="https://github.com/flack/createphp">createphp</a>)</li>
                     <li><a href="https://github.com/symfony-cmf/MenuBundle">MenuBundle</a> (integrates PHPCR with KnpMenuBundle)</li>
-                    <li><a href="https://github.com/symfony-cmf/MultilangContentBundle">MultilangContentBundle</a> (adds i18n capabilities)</li>
                     <li><a href="https://github.com/symfony-cmf/SearchBundle">SearchBundle</a> (adds site-wide search, WIP)</li>
                     <li><a href="https://github.com/symfony-cmf/SimpleCmsBundle">SimpleCmsBundle</a> (simple CMS on top of the CMF)</li>
                     <li><a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle">SonataDoctrinePhpcrAdminBundle</a> (integrates PHPCR with SonataAdminBundle)</li>
