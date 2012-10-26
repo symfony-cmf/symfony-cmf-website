@@ -227,7 +227,7 @@ static:
         publish_start_date: "2012-10-26"
         content: |
               The Symfony CMF documentation is now part of the official documentation of Symfony2 itself. The new location
-              is <a href="symfony-cmf-docs-moved">here</a>. Looks much better now, but the still need help in getting
+              is <a href="http://symfony.com/doc/master/cmf/index.html">here</a>. Looks much better now, but the still need help in getting
               the documentation into a state where they can really take a beginner and turn them into a CMF expert.
               The while current state touches on pretty much all aspects of the CMF, there is a lot of room of improvement
               in terms of language, details and introducing each concept in the right order. This is the kind of thing
