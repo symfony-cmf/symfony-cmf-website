@@ -76,6 +76,7 @@ static:
                     <li><a href="https://github.com/symfony-cmf/SearchBundle">SearchBundle</a> (adds site-wide search, WIP)</li>
                     <li><a href="https://github.com/symfony-cmf/SimpleCmsBundle">SimpleCmsBundle</a> (simple CMS on top of the CMF)</li>
                     <li><a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle">SonataDoctrinePhpcrAdminBundle</a> (integrates PHPCR with SonataAdminBundle)</li>
+                    <li><a href="https://github.com/symfony-cmf/TreeBundle">TreeBundle</a> (integrate jQuery tree with Symfony2)</li>
                     <li><a href="https://github.com/symfony-cmf/TreeBrowserBundle">TreeBrowserBundle</a> (adds a javascript UI to browse PHPCR content repositories)</li>
                     <li><a href="https://github.com/symfony-cmf/RoutingExtraBundle">RoutingExtraBundle</a> (adds dynamic routing)</li>
                 </ul>
