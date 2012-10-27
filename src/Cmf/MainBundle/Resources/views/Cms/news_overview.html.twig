@@ -4,9 +4,7 @@
 
 {% createphp page as="rdf" %}
 
-
 <div {{ createphp_attributes(rdf) }}>
-
     <h2 {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h2>
     <p {{ createphp_attributes( rdf.body ) }}>{{ createphp_content( rdf.body|raw ) }}</p>
 
@@ -20,9 +18,9 @@
                 {% endcreatephp %}
             {% endfor %}
         </ul>
+</div>
 
 {% endcreatephp %}
-</div>
 
 {% block customjs %}
 <script type="text/javascript">
@@ -38,6 +36,7 @@
     });
 
 </script>
-{% endblock %}
 
-{% endblock %}
+{% endblock customjs %}
+
+{% endblock content %}

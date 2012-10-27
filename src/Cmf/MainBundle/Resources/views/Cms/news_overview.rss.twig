@@ -12,8 +12,8 @@
         {% for news in cmf_children(page) %}
         <item>
             <title>{{ news.title }}</title>
-            <link>{{ path(news) }}#{{ news.title }}</link>
-            <guid>{{ path(news) }}</guid>
+            <link>{{ url(news) }}</link>
+            <guid isPermaLink="true">{{ url(news) }}</guid>
             <category>General</category>
             <description>{{ news.body|striptags }}</description>
             <content:encoded>{{ news.body|raw }}</content:encoded>

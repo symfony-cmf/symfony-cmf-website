@@ -11,7 +11,7 @@ static:
                     source leaders implementing the philosophy of the
                     <a href="http://decoupledcms.org">decoupled CMS</a>.
                     You can read learn more about the project on the
-                    <a href="{{ path('about') }}">about</a> page.
+                    <a href="/about">about</a> page.
                 </p>
 
                 <h2>Mission Statement</h2>
@@ -25,12 +25,13 @@ static:
                 </p>
 
                 <h2>Try it out</h2>
+                <p>Live demo of the CMF Sandbox: <a href="http://cmf.liip.ch/">cmf.liip.ch</a></p>
                 <pre>
 
                     Get the code:
 
-                        $ git clone git://github.com/symfony-cmf/symfony-cmf-website.git
-                        $ cd symfony-cmf-website
+                        $ git clone git://github.com/symfony-cmf/symfony-cmf-standard.git
+                        $ cd symfony-cmf-standard
 
                         $ curl -s http://getcomposer.org/installer | php --
                         $ php composer.phar install
@@ -47,6 +48,7 @@ static:
                 </pre>
                 <p><a href="https://github.com/symfony-cmf/symfony-cmf-website">See the complete installation doc on GitHub</a></p>
 
+                <a name="slides"></a>
                 <h2>Slides</h2>
                 <ul>
                     <li><a href="./slides/why_symfony_cmf.html">Why Symfony2 CMF?</a></li>
@@ -58,29 +60,31 @@ static:
 
                 <h2>Documentation</h2>
                 <ul>
-                    <li><a href="http://symfony-cmf.readthedocs.org">Symfony CMF docs</a></li>
+                    <li><a href="http://symfony.com/doc/master/cmf/index.html">Symfony CMF docs</a></li>
                     <li><a href="https://github.com/symfony-cmf/symfony-cmf/wiki">Symfony CMF wiki</a></li>
                     <li><a href="http://docs.doctrine-project.org/projects/doctrine-phpcr-odm/en/latest/">PHPCR ODM</a></li>
                 </ul>
 
+                <a name="bundles"></a>
                 <h2>Bundles</h2>
                 <ul>
-                    <li><a href="https://github.com/symfony-cmf/RoutingExtraBundle">RoutingExtraBundle</a> (adds dynamic routing)</li>
-                    <li><a href="https://github.com/symfony-cmf/SimpleCmsBundle">SimpleCmsBundle</a> (simple CMS on top of the CMF)</li>
+                    <li><a href="https://github.com/symfony-cmf/BlockBundle">BlockBundle</a> (integrates PHPCR with SonataBlockBundle)</li>
                     <li><a href="https://github.com/symfony-cmf/CoreBundle">CoreBundle</a> (provides some common helpers for content rendering)</li>
                     <li><a href="https://github.com/symfony-cmf/ContentBundle">ContentBundle</a> (provides basic classes for defining content)</li>
-                    <li><a href="https://github.com/symfony-cmf/MultilangContentBundle">MultilangContentBundle</a> (adds i18n capabilities)</li>
+                    <li><a href="https://github.com/symfony-cmf/CreateBundle">CreateBundle</a> (provides integration with <a href="http://createjs.org">create.js</a> and <a href="https://github.com/flack/createphp">createphp</a>)</li>
                     <li><a href="https://github.com/symfony-cmf/MenuBundle">MenuBundle</a> (integrates PHPCR with KnpMenuBundle)</li>
-                    <li><a href="https://github.com/symfony-cmf/BlockBundle">BlockBundle</a> (integrates PHPCR with SonataBlockBundle)</li>
-                    <li><a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle">SonataDoctrinePhpcrAdminBundle</a> (integrates PHPCR with SonataAdminBundle)</li>
-                    <li><a href="https://github.com/symfony-cmf/TreeBrowserBundle">TreeBrowserBundle</a> (adds a javascript UI to browse PHPCR content repositories)</li>
                     <li><a href="https://github.com/symfony-cmf/SearchBundle">SearchBundle</a> (adds site-wide search, WIP)</li>
+                    <li><a href="https://github.com/symfony-cmf/SimpleCmsBundle">SimpleCmsBundle</a> (simple CMS on top of the CMF)</li>
+                    <li><a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle">SonataDoctrinePhpcrAdminBundle</a> (integrates PHPCR with SonataAdminBundle)</li>
+                    <li><a href="https://github.com/symfony-cmf/TreeBundle">TreeBundle</a> (integrate jQuery tree with Symfony2)</li>
+                    <li><a href="https://github.com/symfony-cmf/TreeBrowserBundle">TreeBrowserBundle</a> (adds a javascript UI to browse PHPCR content repositories)</li>
+                    <li><a href="https://github.com/symfony-cmf/RoutingExtraBundle">RoutingExtraBundle</a> (adds dynamic routing)</li>
                 </ul>
 
                 <h2>Links</h2>
                 <ul>
-                    <li><a href="{{ path('about') }}">About</a></li>
-                    <li><a href="{{ path('get_involved') }}">Get Involved</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/get-involved">Get Involved</a></li>
                     <li><a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Wiki</a></li>
                     <li><a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Roadmap">Roadmap</a></li>
                 </ul>
@@ -94,7 +98,7 @@ static:
         options:
             displayChildren: false
             currentUriPrefix: "/news"
-        content: The latest news about the Symfony CMF:
+        content: The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):
 
     symfony-cmf-featured-on-symfony-com:
         name: "symfony-cmf-featured-on-symfony-com"
@@ -193,6 +197,43 @@ static:
               In a second step we have also <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/7">added a news system</a>
               based on the SimpleCmsBundle, including an <a href="http://cmf.symfony.com/news.rss">RSS feed</a>.
 
+    demo-website-update:
+        name: "demo-website-update"
+        parent: "/news"
+        title: "Symfony CMF demo website update"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2012-10-22"
+        content: |
+              The pace of development has picked up quite a bit since the summer. One of the big things that finally
+              landed in the <a href="http://cmf.liip.ch">demo site</a> is the integration with <a href="https://github.com/flack/createphp">createphp</a>.
+              One of the big benefits of createphp is that it can help with generating RDFa output inside
+              <a href="https://github.com/symfony-cmf/cmf-sandbox/blob/master/src/Sandbox/MainBundle/Resources/views/MultilangStaticContent/index.html.twig">templates</a>.
+              The image upload is now actually functional and all the CMF Bundles and libraries have been updated
+              to their respective latest versions. Finally we are now using the <a href="https://github.com/lunetics/LocaleBundle">LuneticsLocaleBundle</a>
+              as the language switcher. To be able to use such a general purpose Bundle, build around the
+              <a href="https://github.com/symfony/Routing">static routing</a> component of Symfony2 core, with our
+              <a href="https://github.com/symfony-cmf/Routing">dynamic routing</a> component marks a major step in ensuring
+              that the development experience with the CMF remains as simple and predictable as with just Symfony2 itself.
+              In this context we are also pleased to announce that <a href="https://github.com/ezsystems/ezp-next/blob/master/composer.json#L33>eZPublish5</a>
+              will ship using our routing component. Drupal is also <a href="http://drupal.org/node/1606794">in the process</a>
+              of adopting it for their upcoming Drupal 8 release.
+
+    symfony-cmf-docs-moved:
+        name: "symfony-cmf-docs-moved"
+        parent: "/news"
+        title: "Symfony CMF docs have been moved"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2012-10-26"
+        content: |
+              The Symfony CMF documentation is now part of the official documentation of Symfony2 itself. The new location
+              is <a href="http://symfony.com/doc/master/cmf/index.html">here</a>. Looks much better now, but the still need help in getting
+              the documentation into a state where they can really take a beginner and turn them into a CMF expert.
+              The while current state touches on pretty much all aspects of the CMF, there is a lot of room of improvement
+              in terms of language, details and introducing each concept in the right order. This is the kind of thing
+              that is really hard for the original authors to get right, since they tend to be oblivious to such aspects.
+
     getstarted:
         name: "get-started"
         title: "Get Started"
@@ -231,7 +272,7 @@ static:
                         and introduce yourself there as well.
                     </li>
                     <li>
-                        Read the <a href="{{ path('about') }}">about</a> page.
+                        Read the <a href="/about">about</a> page.
                     </li>
                     <li>
                         Read through the <a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Github Wiki</a> as well
