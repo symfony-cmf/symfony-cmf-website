@@ -25,8 +25,8 @@ class StaticPageTest extends WebTestCase
             array('/', 'The Symfony CMF Project'),
             array('/news', 'News'),
             array('/news/symfony-cmf-featured-on-symfony-com', 'Symfony CMF featured on symfony.com'),
-            array('/get-started', 'Get started'),
-            array('/get-involved', 'Get involved'),
+            array('/get-started', 'Get Started'),
+            array('/get-involved', 'Get Involved'),
             array('/about', 'About'),
         );
     }

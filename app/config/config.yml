@@ -73,7 +73,15 @@ fos_rest:
         mime_types:
             rss: 'application/rss+xml'
 
+assetic:
+    filters:
+        cssrewrite: ~
+
 symfony_cmf_create:
     phpcr_odm: true
+    use_coffee: false
+    rdf_config_dirs:
+        - "%kernel.root_dir%/Resources/rdf-mappings"
     map:
         http://schema.org/NewsArticle: Cmf\MainBundle\Document\NewsArticle
+
