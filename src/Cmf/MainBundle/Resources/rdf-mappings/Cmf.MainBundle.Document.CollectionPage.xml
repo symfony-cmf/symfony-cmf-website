@@ -10,7 +10,7 @@
         >
     <children>
         <property property="cw:headline" identifier="title" tag-name="h1"/>
-        <property property="th:description" identifier="body" />
+        <property property="ar:articleBody" identifier="body" />
 
         <collection rel="skos:related" identifier="children" tag-name="ul" type="sc:NewsArticle" />
 
