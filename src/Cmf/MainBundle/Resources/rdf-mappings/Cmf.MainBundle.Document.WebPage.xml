@@ -5,7 +5,7 @@
         xmlns:ar="http://schema.org/Article/"
         typeof="sc:WebPage"
         itemtype="http://schema.org/WebPage"
-        >
+>
     <children>
         <property property="cw:headline" identifier="title" tag-name="h1"/>
         <property property="cw:text" identifier="body" />
