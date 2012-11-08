@@ -1,5 +1,5 @@
 {
-    "hash": "7050ad85308ffd4e8c9bc3ed56b45689",
+    "hash": "1d377977855d9d6db1328b21b7d4d105",
     "packages": [
         {
             "name": "doctrine/common",
@@ -18,6 +18,7 @@
             "require": {
                 "php": ">=5.3.2"
             },
+            "time": "1348120518",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -41,8 +42,7 @@
                 },
                 {
                     "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
+                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Roman Borschel",
@@ -55,7 +55,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -67,8 +67,7 @@
                 "eventmanager",
                 "annotations",
                 "persistence"
-            ],
-            "time": "1348120518"
+            ]
         },
         {
             "name": "doctrine/data-fixtures",
@@ -700,7 +699,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -739,7 +738,7 @@
                 "twig/twig": ">=1.8,<2.0-dev",
                 "doctrine/orm": ">=2.1,<2.4-dev"
             },
-            "time": "2012-09-20 19:23:52",
+            "time": "2012-09-19 07:23:52",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -800,6 +799,7 @@
                 "silex/silex": "for the integration with your silex application",
                 "twig/twig": "for the TwigRenderer and the integration with your templates"
             },
+            "time": "1339345240",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -834,8 +834,7 @@
             "keywords": [
                 "menu",
                 "tree"
-            ],
-            "time": "1339345240"
+            ]
         },
         {
             "name": "knplabs/knp-menu-bundle",
@@ -856,7 +855,7 @@
                 "knplabs/knp-menu": "1.1.*",
                 "symfony/framework-bundle": ">=2.0,<2.2-dev"
             },
-            "time": "2012-05-17 07:56:49",
+            "time": "2012-05-15 03:56:49",
             "type": "symfony-bundle",
             "installation-source": "dist",
             "autoload": {
@@ -873,7 +872,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -972,6 +971,7 @@
                 "symfony/symfony": ">=2.0",
                 "doctrine/common": ">=2.2"
             },
+            "time": "1347620900",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -992,8 +992,7 @@
             "keywords": [
                 "Symfony2",
                 "cache"
-            ],
-            "time": "1347620900"
+            ]
         },
         {
             "name": "liip/functional-test-bundle",
@@ -1038,67 +1037,6 @@
             "description": "This bundles provides additional functional test-cases for Symfony2 applications",
             "keywords": [
                 "Symfony2"
-            ]
-        },
-        {
-            "name": "lunetics/locale-bundle",
-            "version": "dev-master",
-            "target-dir": "Lunetics/LocaleBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lunetics/LocaleBundle",
-                "reference": "7caf98f4101f8bbd0087a066968e57457fdba4d0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/lunetics/LocaleBundle/zipball/7caf98f4101f8bbd0087a066968e57457fdba4d0",
-                "reference": "7caf98f4101f8bbd0087a066968e57457fdba4d0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.1,<2.3-dev",
-                "symfony/yaml": ">=2.1,<2.3-dev",
-                "symfony/locale": ">=2.1,<2.3-dev",
-                "symfony/validator": ">=2.1,<2.3-dev"
-            },
-            "require-dev": {
-                "twig/twig": "1.*",
-                "ext-intl": "*"
-            },
-            "suggest": {
-                "ext-intl": "Needed for displaying the countryname in the locale language"
-            },
-            "time": "1351296604",
-            "type": "symfony-bundle",
-            "installation-source": "source",
-            "autoload": {
-                "psr-0": {
-                    "Lunetics\\LocaleBundle": ""
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Lunetics",
-                    "homepage": "http://www.lunetics.com"
-                },
-                {
-                    "name": "Christophe Willesmen",
-                    "homepage": "http://christophewillemsen.com"
-                }
-            ],
-            "description": "A Bundle for switching Languages",
-            "keywords": [
-                "browser",
-                "bundle",
-                "locale",
-                "router",
-                "multilanguage",
-                "language",
-                "cookie"
             ]
         },
         {
@@ -1836,6 +1774,7 @@
                 "symfony/yaml": ">=2.1.0,<2.3-dev",
                 "symfony/config": ">=2.1.0,<2.3-dev"
             },
+            "time": "1348137624",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1862,8 +1801,7 @@
                 }
             ],
             "description": "Symfony MonologBundle",
-            "homepage": "http://symfony.com",
-            "time": "1348137624"
+            "homepage": "http://symfony.com"
         },
         {
             "name": "symfony/symfony",
@@ -1975,6 +1913,7 @@
             "require": {
                 "twig/twig": "1.*"
             },
+            "time": "1349889206",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2002,8 +1941,7 @@
                 "debug",
                 "i18n",
                 "text"
-            ],
-            "time": "1349889206"
+            ]
         },
         {
             "name": "twig/twig",
@@ -2055,9 +1993,7 @@
             ]
         }
     ],
-    "packages-dev": [
-
-    ],
+    "packages-dev": null,
     "aliases": [
 
     ],
@@ -2066,7 +2002,6 @@
         "jackalope/jackalope-doctrine-dbal": 20,
         "doctrine/doctrine-fixtures-bundle": 20,
         "liip/functional-test-bundle": 20,
-        "lunetics/locale-bundle": 20,
         "liip/doctrine-cache-bundle": 20,
         "symfony-cmf/create-bundle": 20
     }

@@ -1,7 +1,7 @@
 static:
     docs:
         label: "Docs"
-        uri: "http://symfony-cmf.readthedocs.org/"
+        uri: "http://symfony.com/doc/master/cmf/index.html"
     wiki:
         label: "Wiki"
         uri: "http://wiki.github.com/symfony-cmf/symfony-cmf"
