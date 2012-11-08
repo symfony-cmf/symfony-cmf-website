@@ -49,6 +49,7 @@ class CreateJsTest extends WebTestCase
 
     public function testUpdateNews()
     {
+        self::$fixturesLoaded = false; // we only load fixtures once, but after this write test we want to refresh them
         $client = $this->createClient();
 
         //prepare the PUT request
@@ -85,6 +86,7 @@ class CreateJsTest extends WebTestCase
 
     public function testUpdatePage()
     {
+        self::$fixturesLoaded = false; // we only load fixtures once, but after this write test we want to refresh them
         $client = $this->createClient();
 
         //prepare the PUT request
