@@ -57,6 +57,13 @@
 {% block customjs %}
 {% endblock %}
 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        //no WYSIWYG options for titles in HALLO editor
+        jQuery('body').midgardCreate('setEditorForProperty', 'cw:headline', 'title');
+    });
+</script>
+
 </body>
 </html>
 
