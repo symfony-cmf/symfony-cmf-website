@@ -202,7 +202,7 @@ static:
         parent: "/news"
         title: "Symfony CMF demo website update"
         label: false
-        template: CmfMainBundle:Cms:news_detail.html.twig
+        class: "Cmf\\MainBundle\\Document\\NewsArticle"
         publish_start_date: "2012-10-22"
         content: |
               The pace of development has picked up quite a bit since the summer. One of the big things that finally
@@ -224,7 +224,7 @@ static:
         parent: "/news"
         title: "Symfony CMF docs have been moved"
         label: false
-        template: CmfMainBundle:Cms:news_detail.html.twig
+        class: "Cmf\\MainBundle\\Document\\NewsArticle"
         publish_start_date: "2012-10-26"
         content: |
               The Symfony CMF documentation is now part of the official documentation of Symfony2 itself. The new location
