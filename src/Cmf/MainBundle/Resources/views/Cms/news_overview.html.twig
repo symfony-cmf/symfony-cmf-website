@@ -2,14 +2,14 @@
 
 {% block content %}
 
-{% createphp page as="rdf" %}
+{% createphp cmfMainContent as="rdf" %}
 
 <div {{ createphp_attributes(rdf) }}>
     <h2 {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h2>
     <p {{ createphp_attributes( rdf.body ) }}>{{ createphp_content( rdf.body|raw ) }}</p>
 
         <ul {{ createphp_attributes( rdf.children ) }}>
-            {% for news in page.children|reverse %}
+            {% for news in cmf_children(cmfMainContent) %}
                 {% createphp news %}
                 <li {{ createphp_attributes(news_rdf) }}>
                     <a href="{{ path(news) }}" {{ createphp_attributes(news_rdf.title) }}>{{ createphp_content(news_rdf.title) }}</a> ({{ news.publishStartDate | date('Y-m-d')  }})

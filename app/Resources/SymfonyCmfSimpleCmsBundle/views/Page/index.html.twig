@@ -2,7 +2,7 @@
 
 {% block content %}
 
-{% createphp page as="rdf" %}
+{% createphp cmfMainContent as="rdf" %}
 <div {{ createphp_attributes(rdf) }}>
 
     <h2 {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h2>

@@ -9,7 +9,7 @@
         <managingEditor>symfony-cmf-devs@googlegroups.com (Symfony CMF)</managingEditor>
         <webMaster>symfony-cmf-devs@googlegroups.com (Symfony CMF)</webMaster>
         <ttl>1440</ttl>
-        {% for news in cmf_children(page) %}
+        {% for news in cmf_children(cmfMainContent) %}
         <item>
             <title>{{ news.title }}</title>
             <link>{{ url(news) }}</link>
