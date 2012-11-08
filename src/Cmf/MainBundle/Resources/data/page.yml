@@ -46,7 +46,7 @@ static:
                         app/console doctrine:phpcr:fixtures:load
 
                 </pre>
-                <p><a href="https://github.com/symfony-cmf/symfony-cmf-website">See the complete installation doc on GitHub</a></p>
+                <p><a href="https://github.com/symfony-cmf/cmf-sandbox">See the complete installation doc on GitHub</a></p>
 
                 <a name="slides"></a>
                 <h2>Slides</h2>
