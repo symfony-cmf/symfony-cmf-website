@@ -24,19 +24,14 @@ static:
                     <strong>testing</strong>.
                 </p>
 
-                <h2>Try it out</h2>
-                <p>Live demo of the CMF Sandbox: <a href="http://cmf.liip.ch/">cmf.liip.ch</a></p>
+                <h2>Try it out locally</h2>
                 <pre>
 
-                    Get the code:
-
-                        $ git clone git://github.com/symfony-cmf/symfony-cmf-standard.git
-                        $ cd symfony-cmf-standard
+                    Get the code and all it's dependencies:
 
                         $ curl -s http://getcomposer.org/installer | php --
-                        $ php composer.phar install
-
-                    This will fetch the vendors and all it's dependencies.
+                        $ php composer.phar create-project symfony-cmf/standard-edition path/to/install
+                        $ cd path/to/install
 
                     Setup the database:
 
@@ -46,7 +41,7 @@ static:
                         app/console doctrine:phpcr:fixtures:load
 
                 </pre>
-                <p><a href="https://github.com/symfony-cmf/cmf-sandbox">See the complete installation doc on GitHub</a></p>
+                <p><a href="https://github.com/symfony-cmf/symfony-cmf-standard">See the complete installation doc on GitHub</a></p>
 
                 <a name="slides"></a>
                 <h2>Slides</h2>
