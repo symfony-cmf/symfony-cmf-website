@@ -30,7 +30,7 @@ static:
                     Get the code and all it's dependencies:
 
                         $ curl -s http://getcomposer.org/installer | php --
-                        $ php composer.phar create-project symfony-cmf/standard-edition path/to/install
+                        $ php composer.phar create-project symfony-cmf/standard-edition path/to/install --stability=dev
                         $ cd path/to/install
 
                     Setup the database:
