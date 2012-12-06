@@ -2,9 +2,7 @@
         xmlns:dcterms="http://purl.org/dc/terms/"
         xmlns:sc="http://schema.org/"
         xmlns:cw="http://schema.org/CreativeWork/"
-        xmlns:th="http://schema.org/Thing/"
         xmlns:ar="http://schema.org/Article/"
-        xmlns:skos="http://www.w3.org/2004/02/skos/core#"
         typeof="sc:CollectionPage"
         itemtype="http://schema.org/CollectionPage"
 >
@@ -12,6 +10,6 @@
         <property property="cw:headline" identifier="title" tag-name="h1"/>
         <property property="ar:articleBody" identifier="body" />
 
-        <collection rel="skos:related" identifier="children" tag-name="ul" type="sc:NewsArticle" />
+        <collection rel="dcterms:hasPart" rev="dcterms:partOf" identifier="children" />
     </children>
 </type>
