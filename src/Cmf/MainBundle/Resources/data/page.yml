@@ -223,8 +223,6 @@ static:
         title: "Get Started"
         class: "Cmf\\MainBundle\\Document\\WebPage"
         content: |
-            <h2>Get started</h2>
-
             <p>
                 Want to get started with the project? The best way to get your feet wet is follow the standard edition
                 <a href="http://symfony.com/doc/master/cmf/getting-started/installing-symfony-cmf.html">installation instructions</a>.
