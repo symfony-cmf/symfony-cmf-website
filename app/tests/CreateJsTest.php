@@ -6,34 +6,16 @@ use Midgard\CreatePHP\RestService;
 
 class CreateJsTest extends WebTestCase
 {
+
     public function testAddNews()
     {
         $client = $this->createClient();
 
-        //prepare the POST request
-        $partOfKey = '<http://purl.org/dc/terms/partOf>';
-        $partOf = '</cms/simple/news>';
-
-        $titleKey = '<http://schema.org/CreativeWork/headline>';
         $title = 'news title from testAddNews';
+        $content = 'some new content from testAddNews';
+        $request = $this->generateCreateArticleRequest($title, $content);
 
-        $contentKey = '<http://schema.org/Article/articleBody>';
-        $content = 'some new content';
-
-        $subjectKey = '@subject';
-        $subject = '_:bnode47';
-
-        $typeKey = '@type';
-        $type = '<http://www.w3.org/2002/07/owl#Thing>';
-
-        $client->request('POST', '/en/symfony-cmf/create/document/_:bnode47',
-            array(
-                $partOfKey => array($partOf),
-                $titleKey => $title,
-                $contentKey => $content,
-                $subjectKey => $subject,
-                $typeKey => $type
-            ));
+        $client->request('POST', '/en/symfony-cmf/create/document/_:bnode89', $request);
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
@@ -122,41 +104,50 @@ class CreateJsTest extends WebTestCase
         $this->assertTrue($crawler->filter(sprintf('div:contains("%s")', $content))->count() >= 1);
     }
 
-    public function testRestServiceWithPost()
+    public function testAddNewsWithRestService()
     {
-        //prepare the post request
-        $partOfKey = '<http://purl.org/dc/terms/partOf>';
-        $partOf = '</cms/simple/news>';
-
-        $titleKey = '<http://schema.org/CreativeWork/headline>';
-        $title = 'updated title from testRestService';
-
-        $contentKey = '<http://schema.org/Article/articleBody>';
-        $content = 'updated content<br>';
-
-        $subjectKey = '@subject';
-        $subject = '</cms/simple/news/symfony-cmf-website-update>';
-
-        $typeKey = '@type';
-        $type = '<http://www.w3.org/2002/07/owl#Thing>';
-
-        $request = array(
-                $partOfKey => array($partOf),
-                $titleKey => $title,
-                $contentKey => $content,
-                $subjectKey => $subject,
-                $typeKey => array($type)
-        );
+        $title = 'news title from testAddNewsWithRestService';
+        $content = 'some new content from testAddNewsWithRestService';
+        $request = $this->generateCreateArticleRequest($title, $content);
 
         $restService = $this->getContainer()->get('symfony_cmf_create.rest.handler');
 
         $typeFactory = $this->getContainer()->get('symfony_cmf_create.rdf_type_factory');
 
-        $classType = $typeFactory->getType('Cmf\\MainBundle\\Document\\CollectionPage');
+        $type = $typeFactory->getTypeByRdf('http://schema.org/NewsArticle');
 
-        $result = $restService->run($request, $classType, null, RestService::HTTP_POST);
+        $result = $restService->run($request, $type, null, RestService::HTTP_POST);
 
         $this->assertEquals($title, $result['<http://schema.org/CreativeWork/headline>']);
         $this->assertEquals($content, $result['<http://schema.org/Article/articleBody>']);
+    }
+
+    private function generateCreateArticleRequest($title, $content)
+    {
+        //prepare the POST request
+        $partOfKey = '<http://purl.org/dc/terms/partOf>';
+        $partOf = '</cms/simple/news>';
+
+        $titleKey = '<http://schema.org/CreativeWork/headline>';
+        $titleValue = $title;
+
+        $contentKey = '<http://schema.org/Article/articleBody>';
+        $contentValue = $content;
+
+        $subjectKey = '@subject';
+        $subject = '_:bnode89';
+
+        $typeKey = '@type';
+        $type = '<http://schema.org/NewsArticle>';
+
+        $request = array(
+            $partOfKey => array($partOf),
+            $titleKey => $titleValue,
+            $contentKey => $contentValue,
+            $subjectKey => $subject,
+            $typeKey => $type
+        );
+
+        return $request;
     }
 }
