@@ -27,6 +27,11 @@ class CreateJsTest extends WebTestCase
         $this->assertCount(1, $crawler->filter(sprintf('h2:contains("%s")', $title)));
         $this->assertCount(1, $crawler->filter(sprintf('p:contains("%s")', $content)));
         $this->assertCount(1, $crawler->filter(sprintf('div.subtitle:contains("%s")', 'Date: ' . date('Y-m-d'))));
+
+        //try to add a news with the same title, a collision on the node name should happen
+        $client->request('POST', '/en/symfony-cmf/create/document/_:bnode89', $request);
+        $this->assertEquals(500, $client->getResponse()->getStatusCode());
+        $this->assertEquals('The document could not be created', $client->getResponse()->getContent());
     }
 
     public function testUpdateNews()
