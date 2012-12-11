@@ -85,3 +85,5 @@ symfony_cmf_create:
     map:
         http://schema.org/NewsArticle: Cmf\MainBundle\Document\NewsArticle
 
+    fixed_toolbar: true
+    title_type: 'cw:headline'
