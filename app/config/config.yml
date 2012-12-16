@@ -86,4 +86,4 @@ symfony_cmf_create:
         http://schema.org/NewsArticle: Cmf\MainBundle\Document\NewsArticle
 
     fixed_toolbar: true
-    title_type: 'cw:headline'
+    plain_text_types: ['cw:headline', 'dcterms:title']
