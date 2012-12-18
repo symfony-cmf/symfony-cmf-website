@@ -54,7 +54,7 @@ h3 {
 }
 
 /* Paragraph */
-p { padding: 12px 10px; margin-right: 30px;	}
+p { margin: 12px 30px 12px 10px; }
 
 /* Lists */
 ul, ol {
@@ -321,6 +321,8 @@ input.button {
     padding: 10px 0 5px 5px;
     margin-left: 5px;
     letter-spacing: -2px;
+    padding: 0px;
+    margin-top: 10px;
 }
 #main h2 a {
     color: #51432f;
