@@ -529,3 +529,14 @@ ol.commentlist {
 .subtitle { margin-left: 15px; }
 
 div.newscontent { display: none; }
+
+/*
+ * Temporary hack: hide the duplicate "+Add" buttons.
+ * See https://github.com/flack/createphp/issues/29
+ */
+.newsoverview button {
+    display: none !important;
+}
+.newsoverview button:last-child {
+    display: block !important;
+}
