@@ -198,7 +198,7 @@ static:
               <a href="https://github.com/symfony/Routing">static routing</a> component of Symfony2 core, with our
               <a href="https://github.com/symfony-cmf/Routing">dynamic routing</a> component marks a major step in ensuring
               that the development experience with the CMF remains as simple and predictable as with just Symfony2 itself.
-              In this context we are also pleased to announce that <a href="https://github.com/ezsystems/ezp-next/blob/master/composer.json#L33>eZPublish5</a>
+              In this context we are also pleased to announce that <a href="https://github.com/ezsystems/ezp-next/blob/master/composer.json#L33">eZPublish5></a>
               will ship using our routing component. Drupal is also <a href="http://drupal.org/node/1606794">in the process</a>
               of adopting it for their upcoming Drupal 8 release.
 
