@@ -218,6 +218,18 @@ static:
               in terms of language, details and introducing each concept in the right order. This is the kind of thing
               that is really hard for the original authors to get right, since they tend to be oblivious to such aspects.
 
+    towards-version-1.0:
+        name: "towards-version-1.0"
+        parent: "/news"
+        title: "Towards version 1.0"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2013-02-26"
+        content: |
+            <p>The last few months have seen a huge increase of activity on the CMF (we seem to not have written many news, but those following the github projects will have seen it). Both Jackalope and PHPCR-ODM and the CMF bundles got new features and tons of issues fixed. And the documentation is starting to take shape, but can still use a lot of improvement.</p>
+            <p>With all this activity, it will be hard to draw the line for a 1.0 release, but nonetheless we need to do it. We built a <a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Release-1.0">release plan</a> that wants to stabilize from the bottom up. We start with PHPCR and phpcr-utils, then go to Jackalope and its transports, then the Doctrine PHPCR-ODM and finally the Symfony2 CMF bundles. We created milestones in the PHPCR / Jackalope / PHPCR-ODM space for now. We hope to get through them until beginning of April, and should probably start version 1.0 milestones for the Symfony2 bundles mid of March and focus on the needed pieces in April.</p>
+            <p>The scope of features we get will depend on the contributions by everybody. But on the other hand, there is no problem adding new features soon afterwards and frequently tagging new versions - as long as we do not need to break backwards compatibility. One important focus is thus to tackle those problems that could require BC breaks so we can get them over before going to a stable release.</p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
@@ -227,13 +239,13 @@ static:
                 Want to get started with the project? The best way to get your feet wet is follow the standard edition
                 <a href="http://symfony.com/doc/master/cmf/getting-started/installing-symfony-cmf.html">installation instructions</a>.
             </p>
-            
+
             <p>
                 If you have further questions or need help getting started, visit our <a href="http://symfony.com/doc/master/cmf/index.html">documentation</a>
                 page or contact us in our <a href="irc://freenode/#symfony-cmf">IRC channel</a>. There is almost always someone around happy
                 to help you get started!
             </p>
-            
+
     getinvolved:
             name: "get-involved"
             title: "Get Involved"
