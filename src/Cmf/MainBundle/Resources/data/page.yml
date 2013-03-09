@@ -223,7 +223,7 @@ static:
         parent: "/news"
         title: "Towards version 1.0"
         label: false
-        template: CmfMainBundle:Cms:news_detail.html.twig
+        class: "Cmf\\MainBundle\\Document\\NewsArticle"
         publish_start_date: "2013-02-26"
         content: |
             <p>The last few months have seen a huge increase of activity on the CMF (we seem to not have written many news, but those following the github projects will have seen it). Both Jackalope and PHPCR-ODM and the CMF bundles got new features and tons of issues fixed. And the documentation is starting to take shape, but can still use a lot of improvement.</p>

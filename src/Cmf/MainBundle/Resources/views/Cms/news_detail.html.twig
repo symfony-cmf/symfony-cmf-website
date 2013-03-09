@@ -7,7 +7,9 @@
 
     <h2 class="my-title" {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h2>
     <div class="subtitle">Date: {{ cmfMainContent.publishStartDate| date('Y-m-d') }}</div>
-    <p {{ createphp_attributes( rdf.body|raw ) }}>{{ createphp_content( rdf.body|raw ) }}</p>
+    <div {{ createphp_attributes( rdf.body|raw ) }} >
+        {{ createphp_content( rdf.body|raw ) }}
+    </div>
 
     {% set prev = cmf_prev(cmfMainContent) %}
     {% if prev %}

@@ -79,7 +79,6 @@ assetic:
 
 symfony_cmf_create:
     phpcr_odm: true
-    use_coffee: false
     rdf_config_dirs:
         - "%kernel.root_dir%/Resources/rdf-mappings"
     map:
