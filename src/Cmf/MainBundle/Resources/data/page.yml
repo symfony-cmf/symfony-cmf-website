@@ -237,7 +237,7 @@ static:
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2013-05-10"
         content: |
-            <p>As you might have noticed, we reached a phase in the stabilization process where we clean up things and try avoid future architecture problems. this leads to lots of BC breaks (and we don't want to clutter the codebase with legacy support before a version 1.0 is even out).</p>
+            <p>As you might have noticed, we reached a phase in the stabilization process where we clean up things and try avoid future architecture problems. This leads to lots of BC breaks (and we don't want to clutter the codebase with legacy support before a version 1.0 is even out).</p>
             <p>We now created a set of alpha tags for all relevant bundles. If you want to stay at the edge and don't mind adjusting to the occasional BC break, please keep using 1.0.* and report any issues. Otherwise, you can pin to the following versions to keep status quo and update the tags manually when you want a new feature.</p>
             <p><pre>
                 "jackalope/jackalope-jackrabbit": "1.0.0-beta1",
@@ -255,9 +255,10 @@ static:
                 "symfony-cmf/simple-cms-bundle": "1.0.0-alpha2",
                 "symfony-cmf/search-bundle": "1.0.0-alpha1",
                 "symfony-cmf/tree-browser-bundle": "1.0.0-alpha2",
-                "symfony-cmf/routing-bundle": "1.1.*"
+                "symfony-cmf/routing-bundle": "1.1.0-alpha1"
             </pre></p>
             <p>If you where depending on symfony-cmf/symfony-cmf you need to add the individual bundles for now, sorry. This will all get better once we have stable releases. Then we will not do BC breaks without updating the minor version, so that you can safely depend on 1.0.*.</p>
+            <p>Note that the RoutingExtraBundle was renamed to RoutingBundle. There is 1.0.1 of RoutingExtraBundle which will be the last version with the old name. The above tagged versions already use the new RoutingBundle name. RoutingBundle master branch is already called 1.1 now. It dropped Symfony 2.1 support.</p>
 
     getstarted:
         name: "get-started"
