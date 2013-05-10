@@ -229,7 +229,7 @@ static:
             <p>With all this activity, it will be hard to draw the line for a 1.0 release, but nonetheless we need to do it. We built a <a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Release-1.0">release plan</a> that wants to stabilize from the bottom up. We start with PHPCR and phpcr-utils, then go to Jackalope and its transports, then the Doctrine PHPCR-ODM and finally the Symfony2 CMF bundles. We created milestones in the PHPCR / Jackalope / PHPCR-ODM space for now. We hope to get through them until beginning of April, and should probably start version 1.0 milestones for the Symfony2 bundles mid of March and focus on the needed pieces in April.</p>
             <p>The scope of features we get will depend on the contributions by everybody. But on the other hand, there is no problem adding new features soon afterwards and frequently tagging new versions - as long as we do not need to break backwards compatibility. One important focus is thus to tackle those problems that could require BC breaks so we can get them over before going to a stable release.</p>
 
-    towards-version-1.0:
+    how-to-survive-stabilization-phase:
         name: "how-to-survive-stabilization-phase"
         parent: "/news"
         title: "How to survive the stabilization phase"
