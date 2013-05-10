@@ -229,6 +229,36 @@ static:
             <p>With all this activity, it will be hard to draw the line for a 1.0 release, but nonetheless we need to do it. We built a <a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Release-1.0">release plan</a> that wants to stabilize from the bottom up. We start with PHPCR and phpcr-utils, then go to Jackalope and its transports, then the Doctrine PHPCR-ODM and finally the Symfony2 CMF bundles. We created milestones in the PHPCR / Jackalope / PHPCR-ODM space for now. We hope to get through them until beginning of April, and should probably start version 1.0 milestones for the Symfony2 bundles mid of March and focus on the needed pieces in April.</p>
             <p>The scope of features we get will depend on the contributions by everybody. But on the other hand, there is no problem adding new features soon afterwards and frequently tagging new versions - as long as we do not need to break backwards compatibility. One important focus is thus to tackle those problems that could require BC breaks so we can get them over before going to a stable release.</p>
 
+    towards-version-1.0:
+        name: "how-to-survive-stabilization-phase"
+        parent: "/news"
+        title: "How to survive the stabilization phase"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2013-05-10"
+        content: |
+            <p>As you might have noticed, we reached a phase in the stabilization process where we clean up things and try avoid future architecture problems. this leads to lots of BC breaks (and we don't want to clutter the codebase with legacy support before a version 1.0 is even out).</p>
+            <p>We now created a set of alpha tags for all relevant bundles. If you want to stay at the edge and don't mind adjusting to the occasional BC break, please keep using 1.0.* and report any issues. Otherwise, you can pin to the following versions to keep status quo and update the tags manually when you want a new feature.</p>
+            <p><pre>
+                "jackalope/jackalope-jackrabbit": "1.0.0-beta1",
+                or
+                "jackalope/jackalope-doctrine-dbal": "1.0.0-alpha1",
+
+                "doctrine/phpcr-odm": "1.0.0-alpha1",
+                "doctrine/phpcr-bundle": "1.0.0-alpha3",
+                "sonata-project/doctrine-phpcr-admin-bundle": "1.0.0-alpha2",
+                "symfony-cmf/core-bundle": "1.0.0-alpha1",
+                "symfony-cmf/block-bundle": "1.0.0-alpha3",
+                "symfony-cmf/content-bundle": "1.0.0-alpha2",
+                "symfony-cmf/create-bundle": "1.0.0-alpha1",
+                "symfony-cmf/menu-bundle": "1.0.0-alpha2",
+                "symfony-cmf/simple-cms-bundle": "1.0.0-alpha2",
+                "symfony-cmf/search-bundle": "1.0.0-alpha1",
+                "symfony-cmf/tree-browser-bundle": "1.0.0-alpha2",
+                "symfony-cmf/routing-bundle": "1.1.*"
+            </pre></p>
+            <p>If you where depending on symfony-cmf/symfony-cmf you need to add the individual bundles for now, sorry. This will all get better once we have stable releases. Then we will not do BC breaks without updating the minor version, so that you can safely depend on 1.0.*.</p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
