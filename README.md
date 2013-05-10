@@ -24,7 +24,7 @@ The next step is to setup the database:
 
     app/console doctrine:database:create
     app/console doctrine:phpcr:init:dbal
-    app/console doctrine:phpcr:register-system-node-types
+    app/console doctrine:phpcr:repository:init
     app/console doctrine:phpcr:fixtures:load
 
 ### Setup your permissions - see [Setting up Permissions](http://symfony.com/doc/current/book/installation.html#configuration-and-setup).
