@@ -255,9 +255,11 @@ static:
                 "symfony-cmf/simple-cms-bundle": "1.0.0-alpha2",
                 "symfony-cmf/search-bundle": "1.0.0-alpha1",
                 "symfony-cmf/tree-browser-bundle": "1.0.0-alpha2",
-                "symfony-cmf/routing-bundle": "1.1.0-alpha1"
+                "symfony-cmf/routing-bundle": "1.1.0-alpha1",
+                "symfony-cmf/blog-bundle": "1.0.0-alpha1",
+                "symfony-cmf/routing-auto-bundle": "1.0.0-alpha1"
             </pre></p>
-            <p>If you where depending on symfony-cmf/symfony-cmf you need to add the individual bundles for now, sorry. This will all get better once we have stable releases. Then we will not do BC breaks without updating the minor version, so that you can safely depend on 1.0.*.</p>
+            <p>You can alternatively depend on symfony-cmf/symfony-cmf which includes most of the above bundles. This will all get better once we have stable releases. Then we will not do BC breaks without updating the minor version, so that you can safely depend on 1.0.*.</p>
             <p>Note that the RoutingExtraBundle was renamed to RoutingBundle. There is 1.0.1 of RoutingExtraBundle which will be the last version with the old name. The above tagged versions already use the new RoutingBundle name. RoutingBundle master branch is already called 1.1 now. It dropped Symfony 2.1 support.</p>
 
     getstarted:
