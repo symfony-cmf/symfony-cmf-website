@@ -270,8 +270,7 @@ static:
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2013-05-21"
         content: |
-            <p>If you have updated your CMF bundles lately, you may have problems with PHPCR nodes created with an older implementation. The renaming of the RoutingExtraBundle to RoutingBundle will affect any route nodes
-stored with this class name and cause them to fail. Also due to a new feature of storing the node depth, previously created nodes which don't have this value could cause issues, one of which is the tree browser failing to load in Sonata Admin.</p>
+            <p>If you have updated your CMF bundles lately, you may have problems with PHPCR nodes created with an older implementation. The renaming of the RoutingExtraBundle to RoutingBundle will affect any route nodes stored with this class name and cause them to fail. Also due to a new feature of storing the node depth, previously created nodes which don't have this value could cause issues, one of which is the tree browser failing to load in Sonata Admin.</p>
             <p>The Doctrine DBAL MySQL backend can be fixed by executing this SQL which will patch up your existing data:</p>
             <p><pre>
                 -- Rewrite depth column by counting slashes in path column
