@@ -262,6 +262,39 @@ static:
             <p>You can alternatively depend on symfony-cmf/symfony-cmf which includes most of the above bundles. This will all get better once we have stable releases. Then we will not do BC breaks without updating the minor version, so that you can safely depend on 1.0.*.</p>
             <p>Note that the RoutingExtraBundle was renamed to RoutingBundle. There is 1.0.1 of RoutingExtraBundle which will be the last version with the old name. The above tagged versions already use the new RoutingBundle name. RoutingBundle master branch is already called 1.1 now. It dropped Symfony 2.1 support.</p>
 
+    doctrine-dbal-repository-data-fixes:
+        name: "doctrine-dbal-repository-data-fixes"
+        parent: "/news"
+        title: "Doctrine DBAL Repository Data Fixes"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2013-05-21"
+        content: |
+            <p>If you have updated your CMF bundles lately, you may have problems with PHPCR nodes created with an older implementation. The renaming of the RoutingExtraBundle to RoutingBundle will affect any route nodes
+stored with this class name and cause them to fail. Also due to a new feature of storing the node depth, previously created nodes which don't have this value could cause issues, one of which is the tree browser failing to load in Sonata Admin.</p>
+            <p>The Doctrine DBAL MySQL backend can be fixed by executing this SQL which will patch up your existing data:</p>
+            <p><pre>
+                -- Rewrite depth column by counting slashes in path column
+                UPDATE phpcr_nodes SET depth = (LENGTH(path) - LENGTH(REPLACE(path, '/', ''))) where id > 0;
+                -- Root path has only one slash but should be set as depth zero
+                UPDATE phpcr_nodes SET depth = 0 WHERE path = '/';
+
+                -- Fix route nodes that reference RoutingExtraBundle and rename to RoutingBundle
+                UPDATE phpcr_nodes
+                SET props = REPLACE(props, 'RoutingExtraBundle', 'RoutingBundle')
+                WHERE props LIKE '%RoutingExtraBundle%'
+                AND id > 0;
+            </pre></p>
+            <p>If you wish to revert the change to the class name in your nodes (possibly because you revert back to older bundles for some reason) you can use this SQL:</p>
+            <p><pre>
+                -- Revert fix, rename to RoutingBundle back to RoutingExtraBundle
+                UPDATE phpcr_nodes
+                SET props = REPLACE(props, 'RoutingBundle', 'RoutingExtraBundle')
+                WHERE props LIKE '%RoutingBundle%'
+                AND id > 0;
+            </pre></p>
+            <p>If you don't like to execute this directly on your database I recommend you create a Doctrine migration using the fix SQL in the up() method, and the revert SQL in down().</p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
