@@ -35,20 +35,20 @@ doctrine_phpcr:
         auto_mapping: true
         auto_generate_proxy_classes: %kernel.debug%
 
-symfony_cmf_routing_extra:
+cmf_routing_extra:
     dynamic:
         enabled: true
 
-symfony_cmf_simple_cms:
+cmf_simple_cms:
     routing:
         templates_by_class:
-            Symfony\Cmf\Bundle\SimpleCmsBundle\Document\Page:  SymfonyCmfSimpleCmsBundle:Page:index.html.twig
+            Symfony\Cmf\Bundle\SimpleCmsBundle\Document\Page:  CmfSimpleCmsBundle:Page:index.html.twig
     use_sonata_admin: false
 
 knp_menu:
     twig: true
 
-symfony_cmf_menu:
+cmf_menu:
     use_sonata_admin: false
     menu_basepath: /cms
 

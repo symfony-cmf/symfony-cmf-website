@@ -35,7 +35,7 @@ static:
                 <a name="slides"></a>
                 <h2>Slides</h2>
                 <ul>
-                    <li><a href="./slides/why_symfony_cmf.html">Why Symfony2 CMF?</a></li>
+                    <li><a href="./slides/why_cmf.html">Why Symfony2 CMF?</a></li>
                     <li><a href="./slides/bigpicture.html">The big picture</a></li>
                     <li><a href="http://phpcr.github.com/slides.html">PHPCR</a></li>
                     <li><a href="http://phpcr.github.com/slides-odm.html">PHPCR ODM</a></li>
@@ -83,8 +83,8 @@ static:
             currentUriPrefix: "/news"
         content: The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):
 
-    symfony-cmf-featured-on-symfony-com:
-        name: "symfony-cmf-featured-on-symfony-com"
+    cmf-featured-on-symfony-com:
+        name: "cmf-featured-on-symfony-com"
         parent: "/news"
         title: "Symfony CMF featured on symfony.com"
         label: false
@@ -97,8 +97,8 @@ static:
             he illustrates in this <a href="http://www.youtube.com/watch?v=i5Y5QPcYWHw">short video</a>. Looks
             like the Symfony CMF is ready for prime time!
 
-    symfony-cmf-sandbox-now-running-with-multiple-different-phpcr-implementations:
-        name: "symfony-cmf-sandbox-now-running-with-multiple-different-phpcr-implementations"
+    cmf-sandbox-now-running-with-multiple-different-phpcr-implementations:
+        name: "cmf-sandbox-now-running-with-multiple-different-phpcr-implementations"
         parent: "/news"
         title: "Symfony CMF sandbox now running with multiple different PHPCR implementations"
         label: false
@@ -149,8 +149,8 @@ static:
               at the <a href="http://lanyrd.com/2012/createjs-hackathon-berlin/">hackathon in Berlin</a>. You can read some more
               information on <a href="http://bergie.iki.fi/blog/createjs-update/">what is going on with create.js</a> on Henri's blog.
 
-    symfony-cmf-docs-and-standard-edition:
-        name: "symfony-cmf-docs-and-standard-edition"
+    cmf-docs-and-standard-edition:
+        name: "cmf-docs-and-standard-edition"
         parent: "/news"
         title: "Symfony CMF docs and standard edition"
         label: false
@@ -164,20 +164,20 @@ static:
               the bare minimum configuration necessary to run the CMF. As its can also be used as a starting point to
               create your own CMF project we have labeled it the <a href="http://symfony-cmf.readthedocs.org">CMF Standard Edition</a>.
 
-    symfony-cmf-website-update:
-        name: "symfony-cmf-website-update"
+    cmf-website-update:
+        name: "cmf-website-update"
         parent: "/news"
         title: "Symfony CMF website update"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-09-29"
         content: |
-              In an effort to eat our own dog food, we have finally <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/6">updated</a>
+              In an effort to eat our own dog food, we have finally <a href="https://github.com/symfony-cmf/cmf-website/pull/6">updated</a>
               this website to use the Symfony CMF. The bulk of the work was done during the
-              <a href="https://rocketlab.liip.ch/event/symfony_cmf_hackday_september">recent hackathon</a>
+              <a href="https://rocketlab.liip.ch/event/cmf_hackday_september">recent hackathon</a>
               at the <a href="http://liip.ch">Liip</a> offices in Fribourg. Overall the hackathon was very productive, you
-              can read a <a href="https://groups.google.com/d/msg/symfony-cmf-devs/XwaDeFam79I/uOfiyGzGpVMJ">short summary here</a>.
-              In a second step we have also <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/7">added a news system</a>
+              can read a <a href="https://groups.google.com/d/msg/cmf-devs/XwaDeFam79I/uOfiyGzGpVMJ">short summary here</a>.
+              In a second step we have also <a href="https://github.com/symfony-cmf/cmf-website/pull/7">added a news system</a>
               based on the SimpleCmsBundle, including an <a href="http://cmf.symfony.com/news.rss">RSS feed</a>.
 
     demo-website-update:
@@ -202,8 +202,8 @@ static:
               will ship using our routing component. Drupal is also <a href="http://drupal.org/node/1606794">in the process</a>
               of adopting it for their upcoming Drupal 8 release.
 
-    symfony-cmf-docs-moved:
-        name: "symfony-cmf-docs-moved"
+    cmf-docs-moved:
+        name: "cmf-docs-moved"
         parent: "/news"
         title: "Symfony CMF docs have been moved"
         label: false
@@ -321,7 +321,7 @@ static:
 
                 <ol>
                     <li>
-                        Join the <a href="http://groups.google.com/group/symfony-cmf-devs">developers</a>
+                        Join the <a href="http://groups.google.com/group/cmf-devs">developers</a>
                         mailing list and introduce yourself to the group.
                     </li>
                     <li>
@@ -400,6 +400,6 @@ static:
                     <li><strong>Wiki</strong>: <a href="http://wiki.github.com/symfony-cmf/symfony-cmf/">http://wiki.github.com/symfony-cmf/symfony-cmf/</a></li>
                     <li><strong>Issue Tracker</strong>: <a href="http://github.com/symfony-cmf/symfony-cmf/issues">http://github.com/symfony-cmf/symfony-cmf/issues</a></li>
                     <li><strong>IRC</strong>: <a href="irc://freenode/#symfony-cmf">#symfony-cmf @ irc.freenode.org</a></li>
-                    <li><strong>Users mailing list</strong>: <a href="http://groups.google.com/group/symfony-cmf-users">http://groups.google.com/group/symfony-cmf-users</a></li>
-                    <li><strong>Devs mailing list</strong>: <a href="http://groups.google.com/group/symfony-cmf-devs">http://groups.google.com/group/symfony-cmf-devs</a></li>
+                    <li><strong>Users mailing list</strong>: <a href="http://groups.google.com/group/cmf-users">http://groups.google.com/group/cmf-users</a></li>
+                    <li><strong>Devs mailing list</strong>: <a href="http://groups.google.com/group/cmf-devs">http://groups.google.com/group/cmf-devs</a></li>
                 </ul>

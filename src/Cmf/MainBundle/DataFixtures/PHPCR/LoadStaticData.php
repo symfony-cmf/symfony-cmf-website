@@ -29,7 +29,7 @@ class LoadStaticData extends LoadCmsData
         $yaml = new Parser();
         $data = $yaml->parse(file_get_contents(__DIR__ . '/../../Resources/data/external.yml'));
 
-        $basepath = $this->container->getParameter('symfony_cmf_simple_cms.basepath');
+        $basepath = $this->container->getParameter('cmf_simple_cms.basepath');
         $home = $dm->find(null, $basepath);
 
         foreach ($data['static'] as $name => $overview) {

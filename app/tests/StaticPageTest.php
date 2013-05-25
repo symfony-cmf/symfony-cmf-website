@@ -24,7 +24,7 @@ class StaticPageTest extends WebTestCase
         return array(
             array('/', 'The Symfony CMF Project'),
             array('/news', 'News'),
-            array('/news/symfony-cmf-featured-on-symfony-com', 'Symfony CMF featured on symfony.com'),
+            array('/news/cmf-featured-on-symfony-com', 'Symfony CMF featured on symfony.com'),
             array('/get-started', 'Get started'),
             array('/get-involved', 'Get involved'),
             array('/about', 'About'),
