@@ -6,8 +6,8 @@
         <description>The Symfony CMF project makes it easier for developers to add CMS functionality to applications built with the Symfony2 PHP framework. Key development principles for the provided set of bundles are scalability, usability, documentation and testing.</description>
         <dc:language>{{ app.request.locale }}</dc:language>
         <generator>Symfony2 CMF</generator>
-        <managingEditor>cmf-devs@googlegroups.com (Symfony CMF)</managingEditor>
-        <webMaster>cmf-devs@googlegroups.com (Symfony CMF)</webMaster>
+        <managingEditor>symfony-cmf-devs@googlegroups.com (Symfony CMF)</managingEditor>
+        <webMaster>symfony-cmf-devs@googlegroups.com (Symfony CMF)</webMaster>
         <ttl>1440</ttl>
         {% for news in cmf_children(cmfMainContent, false, true)|reverse %}
         <item>
@@ -18,7 +18,7 @@
             <description>{{ news.body|striptags }}</description>
             <content:encoded>{{ news.body|raw }}</content:encoded>
             <pubDate>{{ news.publishStartDate | date('r') }}</pubDate>
-            <dc:creator>cmf-devs@googlegroups.com (Symfony CMF)</dc:creator>
+            <dc:creator>symfony-cmf-devs@googlegroups.com (Symfony CMF)</dc:creator>
         </item>
         {% endfor %}
     </channel>

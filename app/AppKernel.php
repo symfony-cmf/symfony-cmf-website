@@ -21,7 +21,7 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle($this),
 
             // enable cmf bundles
-            new Symfony\Cmf\Bundle\RoutingExtraBundle\CmfRoutingExtraBundle(),
+            new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
             new Symfony\Cmf\Bundle\MenuBundle\CmfMenuBundle(),
             new Symfony\Cmf\Bundle\ContentBundle\CmfContentBundle(),
             new Symfony\Cmf\Bundle\CoreBundle\CmfCoreBundle(),

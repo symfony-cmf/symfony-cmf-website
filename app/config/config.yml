@@ -35,7 +35,7 @@ doctrine_phpcr:
         auto_mapping: true
         auto_generate_proxy_classes: %kernel.debug%
 
-cmf_routing_extra:
+cmf_routing:
     dynamic:
         enabled: true
 
