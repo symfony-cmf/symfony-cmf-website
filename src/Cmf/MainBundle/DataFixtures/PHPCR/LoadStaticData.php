@@ -5,7 +5,7 @@ namespace Cmf\MainBundle\DataFixtures\PHPCR;
 use Symfony\Component\Yaml\Parser;
 use Symfony\Cmf\Bundle\SimpleCmsBundle\DataFixtures\LoadCmsData;
 
-use Symfony\Cmf\Bundle\MenuBundle\Document\MenuItem;
+use Symfony\Cmf\Bundle\MenuBundle\Document\MenuNode;
 
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -29,11 +29,11 @@ class LoadStaticData extends LoadCmsData
         $yaml = new Parser();
         $data = $yaml->parse(file_get_contents(__DIR__ . '/../../Resources/data/external.yml'));
 
-        $basepath = $this->container->getParameter('symfony_cmf_simple_cms.basepath');
+        $basepath = $this->container->getParameter('cmf_simple_cms.basepath');
         $home = $dm->find(null, $basepath);
 
         foreach ($data['static'] as $name => $overview) {
-            $item = new MenuItem();
+            $item = new MenuNode();
             $item->setName($name);
             $item->setLabel($overview['label']);
             $item->setUri($overview['uri']);

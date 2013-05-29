@@ -2,7 +2,7 @@ static:
     home:
         name: ""
         title: "Home"
-        content: |
+        body: |
                 <h2>The Symfony CMF Project</h2>
                 <p>
                     Welcome to the home of the <a href="http://symfony.com">Symfony2</a>
@@ -35,7 +35,7 @@ static:
                 <a name="slides"></a>
                 <h2>Slides</h2>
                 <ul>
-                    <li><a href="./slides/why_symfony_cmf.html">Why Symfony2 CMF?</a></li>
+                    <li><a href="./slides/why_cmf.html">Why Symfony2 CMF?</a></li>
                     <li><a href="./slides/bigpicture.html">The big picture</a></li>
                     <li><a href="http://phpcr.github.com/slides.html">PHPCR</a></li>
                     <li><a href="http://phpcr.github.com/slides-odm.html">PHPCR ODM</a></li>
@@ -81,36 +81,36 @@ static:
         options:
             displayChildren: false
             currentUriPrefix: "/news"
-        content: The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):
+        body: The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):
 
-    symfony-cmf-featured-on-symfony-com:
-        name: "symfony-cmf-featured-on-symfony-com"
+    cmf-featured-on-symfony-com:
+        name: "cmf-featured-on-symfony-com"
         parent: "/news"
         title: "Symfony CMF featured on symfony.com"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-06-05"
-        content: |
+        body: |
             David wrote a <a href="http://symfony.com/blog/the-symfony-content-management-framework-is-getting-ready#">blog post</a>
             for symfony.com on the current state of the Symfony CMF project.
             He also mentions the work that Frederic Haddad has been doing leveraging the CMF for his clients that
             he illustrates in this <a href="http://www.youtube.com/watch?v=i5Y5QPcYWHw">short video</a>. Looks
             like the Symfony CMF is ready for prime time!
 
-    symfony-cmf-sandbox-now-running-with-multiple-different-phpcr-implementations:
-        name: "symfony-cmf-sandbox-now-running-with-multiple-different-phpcr-implementations"
+    cmf-sandbox-now-running-with-multiple-different-phpcr-implementations:
+        name: "cmf-sandbox-now-running-with-multiple-different-phpcr-implementations"
         parent: "/news"
         title: "Symfony CMF sandbox now running with multiple different PHPCR implementations"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-06-12"
-        content: |
+        body: |
             One of the fundamental ideas of PHPCR is that there can be multiple implementations that
             from an API act and behave exactly the same, but can be optimized for every different
             scalability and server requirements. We have been adding functional tests for the sandbox,
             but initially only tested using the <a href="https://github.com/jackalope/jackalope-jackrabbit">Jackrabbit</a>
             based PHPCR implementation. In the past weeks we have now also
-            <a href="http://travis-ci.org/#!/symfony-cmf/cmf-sandbox">enabled running the same tests</a>
+            <a href="http://travis-ci.org/symfony-cmf/cmf-sandbox">enabled running the same tests</a>
             against the <a href="https://github.com/jackalope/jackalope-doctrine-dbal">Doctrine DBAL</a> and
             <a href="http://midgard-project.org/phpcr/">Midgard</a> implementations. The key thing is
             that all we had to do was adjust the configuration, no code changes were necessary. This is
@@ -124,10 +124,10 @@ static:
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-07-19"
-        content: |
+        body: |
               Thanks to the work of <a href="https://github.com/cryptocompress">cryptocompress</a> the Jackalope
               test suite for the Doctrine DBAL implementation now also
-              <a href="http://travis-ci.org/#!/jackalope/jackalope-doctrine-dbal">runs with PostgreSQL and SQLite</a>!
+              <a href="http://travis-ci.org/jackalope/jackalope-doctrine-dbal">runs with PostgreSQL and SQLite</a>!
               Previously it only passed using MySQL for storage. This is a major milestone as once you can support 3
               so radically different RDBMS there is little doubt left that we cannot easily support others too. More
               importantly this was all done in a very short time frame and we now have worked around many of the
@@ -141,7 +141,7 @@ static:
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-07-21"
-        content: |
+        body: |
               The Symfony CMF has featured integration with create.js and VIE for inline editing for quite sometime
               already. As a matter of fact <a href="http://liip.ch">Liip</a> is one of the big contributors thanks to the
               <a href="http://blog.liip.ch/archive/2011/12/23/what-liip-did-after-winning-the-iks-semantics-ux-contest.html">UX design prize</a>
@@ -149,14 +149,14 @@ static:
               at the <a href="http://lanyrd.com/2012/createjs-hackathon-berlin/">hackathon in Berlin</a>. You can read some more
               information on <a href="http://bergie.iki.fi/blog/createjs-update/">what is going on with create.js</a> on Henri's blog.
 
-    symfony-cmf-docs-and-standard-edition:
-        name: "symfony-cmf-docs-and-standard-edition"
+    cmf-docs-and-standard-edition:
+        name: "cmf-docs-and-standard-edition"
         parent: "/news"
         title: "Symfony CMF docs and standard edition"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-08-01"
-        content: |
+        body: |
               We have finally setup our <a href="http://symfony-cmf.readthedocs.org">documentation</a> on readthedocs.org.
               There is still a fair bit of work to make the documentation complete. But the installation instructions
               should already be a big help in getting started. More importantly any new contributions will automatically
@@ -164,17 +164,17 @@ static:
               the bare minimum configuration necessary to run the CMF. As its can also be used as a starting point to
               create your own CMF project we have labeled it the <a href="http://symfony-cmf.readthedocs.org">CMF Standard Edition</a>.
 
-    symfony-cmf-website-update:
-        name: "symfony-cmf-website-update"
+    cmf-website-update:
+        name: "cmf-website-update"
         parent: "/news"
         title: "Symfony CMF website update"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-09-29"
-        content: |
+        body: |
               In an effort to eat our own dog food, we have finally <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/6">updated</a>
               this website to use the Symfony CMF. The bulk of the work was done during the
-              <a href="https://rocketlab.liip.ch/event/symfony_cmf_hackday_september">recent hackathon</a>
+              <a href="https://rocketlab.liip.ch/event/cmf_hackday_september">recent hackathon</a>
               at the <a href="http://liip.ch">Liip</a> offices in Fribourg. Overall the hackathon was very productive, you
               can read a <a href="https://groups.google.com/d/msg/symfony-cmf-devs/XwaDeFam79I/uOfiyGzGpVMJ">short summary here</a>.
               In a second step we have also <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/7">added a news system</a>
@@ -187,7 +187,7 @@ static:
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-10-22"
-        content: |
+        body: |
               The pace of development has picked up quite a bit since the summer. One of the big things that finally
               landed in the <a href="http://cmf.liip.ch">demo site</a> is the integration with <a href="https://github.com/flack/createphp">createphp</a>.
               One of the big benefits of createphp is that it can help with generating RDFa output inside
@@ -202,14 +202,14 @@ static:
               will ship using our routing component. Drupal is also <a href="http://drupal.org/node/1606794">in the process</a>
               of adopting it for their upcoming Drupal 8 release.
 
-    symfony-cmf-docs-moved:
-        name: "symfony-cmf-docs-moved"
+    cmf-docs-moved:
+        name: "cmf-docs-moved"
         parent: "/news"
         title: "Symfony CMF docs have been moved"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2012-10-26"
-        content: |
+        body: |
               The Symfony CMF documentation is now part of the official documentation of Symfony2 itself. The new location
               is <a href="http://symfony.com/doc/master/cmf/index.html">here</a>. Looks much better now, but the still need help in getting
               the documentation into a state where they can really take a beginner and turn them into a CMF expert.
@@ -224,7 +224,7 @@ static:
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2013-02-26"
-        content: |
+        body: |
             <p>The last few months have seen a huge increase of activity on the CMF (we seem to not have written many news, but those following the github projects will have seen it). Both Jackalope and PHPCR-ODM and the CMF bundles got new features and tons of issues fixed. And the documentation is starting to take shape, but can still use a lot of improvement.</p>
             <p>With all this activity, it will be hard to draw the line for a 1.0 release, but nonetheless we need to do it. We built a <a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Release-1.0">release plan</a> that wants to stabilize from the bottom up. We start with PHPCR and phpcr-utils, then go to Jackalope and its transports, then the Doctrine PHPCR-ODM and finally the Symfony2 CMF bundles. We created milestones in the PHPCR / Jackalope / PHPCR-ODM space for now. We hope to get through them until beginning of April, and should probably start version 1.0 milestones for the Symfony2 bundles mid of March and focus on the needed pieces in April.</p>
             <p>The scope of features we get will depend on the contributions by everybody. But on the other hand, there is no problem adding new features soon afterwards and frequently tagging new versions - as long as we do not need to break backwards compatibility. One important focus is thus to tackle those problems that could require BC breaks so we can get them over before going to a stable release.</p>
@@ -236,7 +236,7 @@ static:
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2013-05-10"
-        content: |
+        body: |
             <p>As you might have noticed, we reached a phase in the stabilization process where we clean up things and try avoid future architecture problems. This leads to lots of BC breaks (and we don't want to clutter the codebase with legacy support before a version 1.0 is even out).</p>
             <p>We now created a set of alpha tags for all relevant bundles. If you want to stay at the edge and don't mind adjusting to the occasional BC break, please keep using 1.0.* and report any issues. Otherwise, you can pin to the following versions to keep status quo and update the tags manually when you want a new feature.</p>
             <p><pre>
@@ -269,7 +269,7 @@ static:
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2013-05-21"
-        content: |
+        body: |
             <p>If you have updated your CMF bundles lately, you may have problems with PHPCR nodes created with an older implementation. The renaming of the RoutingExtraBundle to RoutingBundle will affect any route nodes stored with this class name and cause them to fail. Also due to a new feature of storing the node depth, previously created nodes which don't have this value could cause issues, one of which is the tree browser failing to load in Sonata Admin.</p>
             <p>The Doctrine DBAL MySQL backend can be fixed by executing this SQL which will patch up your existing data:</p>
             <p><pre>
@@ -297,7 +297,7 @@ static:
     getstarted:
         name: "get-started"
         title: "Get Started"
-        content: |
+        body: |
             <h2>Get started</h2>
 
             <p>
@@ -312,94 +312,94 @@ static:
             </p>
 
     getinvolved:
-            name: "get-involved"
-            title: "Get Involved"
-            content: |
-                <h2>Get involved</h2>
+        name: "get-involved"
+        title: "Get Involved"
+        body: |
+            <h2>Get involved</h2>
 
-                <p>Want to get involved with the project? Here are some simple things you can do to get started:</p>
+            <p>Want to get involved with the project? Here are some simple things you can do to get started:</p>
 
-                <ol>
-                    <li>
-                        Join the <a href="http://groups.google.com/group/symfony-cmf-devs">developers</a>
-                        mailing list and introduce yourself to the group.
-                    </li>
-                    <li>
-                        Idle in our <a href="irc://freenode/#symfony-cmf">IRC channel</a>
-                        and introduce yourself there as well.
-                    </li>
-                    <li>
-                        Read the <a href="/about">about</a> page.
-                    </li>
-                    <li>
-                        Read through the <a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Github Wiki</a> as well
-                        as the <a href="http://symfony-cmf.readthedocs.org">Symfony CMF docs</a>.
-                    </li>
-                </ol>
+            <ol>
+                <li>
+                    Join the <a href="http://groups.google.com/group/symfony-cmf-devs">developers</a>
+                    mailing list and introduce yourself to the group.
+                </li>
+                <li>
+                    Idle in our <a href="irc://freenode/#symfony-cmf">IRC channel</a>
+                    and introduce yourself there as well.
+                </li>
+                <li>
+                    Read the <a href="/about">about</a> page.
+                </li>
+                <li>
+                    Read through the <a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Github Wiki</a> as well
+                    as the <a href="http://symfony-cmf.readthedocs.org">Symfony CMF docs</a>.
+                </li>
+            </ol>
 
     about:
-            name: "about"
-            title: "About"
-            content: |
-                <h2>About</h2>
+        name: "about"
+        title: "About"
+        body: |
+            <h2>About</h2>
 
-                <p>
-                The <a href="http://symfony.com">Symfony2</a> Content Management
-                Framework project was started by a large group of Symfony developers looking
-                to get an early start on collaborating together for the next generation
-                of PHP Content Management Systems built on top of Symfony2. Several companies
-                and developers have dedicated themselves to the project. Some of the companies
-                can be found below. Please feel invited to join the effort with or without
-                the backing of a company behind you:
-                </p>
+            <p>
+            The <a href="http://symfony.com">Symfony2</a> Content Management
+            Framework project was started by a large group of Symfony developers looking
+            to get an early start on collaborating together for the next generation
+            of PHP Content Management Systems built on top of Symfony2. Several companies
+            and developers have dedicated themselves to the project. Some of the companies
+            can be found below. Please feel invited to join the effort with or without
+            the backing of a company behind you:
+            </p>
 
-                <h2>Sponsors</h2>
+            <h2>Sponsors</h2>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Company</th>
-                            <th>Location</th>
-                            <th>Team</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="http://ideato.it/">Ideato</a></td>
-                            <td>Italy</td>
-                            <td>Jacopo, Michele</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://liip.ch/">Liip AG</a></td>
-                            <td>Switzerland</td>
-                            <td>Lukas, Ebi, David, Dan, Brian, Chregu, Alain</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://sensiolabs.com/">Sensio Labs</a></td>
-                            <td>Paris, France</td>
-                            <td>Fabien Potencier</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://servergrove.com/">ServerGrove</a></td>
-                            <td>Miami, Florida</td>
-                            <td>Pablo Godel</td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://coddict.com/">Coddict</a></td>
-                            <td>Montreal, Canada | Beirut, Lebanon</td>
-                            <td>Frederic Haddad, Joseph Saliba, Dany Moussa</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="http://ideato.it/">Ideato</a></td>
+                        <td>Italy</td>
+                        <td>Jacopo, Michele</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://liip.ch/">Liip AG</a></td>
+                        <td>Switzerland</td>
+                        <td>Lukas, Ebi, David, Dan, Brian, Chregu, Alain</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://sensiolabs.com/">Sensio Labs</a></td>
+                        <td>Paris, France</td>
+                        <td>Fabien Potencier</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://servergrove.com/">ServerGrove</a></td>
+                        <td>Miami, Florida</td>
+                        <td>Pablo Godel</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://coddict.com/">Coddict</a></td>
+                        <td>Montreal, Canada | Beirut, Lebanon</td>
+                        <td>Frederic Haddad, Joseph Saliba, Dany Moussa</td>
+                    </tr>
+                </tbody>
+            </table>
 
-                <h2>Resources/Links</h2>
+            <h2>Resources/Links</h2>
 
-                <ul>
-                    <li><strong>GitHub</strong>: <a href="https://github.com/symfony-cmf/symfony-cmf">https://github.com/symfony-cmf/symfony-cmf</a></li>
-                    <li><strong>Website</strong>: <a href="http://cmf.symfony-project.org/">http://cmf.symfony-project.org/</a></li>
-                    <li><strong>Wiki</strong>: <a href="http://wiki.github.com/symfony-cmf/symfony-cmf/">http://wiki.github.com/symfony-cmf/symfony-cmf/</a></li>
-                    <li><strong>Issue Tracker</strong>: <a href="http://github.com/symfony-cmf/symfony-cmf/issues">http://github.com/symfony-cmf/symfony-cmf/issues</a></li>
-                    <li><strong>IRC</strong>: <a href="irc://freenode/#symfony-cmf">#symfony-cmf @ irc.freenode.org</a></li>
-                    <li><strong>Users mailing list</strong>: <a href="http://groups.google.com/group/symfony-cmf-users">http://groups.google.com/group/symfony-cmf-users</a></li>
-                    <li><strong>Devs mailing list</strong>: <a href="http://groups.google.com/group/symfony-cmf-devs">http://groups.google.com/group/symfony-cmf-devs</a></li>
-                </ul>
+            <ul>
+                <li><strong>GitHub</strong>: <a href="https://github.com/symfony-cmf/symfony-cmf">https://github.com/symfony-cmf/symfony-cmf</a></li>
+                <li><strong>Website</strong>: <a href="http://cmf.symfony-project.org/">http://cmf.symfony-project.org/</a></li>
+                <li><strong>Wiki</strong>: <a href="http://wiki.github.com/symfony-cmf/symfony-cmf/">http://wiki.github.com/symfony-cmf/symfony-cmf/</a></li>
+                <li><strong>Issue Tracker</strong>: <a href="http://github.com/symfony-cmf/symfony-cmf/issues">http://github.com/symfony-cmf/symfony-cmf/issues</a></li>
+                <li><strong>IRC</strong>: <a href="irc://freenode/#symfony-cmf">#symfony-cmf @ irc.freenode.org</a></li>
+                <li><strong>Users mailing list</strong>: <a href="http://groups.google.com/group/symfony-cmf-users">http://groups.google.com/group/symfony-cmf-users</a></li>
+                <li><strong>Devs mailing list</strong>: <a href="http://groups.google.com/group/symfony-cmf-devs">http://groups.google.com/group/symfony-cmf-devs</a></li>
+            </ul>
