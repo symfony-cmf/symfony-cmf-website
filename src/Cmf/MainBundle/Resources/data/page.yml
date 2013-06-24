@@ -303,38 +303,38 @@ static:
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2013-06-24"
         body: |
-<p>Last friday, a full dozen of CMF developpers gathered at the Liip Office in
-Zurich, Switzerland to exchange on the state of the project. We had people from
-England, Netherlands, France, Germany, Austria and Switzerland.
-<img src="https://blog.liip.ch/files/images/blog/20130621_cmf-hackday.jpg" width="800" alt="Group picture" title="Symfony CMF Hackday">
-We went over all bundles and sorted out issues and pull requests between 1.0 and
-later. We also discussed many open questions and decided on topics. We now
-effectively entered a scope freeze phase, meaning we don't want to add any new
-features to the 1.0 goals. Pull requests for open 1.0 issues as well as bugfixes
-are very welcome however.</p>
+            <p>Last friday, a full dozen of CMF developpers gathered at the Liip Office in
+            Zurich, Switzerland to exchange on the state of the project. We had people from
+            England, Netherlands, France, Germany, Austria and Switzerland.
+            <img src="https://blog.liip.ch/files/images/blog/20130621_cmf-hackday.jpg" width="800" alt="Group picture" title="Symfony CMF Hackday">
+            We went over all bundles and sorted out issues and pull requests between 1.0 and
+            later. We also discussed many open questions and decided on topics. We now
+            effectively entered a scope freeze phase, meaning we don't want to add any new
+            features to the 1.0 goals. Pull requests for open 1.0 issues as well as bugfixes
+            are very welcome however.</p>
 
-<h3>Release plan</h3>
-<p>For a couple of weeks, there has been a "beta1" version of the CMF out. We
-still have a couple of BC breaks planned, but since beta1 they must be
-documented in the CHANGELOG.md file. A stable release will take some time yet,
-unfortunately. We postponed our goal release date to end of July. According to
-the <a href="http://cmf.davidbu.ch/?q=&facets[Milestones][]=1.0&facets[Milestones][]=1.1">dashboard tool</a>
-there are about 60 issues until then, ergo we have to close 12 issues per week.
-This sound like a lot - on the other hand we where 12 people at the meeting, so
-it would mean everybody has to solve one issue per week.</p>
-<p>We also sketched the
-<a href="https://github.com/symfony-cmf/symfony-cmf-docs/pull/168">release process</a>
-for after the 1.0 release is out. An intermediate 1.1 release is planned for
-autumn, after that we will follow the core Symfony release cycle with a delay
-of about one month.</p>
+            <h3>Release plan</h3>
+            <p>For a couple of weeks, there has been a "beta1" version of the CMF out. We
+            still have a couple of BC breaks planned, but since beta1 they must be
+            documented in the CHANGELOG.md file. A stable release will take some time yet,
+            unfortunately. We postponed our goal release date to end of July. According to
+            the <a href="http://cmf.davidbu.ch/?q=&facets[Milestones][]=1.0&facets[Milestones][]=1.1">dashboard tool</a>
+            there are about 60 issues until then, ergo we have to close 12 issues per week.
+            This sound like a lot - on the other hand we where 12 people at the meeting, so
+            it would mean everybody has to solve one issue per week.</p>
+            <p>We also sketched the
+            <a href="https://github.com/symfony-cmf/symfony-cmf-docs/pull/168">release process</a>
+            for after the 1.0 release is out. An intermediate 1.1 release is planned for
+            autumn, after that we will follow the core Symfony release cycle with a delay
+            of about one month.</p>
 
-<h3>How can I help?</h3>
-<p>If you would like to contribute, please look into the issues in milestone
-1.0 of each of the CMF bundles. While we all love great new features, we have
-to focus on cleaning the existing features and making sure they are future
-proof. If you don't know where to start, please ask on the
-<a href="http://groups.google.com/group/symfony-cmf-devs">mailinglist</a> or in
-<em>symfony-cmf</em> on irc.freenode.org.</p>
+            <h3>How can I help?</h3>
+            <p>If you would like to contribute, please look into the issues in milestone
+            1.0 of each of the CMF bundles. While we all love great new features, we have
+            to focus on cleaning the existing features and making sure they are future
+            proof. If you don't know where to start, please ask on the
+            <a href="http://groups.google.com/group/symfony-cmf-devs">mailinglist</a> or in
+            <em>symfony-cmf</em> on irc.freenode.org.</p>
 
     getstarted:
         name: "get-started"
