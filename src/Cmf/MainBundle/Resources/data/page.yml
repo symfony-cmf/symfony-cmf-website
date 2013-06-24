@@ -306,7 +306,7 @@ static:
             <p>Last friday, a full dozen of CMF developpers gathered at the Liip Office in
             Zurich, Switzerland to exchange on the state of the project. We had people from
             England, Netherlands, France, Germany, Austria and Switzerland.
-            <img src="https://blog.liip.ch/files/images/blog/20130621_cmf-hackday.jpg" width="800" alt="Group picture" title="Symfony CMF Hackday">
+            <img src="https://blog.liip.ch/files/images/blog/20130621_cmf-hackday.jpg" width="845" alt="Group picture" title="Symfony CMF Hackday">
             We went over all bundles and sorted out issues and pull requests between 1.0 and
             later. We also discussed many open questions and decided on topics. We now
             effectively entered a scope freeze phase, meaning we don't want to add any new
