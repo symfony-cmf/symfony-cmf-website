@@ -23,7 +23,7 @@ body {
 
 /* links */
 a, a:visited {
-    color: #79A325;
+    color: #60aa2e;
     background: inherit;
     text-decoration: none;
 }
@@ -109,7 +109,7 @@ blockquote {
     line-height: 1.6em;
     font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #80614D;
+    color: #60aa2e;
     border: 1px solid #EEE8E1;
     background: #FAF7F5 url(../images/quote.gif) no-repeat 15px 15px;
 }
@@ -125,7 +125,7 @@ th {
     padding-right: 12px;
     color: #fff;
     text-align: left;
-    background: #ADD163;
+    background: #60aa2e;
     border-width: 1px;
     border-style: solid;
     border-color: #C4DE8F #93C138 #93C138 #C4DE8F;
