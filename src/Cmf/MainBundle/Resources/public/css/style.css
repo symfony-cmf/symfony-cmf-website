@@ -204,10 +204,16 @@ input.button {
     position: relative;
     width: 952px;
     height: 175px;
-    background: #8AB84B url(../images/header.jpg) no-repeat;
+    background: #fff no-repeat;
     color: #fff;
     padding: 0;
     margin: 0;
+}
+#header img {
+    margin-left: -25px;
+    margin-top: -25px;
+
+    border-style: none;
 }
 #header h1#logo-text a {
     position: absolute;
@@ -222,13 +228,13 @@ input.button {
 }
 #header p#slogan {
     position: absolute;
-    margin: 0; padding: 0;
+    margin-left: 0; padding: 0;
     font: bold 15px 'Trebuchet MS', 'Helvetica Neue', Arial, Sans-serif;
     color: #333333;
     letter-spacing: -0.5px;
 
     /* change the values of top and left to adjust the position of the slogan*/
-    top: 125px; left: 150px;
+    top: 125px; left: 142px;
 }
 
 /* top-menu */
