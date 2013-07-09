@@ -24,12 +24,10 @@ body {
 /* links */
 a, a:visited {
     color: #60aa2e;
-    background: inherit;
     text-decoration: none;
 }
 a:hover {
     color: #73471B;
-    background: inherit;
     text-decoration: underline;
 }
 
@@ -75,7 +73,6 @@ dd {
 
 /* images */
 img {
-    background: #FAFAFA;
     border: 1px solid #E4E4E4;
     padding: 8px;
 }
@@ -204,7 +201,7 @@ input.button {
     position: relative;
     width: 952px;
     height: 175px;
-    background: #fff no-repeat;
+    background: #fff url(../images/header.jpg) no-repeat;
     color: #fff;
     padding: 0;
     margin: 0;
