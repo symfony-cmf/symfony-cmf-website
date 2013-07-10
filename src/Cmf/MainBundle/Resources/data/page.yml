@@ -388,7 +388,7 @@ static:
 
             <p>Here is a short overview of websites created using the Symfony CMF:</p>
 
-            <ol>
+            <ul>
                 <li>
                     <a href="http://www.delindenberg.com/" target="_new">Delindenberg.com</a>
                 </li>
@@ -419,7 +419,7 @@ static:
                 <li>
                     <a href="http://www.talliando.de/" target="_new">talliando.de</a>
                 </li>
-            </ol>
+            </ul>
 
     about:
         name: "about"
