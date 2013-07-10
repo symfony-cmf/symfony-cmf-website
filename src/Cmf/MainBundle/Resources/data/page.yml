@@ -337,6 +337,40 @@ static:
             <a href="http://groups.google.com/group/symfony-cmf-devs">mailinglist</a> or in
             <em>symfony-cmf</em> on irc.freenode.org.</p>
 
+    doctrine-dbal-repository-data-fixes-round2:
+        name: "doctrine-dbal-repository-data-fixes-round2"
+        parent: "/news"
+        title: "Doctrine DBAL Repository Data Fixes Round 2"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2013-07-10"
+        body: |
+            <p>We did some more changes to Jackalope Doctrine DBAL which require some updated:</p>
+            <p>First we <a href="https://github.com/jackalope/jackalope-doctrine-dbal/pull/109">
+            fixed some issues related to date sorting and filtering</a>. This basically requires
+            going through all nodes with a date property and forcing a change so that the date will
+            now be stored in UTC format. With this change all nodes will always be returned in
+            the timezone configured in the php.ini. For Jackalope Jackrabbit it will continue to
+            return the timezone as it was provided originally however.</p>
+            <p>The other change is a <a href="https://github.com/jackalope/jackalope-doctrine-dbal/pull/75">
+            small change in the data structure for references</a> and requires the following steps</p>
+            <p><pre>
+                Run ``app/console doctrine:phpcr:init:dbal --dump-sql``
+                Copy and execute all tables, indexes etc related to ``phpcr_nodes_references`` and ``phpcr_nodes_weakreferences``.
+
+                Run the following SQL statements:
+                INSERT INTO phpcr_nodes_references ( source_id, source_property_name, target_id )
+                SELECT source_id, source_property_name, target_id
+                FROM phpcr_nodes_foreignkeys WHERE type = 9;
+                INSERT INTO phpcr_nodes_weakreferences ( source_id, source_property_name, target_id )
+                SELECT source_id, source_property_name, target_id
+                FROM phpcr_nodes_foreignkeys WHERE type = 10;
+
+                Finally clean up the old table:
+                DROP TABLE phpcr_nodes_foreignkeys;
+            </pre></p>
+            <p>If you don't like to execute this directly on your database I recommend you create a Doctrine migration using the fix SQL in the up() method, and the revert SQL in down().</p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
