@@ -296,7 +296,7 @@ static:
             <p>If you don't like to execute this directly on your database I recommend you create a Doctrine migration using the fix SQL in the up() method, and the revert SQL in down().</p>
 
 
-    doctrine-dbal-repository-data-fixes:
+    getting-closer-to-1-0-release:
         name: "getting-closer-to-1-0-release"
         parent: "/news"
         title: "One hackday closer to the 1.0 release!"
