@@ -57,6 +57,7 @@ static:
                     <li><a href="https://github.com/symfony-cmf/CoreBundle">CoreBundle</a> (provides some common helpers for content rendering)</li>
                     <li><a href="https://github.com/symfony-cmf/ContentBundle">ContentBundle</a> (provides basic classes for defining content)</li>
                     <li><a href="https://github.com/symfony-cmf/CreateBundle">CreateBundle</a> (provides integration with <a href="http://createjs.org">create.js</a> and <a href="https://github.com/flack/createphp">createphp</a>)</li>
+                    <li><a href="https://github.com/symfony-cmf/MediaBundle">MediaBundle</a> (provides basic interfaces and classes to deal with media files)</li>
                     <li><a href="https://github.com/symfony-cmf/MenuBundle">MenuBundle</a> (integrates PHPCR with KnpMenuBundle)</li>
                     <li><a href="https://github.com/symfony-cmf/RoutingBundle">RoutingBundle</a> (adds dynamic routing)</li>
                     <li><a href="https://github.com/symfony-cmf/SearchBundle">SearchBundle</a> (adds site-wide search, WIP)</li>
@@ -376,6 +377,47 @@ static:
                 <li>
                     Read through the <a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Github Wiki</a> as well
                     as the <a href="http://symfony-cmf.readthedocs.org">Symfony CMF docs</a>.
+                </li>
+            </ol>
+
+    references:
+        name: "references"
+        title: "References"
+        body: |
+            <h2>References</h2>
+
+            <p>Here is a short overview of websites created using the Symfony CMF:</p>
+
+            <ol>
+                <li>
+                    <a href="http://www.delindenberg.com/" target="_new">Delindenberg.com</a>
+                </li>
+                <li>
+                    <a href="http://digitalvisions-schattdecor.com/" target="_new">digitalvisions-schattdecor.com</a>
+                </li>
+                <li>
+                    <a href="http://kidsgoods.ch/" target="_new">Kidsgoods</a>
+                </li>
+                <li>
+                    <a href="http://liip.ch/" target="_new">Liip.ch</a>
+                </li>
+                <li>
+                    <a href="http://www.mzv.de/" target="_new">mzv.de</a>
+                </li>
+                <li>
+                    <a href="http://webpaper.nzz.ch/" target="_new">NZZ webpaper</a>
+                </li>
+                <li>
+                    <a href="http://www.preisbarometer.ch/" target="_new">Preisbarometer.ch</a> / <a href="http://www.barometredesprix.ch" target="_new">Barometredesprix.ch</a> / <a href="http://www.barometrodeiprezzi.ch" target="_new">Barometrodeiprezzi.ch</a>
+                </li>
+                <li>
+                    <a href="http://rotterdamunlimited.com/" target="_new">Rotterdamunlimited.com</a>
+                </li>
+                <li>
+                    <a href="http://kb.servergrove.com/" target="_new">ServerGrove KnowledgeBase</a>
+                </li>
+                <li>
+                    <a href="http://www.talliando.de/" target="_new">talliando.de</a>
                 </li>
             </ol>
 
