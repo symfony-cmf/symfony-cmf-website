@@ -53,7 +53,7 @@ class StaticPageTest extends WebTestCase
         $client = $this->createClient();
         $crawler = $client->request('GET', '/get-started');
         $this->assertTrue($client->getResponse()->isSuccessful());
-        $crawler = $client->click($crawler->selectLink('Symfony2 CMF')->link());
+        $crawler = $client->click($crawler->filter('a[href="/"]')->link());
         $this->assertCount(1, $crawler->filter(sprintf('h2:contains("%s")', 'The Symfony CMF Project')));
     }
 
