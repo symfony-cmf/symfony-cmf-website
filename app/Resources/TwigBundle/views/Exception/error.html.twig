@@ -1,0 +1,14 @@
+{% extends "CmfMainBundle::layout.html.twig" %}
+
+{% block title %}An Error Occurred: {{ status_text }}{% endblock %}
+
+{% block content %}
+    <h2>Oops! An Error Occurred</h2>
+    <h3>The server returned a "{{ status_code }} {{ status_text }}".</h3>
+
+    <p>
+        Something is broken. Please e-mail us and let us know
+        what you were doing when this error occurred. We will fix it as soon
+        as possible. Sorry for any inconvenience caused.
+    </p>
+{% endblock %}
