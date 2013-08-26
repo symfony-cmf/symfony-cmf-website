@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "80a192be227ae9bd8d2df92fecd866a7",
+    "hash": "59c31981f5f616232f9d20b7ee2b5bcd",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2198,21 +2198,20 @@
         },
         {
             "name": "symfony/icu",
-            "version": "1.2.x-dev",
+            "version": "1.0.x-dev",
             "target-dir": "Symfony/Component/Icu",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Icu.git",
-                "reference": "45c8d35427304b1e14a13a03426055f501ba5f61"
+                "reference": "0b790dfb98904df2bcd44b2e14a69b1ccd679ef7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/45c8d35427304b1e14a13a03426055f501ba5f61",
-                "reference": "45c8d35427304b1e14a13a03426055f501ba5f61",
+                "url": "https://api.github.com/repos/symfony/Icu/zipball/0b790dfb98904df2bcd44b2e14a69b1ccd679ef7",
+                "reference": "0b790dfb98904df2bcd44b2e14a69b1ccd679ef7",
                 "shasum": ""
             },
             "require": {
-                "lib-icu": ">=4.4",
                 "php": ">=5.3.3",
                 "symfony/intl": "~2.3"
             },
@@ -2242,7 +2241,7 @@
                 "icu",
                 "intl"
             ],
-            "time": "2013-08-06 12:55:36"
+            "time": "2013-08-06 12:58:06"
         },
         {
             "name": "symfony/monolog-bundle",

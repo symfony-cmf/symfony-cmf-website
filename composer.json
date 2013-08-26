@@ -18,7 +18,8 @@
         "doctrine/doctrine-bundle": "1.2.*",
         "doctrine/data-fixtures": "1.0.*",
         "liip/functional-test-bundle": "1.0.*",
-        "liip/doctrine-cache-bundle": "1.0.*"
+        "liip/doctrine-cache-bundle": "1.0.*",
+        "symfony/icu": "1.0.*"
     },
     "scripts": {
         "post-install-cmd": [
