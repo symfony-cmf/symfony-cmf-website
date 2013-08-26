@@ -6,19 +6,19 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.2.*",
+        "symfony/symfony": "2.3.*",
         "twig/extensions": "1.0.*",
-        "symfony/monolog-bundle": "2.2.*",
-        "sensio/distribution-bundle": "2.2.*",
+        "symfony/monolog-bundle": "2.3.*",
+        "sensio/distribution-bundle": "2.3.*",
         "symfony-cmf/menu-bundle": "1.0.*",
         "symfony-cmf/simple-cms-bundle": "1.0.*",
-        "friendsofsymfony/rest-bundle": "0.10.*",
-        "jms/serializer-bundle": "0.11.*",
-        "jackalope/jackalope-doctrine-dbal": "dev-master",
+        "friendsofsymfony/rest-bundle": "0.13.*",
+        "jms/serializer-bundle": "0.12.*",
+        "jackalope/jackalope-doctrine-dbal": "1.0.0-beta3",
         "doctrine/doctrine-bundle": "1.2.*",
-        "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "liip/functional-test-bundle": "dev-master",
-        "liip/doctrine-cache-bundle": "dev-master"
+        "doctrine/data-fixtures": "1.0.*",
+        "liip/functional-test-bundle": "1.0.*",
+        "liip/doctrine-cache-bundle": "1.0.*"
     },
     "scripts": {
         "post-install-cmd": [

@@ -72,5 +72,6 @@ class StaticPageTest extends WebTestCase
         $client = $this->createClient();
         $client->request('GET', '/news.rss');
         $this->assertTrue($client->getResponse()->isSuccessful());
+        $this->assertContains('Symfony CMF featured on symfony.com', $client->getResponse()->getContent());
     }
 }

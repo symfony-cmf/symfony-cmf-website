@@ -4,9 +4,9 @@ namespace Cmf\MainBundle\Menu;
 
 use Knp\Menu\MenuItem;
 
-use Symfony\Cmf\Bundle\MenuBundle\Provider\PHPCRMenuProvider;
+use Symfony\Cmf\Bundle\MenuBundle\Provider\PhpcrMenuProvider;
 
-class MenuProvider extends PHPCRMenuProvider
+class MenuProvider extends PhpcrMenuProvider
 {
     public function get($name, array $options = array())
     {

@@ -35,22 +35,20 @@ doctrine_phpcr:
         auto_mapping: true
         auto_generate_proxy_classes: %kernel.debug%
 
-cmf_routing:
-    dynamic:
-        enabled: true
+cmf_core:
+    persistence:
+        phpcr:
+            enabled: true
+    publish_workflow:
+        enabled: false
 
 cmf_simple_cms:
     routing:
         templates_by_class:
-            Symfony\Cmf\Bundle\SimpleCmsBundle\Document\Page:  CmfSimpleCmsBundle:Page:index.html.twig
-    use_sonata_admin: false
+            Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page: CmfSimpleCmsBundle:Page:index.html.twig
 
 knp_menu:
     twig: true
-
-cmf_menu:
-    use_sonata_admin: false
-    menu_basepath: /cms
 
 liip_doctrine_cache:
     namespaces:
@@ -68,3 +66,8 @@ fos_rest:
             html: true
         mime_types:
             rss: 'application/rss+xml'
+    format_listener:
+        default_priorities:
+            - html
+            - rss
+        prefer_extension: true

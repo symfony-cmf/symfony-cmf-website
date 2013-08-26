@@ -4,7 +4,7 @@ services:
         arguments:
           - @service_container
           - @cmf_menu.factory
-          - %cmf_menu.document_manager_name%
-          - %cmf_menu.menu_basepath%
+          - @doctrine_phpcr
+          - %cmf_menu.persistence.phpcr.menu_basepath%
         tags:
           - { name: knp_menu.provider, alias: simple } # The alias is what is used to retrieve the menu
