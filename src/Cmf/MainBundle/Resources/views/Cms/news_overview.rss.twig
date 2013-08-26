@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <channel>
         <title>Symfony CMF</title>
-        <link>{{ app.request.getBaseUrl }}</link>
+        <link>{{ app.request.getSchemeAndHttpHost }}</link>
         <description>The Symfony CMF project makes it easier for developers to add CMS functionality to applications built with the Symfony2 PHP framework. Key development principles for the provided set of bundles are scalability, usability, documentation and testing.</description>
         <dc:language>{{ app.request.locale }}</dc:language>
         <generator>Symfony2 CMF</generator>
