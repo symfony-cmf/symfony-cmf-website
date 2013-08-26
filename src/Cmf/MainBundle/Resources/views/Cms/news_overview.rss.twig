@@ -16,7 +16,7 @@
             <guid isPermaLink="true">{{ url(news) }}</guid>
             <category>General</category>
             <description>{{ news.body|striptags }}</description>
-            <content:encoded>{{ news.body|raw }}</content:encoded>
+            <content:encoded><![CDATA[{{ news.body|raw }}]]></content:encoded>
             <pubDate>{{ news.publishStartDate | date('r') }}</pubDate>
             <dc:creator>symfony-cmf-devs@googlegroups.com (Symfony CMF)</dc:creator>
         </item>
