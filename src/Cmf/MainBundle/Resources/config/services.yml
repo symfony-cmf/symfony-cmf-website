@@ -1,10 +1,2 @@
-services:
-  cmf_menu.provider:
-        class: Cmf\MainBundle\Menu\MenuProvider
-        arguments:
-          - @service_container
-          - @cmf_menu.factory
-          - @doctrine_phpcr
-          - %cmf_menu.persistence.phpcr.menu_basepath%
-        tags:
-          - { name: knp_menu.provider, alias: simple } # The alias is what is used to retrieve the menu
+parameters:
+    cmf_simple_cms.persistence.phpcr.menu_provider.class: Cmf\MainBundle\Menu\MenuProvider
