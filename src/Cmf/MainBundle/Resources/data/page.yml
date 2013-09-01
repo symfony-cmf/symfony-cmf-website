@@ -480,6 +480,11 @@ static:
                 </thead>
                 <tbody>
                     <tr>
+                        <td><a href="http://coddict.com/">Coddict</a></td>
+                        <td>Canada, Lebanon</td>
+                        <td>Frederic, Joseph, Dany</td>
+                    </tr>
+                    <tr>
                         <td><a href="http://ideato.it/">Ideato</a></td>
                         <td>Italy</td>
                         <td>Jacopo, Michele</td>
@@ -487,22 +492,32 @@ static:
                     <tr>
                         <td><a href="http://liip.ch/">Liip AG</a></td>
                         <td>Switzerland</td>
-                        <td>Lukas, Ebi, David, Dan, Brian, Chregu, Alain</td>
+                        <td>Lukas, David, Chregu, Alain</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.netvlies.nl/">Netvlies</a></td>
+                        <td>Netherland</td>
+                        <td>Sjoerd</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.prestaconcept.net">PrestaConcept</a></td>
+                        <td>France</td>
+                        <td>Nicolas</td>
                     </tr>
                     <tr>
                         <td><a href="http://sensiolabs.com/">Sensio Labs</a></td>
-                        <td>Paris, France</td>
-                        <td>Fabien Potencier</td>
+                        <td>France</td>
+                        <td>Fabien</td>
                     </tr>
                     <tr>
                         <td><a href="http://servergrove.com/">ServerGrove</a></td>
-                        <td>Miami, Florida</td>
+                        <td>United States</td>
                         <td>Pablo Godel</td>
                     </tr>
                     <tr>
-                        <td><a href="http://coddict.com/">Coddict</a></td>
-                        <td>Montreal, Canada | Beirut, Lebanon</td>
-                        <td>Frederic Haddad, Joseph Saliba, Dany Moussa</td>
+                        <td><a href="http://www.valiton.com/">Valiton GmbH</a></td>
+                        <td>Germany</td>
+                        <td>Johannes, Sven, Uwe</td>
                     </tr>
                 </tbody>
             </table>
