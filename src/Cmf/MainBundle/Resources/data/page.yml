@@ -482,52 +482,57 @@ static:
                     <tr>
                         <td></td>
                         <td>United Kingdom</td>
-                        <td>Dan</td>
+                        <td><a href="https://github.com/dantleech">Dan</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Germany</td>
+                        <td><a href="https://github.com/nacmartin">Nacho</a></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>Netherland</td>
-                        <td>Wouter</td>
+                        <td><a href="https://github.com/wouterJ">Wouter</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://coddict.com/">Coddict</a></td>
                         <td>Canada, Lebanon</td>
-                        <td>Frederic, Joseph, Dany</td>
+                        <td><a href="freddyhaddad">Frederic</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://ideato.it/">Ideato</a></td>
                         <td>Italy</td>
-                        <td>Jacopo, Michele</td>
+                        <td><a href="https://github.com/jakuza">Jacopo</a>, <a href="https://github.com/micheleorselli">Michele</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://liip.ch/">Liip AG</a></td>
                         <td>Switzerland</td>
-                        <td>Lukas, David, Chregu, Alain</td>
+                        <td><a href="https://github.com/lsmith77">Lukas</a>, <a href="https://github.com/dbu">David</a>, <a href="https://github.com/chregu">Chregu</a>, <a href="https://github.com/elHornair">Alain</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://www.netvlies.nl/">Netvlies</a></td>
                         <td>Netherland</td>
-                        <td>Sjoerd</td>
+                        <td><a href="https://github.com/sjopet">Sjoerd</a>, <a href="https://github.com/krizon">Kristian</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://www.prestaconcept.net">PrestaConcept</a></td>
                         <td>France</td>
-                        <td>Nicolas</td>
+                        <td><a href="https://github.com/nicolas-bastien">Nicolas</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://sensiolabs.com/">Sensio Labs</a></td>
                         <td>France</td>
-                        <td>Fabien</td>
+                        <td><a href="https://github.com/fabpot">Fabien</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://servergrove.com/">ServerGrove</a></td>
                         <td>United States</td>
-                        <td>Pablo Godel</td>
+                        <td><a href="https://github.com/pgodel">Pablo</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://www.valiton.com/">Valiton GmbH</a></td>
                         <td>Germany</td>
-                        <td>Johannes, Sven, Uwe</td>
+                        <td><a href="https://github.com/starkj">Johannes</a>, <a href="https://github.com/sveriger">Sven</a>, <a href="https://github.com/uwej711">Uwe</a></td>
                     </tr>
                 </tbody>
             </table>
