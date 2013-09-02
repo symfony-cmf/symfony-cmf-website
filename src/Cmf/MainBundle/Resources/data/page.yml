@@ -464,8 +464,8 @@ static:
             to get an early start on collaborating together for the next generation
             of PHP Content Management Systems built on top of Symfony2. Several companies
             and developers have dedicated themselves to the project. Some of the companies
-            can be found below. Please feel invited to join the effort with or without
-            the backing of a company behind you:
+            and developers that are most avtive can be found below. Please feel invited
+            to join the effort with or without the backing of a company behind you:
             </p>
 
             <h2>Sponsors</h2>
@@ -480,29 +480,59 @@ static:
                 </thead>
                 <tbody>
                     <tr>
+                        <td></td>
+                        <td>United Kingdom</td>
+                        <td><a href="https://github.com/dantleech">Dan</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Germany</td>
+                        <td><a href="https://github.com/nacmartin">Nacho</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Netherland</td>
+                        <td><a href="https://github.com/wouterJ">Wouter</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://coddict.com/">Coddict</a></td>
+                        <td>Canada, Lebanon</td>
+                        <td><a href="freddyhaddad">Frederic</a></td>
+                    </tr>
+                    <tr>
                         <td><a href="http://ideato.it/">Ideato</a></td>
                         <td>Italy</td>
-                        <td>Jacopo, Michele</td>
+                        <td><a href="https://github.com/jakuza">Jacopo</a>, <a href="https://github.com/micheleorselli">Michele</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://liip.ch/">Liip AG</a></td>
                         <td>Switzerland</td>
-                        <td>Lukas, Ebi, David, Dan, Brian, Chregu, Alain</td>
+                        <td><a href="https://github.com/lsmith77">Lukas</a>, <a href="https://github.com/dbu">David</a>, <a href="https://github.com/chregu">Chregu</a>, <a href="https://github.com/elHornair">Alain</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.netvlies.nl/">Netvlies</a></td>
+                        <td>Netherland</td>
+                        <td><a href="https://github.com/sjopet">Sjoerd</a>, <a href="https://github.com/krizon">Kristian</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.prestaconcept.net">PrestaConcept</a></td>
+                        <td>France</td>
+                        <td><a href="https://github.com/nicolas-bastien">Nicolas</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://sensiolabs.com/">Sensio Labs</a></td>
-                        <td>Paris, France</td>
-                        <td>Fabien Potencier</td>
+                        <td>France</td>
+                        <td><a href="https://github.com/fabpot">Fabien</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://servergrove.com/">ServerGrove</a></td>
-                        <td>Miami, Florida</td>
-                        <td>Pablo Godel</td>
+                        <td>United States</td>
+                        <td><a href="https://github.com/pgodel">Pablo</a></td>
                     </tr>
                     <tr>
-                        <td><a href="http://coddict.com/">Coddict</a></td>
-                        <td>Montreal, Canada | Beirut, Lebanon</td>
-                        <td>Frederic Haddad, Joseph Saliba, Dany Moussa</td>
+                        <td><a href="http://www.valiton.com/">Valiton GmbH</a></td>
+                        <td>Germany</td>
+                        <td><a href="https://github.com/starkj">Johannes</a>, <a href="https://github.com/sveriger">Sven</a>, <a href="https://github.com/uwej711">Uwe</a></td>
                     </tr>
                 </tbody>
             </table>
