@@ -14,7 +14,7 @@
         "symfony-cmf/simple-cms-bundle": "1.0.*",
         "friendsofsymfony/rest-bundle": "0.13.*",
         "jms/serializer-bundle": "0.12.*",
-        "jackalope/jackalope-doctrine-dbal": "1.0.0-beta3",
+        "jackalope/jackalope-doctrine-dbal": "1.0.0-beta4",
         "doctrine/doctrine-bundle": "1.2.*",
         "doctrine/data-fixtures": "1.0.*",
         "liip/functional-test-bundle": "1.0.*",
