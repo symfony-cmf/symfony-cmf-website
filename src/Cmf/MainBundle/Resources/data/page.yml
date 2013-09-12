@@ -259,7 +259,7 @@ static:
                 "symfony-cmf/routing-bundle": "1.1.0-alpha1",
                 "symfony-cmf/blog-bundle": "1.0.0-alpha1",
                 "symfony-cmf/routing-auto-bundle": "1.0.0-alpha1"
-            </pre></p>
+            </pre></p></p>
             <p>You can alternatively depend on symfony-cmf/symfony-cmf which includes most of the above bundles. This will all get better once we have stable releases. Then we will not do BC breaks without updating the minor version, so that you can safely depend on 1.0.*.</p>
             <p>Note that the RoutingExtraBundle was renamed to RoutingBundle. There is 1.0.1 of RoutingExtraBundle which will be the last version with the old name. The above tagged versions already use the new RoutingBundle name. RoutingBundle master branch is already called 1.1 now. It dropped Symfony 2.1 support.</p>
 
@@ -284,7 +284,7 @@ static:
                 SET props = REPLACE(props, 'RoutingExtraBundle', 'RoutingBundle')
                 WHERE props LIKE '%RoutingExtraBundle%'
                 AND id > 0;
-            </pre></p>
+            </pre></p></p>
             <p>If you wish to revert the change to the class name in your nodes (possibly because you revert back to older bundles for some reason) you can use this SQL:</p>
             <p><pre>
                 -- Revert fix, rename to RoutingBundle back to RoutingExtraBundle
@@ -292,7 +292,7 @@ static:
                 SET props = REPLACE(props, 'RoutingBundle', 'RoutingExtraBundle')
                 WHERE props LIKE '%RoutingBundle%'
                 AND id > 0;
-            </pre></p>
+            </pre></p></p>
             <p>If you don't like to execute this directly on your database I recommend you create a Doctrine migration using the fix SQL in the up() method, and the revert SQL in down().</p>
 
 
@@ -368,8 +368,120 @@ static:
 
                 Finally clean up the old table:
                 DROP TABLE phpcr_nodes_foreignkeys;
-            </pre></p>
+            </pre></p></p>
             <p>If you don't like to execute this directly on your database I recommend you create a Doctrine migration using the fix SQL in the up() method, and the revert SQL in down().</p>
+
+    doctrine-dbal-repository-data-fixes-round2:
+        name: "symfony2-cmf-rc1-released"
+        parent: "/news"
+        title: "Symfony2 CMF RC1 released!"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2013-09-12"
+        body: |
+          <p>I think its was February 2010 at Symfony Live Paris, well over a year before the final release of Symfony2,
+          during the Q&A that I voiced by disappointment over the fact that so few (none?) of the big PHP applications
+          are based on a general purpose web framework. That all of these applications choose to waste their time on
+          building low level architecture pieces rather than focusing their energy on solving the higher level problems
+          that their end users actually care about. That they in the end limit their the extensibility of their
+          applications. That they also limit interoperability. I follow this up with a
+          <a href="http://pooteeweet.org/blog/1674">blog post</a> but I also kind of felt
+          that we framework authors needed to take a step towards the application developers. Luckily my co-workers at
+          Liip agreed so we decided to do something about this by organizing a meeting in September 2010 and sponsoring
+          travel expenses for many of the leading authors of CMS components for symfony 1.x. We came up with a game plan
+          and then we got to work.</p>
+
+          <p>Admittedly through out the first 2 years it was mainly Liip doing the work, partly funded by client
+          projects. But Liip is a web agency, we wanted tools to build better solutions for our clients. So from day one
+          we wanted to do this with the community. But through out this time we have had many people that have done very
+          important contributions. Some of who only stayed for a bit but most of which are still very much around. In
+          fact many of these contributors have been starting to reap the benefits of their investments building
+          production applications for over a year already. Going down memory lane always runs the risk of forgetting
+          someone but from the top of my head I want to thank Johannes and Uwe for being the first non Liipers to have
+          done significant contributions to Jackalope. Then there is of course also Benjamin who wrote the initial
+          version of the Doctrine DBAL integration for Jackalope, which meant we no longer required Java. In the same
+          way Henri and Petrius brought us the MidgardCR alternative implementation of PHPCR. Henri of course also
+          introduced us to create.js. Then Nacho Martin for singlehandedly getting SonataDoctrinePHPCRBundle off the
+          ground. And of course Thomas for having created the Sonata project in the first place. I also want to thank
+          Ideato for their various contributions, organizing hackdays, working on the very early concepts of the Routing
+          component which has since been adopted by ezPublish and Drupal. This really validates the goal of making it
+          easier for these well established applications to adopt a general purpose framework. I also want to thank
+          Freddy for his part in proofing that we were on the right path.</p>
+
+          <p>However these days it is no longer just a few people joining the effort temporarily. We have a
+          <a href="http://cmf.symfony.com/about">vibrant community</a> where Liip is still very much involved but the
+          community is now doing the majority of the work. In many ways this might even be more important for the
+          survival of the initiative in the long run than getting every technical aspect just right. That being said,
+          the huge number of contributors, doing <a href="http://cmf.symfony.com/references">real world projects</a>,
+          of course help find flaws in the concepts and validate what we got right. As such we can claim with confidence
+          that the CMF in its current state has proven itself in the real world in multiple projects done by multiple
+          different companies all over Europe. This in turn also means that its future is no longer dependent on a
+          single company let alone a single client. The community is alive and well and growing.</p>
+
+          <p>So its with great pleasure that I can announce that we have finally moved all the key components to release
+          candidate state. This means that while we still have a
+          <a href="https://groups.google.com/d/msg/symfony-cmf-devs/oITg4bIGBsk/H1_AwjUEhR4J">few tasks</a> we want to
+          wrap up, we believe we now have a coherent well tested system to enable to build custom CMS projects on top of
+          Symfony2. We will use the rest of the month to work to wrap up some open items in the storage layer and get as
+          many of the nice to have's in the Bundles done. Also while our documentation is already quite extensive, a lot
+          of details especially in the configuration were changed for better consistency in the last weeks which are not
+          yet reflected in the documentation. So there are plenty of tasks for people who want to join the effort now.
+          We certainly appreciate it and as a project we have always put great emphasis on investing into new potential
+          contributors. So come join our <a href="http://groups.google.com/group/symfony-cmf-devs">mailinglist</a>, our
+          <a href="irc://freenode/#symfony-cmf">IRC channel</a> or our <a href="http://ghag.dantleech.com/#">issue queue</a>!</p>
+
+          <p>So for the historians among you its possible to get a good overview of the different development stages
+          of the CMF by going through all the CMF related posts in the
+          <a href="http://blog.liip.ch/?start=0&q=cmf">Liip blog</a>. Listening to the
+          <a href="http://pierrespring.com/2010/09/20/ps001-discussion-symfony2-cmf/">podcast Pierre recorded</a> during
+          our first meeting in the summer of 2010. Boy was I niav to believe we could release our first stable release
+          close to the first stable release of Symfony2 itself.</p>
+
+          <p>Let me end this post with some numbers (generated using
+          <a href="https://github.com/roderik/GithubStats">GithubStats</a>):</p>
+
+          <p><pre>
+          ./ghs compile phpcr
+          Contributions:     1360
+          Contributors:      39
+          Forks:             69
+          Watchers:          323
+          Downloads total:   85639
+          Downloads monthly: 4100
+          </pre></p>
+
+          <p><pre>
+          ./ghs compile jackalope
+          Contributions:     4457
+          Contributors:      40
+          Forks:             90
+          Watchers:          242
+          Downloads total:   77642
+          Downloads monthly: 4106
+          </pre></p>
+
+          <p><pre>
+          ./ghs compile symfony-cmf
+          Contributions:     6383
+          Contributors:      146
+          Forks:             492
+          Watchers:          1215
+          Downloads total:   284072
+          Downloads monthly: 17038
+          </pre></p>
+
+          <p>To give get some perspective on those numbers lets compare to Symfony2. Remember that Symfony2 is the most
+          active PHP project on github of all time and the CMF started quite a bit later.</p>
+
+          <p><pre>
+          ./ghs compile symfony
+          Contributions:     36266
+          Contributors:      1080
+          Forks:             4667
+          Watchers:          10094
+          Downloads total:   13041336
+          Downloads monthly: 831751
+          </pre></p>
 
     getstarted:
         name: "get-started"
