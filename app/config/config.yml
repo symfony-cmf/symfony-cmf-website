@@ -43,9 +43,6 @@ cmf_core:
         enabled: false
 
 cmf_simple_cms:
-    # work around for https://github.com/symfony-cmf/SimpleCmsBundle/issues/73
-    multilang:
-        locales: %locales%
     routing:
         templates_by_class:
             Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page: CmfSimpleCmsBundle:Page:index.html.twig
