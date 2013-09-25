@@ -379,7 +379,7 @@ static:
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2013-09-12"
         body: |
-          <p>I think its was February 2010 at Symfony Live Paris, well over a year before the final release of Symfony2,
+          <p>I think it was February 2010 at Symfony Live Paris, well over a year before the final release of Symfony2,
           during the Q&A that I voiced by disappointment over the fact that so few (none?) of the big PHP applications
           are based on a general purpose web framework. That all of these applications choose to waste their time on
           building low level architecture pieces rather than focusing their energy on solving the higher level problems
