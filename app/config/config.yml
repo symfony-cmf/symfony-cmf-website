@@ -50,6 +50,10 @@ cmf_simple_cms:
 knp_menu:
     twig: true
 
+cmf_menu:
+    voters:
+        uri_prefix: true
+
 liip_doctrine_cache:
     namespaces:
         meta:
