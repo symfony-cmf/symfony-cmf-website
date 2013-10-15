@@ -71,7 +71,6 @@ fos_rest:
         mime_types:
             rss: 'application/rss+xml'
     format_listener:
-        default_priorities:
-            - html
-            - rss
-        prefer_extension: true
+        rules:
+            - { path: ^/news.rss, priorities: [ rss ], fallback_format: ~, prefer_extension: true }
+            - { path: ^/, priorities: [ html ], fallback_format: html, prefer_extension: true }
