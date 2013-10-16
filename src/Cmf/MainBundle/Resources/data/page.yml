@@ -371,7 +371,7 @@ static:
             </pre></p></p>
             <p>If you don't like to execute this directly on your database I recommend you create a Doctrine migration using the fix SQL in the up() method, and the revert SQL in down().</p>
 
-    doctrine-dbal-repository-data-fixes-round2:
+    symfony2-cmf-rc1-released:
         name: "symfony2-cmf-rc1-released"
         parent: "/news"
         title: "Symfony2 CMF RC1 released!"
@@ -482,6 +482,22 @@ static:
           Downloads total:   13041336
           Downloads monthly: 831751
           </pre></p>
+
+    symfony2-cmf-1-0-0-released:
+        name: "symfony2-cmf-1-0-0-released"
+        parent: "/news"
+        title: "Symfony2 CMF 1.0.0 released!"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2013-10-16"
+        body: |
+          <p>It took us a few days more than expected since there were some interfaces we wanted to iron
+          out in our youngest Bundle, the MediaBundle. But now its done with the releases of PHPCR
+          Jackalope and PHPCR ODM last week and Monday's release of all of the key CMF Components and
+          Bundles. The first stable release of any project marks a major mile stone as we now expect
+          quite a few more casual users to join the effort, where previously most users were effectively
+          also part of the core developer team. At any rate you can find all the details over on
+          <a href="http://symfony.com/blog/the-symfony-cmf-released-its-first-stable-version">symfony.com</a>.
 
     getstarted:
         name: "get-started"
