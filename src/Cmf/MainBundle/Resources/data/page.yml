@@ -499,6 +499,23 @@ static:
           also part of the core developer team. At any rate you can find all the details over on
           <a href="http://symfony.com/blog/the-symfony-cmf-released-its-first-stable-version">symfony.com</a>.
 
+    conference-presence-2013:
+        name: "conference-presence"
+        parent: "/news"
+        title: "Conferences with CMF presentations in 2013"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2013-10-20"
+        body: |
+          <p>CMF developers will present the framework at conferences. This is a good opportunity to get into the CMF
+          or ask your questions. We will try to update this post if other talks are announced. Currently, we know about:</p>
+
+          <ul>
+            <li><a href="http://www.afup.org/pages/forumphp2013/sessions.php#867">ForumPHP in Paris, 21.11.2013 (presentation in french)</a></li>
+            <li><a href="http://warsaw2013.symfony.com/speakers#session-950">SymfonyCon in Warszaw, 12.12.2013 (this one in english)</a></li>
+          </ul>
+         </p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
