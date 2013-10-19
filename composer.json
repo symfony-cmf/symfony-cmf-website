@@ -18,24 +18,29 @@
         "doctrine/data-fixtures": "1.0.*",
         "liip/functional-test-bundle": "1.0.*",
         "liip/doctrine-cache-bundle": "1.0.*",
-        "symfony/icu": "1.0.*"
+        "symfony/icu": "1.0.*",
+        "seld/slippy": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Cmf\\MainBundle\\Composer\\ScriptHandler::compileSlides"
         ],
         "post-update-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Cmf\\MainBundle\\Composer\\ScriptHandler::compileSlides"
         ]
     },
     "config": {
         "bin-dir": "bin"
     },
     "extra": {
+        "slippy-source-dir": "src/Cmf/MainBundle/Resources/slides",
+        "slippy-target-dir": "web/slides",
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "symfony-assets-install": "symlink"
