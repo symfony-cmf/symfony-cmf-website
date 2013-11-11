@@ -1,0 +1,45 @@
+static:
+    talks:
+        class: Cmf\MainBundle\Document\EventsBlock
+#    example-talk:
+#        class: Cmf\MainBundle\Document\TalkBlock
+#        properties:
+#            title: The event were the talk is given
+#            publishEndDate: "2014-11-21 13:00" # when the talk is given, after this date and time it will be unpublished
+#            link: http://www.event.com/my-talk
+#            body: The title of your talk and other information
+    forum-php-paris-2013:
+        class: Cmf\MainBundle\Document\TalkBlock
+        properties:
+            title: Forum PHP Paris 2013
+            publishEndDate: "2013-11-21 16:45"
+            link: http://www.afup.org/pages/forumphp2013/sessions.php#867
+            body: Symfony2 CMF - la gestion de contenu bas-niveau (in french)
+    symfonycon-2013-warszaw:
+        class: Cmf\MainBundle\Document\TalkBlock
+        properties:
+            title: SymfonyCon 2013 Warszaw
+            publishEndDate: "2013-12-21 14:30"
+            link: http://warsaw2013.symfony.com/speakers#session-959
+            body: Symfony2 Content Management in 40 minutes
+    php-benelux-2014:
+        class: Cmf\MainBundle\Document\TalkBlock
+        properties:
+            title: PHP Benelux 2014, Antwerp
+            publishEndDate: "2014-01-24 09:00"
+            link: http://conference.phpbenelux.eu/2014/sessions/#getting-started-content-management-in-symfony2
+            body: 3 hour tutorial - Getting started with content management in Symfony2
+    drupalcamp-2013-vienna:
+        class: Cmf\MainBundle\Document\TalkBlock
+        properties:
+            title: DrupalCamp in Vienna
+            publishEndDate: "2013-11-23 15:00"
+            link: http://2013.drupalcamp.at/session/stone-masons-vs-3d-printer-cms-world
+            body: Stone masons vs. 3d printer in the cms world
+    010php-2013-11-14-rotterdam:
+        class: Cmf\MainBundle\Document\TalkBlock
+        properties:
+            title: 010PHP User Group, Rotterdam
+            publishEndDate: "2013-11-14 20:00"
+            link: http://www.meetup.com/010PHP/events/143957872/
+            body: Symfony CMF: A decoupled Content Management Framework

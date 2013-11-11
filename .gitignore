@@ -8,6 +8,8 @@ app/app.sqlite
 
 web/config.php
 web/slides/
+web/css/
+web/js/
 app/SymfonyRequirements.php
 app/check.php
 .idea/*

@@ -1,0 +1,10 @@
+{% if talkBlocks %}
+<div class="events">
+    <h3>Upcoming CMF talks</h3>
+    <ul class="sidemenu">
+        {% for talkBlock in talkBlocks %}
+            {{ sonata_block_render(talkBlock) }}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

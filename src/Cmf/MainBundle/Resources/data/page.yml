@@ -2,6 +2,7 @@ static:
     home:
         name: ""
         title: "Home"
+        template: "CmfMainBundle:Cms:home.html.twig"
         body: |
                 <h2>The Symfony CMF Project</h2>
                 <p>

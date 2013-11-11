@@ -34,10 +34,16 @@
     </div>
 
     <div id="content">
-        <div id="main">
-            {% block content %}
-            {% endblock %}
+        {% set _sidebar = block('sidebar') %}
+
+        <div id="main" {% if _sidebar is not empty %}class="sidebar"{% endif %}>
+            {% block content %}{% endblock %}
         </div>
+        {% if _sidebar is not empty %}
+        <div id="sidebar">
+            {% block sidebar %}{% endblock %}
+        </div>
+        {% endif %}
     </div>
 
     <div id="footer">The Symfony logo is a trademark of Fabien Potencier. All rights reserved.</div>

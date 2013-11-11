@@ -1,5 +1,6 @@
 imports:
     - { resource: parameters.yml }
+    - { resource: security.yml }
 
 framework:
     #esi:             ~
@@ -39,8 +40,6 @@ cmf_core:
     persistence:
         phpcr:
             enabled: true
-    publish_workflow:
-        enabled: false
 
 cmf_simple_cms:
     routing:
@@ -74,3 +73,6 @@ fos_rest:
         rules:
             - { path: ^/news.rss, priorities: [ rss ], fallback_format: ~, prefer_extension: true }
             - { path: ^/, priorities: [ html ], fallback_format: html, prefer_extension: true }
+
+sonata_block:
+    default_context: [cms]
