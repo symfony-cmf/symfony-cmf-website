@@ -1,2 +1,14 @@
 parameters:
     cmf_simple_cms.persistence.phpcr.menu_provider.class: Cmf\MainBundle\Menu\MenuProvider
+
+services:
+    cmf_main.block.events:
+        class: Cmf\MainBundle\Block\EventsBlockService
+        arguments:
+            - cmf_main.block.events
+            - @templating
+            - null
+            - @doctrine_phpcr.odm.document_manager
+            - @cmf_core.publish_workflow.checker
+        tags:
+            - {name: "sonata.block"}

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "82de6155b57f4b1e12edee9235a173d7",
+    "hash": "7ee72d372f3060628847cd3ace03bd56",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1806,6 +1806,133 @@
                 "distribution"
             ],
             "time": "2013-08-22 05:04:53"
+        },
+        {
+            "name": "sonata-project/block-bundle",
+            "version": "2.2.7",
+            "target-dir": "Sonata/BlockBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataBlockBundle.git",
+                "reference": "ff56bb0135fbfe0d270a47049a7d35f8610c4776"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/ff56bb0135fbfe0d270a47049a7d35f8610c4776",
+                "reference": "ff56bb0135fbfe0d270a47049a7d35f8610c4776",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.3",
+                "symfony/form": "~2.2",
+                "symfony/http-foundation": "~2.2"
+            },
+            "require-dev": {
+                "sonata-project/admin-bundle": "~2.2@dev",
+                "sonata-project/cache-bundle": "~2.1"
+            },
+            "suggest": {
+                "sonata-project/admin-bundle": "~2.2@dev",
+                "sonata-project/cache-bundle": "~2.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Sonata\\BlockBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataBlockBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonataBlockBundle",
+            "homepage": "http://sonata-project.org/bundles/block",
+            "keywords": [
+                "block",
+                "sonata"
+            ],
+            "time": "2013-10-24 09:04:49"
+        },
+        {
+            "name": "symfony-cmf/block-bundle",
+            "version": "1.0.0",
+            "target-dir": "Symfony/Cmf/Bundle/BlockBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony-cmf/BlockBundle.git",
+                "reference": "015802c250ba81ae07706e3d142cfdf9987b0dfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony-cmf/BlockBundle/zipball/015802c250ba81ae07706e3d142cfdf9987b0dfa",
+                "reference": "015802c250ba81ae07706e3d142cfdf9987b0dfa",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/phpcr-bundle": "1.0.*",
+                "doctrine/phpcr-odm": "1.0.*",
+                "php": ">=5.3.3",
+                "sonata-project/block-bundle": "~2.2.4",
+                "symfony-cmf/core-bundle": "1.0.*",
+                "symfony/framework-bundle": "~2.2"
+            },
+            "require-dev": {
+                "sonata-project/cache-bundle": "~2.1.3",
+                "sonata-project/doctrine-phpcr-admin-bundle": "1.0.*",
+                "symfony-cmf/testing": "1.0.*",
+                "twig/twig": "~1.11"
+            },
+            "suggest": {
+                "eko/feedbundle": "When using the RssBlock",
+                "liip/imagine-bundle": "When using the ImagineBlock",
+                "sonata-project/cache-bundle": "To add caching support for block loading",
+                "symfony-cmf/media-bundle": "When using the ImagineBlock"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Cmf\\Bundle\\BlockBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony CMF Community",
+                    "homepage": "https://github.com/symfony-cmf/BlockBundle/contributors"
+                }
+            ],
+            "description": "Symfony CMF Block Bundle",
+            "homepage": "http://cmf.symfony.com",
+            "keywords": [
+                "Symfony CMF",
+                "block",
+                "content fragments"
+            ],
+            "time": "2013-10-14 15:32:36"
         },
         {
             "name": "symfony-cmf/content-bundle",

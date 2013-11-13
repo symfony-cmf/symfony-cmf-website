@@ -298,6 +298,9 @@ input.button {
     padding: 0; margin: 0 0 0 40px;
     display: inline;
 }
+#main.sidebar {
+    width: 535px;
+}
 #main h2 {
     font: bold 2.9em 'Trebuchet MS', 'Helvetica Neue', Arial, Sans-serif;
     color: #333;
@@ -358,13 +361,13 @@ input.button {
     /* font-style: italic; */
     font-weight: normal;
 }
+#sidebar .sidemenu li a span.info{ color: #A98D76; }
 #sidebar .sidemenu li a:hover {
     color: #000;
     background: none;
 }
 #sidebar .sidemenu ul { margin: 0 0 0 5px; padding: 0; }
 #sidebar .sidemenu ul li { border: none; }
-
 /* header quick search */
 #sidebar form#qsearch {
     padding: 0; margin: 20px 0 30px 10px;
