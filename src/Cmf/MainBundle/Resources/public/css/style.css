@@ -1,9 +1,9 @@
 /* ----------------------------------------------
 	Template Name : VectorLover
 	Template Code : S-0026
-	Version : 1.1   
+	Version : 1.1
 	Author : Erwin Aligam
-	Author URI : http://www.styleshout.com/    
+	Author URI : http://www.styleshout.com/
 	Last Date Modified :  January 17, 2010
  ------------------------------------------------ */
 
@@ -251,6 +251,15 @@ input.button {
 #top-menu a {
     font-weight: bold;
     color: #fff;
+}
+
+/* stamp */
+#stamp {
+    position: absolute;
+    margin: 0;
+    color: #FFF;
+
+    top: 105px;	right: 5px
 }
 
 /* Navigation */
