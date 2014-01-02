@@ -516,7 +516,22 @@ static:
             <li><a href="http://2013.drupalcamp.at/session/stone-masons-vs-3d-printer-cms-world">DrupalCamp in Vienna, 23./24.11.2013 (this one in english)</a></li>
             <li><a href="http://warsaw2013.symfony.com/speakers#session-950">SymfonyCon in Warszaw, 12.12.2013 (this one in english)</a></li>
           </ul>
-          </p>
+
+    cmf-best-symfony-opensource-project-2013:
+        name: "cmf-best-symfony-opensource-project-2013"
+        parent: "/news"
+        title: "CMF won Open-Source Application Award 2013"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2013-12-29"
+        body: |
+          <p><img src="/images/cmf-best-os-2013.jpg" style="float:left; margin-right: 10px;"/>
+          During the SymfonyCon Warsaw, the Symfony CMF project was
+          <a href="http://awards.symfony.com/business">awarded</a> the &quot;Best Open-Source
+          application of the year&quot;. This is a great compliment to all the contributors
+          that made the CMF possible with their huge effort!</p>
+
+          <p>Lets continue to rock in 2014!</p>
 
     getstarted:
         name: "get-started"
