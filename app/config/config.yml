@@ -86,4 +86,5 @@ sonata_seo:
         title: Symfony2 CMF
         metas:
             name:
+                description: The Symfony2 Content Management Framework
                 keywords: "CMF, Symfony2, PHPCR"
