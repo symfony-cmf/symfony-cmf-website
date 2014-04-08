@@ -34,7 +34,6 @@ class AppKernel extends Kernel
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\SeoBundle\SonataSeoBundle(),
 
-
             // and the website specific bundle
             new Cmf\MainBundle\CmfMainBundle(),
         );
