@@ -3,7 +3,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{% block title %}{{ title|default('Welcome')|striptags }}{% endblock %} | Symfony2 CMF</title>
+    {{ sonata_seo_metadatas() }}
+    {{ sonata_seo_link_canonical() }}
+    {{ sonata_seo_lang_alternates() }}
+    {{ sonata_seo_title() }}
 
     {% block includes %}
         <link href="{{ asset('bundles/cmfmain/css/style.css') }}" type="text/css" rel="stylesheet"/>

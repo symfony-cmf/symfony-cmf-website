@@ -53,6 +53,10 @@ cmf_menu:
     voters:
         uri_prefix: true
 
+cmf_seo:
+    title: %%content_title%% | Symfony2 CMF
+    description: The Symfony2 Content Management Framework. %%content_description%%
+
 doctrine_cache:
     providers:
         phpcr_meta:
@@ -76,3 +80,11 @@ fos_rest:
 
 sonata_block:
     default_context: [cms]
+
+sonata_seo:
+    page:
+        title: Symfony2 CMF
+        metas:
+            name:
+                description: The Symfony2 Content Management Framework
+                keywords: "CMF, Symfony2, PHPCR"
