@@ -2,56 +2,132 @@
 
 namespace Cmf\MainBundle\DataFixtures\PHPCR;
 
+use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ODM\PHPCR\DocumentManager;
+
 use PHPCR\Util\NodeHelper;
-use Symfony\Component\Yaml\Parser;
-use Symfony\Cmf\Bundle\SimpleCmsBundle\DataFixtures\Phpcr\AbstractLoadPageData;
+
 use Symfony\Cmf\Bundle\MenuBundle\Doctrine\Phpcr\MenuNode;
+use Symfony\Cmf\Component\Routing\RouteObjectInterface;
+use Symfony\Component\DependencyInjection\ContainerAware;
 
-class LoadStaticData extends AbstractLoadPageData
+use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
+use Symfony\Component\Yaml\Parser;
 
+class LoadStaticData extends ContainerAware implements FixtureInterface, OrderedFixtureInterface
 {
     public function getOrder()
     {
         return 5;
     }
 
-    protected function getData()
-    {
-        $yaml = new Parser();
-        return $yaml->parse(file_get_contents(__DIR__.'/../../Resources/data/page.yml'));
-    }
 
-    public function load(ObjectManager $dm)
+    public function load(ObjectManager $manager)
     {
-        parent::load($dm);
-        $session = $dm->getPhpcrSession();
-
+        $session = $manager->getPhpcrSession();
         $yaml = new Parser();
+
+        $basepath = $this->container->getParameter('cmf_simple_cms.persistence.phpcr.basepath');
+        NodeHelper::createPath($session, preg_replace('#/[^/]*$#', '', $basepath));
+
+        $data = $yaml->parse(file_get_contents(__DIR__.'/../../Resources/data/page.yml'));
+        foreach ($data['static'] as $overview) {
+            $class = isset($overview['class']) ? $overview['class'] : '\Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page';
+
+            $parent = (isset($overview['parent']) ? trim($overview['parent'], '/') : '');
+            $name = (isset($overview['name']) ? trim($overview['name'], '/') : '');
+
+            $path = $basepath
+                .(empty($parent) ? '' : '/' . $parent)
+                .(empty($name) ? '' : '/' . $name);
+
+            $page = $manager->find($class, $path);
+            if (!$page) {
+                $page = new $class();
+                $page->setId($path);
+            }
+
+            if (isset($overview['formats'])) {
+                $page->setDefault('_format', reset($overview['formats']));
+                $page->setRequirement('_format', implode('|', $overview['formats']));
+            }
+
+            if (!empty($overview['template'])) {
+                $page->setDefault(RouteObjectInterface::TEMPLATE_NAME, $overview['template']);
+            }
+
+            if (!empty($overview['controller'])) {
+                $page->setDefault(RouteObjectInterface::CONTROLLER_NAME, $overview['controller']);
+            }
+
+            if (!empty($overview['options'])) {
+                $page->setOptions($overview['options']);
+            }
+
+            $manager->persist($page);
+
+            if (is_array($overview['title'])) {
+                foreach ($overview['title'] as $locale => $title) {
+                    $page->setTitle($title);
+                    if (isset($overview['label'][$locale]) && $overview['label'][$locale]) {
+                        $page->setLabel($overview['label'][$locale]);
+                    } elseif (!isset($overview['label'][$locale])) {
+                        $page->setLabel($title);
+                    }
+                    $page->setBody($overview['body'][$locale]);
+                    $manager->bindTranslation($page, $locale);
+                }
+            } else {
+                $page->setTitle($overview['title']);
+                if (isset($overview['label'])) {
+                    if ($overview['label']) {
+                        $page->setLabel($overview['label']);
+                    }
+                } elseif (!isset($overview['label'])) {
+                    $page->setLabel($overview['title']);
+                }
+                $page->setBody($overview['body']);
+            }
+
+            if (isset($overview['create_date'])) {
+                $page->setCreateDate(date_create_from_format('U', strtotime($overview['create_date'])));
+            }
+
+            if (isset($overview['publish_start_date'])) {
+                $page->setPublishStartDate(date_create_from_format('U', strtotime($overview['publish_start_date'])));
+            }
+
+            if (isset($overview['publish_end_date'])) {
+                $page->setPublishEndDate(date_create_from_format('U', strtotime($overview['publish_end_date'])));
+            }
+        } 
+        
         $data = $yaml->parse(file_get_contents(__DIR__ . '/../../Resources/data/external.yml'));
 
         $basepath = $this->container->getParameter('cmf_core.persistence.phpcr.basepath');
-        $home = $dm->find(null, $basepath);
+        $home = $manager->find(null, $basepath);
 
         foreach ($data['static'] as $name => $overview) {
             $item = new MenuNode();
             $item->setName($name);
             $item->setLabel($overview['label']);
             $item->setUri($overview['uri']);
-            $item->setParent($home);
-            $dm->persist($item);
+            $item->setParentDocument($home);
+            $manager->persist($item);
         }
 
         $blocks = $yaml->parse(file_get_contents(__DIR__ . '/../../Resources/data/block.yml'));
         $blockBasepath = $this->container->getParameter('cmf_block.persistence.phpcr.block_basepath');
         NodeHelper::createPath($session, $blockBasepath);
-        $blocksHome = $dm->find(null, $blockBasepath);
+        $blocksHome = $manager->find(null, $blockBasepath);
 
         foreach ($blocks['static'] as $name => $block) {
-            $this->loadBlock($dm, $blocksHome, $name, $block);
+            $this->loadBlock($manager, $blocksHome, $name, $block);
         }
 
-        $dm->flush();
+        $manager->flush();
     }
 
     /**

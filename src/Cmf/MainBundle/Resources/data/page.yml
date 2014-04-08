@@ -81,6 +81,7 @@ static:
         formats: [html, rss]
         template: CmfMainBundle:Cms:news_overview.{_format}.twig
         options:
+            add_format_pattern: true
             displayChildren: false
             currentUriPrefix: "/news"
         body: The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):

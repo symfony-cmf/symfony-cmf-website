@@ -41,8 +41,8 @@ cmf_core:
         phpcr:
             enabled: true
 
-cmf_simple_cms:
-    routing:
+cmf_routing:
+    dynamic:
         templates_by_class:
             Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page: CmfSimpleCmsBundle:Page:index.html.twig
 
@@ -53,11 +53,11 @@ cmf_menu:
     voters:
         uri_prefix: true
 
-liip_doctrine_cache:
-    namespaces:
-        meta:
+doctrine_cache:
+    providers:
+        phpcr_meta:
             type: file_system
-        nodes:
+        phpcr_nodes:
             type: file_system
 
 fos_rest:

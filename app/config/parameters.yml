@@ -8,8 +8,8 @@ parameters:
         type: doctrinedbal
         connection: default
         caches:
-            meta: liip_doctrine_cache.ns.meta
-            nodes: liip_doctrine_cache.ns.nodes
+            meta: doctrine_cache.providers.phpcr_meta
+            nodes: doctrine_cache.providers.phpcr_nodes
     phpcr_workspace: default
     phpcr_user: admin
     phpcr_pass: admin
