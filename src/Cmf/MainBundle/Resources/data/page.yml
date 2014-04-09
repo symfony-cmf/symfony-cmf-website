@@ -80,11 +80,15 @@ static:
         title: "News"
         formats: [html, rss]
         template: CmfMainBundle:Cms:news_overview.{_format}.twig
+        class: "\Cmf\MainBundle\Document\SeoPage"
         options:
             add_format_pattern: true
             displayChildren: false
             currentUriPrefix: "/news"
         body: The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):
+        seo-metadata:
+            description: "News around the Symfony2 CMF"
+            keywords:    "News"
 
     cmf-featured-on-symfony-com:
         name: "cmf-featured-on-symfony-com"

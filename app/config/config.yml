@@ -83,8 +83,8 @@ sonata_block:
 
 sonata_seo:
     page:
-        title: Symfony2 CMF
+        title: Welcome | Symfony2 CMF
         metas:
             name:
-                description: The Symfony2 Content Management Framework
+                description: The Symfony2 Content Management Framework.
                 keywords: "CMF, Symfony2, PHPCR"

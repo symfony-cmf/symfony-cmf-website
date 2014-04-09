@@ -10,6 +10,8 @@ use Doctrine\ODM\PHPCR\DocumentManager;
 use PHPCR\Util\NodeHelper;
 
 use Symfony\Cmf\Bundle\MenuBundle\Doctrine\Phpcr\MenuNode;
+use Symfony\Cmf\Bundle\SeoBundle\Model\SeoAwareInterface;
+use Symfony\Cmf\Bundle\SeoBundle\Model\SeoMetadata;
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 use Symfony\Component\DependencyInjection\ContainerAware;
 
@@ -64,6 +66,20 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
 
             if (!empty($overview['options'])) {
                 $page->setOptions($overview['options']);
+            }
+
+            if (!empty($overview['seo-metadata']) && $page instanceof SeoAwareInterface) {
+                $seoMetadata = new SeoMetadata();
+                $seoMetadata->setMetaDescription(
+                    !empty($overview['seo-metadata']['description']) ? $overview['seo-metadata']['description'] : ''
+                );
+                $seoMetadata->setMetaKeywords(
+                    !empty($overview['seo-metadata']['keywords']) ? $overview['seo-metadata']['keywords'] : ''
+                );
+                $seoMetadata->setOriginalUrl(
+                    !empty($overview['seo-metadata']['original-url']) ? $overview['seo-metadata']['original-url'] : ''
+                );
+                $page->setSeoMetadata($seoMetadata);
             }
 
             $manager->persist($page);
