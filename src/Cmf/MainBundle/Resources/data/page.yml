@@ -533,6 +533,72 @@ static:
 
           <p>Lets continue to rock in 2014!</p>
 
+    finally-1-1-RC1:
+        name: "finally-1-1-0-RC1"
+        parent: "/news"
+        title: "Finally! 1.1.0-RC1"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2014-04-08"
+        body: |
+          <p>Once we released 1.0, we did not sit idle. Instead we immediately began work on improving the CMF.
+          In fact there was such a continuous stream of good ideas and things that felt like a must have, that
+          we let ourselves slip quite far from our <a href="http://symfony.com/doc/master/cmf/contributing/releases.html">
+          defined release process</a>. Or lets say we had every intention of aliging ourselves with the Symfony2
+          core release cycle by releasing within 1-2 months of core which would have meant a 1.1 release in January.
+          Instead it tooks us 6 months to get to RC1, which on the upside is inline with what we intended for future
+          releases.</p>
+
+          <p>As we feared, it turns out that we had to do a few minor BC breaks which we tried to document as much as
+          possible in the CHANGELOG.md files in the respective packages. We also have updated the documentation already
+          with lots of details on the new features we added. Unfortunately due to limitation in the current symfony.com
+          website, we cannot provide a rendered version just yet. So for now please review the
+          <a href="https://github.com/symfony-cmf/symfony-cmf-docs/tree/dev">dev branch</a>. Hopefully we will
+          eventually also be able to provide multiple versions of the CMF documentation just like it is possible for
+          the core documentation.</p>
+
+          <p>Let me briefly highlight some of the key improvements that are coming with 1.1:
+          <ul>
+            <li>A lot of effort was spend in making the CMF more resilent towards edge cases and given better more
+            helpful error messages.</a>
+            <li>Support for newer version of Jackalope and PHPCR ODM, that bring lots of bug fixes, speed improvements,
+            and better debugging and profiling (including Symfony2 debug toolbar support).</li>
+            <li>The routing system was made even more flexible, meaning there is even less code to write when
+            implementing a new storage backend. As a result much less code is now needed in SimpleCmsBundle for
+            routing.</li>
+            <li>The menu system has seen several tweaks, most noteably it is now possible to configure a fetch depth,
+            which can give drastic performance improvements for deeply nested menu structures.</li>
+            <li>A new Bundle was added for handling SEO meta data.</a>
+            <li>A totally reworked Standard Edition that is based on the core Standard Edition to make it easier
+            to understand what is necessary to add to a Symfony2 application to integrate the CMF.</li>
+          </ul>
+          </p>
+
+          <p>So what is still left until we can go stable? For now we want to give at least 2 weeks from now to allow
+          the community to do some testing and to focus on bringing all the documentation up to date. So expect a stable
+          release at the earliest towards the end of April at the latest sometime in May. Other than this the main
+          areas where we might still see some changes are:
+          <ul>
+              <li>The Bundle for handling media data might see some more improvements for
+              <a href="https://github.com/symfony-cmf/MediaBundle/pull/82">handling of uploads</a>.</li>
+              <li>The Bundle for handling routing might see the addition of a solution to do
+              <a href="https://github.com/symfony-cmf/Routing/pull/101">batch lazy loading</a>.<li>
+              <li>The CMF Standard Edition will be <a href="https://groups.google.com/forum/#!topic/symfony-cmf-devs/DtAzizrm4D8">aligned more closely with the Symfony2 core Standard Edition</a>.<li>
+              <li>Updating documentation and ideally figuring out a solution to provide both the 1.0 and 1.1 docs in parallel.</li>
+              <li>More testing and fixing any edge cases that our users discover.</li>
+          </ul>
+          </p>
+
+          <p>To get an idea of what is needed to update to 1.1, have a look at the
+          <a href="https://github.com/symfony-cmf/symfony-cmf-website/pull/43">PR to update this website</a> to the new
+          version. Also note that the <a href="https://github.com/symfony-cmf/cmf-sandbox">CMF sandbox has also already
+          been upgraded to 1.1</a>.</p>
+
+          <p>We are also very happy with the growing eco-system around PHPCR. Most noteably there is now a
+          <a href="https://github.com/phpcr/phpcr-shell">PHPCR shell</a> to interact with a PHPCR repository as well as
+          finally a <a href="https://github.com/marmelab/phpcr-browser">PHPCR GUI</a> that supports reading and writing
+          via a web interface!</p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
