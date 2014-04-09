@@ -3,7 +3,7 @@ static:
         name: ""
         title: "Home"
         template: "CmfMainBundle:Cms:home.html.twig"
-        body: |
+        body:   |
                 <h2>The Symfony CMF Project</h2>
                 <p>
                     Welcome to the home of the <a href="http://symfony.com">Symfony2</a>
@@ -85,6 +85,9 @@ static:
             displayChildren: false
             currentUriPrefix: "/news"
         body: The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):
+        seo-metadata:
+            description: "News around the Symfony2 CMF"
+            keywords:    "News"
 
     cmf-featured-on-symfony-com:
         name: "cmf-featured-on-symfony-com"

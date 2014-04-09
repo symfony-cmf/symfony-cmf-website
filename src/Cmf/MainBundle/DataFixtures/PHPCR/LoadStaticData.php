@@ -10,6 +10,8 @@ use Doctrine\ODM\PHPCR\DocumentManager;
 use PHPCR\Util\NodeHelper;
 
 use Symfony\Cmf\Bundle\MenuBundle\Doctrine\Phpcr\MenuNode;
+use Symfony\Cmf\Bundle\SeoBundle\Model\SeoAwareInterface;
+use Symfony\Cmf\Bundle\SeoBundle\Model\SeoMetadata;
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 use Symfony\Component\DependencyInjection\ContainerAware;
 
@@ -34,7 +36,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
 
         $data = $yaml->parse(file_get_contents(__DIR__.'/../../Resources/data/page.yml'));
         foreach ($data['static'] as $overview) {
-            $class = isset($overview['class']) ? $overview['class'] : '\Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page';
+            $class = isset($overview['class']) ? $overview['class'] : '\Cmf\MainBundle\Document\SeoPage';
 
             $parent = (isset($overview['parent']) ? trim($overview['parent'], '/') : '');
             $name = (isset($overview['name']) ? trim($overview['name'], '/') : '');
@@ -43,7 +45,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
                 .(empty($parent) ? '' : '/' . $parent)
                 .(empty($name) ? '' : '/' . $name);
 
-            $page = $manager->find($class, $path);
+            $page = $manager->find(null, $path);
             if (!$page) {
                 $page = new $class();
                 $page->setId($path);
@@ -64,6 +66,20 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
 
             if (!empty($overview['options'])) {
                 $page->setOptions($overview['options']);
+            }
+
+            if (!empty($overview['seo-metadata']) && $page instanceof SeoAwareInterface) {
+                $seoMetadata = new SeoMetadata();
+                $seoMetadata->setMetaDescription(
+                    !empty($overview['seo-metadata']['description']) ? $overview['seo-metadata']['description'] : ''
+                );
+                $seoMetadata->setMetaKeywords(
+                    !empty($overview['seo-metadata']['keywords']) ? $overview['seo-metadata']['keywords'] : ''
+                );
+                $seoMetadata->setOriginalUrl(
+                    !empty($overview['seo-metadata']['original-url']) ? $overview['seo-metadata']['original-url'] : ''
+                );
+                $page->setSeoMetadata($seoMetadata);
             }
 
             $manager->persist($page);
