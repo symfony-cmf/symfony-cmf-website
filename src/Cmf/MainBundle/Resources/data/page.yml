@@ -587,8 +587,8 @@ static:
               <li>The Bundle for handling media data might see some more improvements for
               <a href="https://github.com/symfony-cmf/MediaBundle/pull/82">handling of uploads</a>.</li>
               <li>The Bundle for handling routing might see the addition of a solution to do
-              <a href="https://github.com/symfony-cmf/Routing/pull/101">batch lazy loading</a>.<li>
-              <li>The CMF Standard Edition will be <a href="https://groups.google.com/forum/#!topic/symfony-cmf-devs/DtAzizrm4D8">aligned more closely with the Symfony2 core Standard Edition</a>.<li>
+              <a href="https://github.com/symfony-cmf/Routing/pull/101">batch lazy loading</a>.</li>
+              <li>The CMF Standard Edition will be <a href="https://groups.google.com/forum/#!topic/symfony-cmf-devs/DtAzizrm4D8">aligned more closely with the Symfony2 core Standard Edition</a>.</li>
               <li>Updating documentation and ideally figuring out a solution to provide both the 1.0 and 1.1 docs in parallel.</li>
               <li>More testing and fixing any edge cases that our users discover.</li>
           </ul>
