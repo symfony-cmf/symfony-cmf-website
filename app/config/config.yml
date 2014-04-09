@@ -41,8 +41,8 @@ cmf_core:
         phpcr:
             enabled: true
 
-cmf_simple_cms:
-    routing:
+cmf_routing:
+    dynamic:
         templates_by_class:
             Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page: CmfSimpleCmsBundle:Page:index.html.twig
 
@@ -53,11 +53,15 @@ cmf_menu:
     voters:
         uri_prefix: true
 
-liip_doctrine_cache:
-    namespaces:
-        meta:
+cmf_seo:
+    title: %%content_title%% | Symfony2 CMF
+    description: The Symfony2 Content Management Framework. %%content_description%%
+
+doctrine_cache:
+    providers:
+        phpcr_meta:
             type: file_system
-        nodes:
+        phpcr_nodes:
             type: file_system
 
 fos_rest:
@@ -76,3 +80,11 @@ fos_rest:
 
 sonata_block:
     default_context: [cms]
+
+sonata_seo:
+    page:
+        title: Welcome | Symfony2 CMF
+        metas:
+            name:
+                description: The Symfony2 Content Management Framework.
+                keywords: "CMF, Symfony2, PHPCR"

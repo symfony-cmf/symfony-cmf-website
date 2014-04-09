@@ -17,7 +17,7 @@ class AppKernel extends Kernel
 
             new Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
+            new Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
 
@@ -28,9 +28,11 @@ class AppKernel extends Kernel
             new Symfony\Cmf\Bundle\BlockBundle\CmfBlockBundle(),
             new Symfony\Cmf\Bundle\CoreBundle\CmfCoreBundle(),
             new Symfony\Cmf\Bundle\SimpleCmsBundle\CmfSimpleCmsBundle(),
+            new Symfony\Cmf\Bundle\SeoBundle\CmfSeoBundle(),
 
             // dependency of the block bundle
             new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\SeoBundle\SonataSeoBundle(),
 
             // and the website specific bundle
             new Cmf\MainBundle\CmfMainBundle(),
