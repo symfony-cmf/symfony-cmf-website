@@ -36,7 +36,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
 
         $data = $yaml->parse(file_get_contents(__DIR__.'/../../Resources/data/page.yml'));
         foreach ($data['static'] as $overview) {
-            $class = isset($overview['class']) ? $overview['class'] : '\Cmf\MainBundle\Document\SeoPage';
+            $class = isset($overview['class']) ? $overview['class'] : '\Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page';
 
             $parent = (isset($overview['parent']) ? trim($overview['parent'], '/') : '');
             $name = (isset($overview['name']) ? trim($overview['name'], '/') : '');
@@ -45,7 +45,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
                 .(empty($parent) ? '' : '/' . $parent)
                 .(empty($name) ? '' : '/' . $name);
 
-            $page = $manager->find(null, $path);
+            $page = $manager->find($class, $path);
             if (!$page) {
                 $page = new $class();
                 $page->setId($path);
