@@ -604,6 +604,24 @@ static:
           finally a <a href="https://github.com/marmelab/phpcr-browser">PHPCR GUI</a> that supports reading and writing
           via a web interface!</p>
 
+    finally-1-1-RC1:
+        name: "cmf-workshop-phpday-it"
+        parent: "/news"
+        title: "Short CMF workshop at phpDay in Italy"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2014-04-15"
+        body: |
+          <p>
+              David Buchmann will do a CMF workshop at the <a href="http://2014.phpday.it">phpDay</a> in Verona, Italy.
+              phpDay takes place on May 16th and 17th. Details will be published by the organizers on  the
+              <a href="http://2014.phpday.it/talk/content-management-with-symfony2/">programme page</a>.
+          </p>
+          <p>
+              If you can make it to the conference, its a good opportunity to get introduced to the CMF and
+              listen to many <a href="http://2014.phpday.it/talk/">other interesting talks</a>.
+          </p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
