@@ -604,13 +604,13 @@ static:
           finally a <a href="https://github.com/marmelab/phpcr-browser">PHPCR GUI</a> that supports reading and writing
           via a web interface!</p>
 
-    finally-1-1-RC1:
+    cmf-workshop-phpday-it:
         name: "cmf-workshop-phpday-it"
         parent: "/news"
         title: "Short CMF workshop at phpDay in Italy"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
-        publish_start_date: "2014-04-15"
+        publish_start_date: "2014-04-18"
         body: |
           <p>
               David Buchmann will do a CMF workshop at the <a href="http://2014.phpday.it">phpDay</a> in Verona, Italy.
@@ -767,7 +767,7 @@ static:
                     <tr>
                         <td><a href="http://liip.ch/">Liip AG</a></td>
                         <td>Switzerland</td>
-                        <td><a href="https://github.com/lsmith77">Lukas</a>, <a href="https://github.com/dbu">David</a>, <a href="https://github.com/chregu">Chregu</a>, <a href="https://github.com/elHornair">Alain</a></td>
+                        <td><a href="https://github.com/lsmith77">Lukas</a>, <a href="https://github.com/dbu">David</a>, <a href="https://github.com/chregu">Chregu</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://www.netvlies.nl/">Netvlies</a></td>
