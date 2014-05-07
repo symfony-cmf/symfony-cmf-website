@@ -3,13 +3,13 @@
 namespace Cmf\MainBundle\Document;
 
 use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCR;
+use Symfony\Cmf\Bundle\SeoBundle\Doctrine\Phpcr\SeoMetadata;
+use Symfony\Cmf\Bundle\SeoBundle\Model\SeoMetadataInterface;
 use Symfony\Cmf\Bundle\SeoBundle\SeoAwareInterface;
-use Symfony\Cmf\Bundle\SeoBundle\SeoMetadata;
-use Symfony\Cmf\Bundle\SeoBundle\SeoMetadataInterface;
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
 
 /**
- * @PHPCR\Document()
+ * @PHPCR\Document(referenceable=true)
  *
  * @author Maximilian Berghoff <Maximilian.Berghoff@gmx.de>
  */
@@ -18,7 +18,7 @@ class SeoPage extends Page implements SeoAwareInterface
     /**
      * @var SeoMetadata
      *
-     * @PHPCR\String(assoc="")
+     * @PHPCR\Child
      */
     protected $seoMetadata;
 

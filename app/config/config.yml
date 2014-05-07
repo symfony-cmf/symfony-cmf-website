@@ -35,7 +35,6 @@ doctrine_phpcr:
     odm:
         auto_mapping: true
         auto_generate_proxy_classes: %kernel.debug%
-
 cmf_core:
     persistence:
         phpcr:

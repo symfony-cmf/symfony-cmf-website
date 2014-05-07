@@ -8,7 +8,7 @@
         <p property="sioc:content">{{ cmfMainContent.body|raw }}</p>
 
         {% set prev = cmf_prev(cmfMainContent) %}
-        {% if prev %}
+        {% if prev and cmf_is_linkable(prev) %}
             <a href="{{ path(prev) }}">prev</a>
         {% endif %}
         {% set next = cmf_next(cmfMainContent) %}

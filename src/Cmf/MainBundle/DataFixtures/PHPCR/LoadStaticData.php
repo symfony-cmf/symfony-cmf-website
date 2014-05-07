@@ -10,11 +10,11 @@ use Doctrine\ODM\PHPCR\DocumentManager;
 use PHPCR\Util\NodeHelper;
 
 use Symfony\Cmf\Bundle\MenuBundle\Doctrine\Phpcr\MenuNode;
-use Symfony\Cmf\Bundle\SeoBundle\SeoAwareInterface;
-use Symfony\Cmf\Bundle\SeoBundle\SeoMetadata;
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 use Symfony\Component\DependencyInjection\ContainerAware;
-
+use Symfony\Cmf\Bundle\SeoBundle\Model\SeoMetadataInterface;
+use Symfony\Cmf\Bundle\SeoBundle\SeoAwareInterface;
+use Symfony\Cmf\Bundle\SeoBundle\Doctrine\Phpcr\SeoMetadata;
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
 use Symfony\Component\Yaml\Parser;
 
