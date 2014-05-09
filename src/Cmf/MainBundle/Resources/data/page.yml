@@ -545,6 +545,10 @@ static:
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2014-04-08"
+        class: "\Cmf\MainBundle\Document\SeoPage"
+        seo-metadata:
+            description: "Finaly got the 1.1.0-RC1"
+            keywords:    "Release candidate"
         body: |
           <p>Once we released 1.0, we did not sit idle. Instead we immediately began work on improving the CMF.
           In fact there was such a continuous stream of good ideas and things that felt like a must have, that
@@ -668,6 +672,10 @@ static:
     references:
         name: "references"
         title: "References"
+        class: "\Cmf\MainBundle\Document\SeoPage"
+        seo-metadata:
+            description: "References for occurance the Symfony2 CMF"
+            keywords:    "Reference"
         body: |
             <h2>References</h2>
 
@@ -712,6 +720,10 @@ static:
     about:
         name: "about"
         title: "About"
+        class: "\Cmf\MainBundle\Document\SeoPage"
+        seo-metadata:
+            description: "About the Symfony2 CMF"
+            keywords:    "About"
         body: |
             <h2>About</h2>
 
