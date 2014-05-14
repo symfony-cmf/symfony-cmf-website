@@ -632,7 +632,7 @@ static:
         title: "1.1 stable release"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
-        publish_start_date: "2014-05-06"
+        publish_start_date: "2014-05-14"
         body: |
           <p>
               We are pleased to announce the 1.1 stable release of the CMF. This follows a series of
