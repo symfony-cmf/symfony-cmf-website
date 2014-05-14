@@ -626,6 +626,49 @@ static:
               listen to many <a href="http://2014.phpday.it/talk/">other interesting talks</a>.
           </p>
 
+    1-1-stable-release:
+        name: "1-1-stable-release"
+        parent: "/news"
+        title: "1.1 stable release"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2014-05-06"
+        body: |
+          <p>
+              We are pleased to announce the 1.1 stable release of the CMF. This follows a series of
+              RCs released over the past weeks that helped us iron out details. It also gave us time
+              to work on the documentation and so from now on you can find the
+              <a href="http://symfony.com/doc/master/cmf/index.html">documentation for the 1.1 release on symfony.com</a>.
+          </p>
+          <p>
+              You can find details about the changes and improvements in the
+              <a href="http://cmf.symfony.com/news/finally-1-1-0-RC1">announcement news for the
+              first RC</a>. In short we have done a lot of work in simplifying the use of the CMF especially
+              in terms of configuration and debugging. We have also improved performance in a few places
+              and added various useful features. We also have a new Bundle for SEO optimizations.
+          </p>
+          <p>
+              Looking ahead the main areas to work on are further speed up performance (especially
+              with the <a href="https://github.com/symfony-cmf/MenuBundle/issues/19">menu system</a>) and
+              improvements to the <a href="https://github.com/symfony-cmf/MediaBundle">media managament</a>.
+              We also plan to finish the <a href="https://github.com/symfony-cmf/RoutingAutoBundle">RoutingAutoBundle</a>
+              to make it easier to generate routes automatically for content. We also did
+              <a href="https://github.com/jackalope/jackalope-prismic">initial work</a> on
+              integrating the CMF with the <a href="https://prismic.io">prismic.io</a> content repository as a service
+              provider which we hope to mature over the coming months to a viable alternative to our
+              other storage options.
+          </p>
+          <p>
+              While the bulk of the work is done by a few regular contributors, we would like to thank
+              everyone who has submitted improvements small or large. The fact that so many developers
+              work on the CMF on some level validates the goals of the CMF, bringing together the entire
+              Symfony2 eco-system to collaborate on CMS functionality. This is probably best highlighted
+              by the fact of how many projects reference the CMF
+              <a href="https://www.versioneye.com/php/symfony-cmf:routing/references">routing component</a> and
+              accompanying <a href="https://www.versioneye.com/php/symfony-cmf:routing-bundle/references">RoutingBundle</a>.
+              Again thank you all for your investment into a stronger community.
+          </p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
