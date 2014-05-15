@@ -755,9 +755,6 @@ static:
                 <li>
                     <a href="http://www.prestaconcept.net/" target="_new">PrestaConcept.net</a>
                 </li>
-                <li>
-                    <a href="http://sandbox.prestacms.com/" target="_new">PrestaCMS Sandbox</a>
-                </li>
             </ul>
 
             <p>Here is a short overview of projects using the Symfony CMF:</p>
