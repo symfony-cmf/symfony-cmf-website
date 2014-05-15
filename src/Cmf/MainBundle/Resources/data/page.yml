@@ -53,7 +53,6 @@ static:
                 <a name="bundles"></a>
                 <h2>Bundles</h2>
                 <ul>
-                    <li><a href="https://github.com/symfony-cmf/BlogBundle">BlogBundle</a> (provide blog functionality)</li>
                     <li><a href="https://github.com/symfony-cmf/BlockBundle">BlockBundle</a> (integrates PHPCR with SonataBlockBundle)</li>
                     <li><a href="https://github.com/symfony-cmf/CoreBundle">CoreBundle</a> (provides some common helpers for content rendering)</li>
                     <li><a href="https://github.com/symfony-cmf/ContentBundle">ContentBundle</a> (provides basic classes for defining content)</li>
@@ -61,7 +60,8 @@ static:
                     <li><a href="https://github.com/symfony-cmf/MediaBundle">MediaBundle</a> (provides basic interfaces and classes to deal with media files)</li>
                     <li><a href="https://github.com/symfony-cmf/MenuBundle">MenuBundle</a> (integrates PHPCR with KnpMenuBundle)</li>
                     <li><a href="https://github.com/symfony-cmf/RoutingBundle">RoutingBundle</a> (adds dynamic routing)</li>
-                    <li><a href="https://github.com/symfony-cmf/SearchBundle">SearchBundle</a> (adds site-wide search, WIP)</li>
+                    <li><a href="https://github.com/symfony-cmf/SearchBundle">SearchBundle</a> (adds site-wide search)</li>
+                    <li><a href="https://github.com/symfony-cmf/SeoBundle">SeoBundle</a> (adds SEO optimization capabilities)</li>
                     <li><a href="https://github.com/symfony-cmf/SimpleCmsBundle">SimpleCmsBundle</a> (simple CMS on top of the CMF)</li>
                     <li><a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle">SonataDoctrinePhpcrAdminBundle</a> (integrates PHPCR with SonataAdminBundle)</li>
                     <li><a href="https://github.com/symfony-cmf/TreeBrowserBundle">TreeBrowserBundle</a> (adds a javascript UI to browse PHPCR content repositories)</li>
