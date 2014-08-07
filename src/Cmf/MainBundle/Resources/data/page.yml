@@ -784,6 +784,9 @@ static:
                 <li>
                     <a href="http://sylius.org/" target="_new">Sylius</a>
                 </li>
+                <li>
+                    <a href="http://togu.io" target="_new">Togu</a>
+                </li>
             </ul>
     about:
         name: "about"
