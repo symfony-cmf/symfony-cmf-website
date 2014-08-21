@@ -669,6 +669,43 @@ static:
               Again thank you all for your investment into a stronger community.
           </p>
 
+    1-2-release-candidate-release:
+        name: "1-2-release-candidate-release"
+        parent: "/news"
+        title: "1.2 release candidate release"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2014-08-21"
+        body: |
+          <p>
+              It is time for another update. The release process for 1.2 has begun with RC1 releases of
+              all of our components and bundles. We expect final releases in the next few weeks, certainly
+              before the end of Q3. Note that the documentation on
+              <a href="http://symfony.com/doc/master/cmf/index.html">symfony.com</a> is still for 1.1, as
+              currently we can unfortunately only render a single version. So please check the
+              <a href="https://github.com/symfony-cmf/symfony-cmf-docs/compare/master...dev">dev branch</a>
+              on the symfony-cmf-docs repository to see the updated docs. That being said, as the main
+              code development efforts are now complete, we will now focus our energy on fixing any bugs
+              reported for these releases as well as documentation. So expect to see much better
+              documentation to be added on the dev branch for all the new features and changed.
+          </p>
+          <p>
+              However, the biggest new feature in this release is that we finally are preparing
+              a stable release of <a href="https://github.com/symfony-cmf/RoutingAutoBundle">RoutingAutoBundle</a>.
+              This Bundle automates the creation of routes based on rules. For example the Bundle can
+              automatically create a route to any new content that was created. Or it can be used to
+              automatically create redirect routes whenever a route is moved. Also we moved everything to
+              use <a href="http://www.php-fig.org/psr/psr-4/">PSR-4<a/> autoloading, which will likely not
+              have a big impact for development except for shorter directory names.
+          </p>
+          <p>
+              In parallel we are also working on improvements for Jackalope and PHPCR ODM. Especially
+              Jackalope Doctrine DBAL as well as PHPCR ODM will see major performance improvements
+              with the next releases. PHPCR ODM also has many improvements related to events. If you
+              want to keep up with work on PHPCR related topics we recommend you keep an eye on the
+              news section on the newly designed <a href="http://phpcr.github.io">PHPCR homepahge</a>.
+          </p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
