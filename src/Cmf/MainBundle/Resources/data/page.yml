@@ -695,7 +695,7 @@ static:
               This Bundle automates the creation of routes based on rules. For example the Bundle can
               automatically create a route to any new content that was created. Or it can be used to
               automatically create redirect routes whenever a route is moved. Also we moved everything to
-              use <a href="http://www.php-fig.org/psr/psr-4/">PSR-4<a/> autoloading, which will likely not
+              use <a href="http://www.php-fig.org/psr/psr-4/">PSR-4</a> autoloading, which will likely not
               have a big impact for development except for shorter directory names.
           </p>
           <p>
