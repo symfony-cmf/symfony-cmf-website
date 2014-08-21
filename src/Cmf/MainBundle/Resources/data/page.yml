@@ -703,7 +703,7 @@ static:
               Jackalope Doctrine DBAL as well as PHPCR ODM will see major performance improvements
               with the next releases. PHPCR ODM also has many improvements related to events. If you
               want to keep up with work on PHPCR related topics we recommend you keep an eye on the
-              news section on the newly designed <a href="http://phpcr.github.io">PHPCR homepahge</a>.
+              news section on the newly designed <a href="http://phpcr.github.io">PHPCR homepage</a>.
           </p>
 
     getstarted:
