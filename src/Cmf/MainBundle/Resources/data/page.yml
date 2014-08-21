@@ -669,10 +669,10 @@ static:
               Again thank you all for your investment into a stronger community.
           </p>
 
-    1-2-release-candidate-release:
-        name: "1-2-release-candidate-release"
+    1-2-first-release-candidate:
+        name: "1-2-first-release-candidate"
         parent: "/news"
-        title: "1.2 release candidate release"
+        title: "1.2 first release candidate"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2014-08-21"
