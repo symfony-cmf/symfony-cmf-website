@@ -706,6 +706,26 @@ static:
               news section on the newly designed <a href="http://phpcr.github.io">PHPCR homepage</a>.
           </p>
 
+    1-2-on-the-home-stretch:
+        name: "1-2-on-the-home-stretch"
+        parent: "/news"
+        title: "1.2 on the home stretch"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2014-10-07"
+        body: |
+          <p>
+              We have been working on finalizing the 1.2 release of the CMF since over a month now but
+              it looks like we are now finally on the home stretch. We encountered some tricky issues
+              in the refactorings we have done to the multilang support in PHPCR ODM. Note there are
+              some edge case BC breaks in the multilang support especially affecting events. So we urge
+              all users to test the latest release candidates to ensure that we are not causing
+              severe issues. We rather work a bit more on getting things just right. That being said
+              thankfully several users have been testing our RCs and have reported issues already.
+              So at this point we are quite confident that we will have a great release ready to ship
+              next week!
+          </p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
