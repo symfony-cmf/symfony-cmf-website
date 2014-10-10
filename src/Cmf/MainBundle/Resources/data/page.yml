@@ -889,7 +889,7 @@ static:
                     <tr>
                         <td></td>
                         <td>Netherland</td>
-                        <td><a href="https://github.com/wouterJ">Wouter</a></td>
+                        <td><a href="https://github.com/WouterJ">Wouter</a></td>
                     </tr>
                     <tr>
                         <td><a href="http://coddict.com/">Coddict</a></td>
@@ -901,6 +901,10 @@ static:
                         <td>Italy</td>
                         <td><a href="https://github.com/jakuza">Jacopo</a>, <a href="https://github.com/micheleorselli">Michele</a></td>
                     </tr>
+                    <tr>
+                        <td><a href="http://www.jetbrains.com/">JetBrains</a></td>
+                        <td>Global</td>
+                        <td></td>
                     <tr>
                         <td><a href="http://liip.ch/">Liip AG</a></td>
                         <td>Switzerland</td>
