@@ -726,6 +726,40 @@ static:
               next week!
           </p>
 
+    cmf-wins-ch-open-source-award-2014:
+        name: "cmf-wins-ch-open-source-award-2014"
+        parent: "/news"
+        title: "Symfony CMF wins CH Open Source Award 2014"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2014-10-08"
+        body: |
+          <p><img src="/images/cmf-ch-open-source-award-2014.jpg" style="float:left; margin-right: 10px;"/>
+          <p>
+            The CMF was selected by the swiss open source organisation /ch/open to receive the OSS award.
+            The jury describes the award as follows:
+          </p>
+
+          <p>
+            <em>"The OSS Awards recognise businesses, public authorities, open source communities and
+            individuals who have used and developed open source software in an innovative and
+            groundbreaking way."</em>
+          </p>
+
+          <p>
+            The convincing arguments for selecting the CMF is that the swiss company
+            <a href="http://www.liip.ch/">Liip</a> started this initiative, but managed to make the
+            CMF a tool that is used in various countries and attracted an international group of
+            contributors. Swiss users of the CMF include the <a href="http://opendata.admin.ch/">Open
+            Government Data Portal</a> and the TV station <a href="http://www.joiz.ch/">Joiz</a>.
+          </p>
+
+          <p>
+            After winning the <a href="http://cmf.symfony.com/news/cmf-best-symfony-opensource-project-2013">
+            Best Open-Source Application Award</a> at SymfonyCon Warszaw 2013, we are very proud to receive
+            this award.
+          </p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
