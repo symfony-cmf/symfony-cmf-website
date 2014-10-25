@@ -793,7 +793,7 @@ static:
           <p>
               Likely the biggest step forward for the CMF however is the first stable release of
               the <a href="http://symfony.com/doc/master/cmf/bundles/routing_auto/index.html">
-              RoutingAutoBundle<a/> and its underlying library. With it users can automate the
+              RoutingAutoBundle</a> and its underlying library. With it users can automate the
               creation of routes. For example when a new content document is created, a route
               document is automatically created. Or when a route is moved, a redirect from the
               previous location is created as well. This makes it a lot easier to leverage the
