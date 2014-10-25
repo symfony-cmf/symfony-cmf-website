@@ -760,6 +760,58 @@ static:
             this award.
           </p>
 
+    1-2-stable-released:
+        name: "1-2-stable-released"
+        parent: "/news"
+        title: "1.2 stable released"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2014-10-25"
+        body: |
+          <p>
+              Today we have finally tagged the last packages and with this the CMF has reached 1.2!
+              Unfortunately we ended up setting HHVM as an allowed failure in our test setup due to
+              an <a href="https://github.com/travis-ci/travis-ci/issues/2863">configuration issue on
+              Travis CI with HHVM 3.3</a>, however things were working fine with 3.2 and we expect
+              once the configuration issue is resolved, things will work fine with 3.3 as well. All
+              packages however are now also tested against PHP 5.6, as well as Symfony 2.5 and the
+              upcoming 2.6.
+          </p>
+
+          <p>
+              In terms of features, as mentioned in a previous news item PHPCR ODM has seen
+              significant improvements related to the events system, the native translation support
+              and performance related to collections. Another big step forward is that we are now
+              also compatible with the recently released <a href="http://sonata-project.org/bundles/admin/2-3/doc/index.html">
+              SonataAdminBundle 2.3</a>, which provides significant improvements especially on the
+              UI side. Furthermore, DoctrinePHPCRBundle now optionally supports the
+              <a href="https://github.com/phpcr/phpcr-shell"> PHPCR shell</a>. Other than that most
+              Bundles have seen incremental improvements related to developer experience,
+              performance or minor feature additions.
+          </p>
+
+          <p>
+              Likely the biggest step forward for the CMF however is the first stable release of
+              the <a href="http://symfony.com/doc/master/cmf/bundles/routing_auto/index.html">
+              RoutingAutoBundle<a/> and its underlying library. With it users can automate the
+              creation of routes. For example when a new content document is created, a route
+              document is automatically created. Or when a route is moved, a redirect from the
+              previous location is created as well. This makes it a lot easier to leverage the
+              ability of the CMF to keep the content and route structure separate, as it allows
+              a best of both worlds approach where most route related work is automated, but
+              it still is possible to easily manually manage the route structure independent
+              of the content structure.
+          </p>
+
+          <p>
+              As always we are also thrilled to see a steady increased in contributors providing
+              feedback, fixes and improvements small or large. In order to allow users to
+              quickly get a taste of what is possible, we have of course also updated our
+              <a href="http://cmf.liip.ch>demo</a> to use the latest version of the sandbox. The
+              <a href="http://symfony.com/doc/master/cmf/index.html">documentation</a> has also
+              been updated to cover the new features.
+          </p>
+
     getstarted:
         name: "get-started"
         title: "Get Started"
