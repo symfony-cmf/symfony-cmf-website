@@ -831,22 +831,22 @@ static:
     hackdays-in-wuerzburg:
         name: "hackdays-in-wuerzburg"
         parent: "/news"
-        title: "Symfony CMF Hackdays in Würzburg (2014-12+13-12)"
+        title: "Symfony CMF Hackdays in Würzburg (12/13 Dec. 2014)"
         label: false
         template: CmfMainBundle:Cms:news_detail.html.twig
         publish_start_date: "2014-11-26"
         body: |
           <p>
               The Mayflower Gmbh will host the next Symfony CMF Hackday in Würzburg Germany.
-              Based on the <a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Release-1.3">
-              roadmap for the 1.3 release</a> we gonna have nearly two days of hacking
+              It will be focused on the <a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Release-1.3">
+              roadmap for the 1.3 release</a> we are going to have nearly two days of hacking
               and pushing the CMF forward to the next version.
           </p>
           <p>
-              You can join the event on <a href="http://doodle.com/8u9aiadta2mvxrpm">Doodle</a>.
-              There will be a public Workshop as an opener too. You can grab information
-              through an <a href="https://www.facebook.com/events/784651721602385/?unit_ref=popular_with_friends">
-              Facebook-Event</a>. This Workshop is public but limited to 8 persons.
+              You can sign up to the event on <a href="http://doodle.com/8u9aiadta2mvxrpm">Doodle</a>.
+              There will be a public workshop as an opener too. You can get more information via the
+              <a href="https://www.facebook.com/events/784651721602385/?unit_ref=popular_with_friends">
+              Facebook-Event</a>. This workshop is public but limited to 8 persons.
           </p>
           <p>
               Both events are located at: <br /><br />
