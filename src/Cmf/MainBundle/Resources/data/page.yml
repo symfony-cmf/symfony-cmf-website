@@ -828,6 +828,7 @@ static:
                 page or contact us in our <a href="irc://freenode/#symfony-cmf">IRC channel</a>. There is almost always someone around happy
                 to help you get started!
             </p>
+
     hackdays-in-wuerzburg:
         name: "hackdays-in-wuerzburg"
         parent: "/news"
@@ -850,7 +851,7 @@ static:
           </p>
           <p>
               Both events are located at: <br /><br />
-              <a href="https://mayflower.de/>Mayflower GmbH</a><br />
+              <a href="https://mayflower.de/">Mayflower GmbH</a><br />
               Gneisenaustraße 10/11<br />
               97074 Würzburg<br />
               Germany<br />
