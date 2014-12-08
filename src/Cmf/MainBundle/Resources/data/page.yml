@@ -857,6 +857,87 @@ static:
               Germany<br />
           </p>
 
+    cmf-admin-survey:
+        name: "cmf-admin-survey"
+        parent: "/news"
+        title: "Results of the Sonata Admin survey"
+        label: false
+        template: CmfMainBundle:Cms:news_detail.html.twig
+        publish_start_date: "2014-12-08"
+        body: |
+          <p>
+              Earlier this year, we did a little user survey to learn what people are doing with Sonata Admin in their CMF projects.
+              We got about ten replies with detailed inputs. In summary, we got the feedback that the admin interface feels cleaned
+              up because only the used features are present. Rather than other systems, where the developer has to remove everything
+              that is not used, CMF developers only add what is needed, leading to a cleaner interface.
+          </p>
+          <p>
+              Below are the questions and a summary of the responses. Where applicable, the related issues are linked:
+          </p>
+          <h3>What works well in the administration interface?</h3>
+          <ul>
+            <li>CRUD</li>
+            <li>Embedding blocks into the page editing.</li>
+            <li>Navigation by content type</li>
+          </ul>
+
+          <h3>What does not work?</h3>
+          <ul>
+            <li>
+              Selecting content with the tree browser is difficult. The tree browser has no filter to
+              only present allowed types of documents, and no typing with autocomplete.<br/>
+              See <a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle/labels/tree%20view">Tree view issues</a>.
+            </li>
+            <li>
+              The admin is data type oriented, rather than content structure oriented. The tree is only
+              available on the home page so editors lose their context.
+            </li>
+            <li>Media management needs to be improved to become more convenient.</li>
+          </ul>
+          <h3>What is missing?</h3>
+            <ul>
+              <li>
+                <a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle/issues/27">Versioning management</a>,
+                deciding which document is online.
+              </li>
+              <li>Better editing of tree structures (Menu, URLs)</li>
+              <li>
+                Tool to create internal links in text fields in the admin (could be reused in frontend editing too).<br/>
+                See <a href="https://github.com/symfony-cmf/RoutingBundle/issues/207">github issue</a>.
+              </li>
+              <li>
+                Multidomain support, e.g. in the routing. <strong>Note</strong>: This has
+                <a href="http://symfony.com/doc/master/cmf/bundles/routing/configuration.html#route-basepaths">been added</a>
+                since the survey was conducted.
+              </li>
+              <li>
+                Standard way of connecting Doctrine ORM entities with PHPCR-ODM documents and back.<br/>
+                There are several incomplete approaches, see <a href="https://groups.google.com/forum/#!topic/symfony-cmf-devs/QIqaSI5bQ90">this discussion</a>.
+              </li>
+            </ul>
+
+          <h3>What are your pain points while developing the admin?</h3>
+          <ul>
+            <li>
+              Documentation of Sonata Admin is lacking. Particularly on customizing templates (figuring out template
+              names, missing blocks as extension points leading to overwrite large templates), for relations, and the
+              <a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle/issues/252">integration with standard symfony forms</a>.
+            </li>
+            <li>
+              Too many ways to accomplish the same thing: Parameters in the service definition, overwriting
+              methods or properties in the admin. Each admin class does everything, difficult to reuse tables or lists.
+            </li
+            <li>
+              Multilanguage support: See what languages the document was translated to, select the language to edit.<br/>
+              See <a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle/issues/26">this github issue</a>.
+            </li>
+            <li>Missing tools for PHPCR. <strong>Note</strong>: Since the survey was conducted, there appeared both the console
+              <a href="https://github.com/phpcr/phpcr-shell">phpcr-shell</a> and the visual
+              <a href="https://github.com/marmelab/phpcr-browser">PHPCR Browser</a>.
+            </li>
+          </ul>
+          <p>Thanks to everybody who gave their feedback!</p>
+
     getinvolved:
         name: "get-involved"
         title: "Get Involved"
