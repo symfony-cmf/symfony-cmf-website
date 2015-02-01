@@ -83,7 +83,7 @@ img.float-left {
     margin: 5px 10px 10px 0px;
 }
 
-code {
+pre {
     margin: 5px 0;
     padding: 15px;
     text-align: left;
@@ -94,6 +94,13 @@ code {
     border: 1px solid #EEE8E1;
     background: #FAF7F5;
 }
+
+code {
+    display: inline;
+    color: #666;
+    font-weight: bold;
+}
+
 acronym {
     cursor: help;
     border-bottom: 1px dotted #895F30;
