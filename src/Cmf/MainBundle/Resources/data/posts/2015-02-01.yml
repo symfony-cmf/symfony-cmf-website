@@ -11,11 +11,14 @@ body: |
     TreeBrowserBundle and true multi-site support.
 
     We also had a CMF hackday in December at the Mayflower offices in Würzburg, Germany and we are
-    hoping to have another one in the coming months, if you are interested make your self known
-    on the [CMF Mailinglist](https://groups.google.com/forum/#!forum/symfony-cmf-devs).
+    hoping to have another one in the coming months. If you are interested make your self known
+    on the [CMF Mailinglist](https://groups.google.com/forum/#!forum/symfony-cmf-devs), otherwise
+    we will announce it on the [@SymfonyCMF](http://twitter.com/SymfonyCMF) Twitter account.
 
-    <center><img src="https://pbs.twimg.com/media/B4rF-8aIcAAQkSB.jpg" width="600" /><br/>
-    <i>CMF hackday</i></center>
+    <figure>
+        <img src="https://pbs.twimg.com/media/B4rF-8aIcAAQkSB.jpg" width="600" />
+        <figcaption>CMF hackday in Würzburg, Germany</figcaption>
+    </figure>
 
     ### Jackalope 2.0
     
@@ -43,11 +46,10 @@ body: |
     resource could represent a file on the local filesystem, a Doctrine Entity
     or a PHPCR Node.
 
-    The resource stack is built upon
-    [Puli](https://github.com/puli/repository).
+    The resource stack is built upon [Puli](https://github.com/puli/repository).
 
     Two of the greatest apparent benefits will be nice ways to support multiple
-    sites and dynamic themeing.
+    sites and dynamic theming.
 
     See [this blog
     post](http://www.dantleech.com/post/2015/01/18/cmf-resource-s-and-puli-and-why-they-are-good)
@@ -89,6 +91,8 @@ body: |
     
     [Beta version](http://www.dantleech.com/post/2015/01/05/phpcrsh-beta) of PHPCR Shell released
 
-    <center><img src="https://pbs.twimg.com/media/B8gwMQOIIAAnYi5.png" width="600" /><br/>
-    <i>PHPCR Shell Beta 1</i></center>
+    <figure>
+        <img src="https://pbs.twimg.com/media/B8gwMQOIIAAnYi5.png" width="600" />
+        <figcaption>PHPCR Shell Beta 1</figcaption>
+    </figure>
 

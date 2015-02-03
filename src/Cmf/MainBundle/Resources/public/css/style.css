@@ -101,6 +101,15 @@ code {
     font-weight: bold;
 }
 
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+
 acronym {
     cursor: help;
     border-bottom: 1px dotted #895F30;
