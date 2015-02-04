@@ -17,108 +17,45 @@ use Symfony\Cmf\Bundle\SeoBundle\SeoAwareInterface;
 use Symfony\Cmf\Bundle\SeoBundle\Doctrine\Phpcr\SeoMetadata;
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
 use Symfony\Component\Yaml\Parser;
+use Symfony\Component\Finder\Finder;
+use Parsedown;
 
 class LoadStaticData extends ContainerAware implements FixtureInterface, OrderedFixtureInterface
 {
+    private $parsedown;
+
+    public function __construct()
+    {
+        $this->parsedown = new Parsedown();
+    }
+
     public function getOrder()
     {
         return 5;
     }
 
-
     public function load(ObjectManager $manager)
     {
+        $dataDir = __DIR__.'/../../Resources/data';
         $session = $manager->getPhpcrSession();
         $yaml = new Parser();
 
         $basepath = $this->container->getParameter('cmf_simple_cms.persistence.phpcr.basepath');
         NodeHelper::createPath($session, preg_replace('#/[^/]*$#', '', $basepath));
 
-        $data = $yaml->parse(file_get_contents(__DIR__.'/../../Resources/data/page.yml'));
+        $data = $yaml->parse(file_get_contents($dataDir . '/page.yml'));
         foreach ($data['static'] as $overview) {
-            $class = isset($overview['class']) ? $overview['class'] : '\Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page';
+            $this->loadPage($manager, $basepath, $overview);
+        }
 
-            $parent = (isset($overview['parent']) ? trim($overview['parent'], '/') : '');
-            $name = (isset($overview['name']) ? trim($overview['name'], '/') : '');
+        // load single pages
+        $finder = new Finder();
+        $finder->files()->name('*.yml')->in($dataDir . '/posts');
 
-            $path = $basepath
-                .(empty($parent) ? '' : '/' . $parent)
-                .(empty($name) ? '' : '/' . $name);
-
-            $page = $manager->find($class, $path);
-            if (!$page) {
-                $page = new $class();
-                $page->setId($path);
-            }
-
-            if (isset($overview['formats'])) {
-                $page->setDefault('_format', reset($overview['formats']));
-                $page->setRequirement('_format', implode('|', $overview['formats']));
-            }
-
-            if (!empty($overview['template'])) {
-                $page->setDefault(RouteObjectInterface::TEMPLATE_NAME, $overview['template']);
-            }
-
-            if (!empty($overview['controller'])) {
-                $page->setDefault(RouteObjectInterface::CONTROLLER_NAME, $overview['controller']);
-            }
-
-            if (!empty($overview['options'])) {
-                $page->setOptions($overview['options']);
-            }
-
-            if (!empty($overview['seo-metadata']) && $page instanceof SeoAwareInterface) {
-                $seoMetadata = new SeoMetadata();
-                $seoMetadata->setMetaDescription(
-                    !empty($overview['seo-metadata']['description']) ? $overview['seo-metadata']['description'] : ''
-                );
-                $seoMetadata->setMetaKeywords(
-                    !empty($overview['seo-metadata']['keywords']) ? $overview['seo-metadata']['keywords'] : ''
-                );
-                $seoMetadata->setOriginalUrl(
-                    !empty($overview['seo-metadata']['original-url']) ? $overview['seo-metadata']['original-url'] : ''
-                );
-                $page->setSeoMetadata($seoMetadata);
-            }
-
-            $manager->persist($page);
-
-            if (is_array($overview['title'])) {
-                foreach ($overview['title'] as $locale => $title) {
-                    $page->setTitle($title);
-                    if (isset($overview['label'][$locale]) && $overview['label'][$locale]) {
-                        $page->setLabel($overview['label'][$locale]);
-                    } elseif (!isset($overview['label'][$locale])) {
-                        $page->setLabel($title);
-                    }
-                    $page->setBody($overview['body'][$locale]);
-                    $manager->bindTranslation($page, $locale);
-                }
-            } else {
-                $page->setTitle($overview['title']);
-                if (isset($overview['label'])) {
-                    if ($overview['label']) {
-                        $page->setLabel($overview['label']);
-                    }
-                } elseif (!isset($overview['label'])) {
-                    $page->setLabel($overview['title']);
-                }
-                $page->setBody($overview['body']);
-            }
-
-            if (isset($overview['create_date'])) {
-                $page->setCreateDate(date_create_from_format('U', strtotime($overview['create_date'])));
-            }
-
-            if (isset($overview['publish_start_date'])) {
-                $page->setPublishStartDate(date_create_from_format('U', strtotime($overview['publish_start_date'])));
-            }
-
-            if (isset($overview['publish_end_date'])) {
-                $page->setPublishEndDate(date_create_from_format('U', strtotime($overview['publish_end_date'])));
-            }
-        } 
+        foreach ($finder as $pageFile) {
+            $page = $yaml->parse(file_get_contents($pageFile));
+            $this->loadPage($manager, $basepath, $page);
+        }
         
         $data = $yaml->parse(file_get_contents(__DIR__ . '/../../Resources/data/external.yml'));
 
@@ -144,6 +81,108 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
         }
 
         $manager->flush();
+    }
+
+    private function loadPage(ObjectManager $manager, $basepath, $pageData)
+    {
+        $class = isset($pageData['class']) ? $pageData['class'] : '\Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page';
+        $format = isset($pageData['format']) ? $pageData['format'] : 'html';
+
+        $parent = (isset($pageData['parent']) ? trim($pageData['parent'], '/') : '');
+        $name = (isset($pageData['name']) ? trim($pageData['name'], '/') : '');
+
+        $path = $basepath
+            .(empty($parent) ? '' : '/' . $parent)
+            .(empty($name) ? '' : '/' . $name);
+
+        $page = $manager->find($class, $path);
+        if (!$page) {
+            $page = new $class();
+            $page->setId($path);
+        }
+
+        if (isset($pageData['formats'])) {
+            $page->setDefault('_format', reset($pageData['formats']));
+            $page->setRequirement('_format', implode('|', $pageData['formats']));
+        }
+
+        if (!empty($pageData['template'])) {
+            $page->setDefault(RouteObjectInterface::TEMPLATE_NAME, $pageData['template']);
+        }
+
+        if (!empty($pageData['controller'])) {
+            $page->setDefault(RouteObjectInterface::CONTROLLER_NAME, $pageData['controller']);
+        }
+
+        if (!empty($pageData['options'])) {
+            $page->setOptions($pageData['options']);
+        }
+
+        if (!empty($pageData['seo-metadata']) && $page instanceof SeoAwareInterface) {
+            $seoMetadata = new SeoMetadata();
+            $seoMetadata->setMetaDescription(
+                !empty($pageData['seo-metadata']['description']) ? $pageData['seo-metadata']['description'] : ''
+            );
+            $seoMetadata->setMetaKeywords(
+                !empty($pageData['seo-metadata']['keywords']) ? $pageData['seo-metadata']['keywords'] : ''
+            );
+            $seoMetadata->setOriginalUrl(
+                !empty($pageData['seo-metadata']['original-url']) ? $pageData['seo-metadata']['original-url'] : ''
+            );
+            $page->setSeoMetadata($seoMetadata);
+        }
+
+        $manager->persist($page);
+
+        if (is_array($pageData['title'])) {
+            foreach ($pageData['title'] as $locale => $title) {
+                $page->setTitle($title);
+                if (isset($pageData['label'][$locale]) && $pageData['label'][$locale]) {
+                    $page->setLabel($pageData['label'][$locale]);
+                } elseif (!isset($pageData['label'][$locale])) {
+                    $page->setLabel($title);
+                }
+
+                $page->setBody($this->parseBody($pageData['body'][$locale], $format));
+                $manager->bindTranslation($page, $locale);
+            }
+        } else {
+            $page->setTitle($pageData['title']);
+            if (isset($pageData['label'])) {
+                if ($pageData['label']) {
+                    $page->setLabel($pageData['label']);
+                }
+            } elseif (!isset($pageData['label'])) {
+                $page->setLabel($pageData['title']);
+            }
+            $page->setBody($this->parseBody($pageData['body'], $format));
+        }
+
+        if (isset($pageData['create_date'])) {
+            $page->setCreateDate(date_create_from_format('U', strtotime($pageData['create_date'])));
+        }
+
+        if (isset($pageData['publish_start_date'])) {
+            $page->setPublishStartDate(date_create_from_format('U', strtotime($pageData['publish_start_date'])));
+        }
+
+        if (isset($pageData['publish_end_date'])) {
+            $page->setPublishEndDate(date_create_from_format('U', strtotime($pageData['publish_end_date'])));
+        }
+    }
+
+    private function parseBody($body, $format)
+    {
+        switch ($format) {
+            case 'html':
+                return $body;
+            case 'markdown':
+                return $this->parsedown->text($body);
+            default:
+                throw new \InvalidArgumentException(sprintf(
+                    'Unknown format "%s"', $format
+                ));
+        }
     }
 
     /**

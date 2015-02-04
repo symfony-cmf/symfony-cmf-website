@@ -1,0 +1,98 @@
+name: "cmf-news-january-2015"
+parent: "/news"
+title: "CMF News Januray 2015"
+label: false
+format: markdown
+template: CmfMainBundle:Cms:news_detail.html.twig
+publish_start_date: "2015-02-01"
+body: |
+    Its quite an exciting time for the CMF, there is talk about the next
+    generation of Jackalope, the Resource stack, rewriting the
+    TreeBrowserBundle and true multi-site support.
+
+    We also had a CMF hackday in December at the Mayflower offices in Würzburg, Germany and we are
+    hoping to have another one in the coming months. If you are interested make your self known
+    on the [CMF Mailinglist](https://groups.google.com/forum/#!forum/symfony-cmf-devs), otherwise
+    we will announce it on the [@SymfonyCMF](http://twitter.com/SymfonyCMF) Twitter account.
+
+    <figure>
+        <img src="https://pbs.twimg.com/media/B4rF-8aIcAAQkSB.jpg" width="600" />
+        <figcaption>CMF hackday in Würzburg, Germany</figcaption>
+    </figure>
+
+    ### Jackalope 2.0
+    
+    It has been generally agreed that the current Jackalope implementation
+    could be improved upon, and to this end the architecture should be adapted.
+
+    The current Jackalope implementation was originally intended only to be a
+    client for Apache Jackrabbit, the `doctrine-dbal` implementation was an
+    afterthought.
+
+    Jackalope will be refactored with the aim of providing a modular framework which
+    will support multiple native persistence backends (Doctrine DBAL, filesystem, MongoDB) in
+    addition to support for Jackrabbit.
+
+    Modules will also be provided for versioning and search. For versioning there will be support
+    for GIT, database storage and Jackrabbit. Search modules will initially be provided for
+    Elastic Search and Zend Lucene.
+
+    Work will probably begin at sometime in the second quarter of this year.
+
+    ### Resources
+    
+    Resources are a new and experimental concept in the CMF. Resources are a
+    common interface to disparate entities within the system. For example a
+    resource could represent a file on the local filesystem, a Doctrine Entity
+    or a PHPCR Node.
+
+    The resource stack is built upon [Puli](https://github.com/puli/repository).
+
+    Two of the greatest apparent benefits will be nice ways to support multiple
+    sites and dynamic theming.
+
+    See [this blog
+    post](http://www.dantleech.com/post/2015/01/18/cmf-resource-s-and-puli-and-why-they-are-good)
+    for more information.
+
+    ### TreeBrowserBundle
+    
+    [WouterJ](https://twitter.com/WouterJNL) has been working on a new tree
+    browser implementation for the
+    [TreeBrowserBundle](https://github.com/symfony-cmf/TreeBrowserBundle).
+
+    - The trees will be implemented as pure JS adapters to existing libraries.
+    - Data will be retrieved from the
+      [ResourceRestBundle](https://github.com/symfony-cmf/ResourceRestBundle).
+    - The tree packages will be kept in a javascript package manager (e.g.
+      [bower](http://bower.io)).
+
+    As a result the code in the TreeBrowserBundle will be limited to
+    bootstrapping the adapters.
+
+    Integration with the resource API will also enable users to freely mix both
+    Doctrine ORM resources and PHPCR-ODM resources in the same tree.
+
+    ### SiteContextBundle
+    
+    [dantleech](https://twitter.com/dantleech) recently started working on a new SiteContextBundle.
+
+    All CMS's that support multiple sites will undoubtably have some "site manager" service
+    which listens to the incoming Request and determines which Site should be "loaded". This decision
+    will normally be based upon the hostname.
+
+    The SiteContextBundle will aim to provide a CMF solution to this problem and also provide an
+    integration with the SonataAdminBundle.
+
+    This bundle will provide the contextual information required by the resource stack to determine where
+    to locate a sites resources (e.g. the routes, content, blocks, etc.).
+
+    ### Other news
+    
+    [Beta version](http://www.dantleech.com/post/2015/01/05/phpcrsh-beta) of PHPCR Shell released
+
+    <figure>
+        <img src="https://pbs.twimg.com/media/B8gwMQOIIAAnYi5.png" width="600" />
+        <figcaption>PHPCR Shell Beta 1</figcaption>
+    </figure>
+

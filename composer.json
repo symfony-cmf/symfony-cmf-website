@@ -20,7 +20,8 @@
         "liip/functional-test-bundle": "1.0.*",
         "doctrine/doctrine-cache-bundle": "1.0.*",
         "symfony/icu": "1.0.*",
-        "seld/slippy": "dev-master"
+        "seld/slippy": "dev-master",
+        "erusev/parsedown": "~1.5"
     },
     "scripts": {
         "post-install-cmd": [
