@@ -46,9 +46,15 @@ h2 {
     color: #88AC0B;
 }
 h3 {
+    font-size: 1.8em;
+    font-weight: normal;
+    padding: 16px 10px 4px 10px;
+}
+h4 {
     font-size: 1.6em;
     font-weight: normal;
     padding: 16px 10px 4px 10px;
+    font-style: italic;
 }
 
 /* Paragraph */
