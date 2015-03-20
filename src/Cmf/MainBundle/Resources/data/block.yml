@@ -43,3 +43,10 @@ static:
             publishEndDate: "2013-11-14 20:00"
             link: http://www.meetup.com/010PHP/events/143957872/
             body: Symfony CMF: A decoupled Content Management Framework
+    dpc-2015-amsterdam:
+        class: Cmf\MainBundle\Document\TalkBlock
+        properties:
+            title: Dutch PHP Conference, Amsterdam
+            publishEndDate: "2015-06-25 9:30"
+            link: http://www.phpconference.nl/schedule
+            body: Symfony CMF Tutorial (3 hour workshop)

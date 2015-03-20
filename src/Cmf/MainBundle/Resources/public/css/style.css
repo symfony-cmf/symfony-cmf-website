@@ -348,27 +348,38 @@ input.button {
     margin: 0 45px 0 0;
     display: inline;
 }
+
+#sidebar .events {
+    border: solid 1px #e4f2c8;
+    margin-bottom: 16px;
+    padding: 0 10px 0 10px;
+}
+
 #sidebar h3 {
     color: #51432F;
     font: bold 1.9em 'Trebuchet MS', 'Helvetica Neue', Arial, Sans-serif;
     text-transform: none;
     letter-spacing: -0.5px;
-    padding: 5px 0 5px 7px;
-    margin: 10px 0 5px 10px;
+    padding: 10px 0 10px 0;
     border-bottom: 1px solid #E4F2C8;
 }
 
 /* sidebar menu */
 #sidebar .sidemenu {
-    margin: 10px 10px 5px 7px; padding: 0;
+    margin: 0;
+    padding: 10px 0 10px 0;
     text-decoration: none;
 }
 #sidebar .sidemenu li {
     list-style: none;
     margin: 0;
-    padding: 8px 10px;
     border-bottom: 1px solid #E8E8E8;
 }
+
+#sidebar .sidemenu li:last-child {
+    border-bottom: none;
+}
+
 * html body #sidebar .sidemenu li {
     height: 1%;
 }
@@ -380,10 +391,7 @@ input.button {
 }
 #sidebar .sidemenu li a span {
     color: #7F7F7F;
-    font-size: .9em;
 
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* font-style: italic; */
     font-weight: normal;
 }
 #sidebar .sidemenu li a span.info{ color: #A98D76; }
