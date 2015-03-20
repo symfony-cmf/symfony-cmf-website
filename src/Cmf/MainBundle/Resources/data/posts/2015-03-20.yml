@@ -17,9 +17,9 @@ body: |
   [https://twitter.com/SymfonyCMF](@SymfonyCMF) - we will tweet important news
   about the Symfony CMF on that account.
 
-  # Meetings
+  ### Events
 
-  ## May Hackday
+  #### May Hackday
 
   Come to Dornbirn, Austria for a joint Symfony CMF / Sulu hackday on 1/2 of
   May! More details will be announced soon. Follow
@@ -27,7 +27,7 @@ body: |
   [https://groups.google.com/forum/#!forum/symfony-cmf-users](symfony-cmf-users)
   google group to not miss the announcement.
 
-  ## Conference Presence
+  #### Conference Presence
 
   Manuel Baldassarri does a CMF tutorial **in Italian language** at
   [PHPDay Italy](http://2015.phpday.it/workshops/) in Italy, on 14th of May.
@@ -39,9 +39,9 @@ body: |
   of April. There is no talk about the CMF scheduled but of course David is always happy to discuss
   the CMF if you approach him.
 
-  # Development updates
+  ### Development updates
 
-  ## Decoupling Sonata Admin
+  #### Decoupling Sonata Admin
 
   We are discussing about moving the [Sonata PHPCR-ODM admin classes into its
   own bundle](https://github.com/symfony-cmf/symfony-cmf/issues/216).
@@ -51,7 +51,7 @@ body: |
   [ng-admin](https://github.com/marmelab/ng-admin),
   [EasyAdmin](https://github.com/javiereguiluz/EasyAdminBundle) etc.
 
-  ## Routing Auto
+  #### Routing Auto
 
   The RoutingAuto component now supports [DI container
   parameters](https://github.com/symfony-cmf/RoutingAutoBundle/pull/153) to be
@@ -61,7 +61,7 @@ body: |
 
   Also the URI generator now does some basic validation on generated routes.
 
-  ## PHPCR-ODM
+  #### PHPCR-ODM
 
   PHPCR-ODM now supports a new "depth" mapping which allows you to map the depth of the underlying
   PHPCR node to a property in the document.
@@ -72,7 +72,7 @@ body: |
   Support was also added to the bundle for [configuring
   Memcache](https://github.com/doctrine/DoctrinePHPCRBundle/pull/184/files).
 
-  ## PHPCR Shell
+  #### PHPCR Shell
 
   Another Beta version of PHPCR-Shell will shortly be released, most notably it
   now supports updating fields with expressions in queries, enabling you to
