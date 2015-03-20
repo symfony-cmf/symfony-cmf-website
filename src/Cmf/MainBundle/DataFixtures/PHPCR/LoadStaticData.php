@@ -50,13 +50,18 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
 
         // load single pages
         $finder = new Finder();
-        $finder->files()->name('*.yml')->in($dataDir . '/posts');
+        $finder
+            ->files()
+            ->name('*.yml')
+            ->in($dataDir . '/posts')
+            ->sortByName()
+        ;
 
         foreach ($finder as $pageFile) {
             $page = $yaml->parse(file_get_contents($pageFile));
             $this->loadPage($manager, $basepath, $page);
         }
-        
+
         $data = $yaml->parse(file_get_contents(__DIR__ . '/../../Resources/data/external.yml'));
 
         $basepath = $this->container->getParameter('cmf_core.persistence.phpcr.basepath');

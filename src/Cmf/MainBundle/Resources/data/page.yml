@@ -85,7 +85,7 @@ static:
             add_format_pattern: true
             displayChildren: false
             currentUriPrefix: "/news"
-        body: The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):
+        body: <p>The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):</p>
         seo-metadata:
             description: "News around the Symfony2 CMF"
             keywords:    "News"

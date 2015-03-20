@@ -7,7 +7,5 @@
 {% endblock %}
 
 {% block sidebar %}
-    {{ sonata_block_render({ 'name': '/cms/content/talks' }, {
-        maxItems: 10
-    }) }}
+    {% include "CmfMainBundle:Cms:sidebar.html.twig" %}
 {% endblock %}

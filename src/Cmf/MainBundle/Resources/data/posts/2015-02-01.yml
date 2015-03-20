@@ -1,6 +1,6 @@
 name: "cmf-news-january-2015"
 parent: "/news"
-title: "CMF News Januray 2015"
+title: "CMF News January 2015"
 label: false
 format: markdown
 template: CmfMainBundle:Cms:news_detail.html.twig
@@ -21,7 +21,7 @@ body: |
     </figure>
 
     ### Jackalope 2.0
-    
+
     It has been generally agreed that the current Jackalope implementation
     could be improved upon, and to this end the architecture should be adapted.
 
@@ -40,7 +40,7 @@ body: |
     Work will probably begin at sometime in the second quarter of this year.
 
     ### Resources
-    
+
     Resources are a new and experimental concept in the CMF. Resources are a
     common interface to disparate entities within the system. For example a
     resource could represent a file on the local filesystem, a Doctrine Entity
@@ -56,7 +56,7 @@ body: |
     for more information.
 
     ### TreeBrowserBundle
-    
+
     [WouterJ](https://twitter.com/WouterJNL) has been working on a new tree
     browser implementation for the
     [TreeBrowserBundle](https://github.com/symfony-cmf/TreeBrowserBundle).
@@ -74,7 +74,7 @@ body: |
     Doctrine ORM resources and PHPCR-ODM resources in the same tree.
 
     ### SiteContextBundle
-    
+
     [dantleech](https://twitter.com/dantleech) recently started working on a new SiteContextBundle.
 
     All CMS's that support multiple sites will undoubtably have some "site manager" service
@@ -88,7 +88,7 @@ body: |
     to locate a sites resources (e.g. the routes, content, blocks, etc.).
 
     ### Other news
-    
+
     [Beta version](http://www.dantleech.com/post/2015/01/05/phpcrsh-beta) of PHPCR Shell released
 
     <figure>
