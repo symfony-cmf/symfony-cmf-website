@@ -1,0 +1,89 @@
+name: "cmf-hackday-may-2015"
+parent: "/news"
+title: "CMF Hackday 1st/2nd May 2015"
+label: false
+format: markdown
+template: CmfMainBundle:Cms:news_detail.html.twig
+publish_start_date: "2015-04-01"
+body: |
+  We are happy to announce a joint [Symfony CMF](http://cmf.symfony.com) /
+  [Sulu](http://sulu.io) hackday in Dornbirn, Austria on the 1st and 2nd of
+  May. Join us for a hacking, discussion and fun. In case there is interest
+  workshops will be available for Symfony CMF, Sulu or both.
+
+  If you would like to come, please register
+  [here](https://docs.google.com/forms/d/16nd-hHJ140RtE-MQyC1FcEMYwPAihbdB6kzhU1y5R2c/viewform?usp=send_form),
+  if for some reason you cannot complete the google form, send a mail to our
+  [mailing list](https://groups.google.com/forum/#!forum/symfony-cmf-devs).
+
+  ### Schedule
+  
+  #### Friday 1st May
+
+  09:00 - Breakfast
+  09:30 - <workshop> / <talk> / <discussion> / <hacking>
+  12:00 - Lunch
+  12:30 - <workshop> / <talk> / <discussion> / <hacking>
+  18:00 - Mountain dinner at the [Karren](http://www.karren.at/?id=1800)
+
+  #### Saturday 2nd May
+
+  09:00 - Breakfast
+  09:30 - <workshop> / <talk> / <discussion> / <hacking>
+  12:00 - Lunch
+  12:30 - <workshop> / <talk> / <discussion> / <hacking>
+
+  ### Getting there
+  
+  The hackday will take place in the [Massive Art](http://www.massiveart.com/de/kontakt/) office:
+
+    Steinebach 16
+    6850 Dornbirn, Austria
+
+  <iframe width="940" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=
+                              "https://maps.google.at/maps?f=q&amp;source=s_q&amp;hl=de&amp;q=Steinebach+16,+6850+Dornbirn,+Vorarlberg&amp;aq=&amp;sll=47.21851,9.8839&amp;sspn=2.253571,2.960815&amp;ie=UTF8&amp;geocode=FYhX0wIdeuaUAA&amp;split=0&amp;hq=&amp;hnear=Steinebach+16,+6850+Dornbirn,+Vorarlberg&amp;t=m&amp;ll=47.411246,9.755602&amp;spn=0.024395,0.080595&amp;z=14&amp;iwloc=A&amp;output=embed">
+  </iframe>
+  
+  #### From an airport
+  
+  Follow the instructions on how to get to Dornbirn train station from one of
+  the closer airports on the [homepage of the local
+  university](http://www.fhv.at/fhv-campus/location-directions/directions-nearby-airports?set_language=en).
+
+  #### From Dornbirn train station
+
+  From the train station you can take a bus:
+
+      - Bus line 9 to Steinebach (walk 1 Minute)
+      - Bus line 8 to Dornbirn Oberdorf (walk 13 Minuten)
+      - Bus line 38 to Gasthaus Engel (walk 10 Minuten) 
+
+  Or it is a 30 minute walk, or we can collect people from the train station if
+  necessary, contact us via. one of the methods below:
+
+  ### Accomodation
+
+  [Harrys Home](http://www.harrys-home.com/), Hotel, Dornbirn
+  75,50 Euro inc. breakfast
+
+  [Junges Hotel Hard](http://www.jugendherberge-hard.at/index.php?page=page&id=6) - Jugendherberge, Hard
+  33 Euro per night, inc. breakfast
+
+  [Jufa Bregenz](https://www.jufa.eu/jufa-bregenz-am-bodensee/zimmerausstattung/)- Hotel, Bregenz
+  61,40 Euro per night
+
+  [Motel Hohenems](http://www.motel-hohenems.at/home.html)
+  95 Euro per night
+  
+  [Airbnb](https://www.airbnb.at/s/Dornbirn?cdn_spdy=1&checkin=30.04.2015&checkout=01.05.2015&source=bb&ss_id=6u9431bx)
+  Rooms from 30 Euro
+
+  [Couchsurfing](https://www.couchsurfing.com)
+
+  In addition there are couches available from the MassiveArt team, let us know.
+
+  ### Contact
+  
+  - Twitter: [@SymfonyCMF](https://twitter.com/symfonycmf)
+  - CMF Mailing List: <a href="mailto:symfony-cmf-devs@googlegroups.com">symfony-cmf-devs@googlegroups.com</a>
+  - MassiveArt website: [http://www.massiveart.com/de/kontakt](http://www.massiveart.com/de/kontakt)
