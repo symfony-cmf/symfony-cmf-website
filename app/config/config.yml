@@ -1,15 +1,13 @@
 imports:
     - { resource: parameters.yml }
-    - { resource: security.yml }
 
 framework:
-    #esi:             ~
     secret:          %secret%
     router:          { resource: "%kernel.root_dir%/config/routing.yml" }
-    form:            true
+    form:            false
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
     default_locale:  %locale%
-    session:         ~
+    session:         false
 
 # Twig Configuration
 twig:
