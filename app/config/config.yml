@@ -2,11 +2,11 @@ imports:
     - { resource: parameters.yml }
 
 framework:
-    secret:          %secret%
+    secret:          false
     router:          { resource: "%kernel.root_dir%/config/routing.yml" }
     form:            false
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
-    default_locale:  %locale%
+    default_locale:  en
     session:         false
 
 # Twig Configuration
