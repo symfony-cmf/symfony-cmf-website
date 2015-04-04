@@ -37,7 +37,7 @@ hooks:
       sed -i 's@%kernel.root_dir%/app.sqlite@/tmp/app.sqlite@' app/config/parameters.yml
       composer dump-autoload --optimize
       app/console --env=prod cache:clear
-      app/console --env=prod assets:install --env=prod
+      app/console --env=prod assets:install
     deploy: |
       app/console --env=prod cache:clear
       app/console --env=prod cache:warm
