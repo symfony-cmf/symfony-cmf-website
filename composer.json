@@ -5,21 +5,20 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.3.*",
+        "symfony/symfony": "~2.6",
         "twig/extensions": "~1.0",
-        "symfony/monolog-bundle": "2.3.*",
-        "sensio/distribution-bundle": "2.3.*",
-        "symfony-cmf/simple-cms-bundle": "1.1.*",
-        "symfony-cmf/block-bundle": "1.1.*",
-        "symfony-cmf/seo-bundle": "1.0.*",
+        "symfony/monolog-bundle": "~2.3",
+        "sensio/distribution-bundle": "~2.3",
+        "symfony-cmf/simple-cms-bundle": "~1.1",
+        "symfony-cmf/block-bundle": "~1.1",
+        "symfony-cmf/seo-bundle": "~1.0",
         "friendsofsymfony/rest-bundle": "~1.0",
         "jms/serializer-bundle": ">=0.12,<0.14",
         "jackalope/jackalope-doctrine-dbal": "1.1.*",
-        "doctrine/doctrine-bundle": "1.2.*",
-        "doctrine/data-fixtures": "1.0.*",
-        "liip/functional-test-bundle": "1.0.*",
-        "doctrine/doctrine-cache-bundle": "1.0.*",
-        "symfony/icu": "1.0.*",
+        "doctrine/doctrine-bundle": "~1.2",
+        "doctrine/data-fixtures": "~1.0",
+        "liip/functional-test-bundle": "~1.0",
+        "doctrine/doctrine-cache-bundle": "~1.0",
         "seld/slippy": "dev-master",
         "erusev/parsedown": "~1.5"
     },
@@ -45,6 +44,6 @@
         "slippy-target-dir": "web/slides",
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
-        "symfony-assets-install": "symlink"
+        "symfony-assets-install": "relative"
     }
 }

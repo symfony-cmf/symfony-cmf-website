@@ -5,9 +5,9 @@ php:
 
 before_script:
   - composer install
-  - php app/console doctrine:database:create -e=test
-  - php app/console doctrine:phpcr:init:dbal -e=test
-  - php app/console doctrine:phpcr:workspace:create standard_test -e=test
+  - php app/console doctrine:database:create
+  - php app/console doctrine:phpcr:init:dbal
+  - php app/console doctrine:phpcr:workspace:create standard_test
   - php app/console doctrine:phpcr:repository:init -e=test
 
 
