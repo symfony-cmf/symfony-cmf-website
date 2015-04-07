@@ -36,8 +36,9 @@ hooks:
       # place sqlite file into /tmp so that we can write to it during deploy
       sed -i 's@%kernel.root_dir%/app.sqlite@/tmp/app.sqlite@' app/config/parameters.yml
     deploy: |
-      app/console --env=prod cache:clear
-      app/console --env=prod cache:warm
-      app/console --env=prod doctrine:phpcr:init:dbal
+      # force clearing the cache
+      rm -rf app/cache/prod
+      app/console --env=prod cache:warmup
+      app/console --env=prod doctrine:phpcr:init:dbal --drop
       app/console --env=prod doctrine:phpcr:repository:init
       app/console --env=prod doctrine:phpcr:fixtures:load
