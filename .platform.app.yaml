@@ -20,6 +20,24 @@ web:
     document_root: "/web"
     # The front-controller script to send non-static requests to.
     passthru: "/app.php"
+    whitelist:
+      # slides
+      - /slides/bigpicture\.html$
+      - /slides/routingandmenu\.html$
+      - /slides/why_symfony_cmf\.html$
+
+      # CSS and Javascript.
+      - \.css$
+      - \.js$
+
+      # image/* types.
+      - \.gif$
+      - \.jpe?g$
+      - \.png$
+      - \.ico
+
+      # robots.txt.
+      - /robots\.txt$
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
