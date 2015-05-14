@@ -22,9 +22,7 @@ web:
     passthru: "/app.php"
     whitelist:
       # slides
-      - /slides/bigpicture\.html$
-      - /slides/routingandmenu\.html$
-      - /slides/why_symfony_cmf\.html$
+      - ^/slides/.*\.html$
 
       # CSS and Javascript.
       - \.css$
