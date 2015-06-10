@@ -57,3 +57,10 @@ static:
             publishEndDate: "2015-06-25 9:30"
             link: http://www.phpconference.nl/schedule
             body: Symfony CMF Tutorial (3 hour workshop)
+    phpfrl-2015-leeuwarden:
+        class: Cmf\MainBundle\Document\TalkBlock
+        properties:
+            title: PHP.FRL Leeuwarden
+            publishEndDate: "2015-06-23 19:00"
+            link: http://www.meetup.com/PHP-FRL/events/222784422/
+            body: Symfony CMF Talk at the PHP user group friesland
