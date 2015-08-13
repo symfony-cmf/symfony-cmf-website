@@ -1,7 +1,7 @@
 {
     "name": "symfony-cmf/website",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": { "": "src/" }
     },
     "require": {
         "php": ">=5.3.3",
@@ -27,20 +27,20 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Cmf\\MainBundle\\Composer\\ScriptHandler::compileSlides"
+            "AppBundle\\Composer\\ScriptHandler::compileSlides"
         ],
         "post-update-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Cmf\\MainBundle\\Composer\\ScriptHandler::compileSlides"
+            "AppBundle\\Composer\\ScriptHandler::compileSlides"
         ]
     },
     "config": {
         "bin-dir": "bin"
     },
     "extra": {
-        "slippy-source-dir": "src/Cmf/MainBundle/Resources/slides",
+        "slippy-source-dir": "app/Resources/slides",
         "slippy-target-dir": "web/slides",
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

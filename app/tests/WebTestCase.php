@@ -17,7 +17,7 @@ abstract class WebTestCase extends BaseWebTestCase
         }
 
         $this->loadFixtures(array(
-            'Cmf\MainBundle\DataFixtures\PHPCR\LoadStaticData',
+            'AppBundle\DataFixtures\PHPCR\LoadStaticData',
         ), null, 'doctrine_phpcr');
 
         self::$fixturesLoaded = true;

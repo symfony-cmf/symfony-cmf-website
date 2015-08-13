@@ -1,0 +1,79 @@
+name: "cmf-news-march-2015"
+parent: "/news"
+title: "CMF News March 2015"
+label: false
+format: markdown
+template: cms/news_detail.html.twig
+publish_start_date: "2015-03-20"
+body: |
+  Main efforts last months focus on TreeBrowserBundle 2.0 and the related Sonata
+  refactoring, and the ResourceBundle.
+
+  Jackalope should see release 1.2 very soon, currently we are aware of only
+  [one issue](https://github.com/jackalope/jackalope-doctrine-dbal/pull/223)
+  that needs to be fixed first.
+
+  If you use Twitter, you might want to follow
+  [https://twitter.com/SymfonyCMF](@SymfonyCMF) - we will tweet important news
+  about the Symfony CMF on that account.
+
+  ### Events
+
+  #### May Hackday
+
+  Come to Dornbirn, Austria for a joint Symfony CMF / Sulu hackday on 1/2 of
+  May! More details will be announced soon. Follow
+  [https://twitter.com/SymfonyCMF](@SymfonyCMF) on twitter or subscribe to the
+  [https://groups.google.com/forum/#!forum/symfony-cmf-users](symfony-cmf-users)
+  google group to not miss the announcement.
+
+  #### Conference Presence
+
+  Manuel Baldassarri does a CMF tutorial **in Italian language** at
+  [PHPDay Italy](http://2015.phpday.it/workshops/) in Italy, on 14th of May.
+
+  David Buchmann gives a CMF tutorial at the [Dutch PHP Conference](http://www.phpconference.nl/)
+  in Amsterdam, end of June.
+
+  David will also be present at [Symfony Live Paris](http://paris2015.live.symfony.com/) on the 9.
+  of April. There is no talk about the CMF scheduled but of course David is always happy to discuss
+  the CMF if you approach him.
+
+  ### Development updates
+
+  #### Decoupling Sonata Admin
+
+  We are discussing about moving the [Sonata PHPCR-ODM admin classes into its
+  own bundle](https://github.com/symfony-cmf/symfony-cmf/issues/216).
+
+  This will decouple the the CMF Bundles from the Sonata Admin and clear the
+  way for integrating other admin systems such as
+  [ng-admin](https://github.com/marmelab/ng-admin),
+  [EasyAdmin](https://github.com/javiereguiluz/EasyAdminBundle) etc.
+
+  #### Routing Auto
+
+  The RoutingAuto component now supports [DI container
+  parameters](https://github.com/symfony-cmf/RoutingAutoBundle/pull/153) to be
+  used as tokens and a
+  [PR](https://github.com/symfony-cmf/RoutingAutoBundle/pull/150)  will soon be
+  merged allowing users to register their own adapters.
+
+  Also the URI generator now does some basic validation on generated routes.
+
+  #### PHPCR-ODM
+
+  PHPCR-ODM now supports a new "depth" mapping which allows you to map the depth of the underlying
+  PHPCR node to a property in the document.
+
+  It is also now possible to specify a custom locale chooser and configure the namespace alias used
+  for translations.
+
+  Support was also added to the bundle for [configuring
+  Memcache](https://github.com/doctrine/DoctrinePHPCRBundle/pull/184/files).
+
+  #### PHPCR Shell
+
+  Another Beta version of PHPCR-Shell will shortly be released, most notably it
+  now supports updating fields with expressions in queries, enabling you to
+  update fields based on other fields within the node for example.
