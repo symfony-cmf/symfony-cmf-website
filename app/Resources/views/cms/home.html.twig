@@ -1,0 +1,11 @@
+{% extends "CmfSimpleCmsBundle:Page:index.html.twig" %}
+
+{% block content %}
+    <div property="sioc:content">
+        {{ cmfMainContent.body|raw }}
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+    {% include "cms/sidebar.html.twig" %}
+{% endblock %}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    {{ sonata_seo_metadatas() }}
+    {{ sonata_seo_link_canonical() }}
+    {{ sonata_seo_lang_alternates() }}
+    {{ sonata_seo_title() }}
+
+    {% block includes %}
+        <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="{{ path('/cms/simple/news', {'_format': 'rss'}) }}" />
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    {% endblock %}
+</head>
+<body>
+
+<div id="wrap">
+    <div id="header">
+        <h1 id="logo-text">
+            <a href="{{ path('/cms/simple') }}"><img src="{{ asset('images/logo-horizontal.png') }}" alt="Symfony CMF"/></a>
+        </h1>
+        <p id="slogan">Symfony2 Content Management Framework</p>
+
+        <div id="top-menu">
+            <p><a href="http://www.symfony.com" target="_BLANK">Symfony2</a> + <a href="http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/" target="_BLANK">Doctrine2</a></p>
+        </div>
+
+        <div id="stamp">
+            <a href="{{ path('/cms/simple/news/cmf-best-symfony-opensource-project-2013') }}"><img src="{{ asset('images/badge_open_source.png') }}"/></a>
+        </div>
+    </div>
+
+    <div id="nav">
+        {{ knp_menu_render('simple', {'depth': 1}) }}
+    </div>
+
+    <div id="content">
+        {% set _sidebar = block('sidebar') %}
+
+        <div id="main" {% if _sidebar is not empty %}class="sidebar"{% endif %}>
+            {% block content %}{% endblock %}
+        </div>
+        {% if _sidebar is not empty %}
+        <div id="sidebar">
+            {% block sidebar %}{% endblock %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div id="footer">
+        <a href="https://twitter.com/SymfonyCMF" class="twitter-follow-button" data-show-count="false">Follow @SymfonyCMF</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <br/>
+        The Symfony logo is a trademark of Fabien Potencier. All rights reserved.
+    </div>
+</div>
+
+</body>
+</html>
+
