@@ -64,3 +64,10 @@ static:
             publishEndDate: "2015-06-23 19:00"
             link: http://www.meetup.com/PHP-FRL/events/222784422/
             body: Symfony CMF talk at the PHP user group Friesland
+    symfony-live-2015-berlin:
+        class: AppBundle\Document\TalkBlock
+        properties:
+            title: SymfonyLive Berlin 2015
+            publishEndDate: "2015-10-16 12:15"
+            link: http://berlin2015.live.symfony.com/programm/#session-014
+            body: Sulu and the other guys - Wie Sulu mit anderen Applikationen zusammen spielt.
