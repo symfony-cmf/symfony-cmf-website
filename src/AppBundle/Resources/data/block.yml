@@ -71,3 +71,10 @@ static:
             publishEndDate: "2015-10-16 12:15"
             link: http://berlin2015.live.symfony.com/programm/#session-014
             body: Sulu and the other guys - Wie Sulu mit anderen Applikationen zusammen spielt.
+    symfony-usergroup-meetup-munich-2015-09-29:
+        class: AppBundle\Document\TalkBlock
+        properties:
+            title: Symfony User Group Munich
+            publishEndDate: "2015-09-29 18:30"
+            link: http://www.meetup.com/de/sfugmunich/events/224029031/
+            body: Symfony CMF and Sulu talk at the Symfony user group Munich
