@@ -81,11 +81,11 @@ static:
     ipc-2015-talk-in-munic:
         class: AppBundle\Document\TalkBlock
         properties:
-            title: IPC Talk 2015 by @ElectricMaxxx in Munic
+            title: IPC Talk 2015 by @ElectricMaxxx in munich
             publishEndDate: "2015-10-26 17:00"
             link: https://phpconference.com/2015/en/sessions/eine-symfony-application-um-cms-funktionen-erweitern
             body: |
-		Maximilian Berghoff (@ElectricMaxxx) will give a talk about the CMF
-		on the international php conference 2015 in munic. He will suggest the
-		CMF as a way to serve CMS features to a given Symfony application. The
-		talk will be in german only.
+                Maximilian Berghoff (@ElectricMaxxx) will give a talk about the CMF
+                on the international php conference 2015 in munich. He will suggest the
+                CMF as a way to serve CMS features to a given Symfony application. The
+                talk will be in german only.
