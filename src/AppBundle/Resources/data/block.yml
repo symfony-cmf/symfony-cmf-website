@@ -78,3 +78,14 @@ static:
             publishEndDate: "2015-09-29 18:30"
             link: http://www.meetup.com/de/sfugmunich/events/224029031/
             body: Symfony CMF and Sulu talk at the Symfony user group Munich
+    ipc-2015-talk-in-munic:
+        class: AppBundle\Document\TalkBlock
+        properties:
+            title: IPC Talk 2015 by @ElectricMaxxx in munich
+            publishEndDate: "2015-10-26 17:00"
+            link: https://phpconference.com/2015/en/sessions/eine-symfony-application-um-cms-funktionen-erweitern
+            body: |
+                Maximilian Berghoff (@ElectricMaxxx) will give a talk about the CMF
+                on the international php conference 2015 in munich. He will suggest the
+                CMF as a way to serve CMS features to a given Symfony application. The
+                talk will be in german only.
