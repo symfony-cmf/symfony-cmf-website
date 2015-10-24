@@ -67,7 +67,7 @@ class EventsBlockService extends BaseBlockService implements BlockServiceInterfa
 //                ->where()
 //                    ->gt()->field('t.publishEndDate')->literal(new \DateTime())
 //                ->end()
-                ->orderBy()->asc()->field('t.publishEndDate')
+                ->orderBy()->desc()->field('t.publishEndDate')
             ;
 
             if ($maxItems = $blockContext->getSetting('maxItems')) {
@@ -81,6 +81,7 @@ class EventsBlockService extends BaseBlockService implements BlockServiceInterfa
                     $talkBlocks[] = $document;
                 }
             }
+            $talkBlocks = array_reverse($talkBlocks);
 
             $response = $this->renderResponse($blockContext->getTemplate(), array(
                 'block'      => $blockContext->getBlock(),
