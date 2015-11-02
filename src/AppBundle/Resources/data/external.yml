@@ -6,5 +6,5 @@ static:
         label: "Wiki"
         uri: "http://wiki.github.com/symfony-cmf/symfony-cmf"
     demo:
-        label: "Demo"
-        uri: "http://cmf.liip.ch/"
+        label: "Sandbox"
+        uri: "http://sandbox.cmf.symfony.com/"
