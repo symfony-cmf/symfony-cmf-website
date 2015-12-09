@@ -4,7 +4,7 @@
         "psr-4": { "": "src/" }
     },
     "require": {
-        "php": ">=5.3.3",
+        "php": "^5.3.3|^7.0",
         "symfony/symfony": "~2.6",
         "twig/extensions": "~1.0",
         "symfony/monolog-bundle": "~2.3",
