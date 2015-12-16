@@ -4,7 +4,6 @@ namespace Cmf;
 
 class StaticPageTest extends WebTestCase
 {
-
     /**
      * @dataProvider contentDataProvider
      */

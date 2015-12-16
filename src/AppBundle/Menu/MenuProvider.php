@@ -3,7 +3,6 @@
 namespace AppBundle\Menu;
 
 use Knp\Menu\MenuItem;
-
 use Symfony\Cmf\Bundle\MenuBundle\Provider\PhpcrMenuProvider;
 
 class MenuProvider extends PhpcrMenuProvider

@@ -2,12 +2,10 @@
 
 namespace AppBundle\Composer;
 
-use Symfony\Component\ClassLoader\ClassCollectionLoader;
 use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\Process\Process;
 
 /**
- * Post install handler for the cmf website
+ * Post install handler for the cmf website.
  *
  * @author David Buchmann
  */
@@ -17,16 +15,16 @@ class ScriptHandler
     {
         $extra = $event->getComposer()->getPackage()->getExtra();
 
-        $event->getIO()->write("<info>Compiling slides</info>");
+        $event->getIO()->write('<info>Compiling slides</info>');
 
         if (!isset($extra['slippy-source-dir'])) {
             throw new \Exception('Do not run this script without defining slippy-source-dir pointing to the slides directory, relative to the project directory');
         }
-        $sourceDir = getcwd() . '/' . $extra['slippy-source-dir'];
+        $sourceDir = getcwd().'/'.$extra['slippy-source-dir'];
         if (!isset($extra['slippy-target-dir'])) {
             throw new \Exception('Do not run this script without defining slippy-target-dir, relative to the project directory');
         }
-        $targetDir = getcwd() . '/' . $extra['slippy-target-dir'];
+        $targetDir = getcwd().'/'.$extra['slippy-target-dir'];
 
         if (!is_dir($sourceDir)) {
             throw new \Exception("$sourceDir not existing");
@@ -60,22 +58,22 @@ class ScriptHandler
         foreach ($files as $file) {
             $event->getIO()->write("<info>Slide $file</info>");
             // copy all source files into src so that index.php can find them
-            foreach (glob(dirname($file) . "/*.*") as $f) {
+            foreach (glob(dirname($file).'/*.*') as $f) {
                 $fs->copy($f, basename($f), true);
             }
 
             // make sure the target file does not exist
-            $targetFile = $targetDir . '/' . basename($file);
+            $targetFile = $targetDir.'/'.basename($file);
             if ($fs->exists($targetFile)) {
                 $fs->remove($targetFile);
             }
 
             exec("php index.php $file $targetFile", $output, $status);
             if ($status) {
-                throw new \RuntimeException("Compiling failed with $status\n" . implode("\n", $output));
+                throw new \RuntimeException("Compiling failed with $status\n".implode("\n", $output));
             }
         }
         chdir($pwd);
-        $event->getIO()->write("<info>All done</info>");
+        $event->getIO()->write('<info>All done</info>');
     }
 }
