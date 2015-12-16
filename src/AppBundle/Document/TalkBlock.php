@@ -38,7 +38,7 @@ class TalkBlock extends SimpleBlock
     }
 
     /**
-     * Set the date and time when the talk will start
+     * Set the date and time when the talk will start.
      *
      * @param \DateTime $date
      */
@@ -48,7 +48,7 @@ class TalkBlock extends SimpleBlock
     }
 
     /**
-     * Get the date and time when the talk will start
+     * Get the date and time when the talk will start.
      *
      * @return \DateTime|null
      */

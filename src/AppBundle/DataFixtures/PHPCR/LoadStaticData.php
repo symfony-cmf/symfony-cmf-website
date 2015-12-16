@@ -5,14 +5,10 @@ namespace AppBundle\DataFixtures\PHPCR;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Doctrine\ODM\PHPCR\DocumentManager;
-
 use PHPCR\Util\NodeHelper;
-
 use Symfony\Cmf\Bundle\MenuBundle\Doctrine\Phpcr\MenuNode;
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 use Symfony\Component\DependencyInjection\ContainerAware;
-use Symfony\Cmf\Bundle\SeoBundle\Model\SeoMetadataInterface;
 use Symfony\Cmf\Bundle\SeoBundle\SeoAwareInterface;
 use Symfony\Cmf\Bundle\SeoBundle\Doctrine\Phpcr\SeoMetadata;
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
@@ -43,7 +39,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
         $basepath = $this->container->getParameter('cmf_simple_cms.persistence.phpcr.basepath');
         NodeHelper::createPath($session, preg_replace('#/[^/]*$#', '', $basepath));
 
-        $data = $yaml->parse(file_get_contents($dataDir . '/page.yml'));
+        $data = $yaml->parse(file_get_contents($dataDir.'/page.yml'));
         foreach ($data['static'] as $overview) {
             $this->loadPage($manager, $basepath, $overview);
         }
@@ -53,7 +49,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
         $finder
             ->files()
             ->name('*.yml')
-            ->in($dataDir . '/posts')
+            ->in($dataDir.'/posts')
             ->sortByName()
         ;
 
@@ -62,7 +58,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
             $this->loadPage($manager, $basepath, $page);
         }
 
-        $data = $yaml->parse(file_get_contents(__DIR__ . '/../../Resources/data/external.yml'));
+        $data = $yaml->parse(file_get_contents(__DIR__.'/../../Resources/data/external.yml'));
 
         $basepath = $this->container->getParameter('cmf_core.persistence.phpcr.basepath');
         $home = $manager->find(null, $basepath);
@@ -76,7 +72,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
             $manager->persist($item);
         }
 
-        $blocks = $yaml->parse(file_get_contents(__DIR__ . '/../../Resources/data/block.yml'));
+        $blocks = $yaml->parse(file_get_contents(__DIR__.'/../../Resources/data/block.yml'));
         $blockBasepath = $this->container->getParameter('cmf_block.persistence.phpcr.block_basepath');
         NodeHelper::createPath($session, $blockBasepath);
         $blocksHome = $manager->find(null, $blockBasepath);
@@ -97,8 +93,8 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
         $name = (isset($pageData['name']) ? trim($pageData['name'], '/') : '');
 
         $path = $basepath
-            .(empty($parent) ? '' : '/' . $parent)
-            .(empty($name) ? '' : '/' . $name);
+            .(empty($parent) ? '' : '/'.$parent)
+            .(empty($name) ? '' : '/'.$name);
 
         $page = $manager->find($class, $path);
         if (!$page) {
@@ -193,15 +189,15 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
     /**
      * Load a block from the fixtures and create / update the node. Recurse if there are children.
      *
-     * @param ObjectManager $manager the document manager
-     * @param string $parentPath the parent of the block
-     * @param string $name the name of the block
-     * @param array $block the block definition
+     * @param ObjectManager $manager    the document manager
+     * @param string        $parentPath the parent of the block
+     * @param string        $name       the name of the block
+     * @param array         $block      the block definition
      */
     private function loadBlock(ObjectManager $manager, $parent, $name, $block)
     {
         $className = $block['class'];
-        $document = $manager->find(null, $this->getIdentifier($manager, $parent) . '/' . $name);
+        $document = $manager->find(null, $this->getIdentifier($manager, $parent).'/'.$name);
         $class = $manager->getClassMetadata($className);
         if ($document && get_class($document) != $className) {
             $manager->remove($document);
@@ -245,7 +241,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
     private function getIdentifier($manager, $document)
     {
         $class = $manager->getClassMetadata(get_class($document));
+
         return $class->getIdentifierValue($document);
     }
-
 }

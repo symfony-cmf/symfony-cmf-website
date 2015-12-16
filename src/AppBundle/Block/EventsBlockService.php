@@ -51,7 +51,6 @@ class EventsBlockService extends BaseBlockService implements BlockServiceInterfa
      */
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
-
         if (!$response) {
             $response = new Response();
         }
@@ -84,7 +83,7 @@ class EventsBlockService extends BaseBlockService implements BlockServiceInterfa
             $talkBlocks = array_reverse($talkBlocks);
 
             $response = $this->renderResponse($blockContext->getTemplate(), array(
-                'block'      => $blockContext->getBlock(),
+                'block' => $blockContext->getBlock(),
                 'talkBlocks' => $talkBlocks,
             ), $response);
         }

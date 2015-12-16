@@ -3,12 +3,10 @@
 namespace Cmf;
 
 use Liip\FunctionalTestBundle\Test\WebTestCase as BaseWebTestCase;
-use Doctrine\Common\DataFixtures\Executor\PHPCRExecutor;
-use Doctrine\Common\DataFixtures\Purger\PHPCRPurger;
 
 abstract class WebTestCase extends BaseWebTestCase
 {
-    static protected $fixturesLoaded = false;
+    protected static $fixturesLoaded = false;
 
     public function setUp()
     {
