@@ -28,6 +28,7 @@ The next step is to setup the database:
     app/console doctrine:phpcr:fixtures:load
 
 ### Setup your permissions - see [Setting up Permissions](http://symfony.com/doc/current/book/installation.html#configuration-and-setup).
+[![StyleCI](https://styleci.io/repos/806312/shield)](https://styleci.io/repos/806312)
 For Mac Os X users, when changing the owner of the cache folder, use '_www' instead of www-data.
 
 ## Access by web browser
