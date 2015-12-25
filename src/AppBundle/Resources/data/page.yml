@@ -67,14 +67,6 @@ static:
                     <li><a href="https://github.com/symfony-cmf/TreeBrowserBundle">TreeBrowserBundle</a> (adds a javascript UI to browse PHPCR content repositories)</li>
                 </ul>
 
-                <h2>Links</h2>
-                <ul>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/get-involved">Get Involved</a></li>
-                    <li><a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Wiki</a></li>
-                    <li><a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Roadmap">Roadmap</a></li>
-                </ul>
-
     news:
         name: "news"
         title: "News"

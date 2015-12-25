@@ -2,3 +2,7 @@
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
+
+sitemaps:
+    prefix: /sitemaps
+    resource: "@CmfSeoBundle/Resources/config/routing/sitemap.xml"

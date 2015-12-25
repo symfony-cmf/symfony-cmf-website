@@ -12,6 +12,7 @@ framework:
 
 # Twig Configuration
 twig:
+    exception_controller: cmf_seo.error.suggestion_provider.controller:showAction
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
 
@@ -54,7 +55,23 @@ cmf_menu:
 cmf_seo:
     title: %%content_title%% | Symfony2 CMF
     description: The Symfony2 Content Management Framework. %%content_description%%
-
+    error:
+        enable_parent_provider: true
+        enable_sibling_provider: true
+        templates:
+            html: ":error:index.html.twig"
+        exclusion_rules:
+            - { path: 'excluded' }
+    sitemap:
+        defaults:
+            default_change_frequency: never
+            templates:
+                xml: ':sitemap:index.xml.twig'
+                html: ':sitemap:index.html.twig'
+        configurations:
+            sitemap: ~
+            frequent:
+                default_change_frequency: always
 doctrine_cache:
     providers:
         phpcr_meta:

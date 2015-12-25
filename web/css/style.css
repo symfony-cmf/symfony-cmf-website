@@ -458,6 +458,42 @@ input.button {
     text-decoration: none;
 }
 
+#footer .links {
+    text-align: left;
+    width: 100%;
+}
+#footer .links h2 {
+    font-size: 15px;
+}
+
+#footer .links .link-col {
+    width: 25%;
+    float: left;
+    display: inline;
+    min-height: 130px;
+}
+
+#footer .links .link-col ul {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.cmf-sitemap .indent-1 {
+    margin-left: 20px;
+}
+
+.cmf-sitemap .indent-2 {
+    margin-left: 40px;
+}
+
+.cmf-sitemap .indent-3 {
+    margin-left: 60px;
+}
+
+.cmf-sitemap .indent-4 {
+    margin-left: 80px;
+}
+
 /* postmeta */
 .post-footer {
     padding: 8px 10px;
