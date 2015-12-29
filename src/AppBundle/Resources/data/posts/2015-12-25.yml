@@ -15,7 +15,7 @@ body: |
   will simply keep PHP 5.3 compatibility as a best as we can but will switch to PHP 5.4+ if we run
   into any tricky issues with 5.3.
 
-  That being said, we also wanted to share the news that PHPCR ODM and DoctrinePHPBundle 1.3 have
+  That being said, we also wanted to share the news that PHPCR ODM and DoctrinePHPCRBundle 1.3 have
   been released. The most important improvements are Symfony 3.0 compatibility while maintaining
   full compatibility with Symfony 2.3. Furthermore PHP 7.0 is fully supported. However this
   required a significant change: "Deprecated Binary, Boolean, Date, Decimal, Double, Float, Int,
