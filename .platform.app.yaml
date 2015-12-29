@@ -5,7 +5,7 @@
 name: php
 
 # The toolstack used to build the application.
-type: php
+type: php:5.6
 build:
     flavor: symfony
 
@@ -57,7 +57,7 @@ hooks:
       # force clearing the cache
       rm -rf app/cache/prod
       app/console --env=prod cache:warmup
-      app/console --env=prod doctrine:phpcr:init:dbal --drop
+      app/console --env=prod doctrine:phpcr:init:dbal --drop --force
       app/console --env=prod doctrine:phpcr:repository:init
       app/console --env=prod doctrine:phpcr:fixtures:load -n
 

@@ -23,9 +23,9 @@ This will fetch the vendors and all it's dependencies.
 The next step is to setup the database:
 
     app/console doctrine:database:create
-    app/console doctrine:phpcr:init:dbal
+    app/console doctrine:phpcr:init:dbal --force
     app/console doctrine:phpcr:repository:init
-    app/console doctrine:phpcr:fixtures:load
+    app/console doctrine:phpcr:fixtures:load -n
 
 ### Setup your permissions - see [Setting up Permissions](http://symfony.com/doc/current/book/installation.html#configuration-and-setup).
 [![StyleCI](https://styleci.io/repos/806312/shield)](https://styleci.io/repos/806312)
