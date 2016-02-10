@@ -1,0 +1,56 @@
+name: "first-1-3-release-candidate"
+parent: "/news"
+title: "First Symfony CMF 1.3 Release Candidate Available"
+label: false
+format: markdown
+template: cms/news_detail.html.twig
+publish_start_date: "2016-02-10"
+body: |
+    The release of Symfony CMF 1.3 is coming closer with the availability of
+    release candidates for all packages. Stable releases can be expected in the
+    coming weeks.
+
+    After the 1.2 release, the activity of the Symfony CMF project has dropped,
+    resulting in no new release in 2014. With this new release, the CMF is back
+    in the running with full Symfony 2.8 and PHP 7 support.
+
+    ## Important new Features
+
+    Included in this release are the following packages:
+
+     * Version 1.0 of SlugifierApi;
+     * Version 1.1 of RoutingAutoBundle and RoutingAuto;
+     * Version 1.2 of SearchBundle, SeoBundle and TreeBrowserBundle;
+     * Version 1.3 of BlockBundle, CoreBundle, ContentBundle, MediaBundle,
+       SimpleCmsBundle, Testing;
+     * Version 1.4 of RoutingBundle and Routing;
+     * Version 2.0 of MenuBundle;
+
+    The most important features included in these new versions are:
+
+     * PHP 7 support for all CMF packages;
+     * The Routing and Testing components support Symfony 3;
+     * The CmfMenuBundle added KnpMenu 2 support and dropped support for KnpMenu 1;
+     * The CmfSeoBundle added support for generating sitemaps and an exception
+       controller for better error pages;
+     * The CmfMediaBundle added a `cmf_media_file` form type to upload simple files;
+     * Improved admin experience for most Sonata Admin classes;
+     * A ``symfony-cmf/slugifier-api`` package was introduced, containing a
+       generic sluggifier interface to be used when a sluggifier is needed;
+     * Integration of CKeditor in the CmfSimpleCmsBundle and CmfContentBundle,
+       providing the admin with better tooling to edit page contents.
+
+    You can read about all new features [master version](http://symfony.com/doc/master/cmf)
+    of the documentation.
+
+    Please update your project and to test the release candidates. This will
+    help making the 1.3 release more stable.
+
+    ## The Future
+
+    Symfony CMF 1.3 will be the last release in the 1.x series. After this
+    release, work will start on Symfony CMF 2.0. This version targets Symfony
+    2.8 and 3.0+. In 1.3, most deprecated features already trigger deprecation
+    notices. However, this does not mean the upgrade to 2.0 will not contain
+    more breaking changes. We do our best to reduce the breaking changes as
+    much as possible.
