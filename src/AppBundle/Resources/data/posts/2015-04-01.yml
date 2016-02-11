@@ -1,9 +1,5 @@
 name: "cmf-hackday-may-2015"
-parent: "/news"
 title: "CMF Hackday 1st/2nd May 2015"
-label: false
-format: markdown
-template: cms/news_detail.html.twig
 publish_start_date: "2015-04-02"
 body: |
   We are happy to announce a joint [Symfony CMF](http://cmf.symfony.com) /

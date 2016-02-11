@@ -1,9 +1,5 @@
 name: "jackalope-1-2"
-parent: "/news"
 title: "Jackalope 1.2"
-label: false
-format: markdown
-template: cms/news_detail.html.twig
 publish_start_date: "2015-05-02"
 body: |
   One of the result of the May [hackday](http://cmf.symfony.com/news/cmf-hackday-may-2015)

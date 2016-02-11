@@ -1,9 +1,5 @@
 name: "first-1-3-release-candidate"
-parent: "/news"
 title: "First Symfony CMF 1.3 Release Candidate Available"
-label: false
-format: markdown
-template: cms/news_detail.html.twig
 publish_start_date: "2016-02-10"
 body: |
     The release of Symfony CMF 1.3 is coming closer with the availability of
@@ -14,7 +10,7 @@ body: |
     resulting in no new release in 2014. With this new release, the CMF is back
     in the running with full Symfony 2.8 and PHP 7 support.
 
-    ## Important new Features
+    ### Important new Features
 
     Included in this release are the following packages:
 
@@ -46,7 +42,7 @@ body: |
     Please update your project and to test the release candidates. This will
     help making the 1.3 release more stable.
 
-    ## The Future
+    ### The Future
 
     Symfony CMF 1.3 will be the last release in the 1.x series. After this
     release, work will start on Symfony CMF 2.0. This version targets Symfony
