@@ -7,7 +7,7 @@ body: |
     coming weeks.
 
     After the 1.2 release, the activity of the Symfony CMF project has dropped,
-    resulting in no new release in 2014. With this new release, the CMF is back
+    resulting in no new release in 2015. With this new release, the CMF is back
     in the running with full Symfony 2.8 and PHP 7 support.
 
     ### Important new Features
@@ -30,7 +30,9 @@ body: |
      * The CmfSeoBundle added support for generating sitemaps and an exception
        controller for better error pages;
      * The CmfMediaBundle added a `cmf_media_file` form type to upload simple files;
-     * Improved admin experience for most Sonata Admin classes;
+     * Improved admin experience for most Sonata Admin classes, including integration
+       of the [SonataTranslationBundle](https://sonata-project.org/bundles/translation/master/doc/index.html)
+       for multi-language documents;
      * A ``symfony-cmf/slugifier-api`` package was introduced, containing a
        generic sluggifier interface to be used when a sluggifier is needed;
      * Integration of CKeditor in the CmfSimpleCmsBundle and CmfContentBundle,
