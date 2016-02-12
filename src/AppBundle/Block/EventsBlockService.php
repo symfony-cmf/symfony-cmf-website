@@ -19,7 +19,7 @@ class EventsBlockService extends BaseBlockService implements BlockServiceInterfa
     protected $dm;
     protected $publishWorkflowChecker;
 
-    public function __construct($name, $templating, $template = null, DocumentManager $dm, PublishWorkflowChecker $publishWorkflowChecker)
+    public function __construct($name, $templating, $template, DocumentManager $dm, PublishWorkflowChecker $publishWorkflowChecker)
     {
         if ($template) {
             $this->template = $template;

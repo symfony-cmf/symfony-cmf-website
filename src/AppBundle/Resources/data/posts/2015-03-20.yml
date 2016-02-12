@@ -1,9 +1,5 @@
 name: "cmf-news-march-2015"
-parent: "/news"
 title: "CMF News March 2015"
-label: false
-format: markdown
-template: cms/news_detail.html.twig
 publish_start_date: "2015-03-20"
 body: |
   Main efforts last months focus on TreeBrowserBundle 2.0 and the related Sonata

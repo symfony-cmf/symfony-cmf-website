@@ -1,9 +1,5 @@
 name: "symfony-cmf-status-and-phpcr-odm-1-3"
-parent: "/news"
 title: "Symfony CMF status update and PHPCR ODM 1.3 release"
-label: false
-format: markdown
-template: cms/news_detail.html.twig
 publish_start_date: "2015-12-25"
 body: |
   Progress has not been as steady as we had hoped this year. Behind the scenes we have added several

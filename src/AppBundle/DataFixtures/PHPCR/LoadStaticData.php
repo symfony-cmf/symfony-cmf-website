@@ -54,8 +54,14 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
         ;
 
         foreach ($finder as $pageFile) {
-            $page = $yaml->parse(file_get_contents($pageFile));
-            $this->loadPage($manager, $basepath, $page);
+            $post = array_merge(array(
+                'parent' => '/news',
+                'label' => false,
+                'format' => 'markdown',
+                'template' => 'cms/news_detail.html.twig',
+            ), $yaml->parse(file_get_contents($pageFile)));
+
+            $this->loadPage($manager, $basepath, $post);
         }
 
         $data = $yaml->parse(file_get_contents(__DIR__.'/../../Resources/data/external.yml'));

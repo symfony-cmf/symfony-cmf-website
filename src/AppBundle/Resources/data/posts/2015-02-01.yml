@@ -1,9 +1,5 @@
 name: "cmf-news-january-2015"
-parent: "/news"
 title: "CMF News January 2015"
-label: false
-format: markdown
-template: cms/news_detail.html.twig
 publish_start_date: "2015-02-01"
 body: |
     Its quite an exciting time for the CMF, there is talk about the next
