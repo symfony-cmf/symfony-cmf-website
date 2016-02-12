@@ -52,3 +52,7 @@ body: |
     notices. However, this does not mean the upgrade to 2.0 will not contain
     more breaking changes. We do our best to reduce the breaking changes as
     much as possible.
+
+    For 2.0, we will also try to reduce the number of bundles included in the
+    CMF so that we can focus on the important parts. A first thing we already
+    deprecated is the BlogBundle that never saw a stable release.
