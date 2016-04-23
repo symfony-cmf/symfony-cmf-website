@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/symfony-cmf/symfony-cmf-website.svg?branch=master)](https://travis-ci.org/symfony-cmf/symfony-cmf-website)
+
 # Symfony2 CMF Website
 
 ### You will need:
