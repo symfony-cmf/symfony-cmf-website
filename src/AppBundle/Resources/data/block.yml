@@ -89,3 +89,14 @@ static:
                 on the international php conference 2015 in munich. He will suggest the
                 CMF as a way to serve CMS features to a given Symfony application. The
                 talk will be in german only.
+    sfu-june-2016-talk:
+        class: AppBundle\Document\TalkBlock
+        properties:
+            title: Symfony Usergroup Talk by @ElectricMaxxx in Frankfurt
+            publishEndDate: "2016-06-23 19:00"
+            link: https://joind.in/event/sfugfra-iii2016/details
+            body: |
+                Maximilian Berghoff (@ElectricMaxxx) will give a talk about the CMF
+                on symfony usergroup frankfurt on the 23th of june 3016. He will suggest the
+                CMF as a way to serve CMS features to a given Symfony application. The
+                talk will be in german only.
