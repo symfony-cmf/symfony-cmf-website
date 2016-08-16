@@ -100,3 +100,14 @@ static:
                 on symfony usergroup frankfurt on the 23th of june 3016. He will suggest the
                 CMF as a way to serve CMS features to a given Symfony application. The
                 talk will be in german only.
+    froscon_talk_2016:
+        class: AppBundle\Document\TalkBlock
+        properties:
+            title: FrOSCon Talk by @ElectricMaxxx
+            publishEndDate: "2016-08-20 19:00"
+            link: https://programm.froscon.de/2016/events/1897.html
+            body: |
+                Maximilian Berghoff (@ElectricMaxxx) will give a talk about the CMF
+                on this years frOSCon in Bonn/Germany on the 20th of august 2016. He will suggest the
+                CMF as a way to serve CMS features to a given Symfony application. The location of the
+                conference is the university of Siegburg next to the former german capital Bonn.
