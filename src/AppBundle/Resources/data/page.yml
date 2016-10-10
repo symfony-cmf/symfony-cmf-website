@@ -1042,6 +1042,9 @@ static:
                 <li>
                     <a href="http://togu.io" target="_new">Togu</a>
                 </li>
+                <li>
+                    <a href="https://github.com/superdesk/web-publisher" target="_new">Superdesk Web Publisher</a>
+                </li>
             </ul>
     about:
         name: "about"
