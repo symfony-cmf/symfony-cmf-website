@@ -111,3 +111,13 @@ static:
                 on this years frOSCon in Bonn/Germany on the 20th of august 2016. He will suggest the
                 CMF as a way to serve CMS features to a given Symfony application. The location of the
                 conference is the university of Siegburg next to the former german capital Bonn.
+    phpruhr-2016-talk:
+        class: AppBundle\Document\TalkBlock
+        properties:
+            title: Symfony Usergroup Talk by @ElectricMaxxx in Frankfurt
+            publishEndDate: "2016-11-10 19:00"
+            link: https://2016.php.ruhr/session/extending-a-symfony-application-by-cms-features/
+            body: |
+                Maximilian Berghoff (@ElectricMaxxx) will give a talk about the CMF
+                at the <a href="https://2016.php.ruhr/">PHPRUHR</a> conference on the 10th of november 2016 in Dortmund.
+                He will suggest the CMF as a way to serve CMS features to a given Symfony application.
