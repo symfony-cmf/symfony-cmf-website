@@ -114,7 +114,7 @@ static:
     phpruhr-2016-talk:
         class: AppBundle\Document\TalkBlock
         properties:
-            title: Symfony Usergroup Talk by @ElectricMaxxx in Frankfurt
+            title: PHPRUHR 2016 Talk by @Electricmaxx
             publishEndDate: "2016-11-10 19:00"
             link: https://2016.php.ruhr/session/extending-a-symfony-application-by-cms-features/
             body: |
