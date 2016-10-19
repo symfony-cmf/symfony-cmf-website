@@ -67,15 +67,21 @@
             <div class="link-col">
                 <h2>Also</h2>
                 <ul>
-                    <li><a href="{{ url('cmf_seo_sitemap', {'sitemap': 'sitemap', '_format': 'html'}) }}">{{ 'Sitemap'|trans }}</a></li>
-                    <li><a href="http://wiki.github.com/symfony-cmf/symfony-cmf">Wiki</a></li>
-                    <li><a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Roadmap">Roadmap</a></li>
+                    <li>
+                        <a href="{{ url('cmf_seo_sitemap', {'sitemap': 'sitemap', '_format': 'html'}) }}">
+                            {{ 'Sitemap'|trans }}
+                        </a>
+                    </li>
+                    <li><a href="http://wiki.github.com/symfony-cmf/symfony-cmf" target="_blank">Wiki</a></li>
+                    <li><a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Roadmap" target="_blank">Roadmap</a></li>
                 </ul>
             </div>
             <div class="link-col">
                 <h2>Contact</h2>
                 <ul>
-                    <li><a href="http://groups.google.com/group/symfony-cmf-users">User mailing list</a></li>
+                    <li>
+                        <a href="http://groups.google.com/group/symfony-cmf-users" target="_blank">User mailing list</a>
+                    </li>
                     <li><a href="http://groups.google.com/group/symfony-cmf-users">Devs mailing list</a></li>
                     <li><a href="irc://freenode/#symfony-cmf">IRC</a></li>
                 </ul>
