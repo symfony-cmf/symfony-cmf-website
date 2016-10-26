@@ -74,7 +74,7 @@ class SeoPage extends Page implements SeoAwareInterface, SitemapAwareInterface
     }
 
     /**
-     * @param boolean $isVisibleForSitemap
+     * @param bool $isVisibleForSitemap
      */
     public function setIsVisibleForSitemap($isVisibleForSitemap)
     {

@@ -27,7 +27,7 @@ class HomePageInitializer implements InitializerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function init(ManagerRegistry $registry)
     {
@@ -41,7 +41,7 @@ class HomePageInitializer implements InitializerInterface
         NodeHelper::createPath($session, PathHelper::getParentPath($this->basePath));
 
         /** @var \AppBundle\Document\SeoPage $page */
-        $page = new $this->documentClass;
+        $page = new $this->documentClass();
         $page->setId($this->basePath);
         $page->setLabel('Home');
         $page->setTitle('Homepage');
@@ -53,7 +53,7 @@ class HomePageInitializer implements InitializerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getName()
     {
