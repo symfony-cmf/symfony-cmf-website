@@ -4,10 +4,8 @@ namespace AppBundle\Initializer;
 
 use PHPCR\Util\NodeHelper;
 use PHPCR\Util\PathHelper;
-
 use Doctrine\Bundle\PHPCRBundle\Initializer\InitializerInterface;
 use Doctrine\ODM\PHPCR\DocumentManager;
-
 use Doctrine\Bundle\PHPCRBundle\ManagerRegistry;
 
 /**
