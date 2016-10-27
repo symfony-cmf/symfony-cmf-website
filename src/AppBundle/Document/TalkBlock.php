@@ -11,7 +11,7 @@ use Symfony\Cmf\Bundle\BlockBundle\Doctrine\Phpcr\SimpleBlock;
 class TalkBlock extends SimpleBlock
 {
     /**
-     * @PHPCR\String
+     *  @PHPCR\Field(type="string")
      */
     protected $link;
 

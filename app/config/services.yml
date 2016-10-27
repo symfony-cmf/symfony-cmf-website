@@ -1,6 +1,5 @@
 parameters:
     cmf_simple_cms.persistence.phpcr.menu_provider.class: AppBundle\Menu\MenuProvider
-    app_bundle.document.seo_page: AppBundle\Document\SeoPage
 
 services:
     app.block.events:
@@ -17,7 +16,7 @@ services:
         class: AppBundle\Initializer\HomePageInitializer
         arguments:
             - %cmf_simple_cms.persistence.phpcr.basepath%
-            - %app_bundle.document.seo_page%
+            - AppBundle\Document\SeoPage
         tags:
           - { name: doctrine_phpcr.initializer}
     cmf_seo.error.suggestion_provider.parent:

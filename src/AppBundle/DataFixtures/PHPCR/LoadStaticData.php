@@ -2,6 +2,7 @@
 
 namespace AppBundle\DataFixtures\PHPCR;
 
+use AppBundle\Document\SeoPage;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -12,7 +13,6 @@ use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Cmf\Bundle\SeoBundle\SeoAwareInterface;
 use Symfony\Cmf\Bundle\SeoBundle\Doctrine\Phpcr\SeoMetadata;
-use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
 use Symfony\Component\Yaml\Parser;
 use Symfony\Component\Finder\Finder;
 use Parsedown;
@@ -93,7 +93,7 @@ class LoadStaticData extends ContainerAware implements FixtureInterface, Ordered
 
     private function loadPage(ObjectManager $manager, $basepath, $pageData)
     {
-        $class = isset($pageData['class']) ? $pageData['class'] : '\AppBundle\Document\SeoPage';
+        $class = isset($pageData['class']) ? $pageData['class'] : SeoPage::class;
         $format = isset($pageData['format']) ? $pageData['format'] : 'html';
 
         $parent = (isset($pageData['parent']) ? trim($pageData['parent'], '/') : '');
