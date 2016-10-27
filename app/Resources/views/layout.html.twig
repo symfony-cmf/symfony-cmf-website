@@ -54,9 +54,45 @@
     </div>
 
     <div id="footer">
-        <a href="https://twitter.com/SymfonyCMF" class="twitter-follow-button" data-show-count="false">Follow @SymfonyCMF</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        <br/>
+        <div class="links">
+            <div class="link-col">
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="{{ url('/cms/simple/about') }}">About</a></li>
+                    <li><a href="{{ url('/cms/simple/get-involved') }}">Get Involved</a></li>
+                    <li><a href="{{ url('/cms/simple/news') }}">News</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="link-col">
+                <h2>Also</h2>
+                <ul>
+                    <li>
+                        <a href="{{ url('cmf_seo_sitemap', {'sitemap': 'sitemap', '_format': 'html'}) }}">
+                            {{ 'Sitemap'|trans }}
+                        </a>
+                    </li>
+                    <li><a href="http://wiki.github.com/symfony-cmf/symfony-cmf" target="_blank">Wiki</a></li>
+                    <li><a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Roadmap" target="_blank">Roadmap</a></li>
+                </ul>
+            </div>
+            <div class="link-col">
+                <h2>Contact</h2>
+                <ul>
+                    <li>
+                        <a href="http://groups.google.com/group/symfony-cmf-users" target="_blank">User mailing list</a>
+                    </li>
+                    <li><a href="http://groups.google.com/group/symfony-cmf-users">Devs mailing list</a></li>
+                    <li><a href="irc://freenode/#symfony-cmf">IRC</a></li>
+                </ul>
+            </div>
+            <div class="link-col">
+
+                <a href="https://twitter.com/SymfonyCMF" class="twitter-follow-button" data-show-count="false">Follow @SymfonyCMF</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
+        <div class="clear"></div>
         The Symfony logo is a trademark of Fabien Potencier. All rights reserved.
     </div>
 </div>

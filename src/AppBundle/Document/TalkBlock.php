@@ -10,7 +10,9 @@ use Symfony\Cmf\Bundle\BlockBundle\Doctrine\Phpcr\SimpleBlock;
  */
 class TalkBlock extends SimpleBlock
 {
-    /** @PHPCR\Field(type="string") */
+    /**
+     *  @PHPCR\Field(type="string")
+     */
     protected $link;
 
     /**
