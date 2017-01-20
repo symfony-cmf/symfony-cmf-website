@@ -12,7 +12,7 @@
             <ul>
                 {% for news in cmf_children(cmfMainContent)|reverse %}
                     {% if cmf_is_linkable(news) %}
-                    <li><a href="{{ path(news) }}">{{ news.title }}</a> ({{ news.publishStartDate | date('Y-m-d')  }})</li>
+                    <li><a href="{{ path(news) }}">{{ news.title }}</a> ({{ news.publishStartDate|date('Y-m-d')  }})</li>
                     {% endif %}
                 {% endfor %}
             </ul>
