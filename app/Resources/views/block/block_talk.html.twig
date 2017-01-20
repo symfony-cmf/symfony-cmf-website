@@ -1,7 +1,7 @@
 {% block block %}
     <li>
         <a href="{{ block.link|raw }}">{{ block.title|raw }}<br />
-            <span class="info">{{ block.publishEndDate| date('Y-m-d H:i') }}</span><br />
+            <span class="info">{{ block.publishEndDate|date('Y-m-d H:i') }}</span><br />
             <span>{{ block.body|raw }}</span>
         </a>
     </li>

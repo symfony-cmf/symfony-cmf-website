@@ -4,7 +4,7 @@
     <div xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" typeof="sioc:Post" about="{{ cmfMainContent.path }}">
         <h2 property="dcterms:title">{{ cmfMainContent.title }}</h2>
 
-        <div class="subtitle">Date: {{ cmfMainContent.publishStartDate| date('Y-m-d') }}</div>
+        <div class="subtitle">Date: {{ cmfMainContent.publishStartDate|date('Y-m-d') }}</div>
         <p property="sioc:content">{{ cmfMainContent.body|raw }}</p>
 
         {% set prev = cmf_prev(cmfMainContent) %}

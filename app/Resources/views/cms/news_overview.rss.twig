@@ -3,9 +3,9 @@
     <channel>
         <title>Symfony CMF</title>
         <link>{{ app.request.getSchemeAndHttpHost }}</link>
-        <description>The Symfony CMF project makes it easier for developers to add CMS functionality to applications built with the Symfony2 PHP framework. Key development principles for the provided set of bundles are scalability, usability, documentation and testing.</description>
+        <description>The Symfony CMF project makes it easier for developers to add CMS functionality to applications built with the Symfony PHP framework. Key development principles for the provided set of bundles are scalability, usability, documentation and testing.</description>
         <dc:language>{{ app.request.locale }}</dc:language>
-        <generator>Symfony2 CMF</generator>
+        <generator>Symfony CMF</generator>
         <managingEditor>symfony-cmf-devs@googlegroups.com (Symfony CMF)</managingEditor>
         <webMaster>symfony-cmf-devs@googlegroups.com (Symfony CMF)</webMaster>
         <ttl>1440</ttl>
@@ -18,7 +18,7 @@
                     <category>General</category>
                     <description>{{ news.body|striptags }}</description>
                     <content:encoded><![CDATA[{{ news.body|raw }}]]></content:encoded>
-                    <pubDate>{{ news.publishStartDate | date('r') }}</pubDate>
+                    <pubDate>{{ news.publishStartDate|date('r') }}</pubDate>
                     <dc:creator>symfony-cmf-devs@googlegroups.com (Symfony CMF)</dc:creator>
                 </item>
             {% endif %}
