@@ -2,64 +2,75 @@ name: "release-2.0.0-RC1"
 title: "Symfony CMF 2.0.0 First Release Candidate"
 publish_start_date: "2017-01-21"
 body: |
-    We are getting ready with the CMF 2.0 release! The most important feature
-    is support for Symfony 3. We are in the process of tagging release
-    candidates and hope to gather feedback in the next weeks, before we tag
-    stable versions.
+    We are getting ready with the CMF 2.0 release! We are in the process of
+    tagging release candidates and hope to gather feedback in the next weeks,
+    before tagging stable versions. The most important feature is support for
+    Symfony 3. 
 
-    We created the #symfony_cmf channel on the [Symfony Slack](https://slackinvite.me/to/symfony-devs)
-    to improve collaboration, as few people are on IRC anymore.
+    We've also created a `#symfony_cmf` channel on the
+    [Symfony Slack](https://slackinvite.me/to/symfony-devs) to improve
+    collaboration and user support. Move in there, report an error or give us a
+    high five!
 
     ### What is new?
 
-    The upcoming versions will support Symfony 3.1 and higher, as well as
-    version 2.8 LTS. They require PHP 5.6 or 7. Deprecated code from the 1.x
+    The upcoming versions will support Symfony 3.0 and higher, as well as
+    the 2.8 LTS version. They require PHP 5.6 or 7. Deprecated code from the 1.x
     versions has been removed.
 
     If you use the Sonata Admin in your project, note that we moved the admins
-    out of the individual bundles into the symfony-cmf/sonata-phpcr-admin-integration-bundle.
+    out of the individual bundles into the CmfSonataPhpcrAdminIntegrationBundle.
+
+    MenuBundle will be released as 2.1, because there already was a 2.0. Note
+    that the sonata admin classes for the menu bundle were also moved to the
+    separate admin integration bundle.
 
     Then, some of the bundles also have new features:
 
-    * MenuBundle is released as 2.1 because there already was a 2.0. Note that
-      the sonata admin classes for the menu bundle were also moved to the
-      separate admin integration bundle.
     * RoutingAuto supports multiple routes per document, e.g. to create REST APIs.
     * TreeBrowserBundle got completely rebuilt, providing a much nicer tree
-      with extensibility and better Javascript libraries. It now also provides
+      with extensibility and better JavaScript libraries. It now also provides
       a form type for the tree widget.
     * SeoBundle supports guessing the modified date and depth from the content.
 
+    Alongside this, three new packages have been released: Resource, ResourceBundle
+    and ResourceRestBundle. These packages provide a PHPCR and Doctrine PHPCR
+    ODM repository for [Puli](http://puli.io/). This way, you can access your
+    documents like they are files. As Puli is not yet released stable, the
+    bundles use a very limited set of Puli classes included in the Resource
+    component. These packages will contain compatibility breaks when Puli is stable.
+
+    ### Some Packages no Longer Maintained
+
+    To focus our resources, the CMF core team decided to stop maintaining some
+    packages for the time being. While they all have their merit, we just don't
+    have enough time to work on all that has been created over the last five
+    years. Rather than having badly maintained packages confuse users, we
+    want to be transparent.
+
+    The affected bundles are: CreateBundle, MediaBundle, SearchBundle and
+    SimpleCmsBundle.
+
+    If you want to help co-maintaining any of those packages, tell us in a
+    GitHub issue or in `#symfony_cmf` of [Symfony slack](https://slackinvite.me/to/symfony-devs).
+
     ### How to upgrade?
 
-    We removed deprecated code. Before upgrading, run your tests and check for
-    deprecation warnings in the test log.
+    A lot of deprecated code was removed. Before upgrading, run your tests and
+    check for deprecation warnings in the test log.
 
-    Each repository contains a UPGRADE-2.0.md file that should explain the
-    changes you need to do when migrating to version 2. Those instructions
-    could be incomplete at this point - if you have time to test the migration,
-    please reach out to us on github if you find inaccuracies or information is
-    missing.
+    Each repository contains a `UPGRADE-2.0.md` file that should explain the
+    breaking changes when migrating to version 2. The instructions can be
+    incomplete at this point. If you have time to test the migration, please
+    reach out to us on GitHub or Slack if you find inaccuracies or information
+    is missing.
 
     ### Documentation, Documentation, Documentation!
 
-    Quite a bit of the changes are not yet reflected by the documentation on
-    symfony.com. This will be the largest part of work to be done before we
-    can tag a stable release.
+    Quite a bit of the changes are not yet reflected in the
+    [documentation](https://symfony.com/doc/master/cmf/). This will prove the
+    largest part of the remaining work.
 
-    We would be very glad for help on finishing the changes. You can help by
-    proof reading the parts that are already done, reviewing pull requests
-    or checking existing documentation and updating where its not accurate
-    anymore.
-
-    ### Some components no longer maintained
-
-    To focus our resources, the CMF core team decided to stop maintaining some
-    optional components for the time being. While they all have their merit, we
-    just don't have enough time to work on all that has been created over the
-    last 5 years. Rather than having badly maintained components confuse users,
-    we want to be transparent. The affected bundles are: CreateBundle,
-    MediaBundle, SearchBundle and SimpleCmsBundle.
-
-    If you want to help co-maintaining any of those packages, tell us in a
-    GitHub issue or in #symfony_cmf of [Symfony slack](https://slackinvite.me/to/symfony-devs).
+    You can become a new CMF hero by helping us with this task. Just a quick
+    proof read of open pull requests or the documentation will already be very
+    great!
