@@ -6,7 +6,7 @@ static:
         body: |
                 <h2>The Symfony CMF Project</h2>
                 <p>
-                    Welcome to the home of the <a href="http://symfony.com">Symfony2</a>
+                    Welcome to the home of the <a href="http://symfony.com">Symfony</a>
                     Content Management Framework. The project is organized by the Symfony
                     community and has several sponsoring companies and prominent open
                     source leaders implementing the philosophy of the
@@ -19,7 +19,7 @@ static:
                 <p>
                     The Symfony CMF project makes it easier for <strong>developers</strong>
                     to add <strong>CMS functionality</strong> to applications built with
-                    the <strong>Symfony2 PHP</strong> framework. Key development principles
+                    the <strong>Symfony PHP</strong> framework. Key development principles
                     for the provided <strong>set of bundles</strong> are <strong>scalability</strong>,
                     <strong>usability</strong>, <strong>documentation</strong> and
                     <strong>testing</strong>.
@@ -36,7 +36,7 @@ static:
                 <a name="slides"></a>
                 <h2>Slides</h2>
                 <ul>
-                    <li><a href="./slides/why_symfony_cmf.html">Why Symfony2 CMF?</a></li>
+                    <li><a href="./slides/why_symfony_cmf.html">Why Symfony CMF?</a></li>
                     <li><a href="./slides/bigpicture.html">The big picture</a></li>
                     <li><a href="http://phpcr.github.com/slides.html">PHPCR</a></li>
                     <li><a href="http://phpcr.github.com/slides-odm.html">PHPCR ODM</a></li>
@@ -56,13 +56,9 @@ static:
                     <li><a href="https://github.com/symfony-cmf/BlockBundle">BlockBundle</a> (integrates PHPCR with SonataBlockBundle)</li>
                     <li><a href="https://github.com/symfony-cmf/CoreBundle">CoreBundle</a> (provides some common helpers for content rendering)</li>
                     <li><a href="https://github.com/symfony-cmf/ContentBundle">ContentBundle</a> (provides basic classes for defining content)</li>
-                    <li><a href="https://github.com/symfony-cmf/CreateBundle">CreateBundle</a> (provides integration with <a href="http://createjs.org">create.js</a> and <a href="https://github.com/flack/createphp">createphp</a>)</li>
-                    <li><a href="https://github.com/symfony-cmf/MediaBundle">MediaBundle</a> (provides basic interfaces and classes to deal with media files)</li>
                     <li><a href="https://github.com/symfony-cmf/MenuBundle">MenuBundle</a> (integrates PHPCR with KnpMenuBundle)</li>
                     <li><a href="https://github.com/symfony-cmf/RoutingBundle">RoutingBundle</a> (adds dynamic routing)</li>
-                    <li><a href="https://github.com/symfony-cmf/SearchBundle">SearchBundle</a> (adds site-wide search)</li>
                     <li><a href="https://github.com/symfony-cmf/SeoBundle">SeoBundle</a> (adds SEO optimization capabilities)</li>
-                    <li><a href="https://github.com/symfony-cmf/SimpleCmsBundle">SimpleCmsBundle</a> (simple CMS on top of the CMF)</li>
                     <li><a href="https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle">SonataDoctrinePhpcrAdminBundle</a> (integrates PHPCR with SonataAdminBundle)</li>
                     <li><a href="https://github.com/symfony-cmf/TreeBrowserBundle">TreeBrowserBundle</a> (adds a javascript UI to browse PHPCR content repositories)</li>
                 </ul>
@@ -79,7 +75,7 @@ static:
             currentUriPrefix: "/news"
         body: <p>The latest news about the Symfony CMF (<a href="/news.rss" >RSS feed</a>):</p>
         seo-metadata:
-            description: "News around the Symfony2 CMF"
+            description: "News around the Symfony CMF"
             keywords:    "News"
 
     cmf-featured-on-symfony-com:
@@ -194,9 +190,9 @@ static:
               The image upload is now actually functional and all the CMF Bundles and libraries have been updated
               to their respective latest versions. Finally we are now using the <a href="https://github.com/lunetics/LocaleBundle">LuneticsLocaleBundle</a>
               as the language switcher. To be able to use such a general purpose Bundle, build around the
-              <a href="https://github.com/symfony/Routing">static routing</a> component of Symfony2 core, with our
+              <a href="https://github.com/symfony/Routing">static routing</a> component of Symfony core, with our
               <a href="https://github.com/symfony-cmf/Routing">dynamic routing</a> component marks a major step in ensuring
-              that the development experience with the CMF remains as simple and predictable as with just Symfony2 itself.
+              that the development experience with the CMF remains as simple and predictable as with just Symfony itself.
               In this context we are also pleased to announce that <a href="https://github.com/ezsystems/ezp-next/blob/master/composer.json#L33">eZPublish5></a>
               will ship using our routing component. Drupal is also <a href="http://drupal.org/node/1606794">in the process</a>
               of adopting it for their upcoming Drupal 8 release.
@@ -209,7 +205,7 @@ static:
         template: cms/news_detail.html.twig
         publish_start_date: "2012-10-26"
         body: |
-              The Symfony CMF documentation is now part of the official documentation of Symfony2 itself. The new location
+              The Symfony CMF documentation is now part of the official documentation of Symfony itself. The new location
               is <a href="http://symfony.com/doc/master/cmf/index.html">here</a>. Looks much better now, but the still need help in getting
               the documentation into a state where they can really take a beginner and turn them into a CMF expert.
               The while current state touches on pretty much all aspects of the CMF, there is a lot of room of improvement
@@ -225,7 +221,7 @@ static:
         publish_start_date: "2013-02-26"
         body: |
             <p>The last few months have seen a huge increase of activity on the CMF (we seem to not have written many news, but those following the github projects will have seen it). Both Jackalope and PHPCR-ODM and the CMF bundles got new features and tons of issues fixed. And the documentation is starting to take shape, but can still use a lot of improvement.</p>
-            <p>With all this activity, it will be hard to draw the line for a 1.0 release, but nonetheless we need to do it. We built a <a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Release-1.0">release plan</a> that wants to stabilize from the bottom up. We start with PHPCR and phpcr-utils, then go to Jackalope and its transports, then the Doctrine PHPCR-ODM and finally the Symfony2 CMF bundles. We created milestones in the PHPCR / Jackalope / PHPCR-ODM space for now. We hope to get through them until beginning of April, and should probably start version 1.0 milestones for the Symfony2 bundles mid of March and focus on the needed pieces in April.</p>
+            <p>With all this activity, it will be hard to draw the line for a 1.0 release, but nonetheless we need to do it. We built a <a href="https://github.com/symfony-cmf/symfony-cmf/wiki/Release-1.0">release plan</a> that wants to stabilize from the bottom up. We start with PHPCR and phpcr-utils, then go to Jackalope and its transports, then the Doctrine PHPCR-ODM and finally the Symfony CMF bundles. We created milestones in the PHPCR / Jackalope / PHPCR-ODM space for now. We hope to get through them until beginning of April, and should probably start version 1.0 milestones for the Symfony bundles mid of March and focus on the needed pieces in April.</p>
             <p>The scope of features we get will depend on the contributions by everybody. But on the other hand, there is no problem adding new features soon afterwards and frequently tagging new versions - as long as we do not need to break backwards compatibility. One important focus is thus to tackle those problems that could require BC breaks so we can get them over before going to a stable release.</p>
 
     how-to-survive-stabilization-phase:
@@ -377,7 +373,7 @@ static:
         template: cms/news_detail.html.twig
         publish_start_date: "2013-09-12"
         body: |
-          <p>I think it was February 2010 at Symfony Live Paris, well over a year before the final release of Symfony2,
+          <p>I think it was February 2010 at Symfony Live Paris, well over a year before the final release of Symfony 2,
           during the Q&A that I voiced by disappointment over the fact that so few (none?) of the big PHP applications
           are based on a general purpose web framework. That all of these applications choose to waste their time on
           building low level architecture pieces rather than focusing their energy on solving the higher level problems
@@ -420,7 +416,7 @@ static:
           candidate state. This means that while we still have a
           <a href="https://groups.google.com/d/msg/symfony-cmf-devs/oITg4bIGBsk/H1_AwjUEhR4J">few tasks</a> we want to
           wrap up, we believe we now have a coherent well tested system to enable to build custom CMS projects on top of
-          Symfony2. We will use the rest of the month to work to wrap up some open items in the storage layer and get as
+          Symfony. We will use the rest of the month to work to wrap up some open items in the storage layer and get as
           many of the nice to have's in the Bundles done. Also while our documentation is already quite extensive, a lot
           of details especially in the configuration were changed for better consistency in the last weeks which are not
           yet reflected in the documentation. So there are plenty of tasks for people who want to join the effort now.
@@ -433,7 +429,7 @@ static:
           <a href="http://blog.liip.ch/?start=0&q=cmf">Liip blog</a>. Listening to the
           <a href="http://pierrespring.com/2010/09/20/ps001-discussion-symfony2-cmf/">podcast Pierre recorded</a> during
           our first meeting in the summer of 2010. Boy was I niav to believe we could release our first stable release
-          close to the first stable release of Symfony2 itself.</p>
+          close to the first stable release of Symfony 2 itself.</p>
 
           <p>Let me end this post with some numbers (generated using
           <a href="https://github.com/roderik/GithubStats">GithubStats</a>):</p>
@@ -468,7 +464,7 @@ static:
           Downloads monthly: 17038
           </pre></p>
 
-          <p>To give get some perspective on those numbers lets compare to Symfony2. Remember that Symfony2 is the most
+          <p>To give get some perspective on those numbers lets compare to Symfony. Remember that Symfony is the most
           active PHP project on github of all time and the CMF started quite a bit later.</p>
 
           <p><pre>
@@ -545,7 +541,7 @@ static:
           <p>Once we released 1.0, we did not sit idle. Instead we immediately began work on improving the CMF.
           In fact there was such a continuous stream of good ideas and things that felt like a must have, that
           we let ourselves slip quite far from our <a href="http://symfony.com/doc/master/cmf/contributing/releases.html">
-          defined release process</a>. Or lets say we had every intention of aliging ourselves with the Symfony2
+          defined release process</a>. Or lets say we had every intention of aliging ourselves with the Symfony
           core release cycle by releasing within 1-2 months of core which would have meant a 1.1 release in January.
           Instead it tooks us 6 months to get to RC1, which on the upside is inline with what we intended for future
           releases.</p>
@@ -563,7 +559,7 @@ static:
             <li>A lot of effort was spend in making the CMF more resilent towards edge cases and given better more
             helpful error messages.</a>
             <li>Support for newer version of Jackalope and PHPCR ODM, that bring lots of bug fixes, speed improvements,
-            and better debugging and profiling (including Symfony2 debug toolbar support).</li>
+            and better debugging and profiling (including Symfony debug toolbar support).</li>
             <li>The routing system was made even more flexible, meaning there is even less code to write when
             implementing a new storage backend. As a result much less code is now needed in SimpleCmsBundle for
             routing.</li>
@@ -571,7 +567,7 @@ static:
             which can give drastic performance improvements for deeply nested menu structures.</li>
             <li>A new Bundle was added for handling SEO meta data.</a>
             <li>A totally reworked Standard Edition that is based on the core Standard Edition to make it easier
-            to understand what is necessary to add to a Symfony2 application to integrate the CMF.</li>
+            to understand what is necessary to add to a Symfony application to integrate the CMF.</li>
           </ul>
           </p>
 
@@ -584,7 +580,7 @@ static:
               <a href="https://github.com/symfony-cmf/MediaBundle/pull/82">handling of uploads</a>.</li>
               <li>The Bundle for handling routing might see the addition of a solution to do
               <a href="https://github.com/symfony-cmf/Routing/pull/101">batch lazy loading</a>.</li>
-              <li>The CMF Standard Edition will be <a href="https://groups.google.com/forum/#!topic/symfony-cmf-devs/DtAzizrm4D8">aligned more closely with the Symfony2 core Standard Edition</a>.</li>
+              <li>The CMF Standard Edition will be <a href="https://groups.google.com/forum/#!topic/symfony-cmf-devs/DtAzizrm4D8">aligned more closely with the Symfony core Standard Edition</a>.</li>
               <li>Updating documentation and ideally figuring out a solution to provide both the 1.0 and 1.1 docs in parallel.</li>
               <li>More testing and fixing any edge cases that our users discover.</li>
           </ul>
@@ -654,7 +650,7 @@ static:
               While the bulk of the work is done by a few regular contributors, we would like to thank
               everyone who has submitted improvements small or large. The fact that so many developers
               work on the CMF on some level validates the goals of the CMF, bringing together the entire
-              Symfony2 eco-system to collaborate on CMS functionality. This is probably best highlighted
+              Symfony eco-system to collaborate on CMS functionality. This is probably best highlighted
               by the fact of how many projects reference the CMF
               <a href="https://www.versioneye.com/php/symfony-cmf:routing/references">routing component</a> and
               accompanying <a href="https://www.versioneye.com/php/symfony-cmf:routing-bundle/references">RoutingBundle</a>.
@@ -961,7 +957,7 @@ static:
         title: "References"
         class: "\AppBundle\Document\SeoPage"
         seo-metadata:
-            description: "References for the Symfony2 CMF"
+            description: "References for the Symfony CMF"
             keywords:    "Reference"
         body: |
             <h2>References</h2>
@@ -1040,16 +1036,16 @@ static:
         title: "About"
         class: "\AppBundle\Document\SeoPage"
         seo-metadata:
-            description: "About the Symfony2 CMF"
+            description: "About the Symfony CMF"
             keywords:    "About"
         body: |
             <h2>About</h2>
 
             <p>
-            The <a href="http://symfony.com">Symfony2</a> Content Management
+            The <a href="http://symfony.com">Symfony</a> Content Management
             Framework project was started by a large group of Symfony developers looking
             to get an early start on collaborating together for the next generation
-            of PHP Content Management Systems built on top of Symfony2. Several companies
+            of PHP Content Management Systems built on top of Symfony. Several companies
             and developers have dedicated themselves to the project. Some of the companies
             and developers that are most avtive can be found below. Please feel invited
             to join the effort with or without the backing of a company behind you:
