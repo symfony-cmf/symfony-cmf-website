@@ -329,7 +329,7 @@ static:
             to focus on cleaning the existing features and making sure they are future
             proof. If you don't know where to start, please ask on the
             <a href="http://groups.google.com/group/symfony-cmf-devs">mailinglist</a> or in
-            <em>symfony-cmf</em> on irc.freenode.org.</p>
+            <em>symfony-cmf</em> on <a href="https://slackinvite.me/to/symfony-devs">Symfony Slack</a>.</p>
 
     doctrine-dbal-repository-data-fixes-round2:
         name: "doctrine-dbal-repository-data-fixes-round2"
@@ -421,8 +421,8 @@ static:
           of details especially in the configuration were changed for better consistency in the last weeks which are not
           yet reflected in the documentation. So there are plenty of tasks for people who want to join the effort now.
           We certainly appreciate it and as a project we have always put great emphasis on investing into new potential
-          contributors. So come join our <a href="http://groups.google.com/group/symfony-cmf-devs">mailinglist</a>, our
-          <a href="irc://freenode/#symfony-cmf">IRC channel</a> or our <a href="http://ghag.dantleech.com/#">issue queue</a>!</p>
+          contributors. So come join our <a href="http://groups.google.com/group/symfony-cmf-devs">mailinglist</a> or
+          the #symfony-cmf channel on <a href="https://slackinvite.me/to/symfony-devs">Symfony Slack</a>!</p>
 
           <p>So for the historians among you its possible to get a good overview of the different development stages
           of the CMF by going through all the CMF related posts in the
@@ -813,7 +813,7 @@ static:
 
             <p>
                 If you have further questions or need help getting started, visit our <a href="http://symfony.com/doc/master/cmf/index.html">documentation</a>
-                page or contact us in our <a href="irc://freenode/#symfony-cmf">IRC channel</a>. There is almost always someone around happy
+                page or contact us in the #symfony-cmf channel on <a href="https://slackinvite.me/to/symfony-devs">Symfony Slack</a>. There is almost always someone around happy
                 to help you get started!
             </p>
 
@@ -940,7 +940,7 @@ static:
                     mailing list and introduce yourself to the group.
                 </li>
                 <li>
-                    Idle in our <a href="irc://freenode/#symfony-cmf">IRC channel</a>
+                    Idle on #symfony-cmf in the <a href="https://slackinvite.me/to/symfony-devs">Symfony Slack</a>
                     and introduce yourself there as well.
                 </li>
                 <li>
@@ -1141,7 +1141,7 @@ static:
                 <li><strong>Website</strong>: <a href="http://cmf.symfony-project.org/">http://cmf.symfony-project.org/</a></li>
                 <li><strong>Wiki</strong>: <a href="http://wiki.github.com/symfony-cmf/symfony-cmf/">http://wiki.github.com/symfony-cmf/symfony-cmf/</a></li>
                 <li><strong>Issue Tracker</strong>: <a href="http://github.com/symfony-cmf/symfony-cmf/issues">http://github.com/symfony-cmf/symfony-cmf/issues</a></li>
-                <li><strong>IRC</strong>: <a href="irc://freenode/#symfony-cmf">#symfony-cmf @ irc.freenode.org</a></li>
+                <li><strong>Slack</strong>: #symfony-cmf in <a href="https://slackinvite.me/to/symfony-devs">Symfony Slack</a></li>
                 <li><strong>Users mailing list</strong>: <a href="http://groups.google.com/group/symfony-cmf-users">http://groups.google.com/group/symfony-cmf-users</a></li>
                 <li><strong>Devs mailing list</strong>: <a href="http://groups.google.com/group/symfony-cmf-devs">http://groups.google.com/group/symfony-cmf-devs</a></li>
             </ul>

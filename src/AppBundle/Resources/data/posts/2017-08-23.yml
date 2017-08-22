@@ -1,0 +1,50 @@
+name: "release-2.0.0-stable"
+title: "Symfony CMF 2.0.0 Stable Release"
+publish_start_date: "2017-08-23"
+body: |
+    Over the summer, we have been tagging the 2.0.0 releases of the Symfony
+    CMF components and bundles. This week, we managed to wrap up the last
+    bits and pieces and tagged 2.0.0 of all parts of the CMF.
+
+    CMF version 2 runs on PHP 5.6 and 7, and is compatible with Symfony 2.8 LTS
+    and all maintained versions of Symfony 3. The sonata admin integration has
+    been moved into its own separate bundle to not clutter up the bundles with
+    an optional integration. We created a resource component inspired by puli.
+    The tree browser bundle was rebuilt on top of the new resource
+    infrastructure, and uses new Javascript libraries. Sonata PHPCR-ODM Admin
+    has also been updated to use the new tree bundle and been released as
+    version 2.0.0.
+
+    For a detailed list of changes, see the [CMF 2 RC1 blogpost](release-2.0.0-RC1)
+    and the changelog of each component.
+
+    As already mentioned in the RC blogpost, we had to abandon some packages to
+    focus our efforts. CreateBundle, MediaBundle, SearchBundle and
+    SimpleCmsBundle are currently not maintained. If you want to help
+    co-maintaining any of those packages, tell us in a GitHub issue or in
+    `#symfony_cmf` of [Symfony slack](https://slackinvite.me/to/symfony-devs).
+
+    ### How to upgrade?
+
+    A lot of deprecated code was removed. Before upgrading, run your tests and
+    check for deprecation warnings in the test log.
+
+    Each repository contains a `UPGRADE-2.0.md` file that should explain the
+    breaking changes when migrating to version 2. The instructions can be
+    incomplete at this point. If you have time to test the migration, please
+    reach out to us on GitHub or Slack if you find inaccuracies or information
+    is missing.
+
+    ### Next steps
+
+    We are happy with the current release, but there is of course always more
+    that could be done. When Symfony 4 starts to take shape, we will have to
+    make sure all components are compatible with it.
+
+    For CMF 2.1, there is a [tentative roadmap in the CMF wiki](https://github.com/symfony-cmf/symfony-cmf/wiki/[Proposal]-Roadmap-2.1).
+    Another topic we discuss is whether to use a [mono repository](https://github.com/symfony-cmf/symfony-cmf/issues/248)
+    aproach or a tool to [synchronize files into all our repositories](https://github.com/symfony-cmf/symfony-cmf/issues/246),
+    similar to the Sonata dev-kit.
+
+    If you want to get involved, comment on the github issues or join us at
+    `#symfony_cmf` in the [Symfony slack](https://slackinvite.me/to/symfony-devs).
