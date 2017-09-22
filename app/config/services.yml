@@ -6,31 +6,31 @@ services:
         class: AppBundle\Block\EventsBlockService
         arguments:
             - app.block.events
-            - @templating
+            - '@templating'
             - null
-            - @doctrine_phpcr.odm.document_manager
-            - @cmf_core.publish_workflow.checker
+            - '@doctrine_phpcr.odm.document_manager'
+            - '@cmf_core.publish_workflow.checker'
         tags:
             - {name: "sonata.block"}
     cmf_simple_cms.initializer:
         class: AppBundle\Initializer\HomePageInitializer
         arguments:
-            - %cmf_simple_cms.persistence.phpcr.basepath%
+            - '%cmf_simple_cms.persistence.phpcr.basepath%'
             - AppBundle\Document\SeoPage
         tags:
           - { name: doctrine_phpcr.initializer}
     cmf_seo.error.suggestion_provider.parent:
         class: Symfony\Cmf\Bundle\SeoBundle\Doctrine\Phpcr\ParentSuggestionProvider
         arguments:
-            - @doctrine_phpcr
-            - %cmf_simple_cms.persistence.phpcr.basepath%
+            - '@doctrine_phpcr'
+            - '%cmf_simple_cms.persistence.phpcr.basepath%'
         tags:
             - { name: 'cmf_seo.suggestion_provider', group: 'parent'}
 
     cmf_seo.error.suggestion_provider.sibling:
         class: Symfony\Cmf\Bundle\SeoBundle\Doctrine\Phpcr\SiblingSuggestionProvider
         arguments:
-            - @doctrine_phpcr
-            - %cmf_simple_cms.persistence.phpcr.basepath%
+            - '@doctrine_phpcr'
+            - '%cmf_simple_cms.persistence.phpcr.basepath%'
         tags:
             - { name: 'cmf_seo.suggestion_provider', group: 'sibling'}
