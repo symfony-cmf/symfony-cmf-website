@@ -68,7 +68,7 @@ static:
         title: "News"
         formats: [html, rss]
         template: cms/news_overview.{_format}.twig
-        class: "\AppBundle\Document\SeoPage"
+        class: "\\AppBundle\\Document\\SeoPage"
         options:
             add_format_pattern: true
             displayChildren: false
@@ -533,7 +533,7 @@ static:
         label: false
         template: cms/news_detail.html.twig
         publish_start_date: "2014-04-08"
-        class: "\AppBundle\Document\SeoPage"
+        class: "\\AppBundle\\Document\\SeoPage"
         seo-metadata:
             description: "Finaly got the 1.1.0-RC1"
             keywords:    "Release candidate"
@@ -955,7 +955,7 @@ static:
     references:
         name: "references"
         title: "References"
-        class: "\AppBundle\Document\SeoPage"
+        class: "\\AppBundle\\Document\\SeoPage"
         seo-metadata:
             description: "References for the Symfony CMF"
             keywords:    "Reference"
@@ -1034,7 +1034,7 @@ static:
     about:
         name: "about"
         title: "About"
-        class: "\AppBundle\Document\SeoPage"
+        class: "\\AppBundle\\Document\\SeoPage"
         seo-metadata:
             description: "About the Symfony CMF"
             keywords:    "About"
