@@ -67,3 +67,14 @@ runtime:
       configuration:
         server_id: "ce95eba9-2d90-48b7-ad75-fcad42e1bcab"
         server_token: "ca7e32ac2d466ecfdf30b8ac43bdfef1304fc3feeb66e8906c1192b435e206f0"
+
+cron:
+    symfony:
+        spec: '0 1 * * *'
+        cmd: |
+          # force clearing the cache
+          rm -rf app/cache/prod
+          app/console --env=prod cache:warmup
+          app/console --env=prod doctrine:phpcr:init:dbal --drop --force
+          app/console --env=prod doctrine:phpcr:repository:init
+          app/console --env=prod doctrine:phpcr:fixtures:load -n
