@@ -27,7 +27,7 @@ static:
 
                 <h2>Try it out</h2>
                 <p>
-                    Visit the online <a target="_blank" href="http://cmf.liip.ch/">Demo</a> page to get a glimpse of what can be done using with Symfony CMF.
+                    Visit the online <a target="_blank" href="http://sandbox.cmf.symfony.com/">Demo</a> page to get a glimpse of what can be done using with Symfony CMF.
                 </p>
                 <p>
                     Like what you see? <a href="/get-started">Get started!</a>
@@ -184,7 +184,7 @@ static:
         publish_start_date: "2012-10-22"
         body: |
               The pace of development has picked up quite a bit since the summer. One of the big things that finally
-              landed in the <a href="http://cmf.liip.ch">demo site</a> is the integration with <a href="https://github.com/flack/createphp">createphp</a>.
+              landed in the <a href="http://sandbox.cmf.symfony.com">demo site</a> is the integration with <a href="https://github.com/flack/createphp">createphp</a>.
               One of the big benefits of createphp is that it can help with generating RDFa output inside
               <a href="https://github.com/symfony-cmf/cmf-sandbox/blob/master/src/Sandbox/MainBundle/Resources/views/MultilangStaticContent/index.html.twig">templates</a>.
               The image upload is now actually functional and all the CMF Bundles and libraries have been updated
@@ -795,7 +795,7 @@ static:
               As always we are also thrilled to see a steady increased in contributors providing
               feedback, fixes and improvements small or large. In order to allow users to
               quickly get a taste of what is possible, we have of course also updated our
-              <a href="http://cmf.liip.ch">demo</a> to use the latest version of the sandbox. The
+              <a href="http://sandbox.cmf.symfony.com">demo</a> to use the latest version of the sandbox. The
               <a href="http://symfony.com/doc/master/cmf/index.html">documentation</a> has also
               been updated to cover the new features.
           </p>
