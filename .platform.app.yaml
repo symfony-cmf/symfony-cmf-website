@@ -53,6 +53,8 @@ hooks:
       rm web/app_dev.php
       # place sqlite file into /tmp so that we can write to it during deploy
       sed -i 's@%kernel.root_dir%/app.sqlite@/tmp/app.sqlite@' app/config/parameters.yml
+      # install platform.sh cli to .platformsh/bin
+      curl -sS https://platform.sh/cli/installer | php
     deploy: |
       # force clearing the cache
       rm -rf app/cache/prod
@@ -78,3 +80,11 @@ cron:
           app/console --env=prod doctrine:phpcr:init:dbal --drop --force
           app/console --env=prod doctrine:phpcr:repository:init
           app/console --env=prod doctrine:phpcr:fixtures:load -n
+
+    renewcert:
+        # Force a redeploy at 1 am (UTC) on the 1st and 15th of every month.
+        spec: '0 1 1,15 * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                platform redeploy --yes --no-wait
+            fi
