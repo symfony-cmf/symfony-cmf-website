@@ -53,8 +53,8 @@ cmf_menu:
         uri_prefix: true
 
 cmf_seo:
-    title: %%content_title%% | Symfony2 CMF
-    description: The Symfony2 Content Management Framework. %%content_description%%
+    title: %%content_title%% | Symfony CMF
+    description: The Symfony Content Management Framework. %%content_description%%
     error:
         enable_parent_provider: true
         enable_sibling_provider: true
@@ -98,8 +98,8 @@ sonata_block:
 
 sonata_seo:
     page:
-        title: Welcome | Symfony2 CMF
+        title: Welcome | Symfony CMF
         metas:
             name:
-                description: The Symfony2 Content Management Framework.
-                keywords: "CMF, Symfony2, PHPCR"
+                description: The Symfony Content Management Framework.
+                keywords: "CMF, Symfony, PHPCR"
