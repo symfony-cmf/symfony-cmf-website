@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/symfony-cmf/symfony-cmf-website.svg?branch=master)](https://travis-ci.org/symfony-cmf/symfony-cmf-website)
 
-# Symfony2 CMF Website
+# Symfony CMF Website
 
 ### You will need:
   * Git 1.6+
@@ -47,8 +47,8 @@ Create an apache virtual host entry along the lines of
 
 And add an entry to your hosts file for "cmf-website.lo"
 
-If you are running Symfony2 for the first time, run http://simple-cms.lo/config.php to ensure your
-system settings have been setup inline with the expected behaviour of the Symfony2 framework.
+If you are running Symfony for the first time, run http://cmf-website.lo/config.php to ensure your
+system settings have been setup inline with the expected behaviour of the Symfony framework.
 
 Then point your browser to http://cmf-website.lo/app_dev.php
 
